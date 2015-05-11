@@ -3,3 +3,4 @@
 ^mosaicData_.*tar.gz$
 ^Rbuildignore$
 
+^\.travis\.yml$
