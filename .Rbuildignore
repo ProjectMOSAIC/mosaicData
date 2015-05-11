@@ -1,2 +1,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^mosaicData_.*tar.gz$
+^Rbuildignore$
+
