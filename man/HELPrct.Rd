@@ -63,11 +63,17 @@ years.  A variety of continuous, count, discrete, and survival time
 predictors and outcomes were collected at each of these five
 occasions.
 
-This dataset is a subset of the \code{\link{HELPmiss}}  data which includes an
-additional 17 subjects with
-partially observed data on some of the baseline variables.  This is
-also a subset of the \code{\link{HELPfull}}  data which includes 5 timepoints and many
-additional variables for all subjects.
+This data set is a subset of the \code{\link{HELPmiss}} data set restricted to
+the 453 subjects who were fully observed on the
+\code{age}, \code{cesd}, \code{d1},
+\code{female}, \code{sex}, \code{g1b}, \code{homeless},
+\code{i1}, \code{i2}, \code{indtot}, \code{mcs}, \code{pcs}, \code{pss_fr},
+\code{racegrp}, \code{satreat}, \code{substance}, \code{treat},
+and \code{sexrisk} variables.  (There is some missingness in the other variables.)
+\code{\link{HELPmiss}} contains 17 additional subjects with
+partially observed data on some of these baseline variables.  This is
+also a subset of the \code{\link{HELPfull}}  data which includes 5 timepoints and
+many additional variables.
 }
 \note{
 The \code{HELPrct} data set was originally named \code{HELP} but has
