@@ -9,6 +9,7 @@
     \item{\code{date}} {date in 1978}
     \item{\code{births}} {number of US births}
     \item{\code{dayofyear}} {sequential number of days from 1 to 365}
+    \item{\code{wday}} {day of week as an ordered factor}
   }}
 \usage{
 data(Births78)
@@ -20,7 +21,7 @@ A day by day record of the number of births in the United States in 1978.
 data(Births78)
 if (require(lattice)) {
   xyplot(births ~ date, Births78)
-  xyplot(births ~ date, Births78, groups=dayofyear\%\%7)
+  xyplot(births ~ date, Births78, groups = wday)
 }
 }
 

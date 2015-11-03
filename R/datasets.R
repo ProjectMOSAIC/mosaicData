@@ -114,13 +114,14 @@ NA
 #'     \item{\code{date}} {date in 1978}
 #'     \item{\code{births}} {number of US births}
 #'     \item{\code{dayofyear}} {sequential number of days from 1 to 365}
+#'     \item{\code{wday}} {day of week as an ordered factor}
 #'   }
 #' 
 #' @examples
 #' data(Births78)
 #' if (require(lattice)) {
 #'   xyplot(births ~ date, Births78)
-#'   xyplot(births ~ date, Births78, groups=dayofyear%%7)
+#'   xyplot(births ~ date, Births78, groups = wday)
 #' }
 
 NA 
