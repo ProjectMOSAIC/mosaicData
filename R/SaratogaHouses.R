@@ -1,6 +1,6 @@
-#' Houses in Saratoga (2006)
+#' Houses in Saratoga County (2006)
 #' 
-#' Data on houses in Saratoga, New York, USA in 2006
+#' Data on houses in Saratoga County, New York, USA in 2006
 #' 
 #' @docType data
 #' @name SaratogaHouses
@@ -24,8 +24,11 @@
 #' \item{\code{newConstruction}}{ whether the property is a new construction}
 #' \item{\code{centralAir}}{ whether the house has central air}
 #' }
-#' @source Data were originally collected by Candice Corvetti and Dick De Veaux 
-#' (Williams College) from \url{http://www.saratogacountyny.gov/departments/real-property-tax-service-agency/}.
+#' @source 
+#' Data collected by Candice Corvetti and used in the "Stat 101" case study 
+#' "How much is a Fireplace Worth".  
+#' See also 
+#' \url{http://www.saratogacountyny.gov/departments/real-property-tax-service-agency/}.
 NA
 
   

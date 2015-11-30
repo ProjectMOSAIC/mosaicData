@@ -3,7 +3,7 @@
 \docType{data}
 \name{SaratogaHouses}
 \alias{SaratogaHouses}
-\title{Houses in Saratoga (2006)}
+\title{Houses in Saratoga County (2006)}
 \format{A data frame with 1728 observations on the following 16 variables.
 \itemize{
 \item{\code{price}}{ price (1000s of US dollars)}
@@ -24,13 +24,15 @@
 \item{\code{centralAir}}{ whether the house has central air}
 }}
 \source{
-Data were originally collected by Candice Corvetti and Dick De Veaux 
-(Williams College) from \url{http://www.saratogacountyny.gov/departments/real-property-tax-service-agency/}.
+Data collected by Candice Corvetti and used in the "Stat 101" case study 
+"How much is a Fireplace Worth".  
+See also 
+\url{http://www.saratogacountyny.gov/departments/real-property-tax-service-agency/}.
 }
 \usage{
 data(SaratogaHouses)
 }
 \description{
-Data on houses in Saratoga, New York, USA in 2006
+Data on houses in Saratoga County, New York, USA in 2006
 }
 
