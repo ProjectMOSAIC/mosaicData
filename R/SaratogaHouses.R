@@ -1,6 +1,6 @@
 #' Houses in Saratoga (2006)
 #' 
-#' Data on houses in Saratoga, Florida
+#' Data on houses in Saratoga, New York, USA in 2006
 #' 
 #' @docType data
 #' @name SaratogaHouses
@@ -26,9 +26,6 @@
 #' }
 #' @source Data were originally collected by Candice Corvetti and Dick De Veaux 
 #' (Williams College) from \url{http://www.saratogacountyny.gov/departments/real-property-tax-service-agency/}.
-#' @details 
-#' House characteristics in Saratoga, NY collected in 2006
-#' 
 NA
 
   
