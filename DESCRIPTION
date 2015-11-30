@@ -21,3 +21,4 @@ Description: Data sets from Project MOSAIC (mosaic-web.org) used
 License: GPL (>=2)
 LazyLoad: yes
 LazyData: yes
+RoxygenNote: 5.0.1
