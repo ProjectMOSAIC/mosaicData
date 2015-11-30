@@ -15,10 +15,10 @@ SaratogaHouses <-
                              oil = Fuel.Type == 4)
     ) %>%
   mutate(
-    sewer = derivedFactor(private = Sewer.Type == 2,
-                         "commercial/public" = Sewer.Type == 3,
+    sewer = derivedFactor("septic" = Sewer.Type == 2,
+                         "public/commercial" = Sewer.Type == 3,
                          "none" = Sewer.Type == 1,
-                         .default = NA)
+                         .default = NA)    # 0's code NA as well
     ) %>%
   mutate(
     waterfront = derivedFactor(Yes = Waterfront, .default = "No")) %>%
