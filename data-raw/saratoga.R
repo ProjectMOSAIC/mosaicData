@@ -17,6 +17,7 @@ SaratogaHouses <-
   mutate(
     sewer = derivedFactor(private = Sewer.Type == 2,
                          "commercial/public" = Sewer.Type == 3,
+                         "none" = Sewer.Type == 1,
                          .default = NA)
     ) %>%
   mutate(
