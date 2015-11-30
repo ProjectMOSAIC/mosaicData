@@ -4,3 +4,4 @@
 ^Rbuildignore$
 
 ^\.travis\.yml$
+^data-raw$
