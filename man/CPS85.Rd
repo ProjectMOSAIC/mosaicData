@@ -21,7 +21,7 @@
 \code{manag} \code{manuf} \code{other} \code{prof} \code{sales} \code{service}} 
   }}
 \source{
-Data are from \url{http://lib.stat.cmu.edu/datasets/CPS_85_Wages}.
+Data are from \url{http://lib.stat.cmu.edu/DASL}.
 }
 \usage{
 data(CPS85)

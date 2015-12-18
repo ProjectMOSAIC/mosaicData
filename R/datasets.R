@@ -224,7 +224,7 @@ NA
 #' entirely numerical codes.  
 #' 
 #' @source
-#' Data are from \url{http://lib.stat.cmu.edu/datasets/CPS_85_Wages}.
+#' Data are from \url{http://lib.stat.cmu.edu/DASL}.
 #' 
 #' @references
 #' Berndt, ER. \emph{The Practice of Econometrics} 1991. Addison-Wesley. 
