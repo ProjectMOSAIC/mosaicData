@@ -1,6 +1,6 @@
 library(mosaic)
 library(tidyr)
-Birthdays <- 
+Births <- 
   read.file("data-raw/birthdates-1968-1988.csv") %>%
   mutate(
     date = lubridate::ymd(paste(year, month, day, sep = "-")),

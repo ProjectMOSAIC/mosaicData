@@ -1,10 +1,10 @@
-#' US Birthdays
+#' US Births
 #' 
 #' Number of births each day from 1968 to 1988
 #'
 #' @docType data
-#' @name Birthdays
-#' @usage data(Birthdays)
+#' @name Births
+#' @usage data(Births)
 #' @format  A data.frame with 7305 observations on the following 8 variables.
 #' \itemize{
 #'    item{code{date }}{[Date]}
@@ -26,16 +26,16 @@
 #' of births in this data set for the year 1978.  See the examples.
 #' 
 #' @examples
-#' data(Birthdays)
+#' data(Births)
 #' if(require(ggplot2)) {
-#'   ggplot(data = Birthdays, aes(x = date, y = births, colour = wday)) +
+#'   ggplot(data = Births, aes(x = date, y = births, colour = wday)) +
 #'     stat_smooth(se = FALSE, alpha = 0.8, geom = "line")
-#'   ggplot(data = Birthdays, aes(x = day_of_year, y = births, colour = wday)) +
+#'   ggplot(data = Births, aes(x = day_of_year, y = births, colour = wday)) +
 #'     geom_point(size = 0.4, alpha = 0.5) +
 #'     stat_smooth(se = FALSE, geom = "line", alpha = 0.6, size = 1.5)
 #'   if (require(dplyr)) {
 #'     ggplot(
-#'      data =  bind_cols(Birthdays %>% filter(year == 1978), 
+#'      data =  bind_cols(Births %>% filter(year == 1978), 
 #'                        Births78 %>% rename(births78 = births)),
 #'      aes(x = births - births78)
 #'      ) +
