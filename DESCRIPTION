@@ -8,7 +8,9 @@ Depends:
 Suggests:
     lattice,
     mosaic,
-    reshape2
+    reshape2,
+    ggplot2,
+    dplyr
 Author: Randall Pruim <rpruim@calvin.edu>, Daniel Kaplan
     <kaplan@macalester.edu>, Nicholas Horton <nhorton@amherst.edu>
 Maintainer: Randall Pruim <rpruim@calvin.edu>
