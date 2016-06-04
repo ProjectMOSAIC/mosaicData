@@ -11,7 +11,10 @@
    item{code{sell }}{number of hunters who kept the cash and returned the permit [numeric]}
 }}
 \source{
-Bishop and Heberlein (Amer. J. Agr. Econ. 61, 1979).  
+Bishop and Heberlein. 
+"Measuring values of extramarket goods: are indirect measures biased?". 
+Amer. J. Agr. Econ. 61, 1979. Available at 
+\url{http://www1.udel.edu/johnmack/frec343/bishop_and_heberlein.pdf}.
 See also \url{http://www.math.umt.edu/patterson/ProfileLikelihoodCI.pdf}.
 }
 \usage{
