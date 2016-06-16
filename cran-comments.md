@@ -21,3 +21,6 @@ The only reported issue from revdep_check() was with the mosaic package, but tha
 
 Modified DESCRIPTION file to remove reference to mosaic-web.org from title and add
 http:// in description.
+
+Put title into title case -- would have been nice to catch that at the same time
+as the other issue, but oh well.

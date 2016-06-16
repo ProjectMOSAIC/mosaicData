@@ -1,6 +1,6 @@
 Package: mosaicData
 Type: Package
-Title: Project MOSAIC data sets
+Title: Project MOSAIC Data Sets
 Version: 0.14.0
 Date: 2016-06-15
 Depends:
