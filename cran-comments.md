@@ -16,3 +16,8 @@ R CMD check succeeded
 ## Downstream dependencies
 
 The only reported issue from revdep_check() was with the mosaic package, but that will go away with the version submitted to CRAN earlier today.
+
+## Note
+
+Modified DESCRIPTION file to remove reference to mosaic-web.org from title and add
+http:// in description.
