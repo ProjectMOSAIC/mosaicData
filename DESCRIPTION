@@ -1,6 +1,6 @@
 Package: mosaicData
 Type: Package
-Title: Project MOSAIC (mosaic-web.org) data sets
+Title: Project MOSAIC data sets
 Version: 0.14.0
 Date: 2016-06-15
 Depends:
@@ -14,7 +14,7 @@ Suggests:
 Author: Randall Pruim <rpruim@calvin.edu>, Daniel Kaplan
     <kaplan@macalester.edu>, Nicholas Horton <nhorton@amherst.edu>
 Maintainer: Randall Pruim <rpruim@calvin.edu>
-Description: Data sets from Project MOSAIC (mosaic-web.org) used
+Description: Data sets from Project MOSAIC (http://mosaic-web.org) used
     to teach mathematics, statistics, computation and modeling.  Funded by the
     NSF, Project MOSAIC is a community of educators working to tie together
     aspects of quantitative work that students in science, technology,
