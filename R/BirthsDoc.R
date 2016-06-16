@@ -19,7 +19,7 @@
 #' @source
 #' Data source: National Vital Statistics System natality data, as provided by
 #' Google BigQuery and exported to csv 
-#' Robert Kern (\url{http://www.mechanicalkern.com/static/birthdates-1968-1988.csv)}
+#' Robert Kern (\url{http://www.mechanicalkern.com/static/birthdates-1968-1988.csv})
 #'
 #' @details
 #' The number of births in \code{\link{Births78}} is slightly lower than the number

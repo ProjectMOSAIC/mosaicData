@@ -18,7 +18,7 @@
 \source{
 Data source: National Vital Statistics System natality data, as provided by
 Google BigQuery and exported to csv 
-Robert Kern (\url{http://www.mechanicalkern.com/static/birthdates-1968-1988.csv)}
+Robert Kern (\url{http://www.mechanicalkern.com/static/birthdates-1968-1988.csv})
 }
 \usage{
 data(Births)
