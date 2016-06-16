@@ -26,7 +26,7 @@ application}
   }}
 \source{
 The records were collected through 
-\url{http://www.mobilecounty.org/probatecourt/recordssearch.htm}
+http://www.mobilecounty.org/probatecourt/recordssearch.htm
 }
 \usage{
 data(Marriage)
