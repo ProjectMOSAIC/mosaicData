@@ -154,7 +154,7 @@ NA
 #' Countries
 #' 
 #' A data frame containing country names as used by GapMinder and the \code{maps}
-#' package to facilitate converstion between the two.
+#' package to facilitate conversation between the two.
 #' 
 #' @name Countries
 #' @aliases Countries
@@ -303,7 +303,7 @@ NA
 #' @examples
 #' # We can test for heat exchange with the environment by check to see if the 
 #' # heat gained by the cold water matches the heat lost by the hot water.
-#' C_p <- 4.182 / 60  # / 60 because measureing m in L/min
+#' C_p <- 4.182 / 60  # / 60 because measuring m in L/min
 #' HeatX2 <- transform(HeatX, 
 #'                 Q.cold = m.cold * C_p * (T.cold.out - T.cold.in),
 #'                 Q.hot= m.hot * C_p * (T.hot.out- T.hot.in)
@@ -331,7 +331,7 @@ NA
 #'   A data frame with 1236 observations on the following variables.
 #'   \itemize{
 #'     \item{\code{id}} {identification number}
-#'     \item{\code{pluralty}} {5 = single fetus}
+#'     \item{\code{plurality}} {5 = single fetus}
 #'     \item{\code{outcome}} {1 = live birth that survived at least 28 days}
 #'     \item{\code{date}} {birth date where 1096=January 1, 1961}
 #'     \item{\code{gestation}} {length of gestation (in days)}
@@ -570,7 +570,7 @@ NA
 #'     \item{\code{C3G1}} {Have you ever been tested for HIV/AIDS (0=No, 1=Yes)}
 #'     \item{\code{C3G2}} {# times tested for HIV/AIDS}
 #'     \item{\code{C3G3}} {Have you been tested for HIV/AIDS-lst 6 mos (0=No, 1=Yes)}
-#'     \item{\code{C3G4}} {What was the result of last test (1=Positive, 2=Negative, 3=Refued, 4=Never got result, 5=Inconclusive}
+#'     \item{\code{C3G4}} {What was the result of last test (1=Positive, 2=Negative, 3=Refused, 4=Never got result, 5=Inconclusive}
 #'     \item{\code{C3H1}} {Have you ever had PID (0=No, 1=Yes)}
 #'     \item{\code{C3H2}} {# of times had PID}
 #'     \item{\code{C3H3}} {Have you had PID in last 6 mos (0=No, 1=Yes)}
@@ -582,7 +582,7 @@ NA
 #'     \item{\code{CES_D}} {CES-D score, measure of depressive symptoms, high scores are worse}
 #'     \item{\code{CHR_6M}} {Chronic medical conds/HIV-past 6m y/n (0=No, 1=Yes)}
 #'     \item{\code{CHR_EVER}} {Chronic medical conds/HIV-ever y/n (0=No, 1=Yes)}
-#'     \item{\code{CHR_SUM}} {Sum chronic medican conds/HIV ever}
+#'     \item{\code{CHR_SUM}} {Sum chronic medical conds/HIV ever}
 #'     \item{\code{CNTRL}} {InDUC-2L-Control score}
 #'     \item{\code{COC_HER}} {1st/2nd drug of choice=cocaine or heroine (0=No, 1=Yes)}
 #'     \item{\code{CUAD_C}} {CUAD-Cocaine}
@@ -698,12 +698,12 @@ NA
 #'     \item{\code{EPI_6M}} {Episodic (C2A-C2O,C2R-C2U, STD)-6m y/n (0=No, 1=Yes)}
 #'     \item{\code{EPI_SUM}} {Sum episodic (C2A-C2O, C2R-C2U, STD)-6m}
 #'     \item{\code{F1A}} {Bothered by thngs not gen boethered by (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
-#'     \item{\code{F1B}} {My appretite was poor (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
+#'     \item{\code{F1B}} {My appetite was poor (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
 #'     \item{\code{F1C}} {Couldn't shake blues evn w/fam+frnds hlp (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
 #'     \item{\code{F1D}} {Felt I was just as good as other people (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
 #'     \item{\code{F1E}} {Had trouble keeping mind on what doing (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
 #'     \item{\code{F1F}} {I felt depressed (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
-#'     \item{\code{F1G}} {I felt everthing I did was an effort (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
+#'     \item{\code{F1G}} {I felt everything I did was an effort (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
 #'     \item{\code{F1H}} {I felt hopeful about the future (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
 #'     \item{\code{F1I}} {I thought my life had been a failure (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
 #'     \item{\code{F1J}} {I felt fearful (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
@@ -712,7 +712,7 @@ NA
 #'     \item{\code{F1M}} {I talked less than usual (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
 #'     \item{\code{F1N}} {I felt lonely (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
 #'     \item{\code{F1O}} {People were unfriendly (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
-#'     \item{\code{F1P}} {I enoyed life (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
+#'     \item{\code{F1P}} {I enjoyed life (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
 #'     \item{\code{F1Q}} {I had crying spells (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
 #'     \item{\code{F1R}} {I felt sad (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
 #'     \item{\code{F1S}} {I felt that people dislike me (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
@@ -722,15 +722,15 @@ NA
 #'     \item{\code{G1A_30}} {Diff contr viol beh-sig per lst 30 days (0=No, 1=Yes)}
 #'     \item{\code{G1A}} {Diff contr viol beh for sig time per evr (0=No, 1=Yes)}
 #'     \item{\code{G1B_30}} {Had thoughts of suicide-lst 30 days (0=No, 1=Yes)}
-#'     \item{\code{G1B_REC}} {Suicidal thoughs past 30 days y/n (0=No, 1=Yes)}
+#'     \item{\code{G1B_REC}} {Suicidal thoughts past 30 days y/n (0=No, 1=Yes)}
 #'     \item{\code{G1B}} {Ever had thoughts of suicide (0=No, 1=Yes)}
 #'     \item{\code{G1C_30}} {Attempted suicide-lst 30 days (0=No, 1=Yes)}
 #'     \item{\code{G1C}} {Attempted suicide ever (0=No, 1=Yes)}
 #'     \item{\code{G1D_30}} {Prescr med for psy/emot prob-lst 30 days (0=No, 1=Yes)}
-#'     \item{\code{G1D_REC}} {Prescribed psych meds past 30 daus y/n (0=No, 1=Yes)}
+#'     \item{\code{G1D_REC}} {Prescribed psych meds past 30 days y/n (0=No, 1=Yes)}
 #'     \item{\code{G1D}} {Prescr med for pst/emot prob ever (0=No, 1=Yes)}
 #'     \item{\code{GH}} {SF-36 general health perceptions (0-100)}
-#'     \item{\code{GOV_SUPP}} {Received governemtn support past 6 m (0=No, 1=Yes)}
+#'     \item{\code{GOV_SUPP}} {Received government support past 6 m (0=No, 1=Yes)}
 #'     \item{\code{GROUP}} {Randomization Group (0=Control, 1=Clinic)}
 #'     \item{\code{H10_30}} {# days in lst 30 bef detox used cannabis}
 #'     \item{\code{H10_LT}} {# yrs regularly used cannabis}
@@ -747,8 +747,8 @@ NA
 #'     \item{\code{H13_30}} {# days used >1 sub/day-lst 30 bef detox}
 #'     \item{\code{H13_LT}} {# yrs regularly used >1 subst/day}
 #'     \item{\code{H13_RT}} {Route of admin of >1 subst/day (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
-#'     \item{\code{H14}} {Accord to interview w/c subst is main prob (0=No problem, 1=Alcohol, 2=Alcool to intox, 3=Heroin 4=Methadone, 5=Oth opiate/analg, 6=Barbituates, 7=Sed/hyp/tranq, 8=Cocaine, 9=Amphetamines, 10=Marij/cannabis}
-#'     \item{\code{H15A}} {# times had alchol DTs}
+#'     \item{\code{H14}} {Accord to interview w/c subst is main prob (0=No problem, 1=Alcohol, 2=Alcohol to intox, 3=Heroin 4=Methadone, 5=Oth opiate/analg, 6=Barbituates, 7=Sed/hyp/tranq, 8=Cocaine, 9=Amphetamines, 10=Marij/cannabis}
+#'     \item{\code{H15A}} {# times had alcohol DTs}
 #'     \item{\code{H15B}} {# times overdosed on drugs}
 #'     \item{\code{H16A}} {$ spent on alc-lst 30 days bef detox}
 #'     \item{\code{H16B}} {$ spent on drugs-lst 30 days bef detox}
@@ -757,7 +757,7 @@ NA
 #'     \item{\code{H18A}} {How troubled by alc probs-lst 30 days (0=Not at all, 1=Slightly, 2=Moderately, 3=Considerably, 4=Extremely)}
 #'     \item{\code{H18B}} {How troubled by drug probs-lst 30 days (0=Not at all, 1=Slightly, 2=Moderately, 3=Considerably, 4=Extremely)}
 #'     \item{\code{H19A}} {How import is trtmnt for alc probs now (0=Not at all, 1=Slightly, 2=Moderately, 3=Considerably, 4=Extremely)}
-#'     \item{\code{H19B}} {How importy is trtmnt for drug probs now (0=Not at all, 1=Slightly, 2=Moderately, 3=Considerably, 4=Extremely)}
+#'     \item{\code{H19B}} {How important is trtmnt for drug probs now (0=Not at all, 1=Slightly, 2=Moderately, 3=Considerably, 4=Extremely)}
 #'     \item{\code{H1_30}} {# days in past 30 bef detox used alcohol}
 #'     \item{\code{H1_LT}} {# yrs regularly used alcohol}
 #'     \item{\code{H1_RT}} {Route of administration use alcohol (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
@@ -800,7 +800,7 @@ NA
 #'     \item{\code{I2}} {Most drank any 1 day in lst 30 bef detox}
 #'     \item{\code{I3}} {On days used heroin, avg # bags used}
 #'     \item{\code{I4}} {Most bgs heroin use any 1 day-30 bef det}
-#'     \item{\code{I5}} {Avg $ amt of heorin used per day}
+#'     \item{\code{I5}} {Avg $ amt of heroin used per day}
 #'     \item{\code{I6A}} {On days used cocaine, avg # bags used}
 #'     \item{\code{I6B}} {On days used cocaine, avg # rocks used}
 #'     \item{\code{I7A}} {Mst bgs cocaine use any 1 day-30 bef det}
@@ -980,7 +980,7 @@ NA
 #'     \item{\code{PREV_TIME}} {Previous interview time}
 #'     \item{\code{PRIMLANG}} {First language (recode) (0=English, 1=Other lang)}
 #'     \item{\code{PRIMSUB2}} {First drug of choice (no marijuana) (0=None, 1=Alcohol, 2=Cocaine, 3=Heroin, 4=Barbituates, 5=Benzos, 6=Marijuana, 7=Methadone, 8=Opiates)}
-#'     \item{\code{PRIM_SUB}} {First drug of choice (0=None, 1=Alcohol, 3=Cocaine, 3=Heroine, 4=Barbituates, 5=Benzos, 6=Marijuana, 7=Methadone, 8=Opiates)}
+#'     \item{\code{PRIM_SUB}} {First drug of choice (0=None, 1=Alcohol, 2=Cocaine, 3=Heroin, 4=Barbituates, 5=Benzos, 6=Marijuana, 7=Methadone, 8=Opiates)}
 #'     \item{\code{PSS_FA}} {Perceived social support-family}
 #'     \item{\code{PSS_FR}} {Perceived social support-friends}
 #'     \item{\code{Q10}} {How would you describe yourself (0=Straight, 1=Gay/bisexual)}
@@ -991,7 +991,7 @@ NA
 #'     \item{\code{Q15}} {How often given drugs to have sex-lst 6 mos (0=Never, 1=Few times or less, 2=Few times/month, 3=Once or more/week)}
 #'     \item{\code{Q16}} {How often were you paid for sex-lst 6 mos (0=Never, 1=Few times or less, 2=Few times/month, 3=Once or more/week)}
 #'     \item{\code{Q17}} {How often you pay pers for sex-lst 6 mos (0=Never, 1=Few times or less, 2=Few times/month, 3=Once or more/week)}
-#'     \item{\code{Q18}} {How often use condomes during sex=lst 6 mos (0=No sex/always, 1=Most of the time, 2=Some of the time, 3=None of the time)}
+#'     \item{\code{Q18}} {How often use condoms during sex=lst 6 mos (0=No sex/always, 1=Most of the time, 2=Some of the time, 3=None of the time)}
 #'     \item{\code{Q19}} {Condoms are too much of a hassle to use (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
 #'     \item{\code{Q1A}} {Have you ever injected drugs (0=No, 1=Yes)}
 #'     \item{\code{Q1B}} {Have you injected drugs-lst 6 mos (0=No, 1=Yes)}
@@ -1004,19 +1004,19 @@ NA
 #'     \item{\code{Q7}} {How often shared a cooker-last 6 mos (0=Nevr/Not shot up, 1=Few times or less, 2=Few times/month, 3=Once or more/week)}
 #'     \item{\code{Q8}} {How often shared a cotton-last 6 mos (0=Nevr/Not shot up, 1=Few times or less, 2=Few times/month, 3=Once or more/week)}
 #'     \item{\code{Q9}} {How often use syringe to div drugs-lst 6 mos (0=Nevr/Not shot up, 1=Few times or less, 2=Few times/month, 3=Once or more/week)}
-#'     \item{\code{R1A}} {I really want to hange my alcohol/drug use (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
+#'     \item{\code{R1A}} {I really want to change my alcohol/drug use (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
 #'     \item{\code{R1B}} {Sometimes I wonder if I'm an alcohol/addict (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
-#'     \item{\code{R1C}} {Id I don't chng alcohol/drug probs will worsen (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
+#'     \item{\code{R1C}} {Id I don't change alcohol/drug probs will worsen (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
 #'     \item{\code{R1D}} {I started making changes in alcohol/drug use (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
 #'     \item{\code{R1E}} {Was using too much but managed to change (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
 #'     \item{\code{R1F}} {I wonder if my alcohol/drug use hurting othrs (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
 #'     \item{\code{R1G}} {I am a prob drinker or have drug prob (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
-#'     \item{\code{R1H}} {Already doing thngs to chnge alcohol/drug use (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
+#'     \item{\code{R1H}} {Already doing thngs to change alcohol/drug use (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
 #'     \item{\code{R1I}} {have changed use-trying to not slip back (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
 #'     \item{\code{R1J}} {I have a serious problem w/ alcohol/drugs (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
-#'     \item{\code{R1K}} {I wonder if I'm in contrl of alcohol/drug use (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
+#'     \item{\code{R1K}} {I wonder if I'm in control of alcohol/drug use (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
 #'     \item{\code{R1L}} {My alcohol/drug use is causing a lot of harm (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
-#'     \item{\code{R1M}} {Actively curring down/stopping alcohol/drug use (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
+#'     \item{\code{R1M}} {Actively cutting down/stopping alcohol/drug use (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
 #'     \item{\code{R1N}} {Want help to not go back to alcohol/drugs (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
 #'     \item{\code{R1O}} {I know that I have an alcohol/drug problem (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
 #'     \item{\code{R1P}} {I wonder if I use alcohol/drugs too much (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
@@ -1036,7 +1036,7 @@ NA
 #'     \item{\code{RAWVT}} {Raw SF-36 vitality}
 #'     \item{\code{RAW_ADS}} {ADS score}
 #'     \item{\code{RAW_AM}} {SOCRATES-Ambivalence-Raw}
-#'     \item{\code{RAW_RE}} {SOCRATES-Rocognition-Raw}
+#'     \item{\code{RAW_RE}} {SOCRATES-Recognition-Raw}
 #'     \item{\code{RAW_TS}} {SOCRATES-Taking steps-Raw}
 #'     \item{\code{RCT_LINK}} {Did subject link to primary care (RCT)--This time point (0=No, 1=Yes)}
 #'     \item{\code{REALM2}} {REALM score (dichotomous) (1=0-60, 2=61-66)}
@@ -1047,7 +1047,7 @@ NA
 #'     \item{\code{RP}} {SF-36 role physical (0-100)}
 #'     \item{\code{S1A}} {At interview pt obviously depressed/withdrawn (0=No, 1=Yes)}
 #'     \item{\code{S1B}} {at interview pt obviously hostile (0=No, 1=Yes)}
-#'     \item{\code{S1C}} {At interview pt obviouslt anx/nervous (0=No, 1=Yes)}
+#'     \item{\code{S1C}} {At interview pt obviously anx/nervous (0=No, 1=Yes)}
 #'     \item{\code{S1D}} {Trouble w/real tst/thght dis/par at interview (0=No, 1=Yes)}
 #'     \item{\code{S1E}} {At interview pt trbl w/ compr/concen/rememb (0=No, 1=Yes)}
 #'     \item{\code{S1F}} {At interview pt had suicidal thoughts (0=No, 1=Yes)}
@@ -1069,7 +1069,7 @@ NA
 #'     \item{\code{T2C}} {Longest period abstain-lst 6 mos (heroin)}
 #'     \item{\code{T2}} {Have used heroin since leaving River St (0=No, 1=Yes)}
 #'     \item{\code{T3B}} {# days in row continued to use cocaine}
-#'     \item{\code{T3C}} {Lngest period abstain-lst 6 mos (cocaine)}
+#'     \item{\code{T3C}} {Longest period abstain-lst 6 mos (cocaine)}
 #'     \item{\code{T3}} {Have used cocaine since leaving River St (0=No, 1=Yes)}
 #'     \item{\code{TIME}} {Interview time point}
 #'     \item{\code{TOTALRAB}} {RAB-Total RAB sore}
@@ -1123,15 +1123,15 @@ NA
 #'     \item{\code{U26I}} {Got HIV tested because of MDs advice (0=No, 1=Yes)}"						
 #'     \item{\code{U27A}} {I can tell my MD anything (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"						
 #'     \item{\code{U27B}} {My MD pretends to know thngs if not sure (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"						
-#'     \item{\code{U27C}} {I trust my MDs judgement re my med care (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"						
+#'     \item{\code{U27C}} {I trust my MDs judgment re my med care (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"						
 #'     \item{\code{U27D}} {My MD cares > about < costs than my hlth (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"						
 #'     \item{\code{U27E}} {My MD always tell truth about my health (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"						
 #'     \item{\code{U27F}} {My MD cares as much as I about my hlth (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"						
 #'     \item{\code{U27G}} {My MD would try to hide a mistake in trtmt (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"						
-#'     \item{\code{U28}} {How much to you trst this MD (0=Not at all, 1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=Completely)}"						
+#'     \item{\code{U28}} {How much to you trust this MD (0=Not at all, 1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=Completely)}"						
 #'     \item{\code{U29A}} {MDs knowledge of your entire med history (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}"						
-#'     \item{\code{U29B}} {MD knowldg of your respons-home/work/sch (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}"						
-#'     \item{\code{U29C}} {MD knowldg of what worries you most-hlth (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}"						
+#'     \item{\code{U29B}} {MD knowledge of your response-home/work/sch (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}"						
+#'     \item{\code{U29C}} {MD knowledge of what worries you most-hlth (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}"						
 #'     \item{\code{U29D}} {MDs knowledge of you as a person (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}"						
 #'     \item{\code{U2A}} {I cannot pay for services (0=No, 1=Yes)}
 #'     \item{\code{U2B}} {I am not eligible for free care (0=No, 1=Yes)}
@@ -1152,36 +1152,36 @@ NA
 #'     \item{\code{U2Q_T}} {a factor with many levels}
 #'     \item{\code{U2Q}} {Other reason hard to get regular med care (0=No, 1=Yes)}
 #'     \item{\code{U2R}} {a factor with levels \code{} \code{7} \code{A} \code{B} \code{C} \code{D} \code{E} \code{F} \code{G} \code{H} \code{I} \code{J} \code{K} \code{L} \code{M} \code{N} \code{O} \code{P} \code{Q}}
-#'     \item{\code{U30}} {MD would know what want done if unconsc (1=Strongly agree, 2=Agree, 3=Not sure, 4= Disagree, 5=Strongly disagree)}"						
-#'     \item{\code{U31}} {Oth MDs/RNs who play roel in your care (0=No, 1=Yes)}"						*
+#'     \item{\code{U30}} {MD would know what want done if unconscious (1=Strongly agree, 2=Agree, 3=Not sure, 4= Disagree, 5=Strongly disagree)}"						
+#'     \item{\code{U31}} {Oth MDs/RNs who play role in your care (0=No, 1=Yes)}"						*
 #'     \item{\code{U32A}} {Their knowledge of you as a person (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
 #'     \item{\code{U32B}} {The quality of care they provide (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
-#'     \item{\code{U32C}} {Coordination betw them and your regular MD (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
+#'     \item{\code{U32C}} {Coordination between them and your regular MD (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
 #'     \item{\code{U32D_T}} {N/A, only my regular MD does this}
-#'     \item{\code{U32D}} {Their expl of your hlth prbs/trtmts need (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
+#'     \item{\code{U32D}} {Their explanation of your hlth prbs/trtmts need (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
 #'     \item{\code{U33}} {Amt regular MD knows about care from others (1=Knows everything, 2=Knows almost everything, 3=Knows some things, 4=Knows very little, 5=Knows nothing)}
-#'     \item{\code{U34}} {Has MD ever recommended you see MD sepcialist (0=No, 1=Yes)}
+#'     \item{\code{U34}} {Has MD ever recommended you see MD specialists (0=No, 1=Yes)}
 #'     \item{\code{U35A}} {How helpful MD in deciding on specialist (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
 #'     \item{\code{U35B}} {How helpful MD getting appt w/specialist (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
-#'     \item{\code{U35C}} {MDs involvmt when you trtd by specialist (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
-#'     \item{\code{U35D}} {MDs communic w/your specialists/oth MDs (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
+#'     \item{\code{U35C}} {MDs involvement when you trtd by specialist (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
+#'     \item{\code{U35D}} {MDs communication w/your specialists/oth MDs (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
 #'     \item{\code{U35E}} {MD help in explain what specialists said (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
 #'     \item{\code{U35F}} {Quality of specialists MD sent you to (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
 #'     \item{\code{U36}} {How many minutes to get to MDs office (1=<15, 2=16-30. 3=31-60, 4=More than 60)}
 #'     \item{\code{U37}} {When sick+call how long take to see you (1=Same day, 2=Next day, 3=In 2-3 days, 4=In 4-5 days, 5=in >5 days)}
-#'     \item{\code{U38}} {How mant minutes late appt usually begin (1=None, 2=<5 minutes, 3=6-10 minutes, 4=11-20 minutes, 5=21-30 minutes, 6=31-45 minutes, 7=>45 minutes)}
+#'     \item{\code{U38}} {How many minutes late appt usually begin (1=None, 2=<5 minutes, 3=6-10 minutes, 4=11-20 minutes, 5=21-30 minutes, 6=31-45 minutes, 7=>45 minutes)}
 #'     \item{\code{U39}} {How satisfied are you w/your regular MD (1=Completely satisfied, 2=Very satisfied, 3=Somewhat satisfied, 4=Neither, 5=Somewhat dissatisfied, 6=Very dissatisfied, 7=Completely dissatisfied)}
 #'     \item{\code{U3A}} {Has MD evr talked to you about drug use (0=No, 1=Yes)}
 #'     \item{\code{U3B}} {Has MD evr talked to you about alc use (0=No, 1=Yes)}
 #'     \item{\code{U4}} {Is there an MD you consider your regular MD (0=No, 1=Yes)}
 #'     \item{\code{U5}} {Have you seen any MDs in last 6 mos (0=No, 1=Yes)}
-#'     \item{\code{U6A}} {Would you go to this MD if med prb not emer (0=No, 1=Yes)}
+#'     \item{\code{U6A}} {Would you go to this MD if med prb not emergency (0=No, 1=Yes)}
 #'     \item{\code{U6B}} {Think one of these could be your regular MD (0=No, 1=Yes)}
-#'     \item{\code{U7A_T}} {a factor with levels \code{} \code{ARTHRITIS DOCTOR} \code{CHIROPRACTOR} \code{COCAINE STUDY} \code{DETOX DOCTOR} \code{DO} \code{EAR DOCTOR} \code{EAR SPECIALIST} \code{EAR, NOSE, & THROAT.} \code{EAR/NOSE/THROAT} \code{ENT} \code{FAMILY PHYSICIAN} \code{GENERAL MEDICINE} \code{GENERAL PRACTICE} \code{GENERAL PRACTIONER} \code{GENERAL PRACTITIONER} \code{HEAD & NECK SPECIALIST} \code{HERBAL/HOMEOPATHIC/ACUPUNCTURE} \code{ID DOCTOR} \code{MAYBE GENERAL PRACTITIONER} \code{MEDICAL STUDENT} \code{NEUROLOGIST} \code{NURSE} \code{NURSE PRACTICIONER} \code{NURSE PRACTITIONER} \code{ONCOLOGIST} \code{PRENATAL} \code{PRIMARY} \code{PRIMARY CAAE} \code{PRIMARY CARE} \code{PRIMARY CARE DOCTOR} \code{PRIMERY CARE} \code{THERAPIST} \code{UROLOGIST} \code{WOMENS CLINIC BMC}}
+#'     \item{\code{U7A_T}} {a factor with levels \code{} \code{ARTHRITIS DOCTOR} \code{CHIROPRACTOR} \code{COCAINE STUDY} \code{DETOX DOCTOR} \code{DO} \code{EAR DOCTOR} \code{EAR SPECIALIST} \code{EAR, NOSE, & THROAT.} \code{EAR/NOSE/THROAT} \code{ENT} \code{FAMILY PHYSICIAN} \code{GENERAL MEDICINE} \code{GENERAL PRACTICE} \code{GENERAL PRACTITIONER} \code{GENERAL PRACTITIONER} \code{HEAD & NECK SPECIALIST} \code{HERBAL/HOMEOPATHIC/ACUPUNCTURE} \code{ID DOCTOR} \code{MAYBE GENERAL PRACTITIONER} \code{MEDICAL STUDENT} \code{NEUROLOGIST} \code{NURSE} \code{NURSE PRACTITIONER} \code{NURSE PRACTITIONER} \code{ONCOLOGIST} \code{PRENATAL} \code{PRIMARY} \code{PRIMARY CARE} \code{PRIMARY CARE} \code{PRIMARY CARE DOCTOR} \code{PRIMARY CARE} \code{THERAPIST} \code{UROLOGIST} \code{WOMENS CLINIC BMC}}
 #'     \item{\code{U7A}} {What type of MD is your regular MD/this MD (1=OB/GYN, 2=Family medicine, 3=Pediatrician, 4=Adolescent medicine, 5=Internal medicine, 6=AIDS doctor, 7=Asthma doctor, 8=Pulmonary doctor, 9=Cardiologist, 10=Gastroen)}
 #'     \item{\code{U8A}} {Only saw this person once (=Only saw once)}
 #'     \item{\code{U8B}} {Saw this person for <6 mos (1=<6 mos)}
-#'     \item{\code{U8C}} {Saw tis person for 6 mos-1year (2=Betwn 6 mos & 1 yr)}
+#'     \item{\code{U8C}} {Saw this person for 6 mos-1year (2=Betwn 6 mos & 1 yr)}
 #'     \item{\code{U8D}} {Saw this person for 1-2 years (3=1-2 years)}
 #'     \item{\code{U8E}} {Saw this person for 3-5 years (4=3-5 years)}
 #'     \item{\code{U8F}} {Saw this person for more than 5 years (5=>5 years)}
@@ -1478,7 +1478,7 @@ NA
 #'     \item{\code{hs}} {the number of years of high school education, as listed on the application}
 #'     \item{\code{college}} {the number of years College education, as listed on the application.  Where no number was listed, this field was left blank, unless less than 12 years High School was reported, in which case it was entered as 0.}
 #'     \item{\code{dayOfBirth}} {the day of birth, as a number from 1 to 365 counting from January 1}
-#'     \item{\code{sign}} {the astrological sign, with levels \code{Aquarius} \code{Aries} \code{Cancer} \code{Capricorn} \code{Gemini} \code{Leo} \code{Libra} \code{Pisces} \code{Saggitarius} \code{Scorpio} \code{Taurus} \code{Virgo}}
+#'     \item{\code{sign}} {the astrological sign, with levels \code{Aquarius} \code{Aries} \code{Cancer} \code{Capricorn} \code{Gemini} \code{Leo} \code{Libra} \code{Pisces} \code{Sagittarius} \code{Scorpio} \code{Taurus} \code{Virgo}}
 #'   }
 #' 
 #' @details 
@@ -1628,7 +1628,7 @@ NA
 #'     \item{\code{billingDays}} {number of billing days in billing period}
 #'     \item{\code{totalbill}} {total bill (in dollars)}
 #'     \item{\code{gasbill}} {gas bill (in dollars)}
-#'     \item{\code{elecbill}} {exectric bill (in dollars)}
+#'     \item{\code{elecbill}} {electric bill (in dollars)}
 #'     \item{\code{notes}} {notes about the billing period}
 #'   }
 #' 
@@ -1667,7 +1667,7 @@ NA
 #'     \item{\code{billingDays}} {number of billing days in billing period}
 #'     \item{\code{totalbill}} {total bill (in dollars)}
 #'     \item{\code{gasbill}} {gas bill (in dollars)}
-#'     \item{\code{elecbill}} {exectric bill (in dollars)}
+#'     \item{\code{elecbill}} {electric bill (in dollars)}
 #'     \item{\code{notes}} {notes about the billing period}
 #'     \item{\code{ccfpday}} {average gas usage per day [\code{Utilities2} only]}
 #'     \item{\code{kwhpday}} {average electric usage per day [\code{Utilities2} only]}
