@@ -404,22 +404,13 @@ NA
 #'   A data frame with 1472 observations on the following variables.
 #'   \itemize{
 #'     \item{\code{ID}} {Subject ID}
-#'     \item{\code{TIME}} {Interview time point}
-#'     \item{\code{NUM_INTERVALS}} {Number of 6-month intervals from previous to current interview}
-#'     \item{\code{INT_TIME1}} {# of months from baseline to current interview}
-#'     \item{\code{DAYS_SINCE_BL}} {# of days from baseline to current interview}
-#'     \item{\code{INT_TIME2}} {# of months from previous to current interview}
-#'     \item{\code{DAYS_SINCE_PREV}} {# of days from previous to current interview}
-#'     \item{\code{PREV_TIME}} {Previous interview time}
-#'     \item{\code{DEAD}} {a numeric vector}
-#'     \item{\code{A1}} {Gender (1=Male, 2=Female)}
-#'     \item{\code{A9}} {Years of education completed}
 #'     \item{\code{A10}} {Marital Status (1=Married, 2=Remarried, 3=Widowed, 4= Separated, 5=Divorced, 6=Never Married}
 #'     \item{\code{A11A}} {Do you currently have a living mother? (0=No, 1= Yes}
 #'     \item{\code{A11B}} {Do you currently have a living father? (0=No, 1=Yes}
 #'     \item{\code{A11C}} {Do you currently have siblings? (0=No, 1=Yes}
 #'     \item{\code{A11D}} {Do you currently have a partner (0=No, 1=Yes)}
 #'     \item{\code{A11E}} {Do you currently have children? (0=No, 1=Yes)}
+#'     \item{\code{A12B_REC}} {Hollingshead category (recode) (0=Cat 1,2,3, 1=Cat 4,5,6, 2=Cat 7,8,9)}
 #'     \item{\code{A12B}} {Hollingshead categories (1=Major profess, 2= Lesser profess, 3=Minor profess, 4=Clerical/sales, 5=Skilled manual, 6=Semi-skilled, 7=Unskilled, 8= Homemaker, 9=No occupation)}
 #'     \item{\code{A13}} {Usual employment pattern in last 6 months (1=Full time, 2= Part time, 3=Student, 4=Unemployed, 5=Control envir)}
 #'     \item{\code{A14A}} {Loved alone-last 6 mos (0=No, 1=Yes)}
@@ -428,8 +419,8 @@ NA
 #'     \item{\code{A14D}} {Lived w/children-last 6 mos (0=No, 1=Yes)}
 #'     \item{\code{A14E}} {Lived w/other family-last 6 mos (0=No, 1=Yes}
 #'     \item{\code{A14F}} {Lived w/friend(s)-last 6 mos (0=No, 1=Yes)}
-#'     \item{\code{A14G}} {Lived w/other-last 6 mos (0=No, 1=Yes)}
 #'     \item{\code{A14G_T}} {a factor with levels \code{} \code{1/2 WAY HOUSE} \code{3/4 HOUSE} \code{ANCHOR INN} \code{ARMY} \code{ASSOCIATES} \code{BOARDERS} \code{BOYFRIENDS MOM} \code{CORRECTIONAL FACILIT} \code{CRACK HOUSE} \code{DEALER} \code{ENTRE FAMILIA} \code{FENWOOD} \code{GAVIN HSE} \code{GIRLFRIENDS DAUGHTE} \code{GIRLFRIENDS SON} \code{GIRLFRIENDS CHILDREN} \code{GIRLFRIENDS DAUGHTER} \code{GROUP HOME} \code{HALF-WAY HOUSE} \code{HALFWAY HOUSE} \code{HALFWAY HOUSES} \code{HALFWAY HSE} \code{HOLDING UNIT} \code{HOME BORDER} \code{HOMELESS} \code{HOMELESS SHELTER} \code{IN JAIL} \code{IN PROGRAMS} \code{INCARCERATED} \code{JAIL} \code{JAIL HALFWAY HOUSE} \code{JAIL, SHELTER} \code{JAIL, STREET} \code{JAIL/PROGRAM} \code{JAIL/SHELTER} \code{JAILS} \code{LANDLADY} \code{LANDLORD} \code{LODGING HOUSE} \code{MERIDIAN HOUSE} \code{NURSING HOME} \code{ON THE STREET} \code{PARTNERS MOTHER} \code{PARTNERS CHILD} \code{PARTNERS CHILDREN} \code{PRDGRAMS} \code{PRISON} \code{PROGRAM} \code{PROGRAM MTHP} \code{PROGRAM ROOMMATES} \code{PROGRAM SOBER HOUSE} \code{PROGRAM-RESIDENTIAL} \code{PROGRAM/HALFWAY HOUS} \code{PROGRAM/JAIL} \code{PROGRAM/SHELTER} \code{PROGRAM/SHELTERS} \code{PROGRAMS} \code{PROGRAMS SUBSTANCE} \code{PROGRAMS/SHELTER} \code{PROGRAMS/SHELTERS} \code{PROGRAMS/SHELTERS/DE} \code{PROJECT SOAR} \code{RESIDENTIAL FACILITY} \code{RESIDENTIAL PROGRAM} \code{ROOMING HOUSE} \code{ROOMING HOUSE (RELIG} \code{ROOMMATE} \code{ROOMMATES} \code{ROOMMATES AT TRANSIT} \code{RYAN HOUSE} \code{SALVATION ARMY} \code{SHELTER} \code{SHELTER/HALFWAY HSE} \code{SHELTER/HOTEL} \code{SHELTER/PROGRAM} \code{SHELTERS} \code{SHELTERS/HOSPITALS} \code{SHELTERS/JAIL} \code{SHELTERS/PROGRAMS} \code{SHELTERS/STREETS} \code{SOBER HOUSE} \code{SOBER HOUSING} \code{SOUTH BAY JAIL} \code{STEPSON} \code{STREET} \code{STREETS} \code{SUBSTANCE ABUSE TREA} \code{TRANSITIONAL HOUSE} \code{VA SHELTER}}
+#'     \item{\code{A14G}} {Lived w/other-last 6 mos (0=No, 1=Yes)}
 #'     \item{\code{A15A}} {#nights in ovrnight shelter-last 6 mos}
 #'     \item{\code{A15B}} {# nights on street-last 6 mos}
 #'     \item{\code{A15C}} {#months in jail-last 6 mos}
@@ -444,9 +435,31 @@ NA
 #'     \item{\code{A17F}} {Received unemployment benefits-past 6 mos (0=No, 1=Yes)}
 #'     \item{\code{A17G}} {Received Workman's Comp-past 6 mos (0=No, 1=Yes)}
 #'     \item{\code{A17H}} {Received Child Support-past 6 mos (0=No, 1=Yes)}
-#'     \item{\code{A17I}} {Received other income-past 6 mos (0=No, 1=Yes)}
 #'     \item{\code{A17I_T}} {a factor with levels \code{} \code{DISABLED VETERAN} \code{EBT (FOOD STAMPS)} \code{EMERGENCY FOOD STAMP} \code{FOOD STAMP} \code{FOOD STAMPS} \code{FOOD STAMPS/VETERAN} \code{FOOD STAMPS/VETERANS} \code{INSURANCE SETTLEMENT} \code{PENSION CHECK} \code{SECTION 8} \code{SERVICE CONNECTED DI} \code{SOCIAL SECURITY} \code{SSDI FOR SON} \code{SURVIVORS BENEFITS} \code{TEMPORARY DISABILITY} \code{VA BENEFITS-DISABILI} \code{VA COMPENSATION} \code{VA DISABILITY PENSIO} \code{VETERAN BENEFITS} \code{VETERANS SERVICES} \code{VETERANS AFFAIRS}}
+#'     \item{\code{A17I}} {Received other income-past 6 mos (0=No, 1=Yes)}
+#'     \item{\code{A18_REC1}} {Most money made in 1 yr (recode)  (0=$19,000 or less, 1=$20,000-$49,000, 2=$50,000 or more)}
+#'     \item{\code{A18_REC2}} {Most money made-continuous recode}
 #'     \item{\code{A18}} {Most money made in any 1 year-last 5 yrs (1=<5000, 2=5000-10000, 3=11000-19000, 4=20000-29000, 5=30000-39000, 6=40000-49000, 7=50000+}
+#'     \item{\code{A1}} {Gender (1=Male, 2=Female)}
+#'     \item{\code{A9}} {Years of education completed}
+#'     \item{\code{ABUSE2}} {Type of abuse (0=No abuse, 1=Physical only, 2=Sexual only, 3=Physical and sexual)}
+#'     \item{\code{ABUSE3}} {Type of abuse (0=No abuse, 1=Physical only, 2=Sexual +/- physical (0=No, 1=Yes)}
+#'     \item{\code{ABUSE}} {Abuse-physical or sexual (0=No abuse, 1= Family abuse, 2= Stranger only abuse)}
+#'     \item{\code{AGE}} {Age in years}
+#'     \item{\code{ALCOHOL}} {1st/2nd drug of coice=Alcohol (0=No, 1=Yes)}
+#'     \item{\code{ALCQ_30}} {Total number drinks past 30 days}
+#'     \item{\code{ALONE6M}} {Usually lived alone past 6m y/n (0=No, 1=Yes)}
+#'     \item{\code{ALT_TRT}} {Alternative tratments y/n (0=No, 1=Yes)}
+#'     \item{\code{ANYSUBSTATUS}} {Used alcohol, heroin, or cocaine since leaving detox-6m}
+#'     \item{\code{ANY_INS}} {Did you have health insurance past 6 m (0=No, 1=Yes)}
+#'     \item{\code{ANY_UTIL}} {Amy recent health utilization (0=No, 1=Yes)}
+#'     \item{\code{ANY_VIS_CUMUL}} {Cumulative # visits to regular doctor's office}
+#'     \item{\code{ANY_VIS}} {# visits to regular doctor's office--This time point}
+#'     \item{\code{B10}} {Amyphys/em prb intf w/soc act-lst 4 wks (1All of the time, 2=Most of the time, 3=Some of the time, 4= A lttle of time, 5= Non of the time)}
+#'     \item{\code{B11A}} {I seem to get sick easier than oth peop (1=Definitely true, 2=Mostly True, 3=Don't know, 4=Mostly false, 5=Definitely false)}
+#'     \item{\code{B11B}} {I am as healthy as anybody I know (1=Definitely true, 2=Mostly true, 3=Don't know, 4=Mostly false, 5=Definitely False)}
+#'     \item{\code{B11C}} {I expect my health to get worse (1=Definitely true, 2=Mostly true, 3=Don't know, 3=Mostly false, 5=Definitely false)}
+#'     \item{\code{B11D}} {My health is excellent (1=Definitely true, 2=Mostly true, 3=Don't know, 4=Mostly false, 5=Definitely false)}
 #'     \item{\code{B1}} {In general, how is your health (1=Excellent, 2=Very Good, 3=Good, 4=Fair, 5=Poor)}
 #'     \item{\code{B2}} {Comp to 1 yr ago, how is your health now (1=Much better, 2=Somewhat better, 3=About the same, 4=Somewhat worse, 5=Much worse)}
 #'     \item{\code{B3A}} {Does health limit you in vigorous activity (1=Limited a lot, 2=Limited a little, 3=Not limited)}
@@ -478,11 +491,8 @@ NA
 #'     \item{\code{B9G}} {Did you feel worn out-past 4 wks (1=All of the time, 2=Most of the time, 3 = Good bit of the time, 4=Some of the time, 5=A little of time, 6=None of the time)}
 #'     \item{\code{B9H}} {Have you been a happy pers-past 4 wks (1=All of the time, 2=Most of the time, 3 = Good bit of the time, 4=Some of the time, 5=A little of time, 6=None of the time)}
 #'     \item{\code{B9I}} {Did you feel tired-past 4 wks (1=All of the time, 2=Most of the time, 3 = Good bit of the time, 4=Some of the time, 5=A little of time, 6=None of the time)}
-#'     \item{\code{B10}} {Amyphys/em prb intf w/soc act-lst 4 wks (1All of the time, 2=Most of the time, 3=Some of the time, 4= A lttle of time, 5= Non of the time)}
-#'     \item{\code{B11A}} {I seem to get sick easier than oth peop (1=Definitely true, 2=Mostly True, 3=Don't know, 4=Mostly false, 5=Definitely false)}
-#'     \item{\code{B11B}} {I am as healthy as anybody I know (1=Definitely true, 2=Mostly true, 3=Don't know, 4=Mostly false, 5=Definitely False)}
-#'     \item{\code{B11C}} {I expect my health to get worse (1=Definitely true, 2=Mostly true, 3=Don't know, 3=Mostly false, 5=Definitely false)}
-#'     \item{\code{B11D}} {My health is excellent (1=Definitely true, 2=Mostly true, 3=Don't know, 4=Mostly false, 5=Definitely false)}
+#'     \item{\code{BIRTHPLC}} {Where born (recode) (0=USA, 1=Foreign)}
+#'     \item{\code{BP}} {SF-36 pain index (0-100)}
 #'     \item{\code{C1A}} {Tolf by MD had seix, epil, convuls (0=No, 1=Yes)}
 #'     \item{\code{C1B}} {Told by MD had asth, emphys, chr lung dis (0=No, 1=Yes)}
 #'     \item{\code{C1C}} {Told by MD had MI (0=No, 1=Yes)}
@@ -566,13 +576,104 @@ NA
 #'     \item{\code{C3H3}} {Have you had PID in last 6 mos (0=No, 1=Yes)}
 #'     \item{\code{C3I}} {Have you ever had a Pap smear (0=No, 1=Yes)}
 #'     \item{\code{C3J}} {Have you had a Pap smear in last 3 years (0=No, 1=Yes)}
-#'     \item{\code{C3K}} {Are you pregnant (0=No, 1=Yes)}
 #'     \item{\code{C3K_M}} {How many mos pregnant}
+#'     \item{\code{C3K}} {Are you pregnant (0=No, 1=Yes)}
+#'     \item{\code{CESD_CUT}} {CES-D score > 21 y/n (0=No, 1=Yes)}
+#'     \item{\code{CES_D}} {CES-D score, measure of depressive symptoms, high scores are worse}
+#'     \item{\code{CHR_6M}} {Chronic medical conds/HIV-past 6m y/n (0=No, 1=Yes)}
+#'     \item{\code{CHR_EVER}} {Chronic medical conds/HIV-ever y/n (0=No, 1=Yes)}
+#'     \item{\code{CHR_SUM}} {Sum chronic medican conds/HIV ever}
+#'     \item{\code{CNTRL}} {InDUC-2L-Control score}
+#'     \item{\code{COC_HER}} {1st/2nd drug of choice=cocaine or heroine (0=No, 1=Yes)}
+#'     \item{\code{CUAD_C}} {CUAD-Cocaine}
+#'     \item{\code{CUAD_H}} {CUAD-Heroin}
+#'     \item{\code{CURPHYAB}} {Current abuse-physical (0=No, 1=Yes)}
+#'     \item{\code{CURPHYSEXAB}} {Curent abuse-physical or sexual (0=No abuse, 1=Physical only, 2=Sexual +/- physical)}
+#'     \item{\code{CURSEXAB}} {Current abuse-sexual (0=No, 1=Yes)}
+#'     \item{\code{C_AU}} {ASI-Composite score for alcohol use}
+#'     \item{\code{C_DU}} {ASI-Composite score for drug use}
+#'     \item{\code{C_MS}} {ASI-Composite medical status}
 #'     \item{\code{D1}} {$ of times hospitalized for med probs}
 #'     \item{\code{D2}} {Take prescr med regularly for phys prob (0=No, 1=Yes)}
+#'     \item{\code{D3_REC}} {Any medical problems past 30d y/n (0=No, 1=Yes)}
 #'     \item{\code{D3}} {# days had med probs-30 days bef detox}
+#'     \item{\code{D4_REC}} {Bothered by medical problems y/n (0=No, 1=Yes)}
 #'     \item{\code{D4}} {How bother by med prob-30days bef detox (0=Not at all, 1=Slightly, 2=Moderately, 3=Considerably, 4=Extremely)}
+#'     \item{\code{D5_REC}} {Medical trtmt is important y/n (0=No, 1=Yes)}
 #'     \item{\code{D5}} {How import is trtmnt for these med probs (0=Not at all, 1=Slightly, 2= Moderately, 3= Considerably, 4= Extremely}
+#'     \item{\code{DAYSANYSUB}} {time (days) from baseline to first alcohol, heroin, or cocaine since leaving detox-6m}
+#'     \item{\code{DAYSDRINK}} {Time (days) from baseline to first drink since leaving detox-6m}
+#'     \item{\code{DAYSLINK}} {Time (days) to linkage to primary care within 12 months (by administrative record)}
+#'     \item{\code{DAYS_SINCE_BL}} {# of days from baseline to current interview}
+#'     \item{\code{DAYS_SINCE_PREV}} {# of days from previous to current interview}
+#'     \item{\code{DEAD}} {a numeric vector}
+#'     \item{\code{DEC_AM}} {SOCRATES-Ambivalence-Decile}
+#'     \item{\code{DEC_RE}} {SOCRATES-Recognition-Decile}
+#'     \item{\code{DEC_TS}} {SOCRATES-Taking steps-Decile}
+#'     \item{\code{DRINKSTATUS}} {Drank alcohol since leaving detox-6m}
+#'     \item{\code{DRUGRISK}} {RAB-Drug risk total}
+#'     \item{\code{E10A}} {have you been to med clinic-lst 6 mos (0=No, 1=Yes)}
+#'     \item{\code{E10B1_R}} {Mental health treatment past 6m y/n (0=No, 1=Yes)}
+#'     \item{\code{E10B1}} {# x visit ment hlth clin/prof-lst 6 mos}
+#'     \item{\code{E10B2_R}} {Med clinic/private MD past 6m y/n (0=No, 1=Yes)}
+#'     \item{\code{E10B2}} {# x visited med clin/priv MD-lst 6 mos}
+#'     \item{\code{E10C19}} {Visited private MD-last 6 mos (0=No, 1=Yes)}
+#'     \item{\code{E11A}} {Did you stay ovrnite/+ in hosp-lst 6 mos (0=No, 1=Yes)}
+#'     \item{\code{E11B}} {# times ovrnight/+ in hosp-last 6 mos }
+#'     \item{\code{E11C}} {Total # nights in hosp-last 6 mos}
+#'     \item{\code{E12A}} {Visited Hosp ER for med care-past 6 mos (0=No, 1=Yes)}
+#'     \item{\code{E12B}} {# times visited hosp ER-last 6 mos}
+#'     \item{\code{E13}} {Tlt # visits to MDs-lst 2 wks bef detox}
+#'     \item{\code{E14A}} {Recd trtmt from acupuncturist-last 6 mos (0=No, 1=Yes)}
+#'     \item{\code{E14B}} {Recd trtmt from chiropractor-last 6 mos (0=No, 1=Yes)}
+#'     \item{\code{E14C}} {Trtd by hol/herb/hom med prac-lst 6 mos (0=No, 1=Yes)}
+#'     \item{\code{E14D}} {Recd trtmt from spirit healer-lst 6 mos (0=No, 1=Yes)}
+#'     \item{\code{E14E}} {Have you had biofeedback-last 6 mos (0=No, 1=Yes)}
+#'     \item{\code{E14F}} {Have you underwent hypnosis-lst 6 mos (0=No, 1=Yes)}
+#'     \item{\code{E14G}} {Received other treatment-last 6 mos (0=No, 1=Yes)}
+#'     \item{\code{E15A}} {Tried to get subst ab services-lst 6 mos (0=No, 1=Yes)}
+#'     \item{\code{E15B}} {Always able to get subst ab servies (0=No, 1=Yes)}
+#'     \item{\code{E15C10}} {My insurance didn't cover services (0=No, 1=Yes)}
+#'     \item{\code{E15C11}} {There were no beds available at the prog (0=No, 1=Yes)}
+#'     \item{\code{E15C12}} {Other reason not get sub ab services (0=No, 1=Yes)}
+#'     \item{\code{E15C1}} {I could not pay for services (0=No, 1=Yes)}
+#'     \item{\code{E15C2}} {I did not know where to go for help (0=No, 1=Yes)}
+#'     \item{\code{E15C3}} {Couldn't get to services due to transp prob (0=No, 1=Yes)}
+#'     \item{\code{E15C4}} {The offie/clinic hrs were inconvenient (0=No, 1=Yes)}
+#'     \item{\code{E15C5}} {Didn't speak/understnd Englsh well enough (0=No, 1=Yes)}
+#'     \item{\code{E15C6}} {Afraid other might find out about prob (0=No, 1=Yes)}
+#'     \item{\code{E15C7}} {My substance abuse interfered (0=No, 1=Yes)}
+#'     \item{\code{E15C8}} {Didn't have someone to watch my children (0=No, 1=Yes)}
+#'     \item{\code{E15C9}} {I did not want to lose my job (0=No, 1=Yes)}
+#'     \item{\code{E16A10}} {I do not want to lose my job (0=No, 1=Yes)}
+#'     \item{\code{E16A11}} {My insurance doesn't cover charges (0=No, 1=Yes)}
+#'     \item{\code{E16A12}} {I do not feel I need a regular MD (0=No, 1=Yes)}
+#'     \item{\code{E16A13}} {Other reasons don't have regular MD (0=No, 1=Yes)}
+#'     \item{\code{E16A1}} {I cannot pay for services (0=No, 1=Yes)}
+#'     \item{\code{E16A2}} {I am not eligible for free care (0=No, 1=Yes)}
+#'     \item{\code{E16A3}} {I do not know where to go (0=No, 1=Yes)}
+#'     \item{\code{E16A4}} {Can't get to services due to trans prob (0=No, 1=Yes)}
+#'     \item{\code{E16A5}} {a numeric vectorOffice/clinic hours are inconvenient (0=No, 1=Yes)}
+#'     \item{\code{E16A6}} {I don't speak/understnd enough English (0=No, 1=Yes)}
+#'     \item{\code{E16A7}} {Afraid othrs find out about my hlth prob (0=No, 1=Yes)}
+#'     \item{\code{E16A8}} {My substance abuse interferes (0=No, 1=Yes)}
+#'     \item{\code{E16A9}} {I don't have someone to watch my childrn (0=No, 1=Yes)}
+#'     \item{\code{E16A_DD}} {Barrier to regular MD: dislike docs/system (0=No, 1=Yes)}
+#'     \item{\code{E16A_IB}} {Barrier to regular MD: internal barriers (0=No, 1=Yes)}
+#'     \item{\code{E16A_RT}} {Barrier to regular MD: red tape (0=No, 1=Yes)}
+#'     \item{\code{E16A_TM}} {Barrier to regular MD: time restrictions (0=No, 1=Yes)}
+#'     \item{\code{E18A}} {I could not pay for services (0=No, 1=Yes)}
+#'     \item{\code{E18B}} {I did not know where to go for help (0=No, 1=Yes)}
+#'     \item{\code{E18C}} {Couldn't get to services due to transp prob (0=No, 1=Yes)}
+#'     \item{\code{E18D}} {The office/clinic hrs were inconvenient (0=No, 1=Yes)}
+#'     \item{\code{E18F}} {Afraid others might find out about prob (0=No, 1=Yes)}
+#'     \item{\code{E18G}} {My substance abuse interfered (0=No, 1=Yes)}
+#'     \item{\code{E18H}} {Didn't have someone to watch my children (0=No, 1=Yes)}
+#'     \item{\code{E18I}} {I did not want to lose my job (0=No, 1=Yes)}
+#'     \item{\code{E18J}} {My insurance didn't cover services (0=No, 1=Yes)}
+#'     \item{\code{E18K}} {There were no beds available at the prog (0=No, 1=Yes)}
+#'     \item{\code{E18L}} {I do not need substance abuse services (0=No, 1=Yes)}
+#'     \item{\code{E18M}} {Other reason not get sub ab services (0=No, 1=Yes)}
 #'     \item{\code{E2A}} {Detox prog for alc or drug prob-lst 6 mos (0=No, 1=Yes)}
 #'     \item{\code{E2B}} {# times entered a detox prog-lst 6 mos}
 #'     \item{\code{E2C}} {# nights ovrnight in detox prg-lst 6 mos}
@@ -593,62 +694,9 @@ NA
 #'     \item{\code{E8A4}} {Oth source cnsl for alcohol/drug prb-lst 6 mos (0=No, 1=Yes)}
 #'     \item{\code{E9A}} {AA/NA/slf-hlp for drug/alcohol/emot-lst 6 mos (0=No, 1=Yes)}
 #'     \item{\code{E9B}} {How often attend AA/NA/slf-hlp-lst 6 mos (1=Daily, 2=2-3 Times/week, 3=Weekly, 4=Every 2 weeks, 5=Once/month}
-#'     \item{\code{E10A}} {have you been to med clinic-lst 6 mos (0=No, 1=Yes)}
-#'     \item{\code{E10B1}} {# x visit ment hlth clin/prof-lst 6 mos}
-#'     \item{\code{E10B2}} {# x visited med clin/priv MD-lst 6 mos}
-#'     \item{\code{E10C19}} {Visited private MD-last 6 mos (0=No, 1=Yes)}
-#'     \item{\code{E11A}} {Did you stay ovrnite/+ in hosp-lst 6 mos (0=No, 1=Yes)}
-#'     \item{\code{E11B}} {# times ovrnight/+ in hosp-last 6 mos }
-#'     \item{\code{E11C}} {Total # nights in hosp-last 6 mos}
-#'     \item{\code{E12A}} {Visited Hosp ER for med care-past 6 mos (0=No, 1=Yes)}
-#'     \item{\code{E12B}} {# times visited hosp ER-last 6 mos}
-#'     \item{\code{E13}} {Tlt # visits to MDs-lst 2 wks bef detox}
-#'     \item{\code{E14A}} {Recd trtmt from acupuncturist-last 6 mos (0=No, 1=Yes)}
-#'     \item{\code{E14B}} {Recd trtmt from chiropractor-last 6 mos (0=No, 1=Yes)}
-#'     \item{\code{E14C}} {Trtd by hol/herb/hom med prac-lst 6 mos (0=No, 1=Yes)}
-#'     \item{\code{E14D}} {Recd trtmt from spirit healer-lst 6 mos (0=No, 1=Yes)}
-#'     \item{\code{E14E}} {Have you had biofeedback-last 6 mos (0=No, 1=Yes)}
-#'     \item{\code{E14F}} {Have you underwent hypnosis-lst 6 mos (0=No, 1=Yes)}
-#'     \item{\code{E14G}} {Received other treatment-last 6 mos (0=No, 1=Yes)}
-#'     \item{\code{E15A}} {Tried to get subst ab services-lst 6 mos (0=No, 1=Yes)}
-#'     \item{\code{E15B}} {Always able to get subst ab servies (0=No, 1=Yes)}
-#'     \item{\code{E15C1}} {I could not pay for services (0=No, 1=Yes)}
-#'     \item{\code{E15C2}} {I did not know where to go for help (0=No, 1=Yes)}
-#'     \item{\code{E15C3}} {Couldn't get to services due to transp prob (0=No, 1=Yes)}
-#'     \item{\code{E15C4}} {The offie/clinic hrs were inconvenient (0=No, 1=Yes)}
-#'     \item{\code{E15C5}} {Didn't speak/understnd Englsh well enough (0=No, 1=Yes)}
-#'     \item{\code{E15C6}} {Afraid other might find out about prob (0=No, 1=Yes)}
-#'     \item{\code{E15C7}} {My substance abuse interfered (0=No, 1=Yes)}
-#'     \item{\code{E15C8}} {Didn't have someone to watch my children (0=No, 1=Yes)}
-#'     \item{\code{E15C9}} {I did not want to lose my job (0=No, 1=Yes)}
-#'     \item{\code{E15C10}} {My insurance didn't cover services (0=No, 1=Yes)}
-#'     \item{\code{E15C11}} {There were no beds available at the prog (0=No, 1=Yes)}
-#'     \item{\code{E15C12}} {Other reason not get sub ab services (0=No, 1=Yes)}
-#'     \item{\code{E16A1}} {I cannot pay for services (0=No, 1=Yes)}
-#'     \item{\code{E16A2}} {I am not eligible for free care (0=No, 1=Yes)}
-#'     \item{\code{E16A3}} {I do not know where to go (0=No, 1=Yes)}
-#'     \item{\code{E16A4}} {Can't get to services due to trans prob (0=No, 1=Yes)}
-#'     \item{\code{E16A5}} {a numeric vectorOffice/clinic hours are inconvenient (0=No, 1=Yes)}
-#'     \item{\code{E16A6}} {I don't speak/understnd enough English (0=No, 1=Yes)}
-#'     \item{\code{E16A7}} {Afraid othrs find out about my hlth prob (0=No, 1=Yes)}
-#'     \item{\code{E16A8}} {My substance abuse interferes (0=No, 1=Yes)}
-#'     \item{\code{E16A9}} {I don't have someone to watch my childrn (0=No, 1=Yes)}
-#'     \item{\code{E16A10}} {I do not want to lose my job (0=No, 1=Yes)}
-#'     \item{\code{E16A11}} {My insurance doesn't cover charges (0=No, 1=Yes)}
-#'     \item{\code{E16A12}} {I do not feel I need a regular MD (0=No, 1=Yes)}
-#'     \item{\code{E16A13}} {Other reasons don't have regular MD (0=No, 1=Yes)}
-#'     \item{\code{E18A}} {I could not pay for services (0=No, 1=Yes)}
-#'     \item{\code{E18B}} {I did not know where to go for help (0=No, 1=Yes)}
-#'     \item{\code{E18C}} {Couldn't get to services due to transp prob (0=No, 1=Yes)}
-#'     \item{\code{E18D}} {The office/clinic hrs were inconvenient (0=No, 1=Yes)}
-#'     \item{\code{E18F}} {Afraid others might find out about prob (0=No, 1=Yes)}
-#'     \item{\code{E18G}} {My substance abuse interfered (0=No, 1=Yes)}
-#'     \item{\code{E18H}} {Didn't have someone to watch my children (0=No, 1=Yes)}
-#'     \item{\code{E18I}} {I did not want to lose my job (0=No, 1=Yes)}
-#'     \item{\code{E18J}} {My insurance didn't cover services (0=No, 1=Yes)}
-#'     \item{\code{E18K}} {There were no beds available at the prog (0=No, 1=Yes)}
-#'     \item{\code{E18L}} {I do not need substance abuse services (0=No, 1=Yes)}
-#'     \item{\code{E18M}} {Other reason not get sub ab services (0=No, 1=Yes)}
+#'     \item{\code{EPI_6M2B}} {Episodic(C2A-C2O)-6m y/n (0=No, 1=Yes)}
+#'     \item{\code{EPI_6M}} {Episodic (C2A-C2O,C2R-C2U, STD)-6m y/n (0=No, 1=Yes)}
+#'     \item{\code{EPI_SUM}} {Sum episodic (C2A-C2O, C2R-C2U, STD)-6m}
 #'     \item{\code{F1A}} {Bothered by thngs not gen boethered by (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
 #'     \item{\code{F1B}} {My appretite was poor (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
 #'     \item{\code{F1C}} {Couldn't shake blues evn w/fam+frnds hlp (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
@@ -669,49 +717,32 @@ NA
 #'     \item{\code{F1R}} {I felt sad (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
 #'     \item{\code{F1S}} {I felt that people dislike me (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
 #'     \item{\code{F1T}} {I could not get going (0=Rarely/never, 1=Some of the time, 2=Occas/moderately, 3=Most of the time)}
-#'     \item{\code{G1A}} {Diff contr viol beh for sig time per evr (0=No, 1=Yes)}
+#'     \item{\code{FAMABUSE}} {Family abuse-physical or sexual (0=No, 1=Yes)}
+#'     \item{\code{FRML_SAT}} {Formal substance abuse treatment y/n (0=No, 1=Yes)}
 #'     \item{\code{G1A_30}} {Diff contr viol beh-sig per lst 30 days (0=No, 1=Yes)}
-#'     \item{\code{G1B}} {Ever had thoughts of suicide (0=No, 1=Yes)}
+#'     \item{\code{G1A}} {Diff contr viol beh for sig time per evr (0=No, 1=Yes)}
 #'     \item{\code{G1B_30}} {Had thoughts of suicide-lst 30 days (0=No, 1=Yes)}
-#'     \item{\code{G1C}} {Attempted suicide ever (0=No, 1=Yes)}
+#'     \item{\code{G1B_REC}} {Suicidal thoughs past 30 days y/n (0=No, 1=Yes)}
+#'     \item{\code{G1B}} {Ever had thoughts of suicide (0=No, 1=Yes)}
 #'     \item{\code{G1C_30}} {Attempted suicide-lst 30 days (0=No, 1=Yes)}
-#'     \item{\code{G1D}} {Prescr med for pst/emot prob ever (0=No, 1=Yes)}
+#'     \item{\code{G1C}} {Attempted suicide ever (0=No, 1=Yes)}
 #'     \item{\code{G1D_30}} {Prescr med for psy/emot prob-lst 30 days (0=No, 1=Yes)}
-#'     \item{\code{H1_30}} {# days in past 30 bef detox used alcohol}
-#'     \item{\code{H1_LT}} {# yrs regularly used alcohol}
-#'     \item{\code{H1_RT}} {Route of administration use alcohol (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
-#'     \item{\code{H2_30}} {#days in 3- bef detox use alc to intox}
-#'     \item{\code{H2_LT}} {# yrs regularly used alcohol to intox}
-#'     \item{\code{H2_RT}} {Route of admin use alcohol to intox (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
-#'     \item{\code{H3_30}} {# days in past 30 bef detox used heroin}
-#'     \item{\code{H3_LT}} {# yrs regularly used heroin}
-#'     \item{\code{H3_RT}} {Route of administration of heroin (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
-#'     \item{\code{H4_30}} {# days used methadone-lst 30 bef detox}
-#'     \item{\code{H4_LT}} {# yrs regularly used methadone}
-#'     \item{\code{H4_RT}} {Route of administration of methadone (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
-#'     \item{\code{H5_30}} {# days used opi/analg-lst 30 bef detox}
-#'     \item{\code{H5_LT}} {# yrs regularly used oth opiates/analg}
-#'     \item{\code{H5_RT}} {Route of admin of oth opiates/analg (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
-#'     \item{\code{H6_30}} {# days in past 30 bef detox used barbit}
-#'     \item{\code{H6_LT}} {# yrs regularly used barbiturates}
-#'     \item{\code{H6_RT}} {Route of admin of barbiturates (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
-#'     \item{\code{H7_30}} {# days used sed/hyp/trnq-lst 30 bef det}
-#'     \item{\code{H7_LT}} {# yrs regularly used sed/hyp/trnq}
-#'     \item{\code{H7_RT}} {Route of admin of sed/hyp/trnq (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
-#'     \item{\code{H8_30}} {# days in lst 30 bef detox used cocaine}
-#'     \item{\code{H8_LT}} {# yrs regularly used cocaine}
-#'     \item{\code{H8_RT}} {Route of admin of cocaine (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
-#'     \item{\code{H9_30}} {# days in lst 30 bef detox used amphet}
-#'     \item{\code{H9_LT}} {# yrs regularly used amphetamines}
-#'     \item{\code{H9_RT}} {Route of admin of amphetamines (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
+#'     \item{\code{G1D_REC}} {Prescribed psych meds past 30 daus y/n (0=No, 1=Yes)}
+#'     \item{\code{G1D}} {Prescr med for pst/emot prob ever (0=No, 1=Yes)}
+#'     \item{\code{GH}} {SF-36 general health perceptions (0-100)}
+#'     \item{\code{GOV_SUPP}} {Received governemtn support past 6 m (0=No, 1=Yes)}
+#'     \item{\code{GROUP}} {Randomization Group (0=Control, 1=Clinic)}
 #'     \item{\code{H10_30}} {# days in lst 30 bef detox used cannabis}
 #'     \item{\code{H10_LT}} {# yrs regularly used cannabis}
+#'     \item{\code{H10_PRB}} {Problem sub: marijuana, cannabis (0=No, 1=Yes)}
 #'     \item{\code{H10_RT}} {Route of admin of cannabis (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
 #'     \item{\code{H11_30}} {# days in lst 30 bef detox used halluc}
 #'     \item{\code{H11_LT}} {# yrs regularly used hallucinogens}
+#'     \item{\code{H11_PRB}} {Problem sub: hallucinogens (0=No, 1=Yes)}
 #'     \item{\code{H11_RT}} {Route of admin of hallucinogens (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
 #'     \item{\code{H12_30}} {# days in lst 30 bef detox used inhalant}
 #'     \item{\code{H12_LT}} {# yrs regularly used inhalants}
+#'     \item{\code{H12_PRB}} {Problem sub: inhalants (0=No, 1=Yes)}
 #'     \item{\code{H12_RT}} {Route of admin of inhalants (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
 #'     \item{\code{H13_30}} {# days used >1 sub/day-lst 30 bef detox}
 #'     \item{\code{H13_LT}} {# yrs regularly used >1 subst/day}
@@ -727,6 +758,44 @@ NA
 #'     \item{\code{H18B}} {How troubled by drug probs-lst 30 days (0=Not at all, 1=Slightly, 2=Moderately, 3=Considerably, 4=Extremely)}
 #'     \item{\code{H19A}} {How import is trtmnt for alc probs now (0=Not at all, 1=Slightly, 2=Moderately, 3=Considerably, 4=Extremely)}
 #'     \item{\code{H19B}} {How importy is trtmnt for drug probs now (0=Not at all, 1=Slightly, 2=Moderately, 3=Considerably, 4=Extremely)}
+#'     \item{\code{H1_30}} {# days in past 30 bef detox used alcohol}
+#'     \item{\code{H1_LT}} {# yrs regularly used alcohol}
+#'     \item{\code{H1_RT}} {Route of administration use alcohol (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
+#'     \item{\code{H2_30}} {#days in 3- bef detox use alc to intox}
+#'     \item{\code{H2_LT}} {# yrs regularly used alcohol to intox}
+#'     \item{\code{H2_PRB}} {Problem sub: alc to intox (0=No, 1=Yes)}
+#'     \item{\code{H2_RT}} {Route of admin use alcohol to intox (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
+#'     \item{\code{H3_30}} {# days in past 30 bef detox used heroin}
+#'     \item{\code{H3_LT}} {# yrs regularly used heroin}
+#'     \item{\code{H3_PRB}} {Problem sub: heroin (0=No, 1=Yes)}
+#'     \item{\code{H3_RT}} {Route of administration of heroin (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
+#'     \item{\code{H4_30}} {# days used methadone-lst 30 bef detox}
+#'     \item{\code{H4_LT}} {# yrs regularly used methadone}
+#'     \item{\code{H4_PRB}} {Problem sub: methadone (0=No, 1=Yes)}
+#'     \item{\code{H4_RT}} {Route of administration of methadone (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
+#'     \item{\code{H5_30}} {# days used opi/analg-lst 30 bef detox}
+#'     \item{\code{H5_LT}} {# yrs regularly used oth opiates/analg}
+#'     \item{\code{H5_PRB}} {Problem sub: oth opiates/analg (0=No, 1=Yes)}
+#'     \item{\code{H5_RT}} {Route of admin of oth opiates/analg (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
+#'     \item{\code{H6_30}} {# days in past 30 bef detox used barbit}
+#'     \item{\code{H6_LT}} {# yrs regularly used barbiturates}
+#'     \item{\code{H6_PRB}} {Problem sub: barbituates (0=No, 1=Yes)}
+#'     \item{\code{H6_RT}} {Route of admin of barbiturates (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
+#'     \item{\code{H7_30}} {# days used sed/hyp/trnq-lst 30 bef det}
+#'     \item{\code{H7_LT}} {# yrs regularly used sed/hyp/trnq}
+#'     \item{\code{H7_PRB}} {Problem sub: sedat/hyp/tranq (0=No, 1=Yes)}
+#'     \item{\code{H7_RT}} {Route of admin of sed/hyp/trnq (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
+#'     \item{\code{H8_30}} {# days in lst 30 bef detox used cocaine}
+#'     \item{\code{H8_LT}} {# yrs regularly used cocaine}
+#'     \item{\code{H8_PRB}} {Problem sub: cocaine (0=No, 1=Yes)}
+#'     \item{\code{H8_RT}} {Route of admin of cocaine (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
+#'     \item{\code{H9_30}} {# days in lst 30 bef detox used amphet}
+#'     \item{\code{H9_LT}} {# yrs regularly used amphetamines}
+#'     \item{\code{H9_PRB}} {Problem sub: amphetamines (0=No, 1=Yes)}
+#'     \item{\code{H9_RT}} {Route of admin of amphetamines (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
+#'     \item{\code{HOMELESS}} {Homeless-shelter/street past 6 m (0=No, 1=Yes)}
+#'     \item{\code{HS_GRAD}} {High school graduate (0=No, 1=Yes)}
+#'     \item{\code{HT}} {Raw SF-36 health transition item}
 #'     \item{\code{I1}} {Avg # drinks in lst 30 days bef detox}
 #'     \item{\code{I2}} {Most drank any 1 day in lst 30 bef detox}
 #'     \item{\code{I3}} {On days used heroin, avg # bags used}
@@ -737,6 +806,16 @@ NA
 #'     \item{\code{I7A}} {Mst bgs cocaine use any 1 day-30 bef det}
 #'     \item{\code{I7B}} {Mst rcks cocaine use any 1 day-30 bef det}
 #'     \item{\code{I8}} {Avg $ amt of cocaine used per day}
+#'     \item{\code{IMPUL2}} {InDUC-2L-Impulse control-Raw (w/0 M23)}
+#'     \item{\code{IMPUL}} {InDUL-2L-Impulse control-Raw}
+#'     \item{\code{INDTOT2}} {InDUC-2L-Total drlnC-Raw- w/o M23 and M48}
+#'     \item{\code{INDTOT}} {InDUC-2LTotal drlnC sore-Raw}
+#'     \item{\code{INTER}} {InDUC-2L-Interpersonal-Raw}
+#'     \item{\code{INTRA}} {InDUC-2L-Intrapersonal-Raw}
+#'     \item{\code{INT_TIME1}} {# of months from baseline to current interview}
+#'     \item{\code{INT_TIME2}} {# of months from previous to current interview}
+#'     \item{\code{J10A}} {Get phys sick when stop using heroin (0=No, 1=Yes)}
+#'     \item{\code{J10B}} {Ever use heroin to prevent getting sick (0=No, 1=Yes)}
 #'     \item{\code{J1}} {Evr don't stop using cocaine when should (0=No, 1=Yes)}
 #'     \item{\code{J2}} {Ever tried to cut down on cocaine (0=No, 1=Yes)}
 #'     \item{\code{J3}} {Does cocaine take up a lot of your time (0=No, 1=Yes)}
@@ -747,20 +826,11 @@ NA
 #'     \item{\code{J7}} {Ever tried to cut down on heroin (0=No, 1=Yes)}
 #'     \item{\code{J8}} {Does heroin take up a lot of your time (0=No, 1=Yes)}
 #'     \item{\code{J9}} {Need use > heroin to get some feeling (0=No, 1=Yes)}
-#'     \item{\code{J10A}} {Get phys sick when stop using heroin (0=No, 1=Yes)}
-#'     \item{\code{J10B}} {Ever use heroin to prevent getting sick (0=No, 1=Yes)}
+#'     \item{\code{JAIL_5YR}} {Any jail time past 5 years y/n (0=No, 1=Yes)}
+#'     \item{\code{JAIL_MOS}} {Total months in jail past 5 years }
 #'     \item{\code{K1}} {Do you currently smoke cigarettes (1=Yes-every day, 2=Yes-some days, 3=No-former smoker, 4=No-never>100 cigs}
 #'     \item{\code{K2}} {Avg # cigarettes smoked per day}
 #'     \item{\code{K3}} {Considering quitting cigs w/in next 6 mo (0=No, 1=Yes)}
-#'     \item{\code{L1}} {How often drink last time drank (1=To get high/less, 2=To get drunk, 3=To pass out)}
-#'     \item{\code{L2}} {Often have hangovrs Sun or Mon mornings (0=No, 1=Yes)}
-#'     \item{\code{L3}} {Have you had the shakes when sobering (0=No, 1=Sometimes, 2=Alm evry time drink)}
-#'     \item{\code{L4}} {Do you get phys sick as reslt of drinking (0=No, 1=Sometimes, 2=Alm evry time drink)}
-#'     \item{\code{L5}} {have you had the DTs (0=No, 1=Once, 2=Several times}
-#'     \item{\code{L6}} {When drink do you stumble/stagger/weave (0=No, 1=Sometimes, 2=Often)}
-#'     \item{\code{L7}} {D/t drinkng felt overly hot/sweaty (0=No, 1=Once, 2=Several times)}
-#'     \item{\code{L8}} {As result of drinkng saw thngs not there (0=No, 1=Once, 2=Several times)}
-#'     \item{\code{L9}} {Panic because fear not have drink if need it (0=No, 1=Yes)}
 #'     \item{\code{L10}} {Have had blkouts as result of drinkng (0=No, never, 1=Sometimes, 2=Often, 3=Alm evry time drink)}
 #'     \item{\code{L11}} {Do you carry bottle or keep close by (0=No, 1=Some of the time, 2=Most of the time)}
 #'     \item{\code{L12}} {After abstin end up drink heavily again (0=No, 1=Sometimes, 2=Almost evry time)}
@@ -771,21 +841,22 @@ NA
 #'     \item{\code{L17}} {D/t drinkng felt heart beat rapidly (0=No, 1=Once, 2=Several times)}
 #'     \item{\code{L18}} {Do you constntly think about drinkng/alc (0=No, 1=Yes)}
 #'     \item{\code{L19}} {D/t drinkng heard things not there (0=No, 1=Once, 2= Several times)}
+#'     \item{\code{L1}} {How often drink last time drank (1=To get high/less, 2=To get drunk, 3=To pass out)}
 #'     \item{\code{L20}} {Had weird/fright sensations when drinkng (0=No, 1=Once or twice, 2=Often)}
 #'     \item{\code{L21}} {When drinkng felt things rawl not there (0=No, 1=Once, 2=Several times)}
 #'     \item{\code{L22}} {With respect to blackouts (0=Never had one, 1=Had for <1hr, 2=Had several hrs, 3=Had for day/+)}
 #'     \item{\code{L23}} {Ever tried to cut down on drinking & failed (0=No, 1=Once, 2=Several times)}
 #'     \item{\code{L24}} {Do you gulp drinks (0=No, 1=Yes)}
 #'     \item{\code{L25}} {After taking 1 or 2 drinks can you stop (0=No, 1=Yes)}
-#'     \item{\code{M1}} {Had hangover/felt bad aftr using alcohol/drugs (0=No, 1=Yes)}
-#'     \item{\code{M2}} {Felt bad about self because of alcohol/drug use (0=No, 1=Yes)}
-#'     \item{\code{M3}} {Missed days wrk/sch because of alcohol/drug use (0=No, 1=Yes)}
-#'     \item{\code{M4}} {Fam/frinds worry/compl about alcohol/drug use (0=No, 1=Yes)}
-#'     \item{\code{M5}} {I have enjoyed drinking/using drugs (0=No, 1=Yes)}
-#'     \item{\code{M6}} {Qual of work suffered because of alcohol/drug use (0=No, 1=Yes)}
-#'     \item{\code{M7}} {Parenting ability harmed by alcohol/drug use (0=No, 1=Yes)}
-#'     \item{\code{M8}} {Trouble sleeping/nightmares aftr alcohol/drugs (0=No, 1=Yes)}
-#'     \item{\code{M9}} {Driven motor veh while undr inf alcohol/drugs (0=No, 1=Yes)}
+#'     \item{\code{L2}} {Often have hangovrs Sun or Mon mornings (0=No, 1=Yes)}
+#'     \item{\code{L3}} {Have you had the shakes when sobering (0=No, 1=Sometimes, 2=Alm evry time drink)}
+#'     \item{\code{L4}} {Do you get phys sick as reslt of drinking (0=No, 1=Sometimes, 2=Alm evry time drink)}
+#'     \item{\code{L5}} {have you had the DTs (0=No, 1=Once, 2=Several times}
+#'     \item{\code{L6}} {When drink do you stumble/stagger/weave (0=No, 1=Sometimes, 2=Often)}
+#'     \item{\code{L7}} {D/t drinkng felt overly hot/sweaty (0=No, 1=Once, 2=Several times)}
+#'     \item{\code{L8}} {As result of drinkng saw thngs not there (0=No, 1=Once, 2=Several times)}
+#'     \item{\code{L9}} {Panic because fear not have drink if need it (0=No, 1=Yes)}
+#'     \item{\code{LINKSTATUS}} {Linked to primary care within 12 months (by administrative record)}
 #'     \item{\code{M10}} {Using alcohol/1 drug caused > use othr drugs (0=No, 1=Yes)}
 #'     \item{\code{M11}} {I have been sick/vomited aft alcohol/drug use (0=No, 1=Yes)}
 #'     \item{\code{M12}} {I have been unhappy because of alcohol/drug use (0=No, 1=Yes)}
@@ -796,6 +867,7 @@ NA
 #'     \item{\code{M17}} {Said/done emarras thngs when on alcohol/drug (0=No, 1=Yes)}
 #'     \item{\code{M18}} {Personality changed for worse on alcohol/drug (0=No, 1=Yes)}
 #'     \item{\code{M19}} {Taken foolish risk when using alcohol/drugs (0=No, 1=Yes)}
+#'     \item{\code{M1}} {Had hangover/felt bad aftr using alcohol/drugs (0=No, 1=Yes)}
 #'     \item{\code{M20}} {Gotten into trouble because of alcohol/drug use (0=No, 1=Yes)}
 #'     \item{\code{M21}} {Said cruel things while using alcohol/drugs (0=No, 1=Yes)}
 #'     \item{\code{M22}} {Done impuls thngs regret due to alcohol/drug use (0=No, 1=Yes)}
@@ -806,6 +878,7 @@ NA
 #'     \item{\code{M27}} {My love relat harmed due to my alcohol/drug use (0=No, 1=Yes)}
 #'     \item{\code{M28}} {Smoked tobacco more when using alcohol/drugs (0=No, 1=Yes)}
 #'     \item{\code{M29}} {<y phys appearance harmed by alcohol/drug use (0=No, 1=Yes)}
+#'     \item{\code{M2}} {Felt bad about self because of alcohol/drug use (0=No, 1=Yes)}
 #'     \item{\code{M30}} {My family hurt because of my alc drug use (0=No, 1=Yes)}
 #'     \item{\code{M31}} {Close relationsp damaged due to alcohol/drug use (0=No, 1=Yes)}
 #'     \item{\code{M32}} {Spent time in jail because of my alcohol/drug use (0=No, 1=Yes)}
@@ -816,6 +889,7 @@ NA
 #'     \item{\code{M37}} {Not had kind life want due to alcohol/drug use (0=No, 1=Yes)}
 #'     \item{\code{M38}} {My alcohol/drug use in way of personal growth (0=No, 1=Yes)}
 #'     \item{\code{M39}} {My alcohol/drug use damaged soc life/reputat (0=No, 1=Yes)}
+#'     \item{\code{M3}} {Missed days wrk/sch because of alcohol/drug use (0=No, 1=Yes)}
 #'     \item{\code{M40}} {Spent/lost too much $ because alcohol/drug use (0=No, 1=Yes)}
 #'     \item{\code{M41}} {Arrested for DUI of alc or oth drugs (0=No, 1=Yes)}
 #'     \item{\code{M42}} {Arrested for offenses rel to alcohol/drug use (0=No, 1=Yes)}
@@ -826,7 +900,18 @@ NA
 #'     \item{\code{M47}} {Had an accident while using alcohol/drugs (0=No, 1=Yes)}
 #'     \item{\code{M48}} {Phys hurt/inj/burned when using alcohol/drugs (0=No, 1=Yes)}
 #'     \item{\code{M49}} {I injured someone while using alcohol/drugs (0=No, 1=Yes)}
+#'     \item{\code{M4}} {Fam/frinds worry/compl about alcohol/drug use (0=No, 1=Yes)}
 #'     \item{\code{M50}} {Damaged things/prop when using alcohol/drugs (0=No, 1=Yes)}
+#'     \item{\code{M5}} {I have enjoyed drinking/using drugs (0=No, 1=Yes)}
+#'     \item{\code{M6}} {Qual of work suffered because of alcohol/drug use (0=No, 1=Yes)}
+#'     \item{\code{M7}} {Parenting ability harmed by alcohol/drug use (0=No, 1=Yes)}
+#'     \item{\code{M8}} {Trouble sleeping/nightmares aftr alcohol/drugs (0=No, 1=Yes)}
+#'     \item{\code{M9}} {Driven motor veh while undr inf alcohol/drugs (0=No, 1=Yes)}
+#'     \item{\code{MAR_STAT}} {Marital status (recode) (0=Married, 1=Not married)}
+#'     \item{\code{MCS}} {Standardized mental component scale-00}
+#'     \item{\code{MD_LANG}} {Lang prefer to speak to MD (recode) (0=English, 1=Other lang)}
+#'     \item{\code{MH}} {SF-36 mental health index (0-100)}
+#'     \item{\code{MMSEC}} {MMSEC}
 #'     \item{\code{N1A}} {My friends give me the moral support I need (0=No, 1=Yes)}
 #'     \item{\code{N1B}} {Most people closer to friends than I am (0=No, 1=Yes)}
 #'     \item{\code{N1C}} {My friends enjoy hearing what I think (0=No, 1=Yes)}
@@ -855,10 +940,16 @@ NA
 #'     \item{\code{N2L}} {Have deep sharing relat w/# of fam membs (0=No, 1=Yes)}
 #'     \item{\code{N2M}} {Makes me uncomf to confide in fam membs (0=No, 1=Yes)}
 #'     \item{\code{N2N}} {I wish my family were much different (0=No, 1=Yes)}
+#'     \item{\code{NUM_BARR}} {# of perceived barriers to linkage}
+#'     \item{\code{NUM_INTERVALS}} {Number of 6-month intervals from previous to current interview}
 #'     \item{\code{O1A}} {# people spend tx w/who drink alc (1=None, 2= A few, 3=About half, 4= Most, 5=All)}
+#'     \item{\code{O1B_REC}} {Family/friends heavy drinkers y/n (0=No, 1=Yes)}
 #'     \item{\code{O1B}} {# people spend tx w/who are heavy drinkrs (1=None, 2= A few, 3=About half, 4= Most, 5=All)}
+#'     \item{\code{O1C_REC}} {Family/friends use drugs y/n (0=No, 1=Yes)}
 #'     \item{\code{O1C}} {# people spend tx w/who use drugs (1=None, 2= A few, 3=About half, 4= Most, 5=All)}
+#'     \item{\code{O1D_REC}} {Family/fiends support abst. y/n (0=No, 1=Yes)}
 #'     \item{\code{O1D}} {# peop spend tx w/who supprt your abstin (1=None, 2= A few, 3=About half, 4= Most, 5=All)}
+#'     \item{\code{O2_REC}} {Live-in partner drinks/drugs y/n (0=No, 1=Yes)}
 #'     \item{\code{O2}} {Does live-in part/spouse drink/use drugs (0=No, 1=Yes, 2=N/A)}
 #'     \item{\code{P1A}} {Phys abuse/assaul by fam memb/pers know (0=No, 1=Yes, 7=Not sure)}
 #'     \item{\code{P1B}} {Age first phys assaulted by pers know}
@@ -876,16 +967,22 @@ NA
 #'     \item{\code{P6C}} {Sex assaulted by stranger-last 6 mos (0=No, 1=Yes)}
 #'     \item{\code{P7}} {Using drugs/alc when sex assaulted (1=Don't know, 2=Never, 3=Some cases, 4=Most cases, 5=All cases, 9=Never assaulted)}
 #'     \item{\code{P8}} {Person who sex assaulted you using alcohol/drugs (1=Don't know, 2=Never, 3=Some cases, 4=Most cases, 5=All cases, 9=Never assaulted)}
-#'     \item{\code{Q1A}} {Have you ever injected drugs (0=No, 1=Yes)}
-#'     \item{\code{Q1B}} {Have you injected drugs-lst 6 mos (0=No, 1=Yes)}
-#'     \item{\code{Q2}} {Have you shared needles/works-last 6 mos (0=No/Not shot up, 3=Yes)}
-#'     \item{\code{Q3}} {# people shared needles w/past 6 mos (0=No/Not shot up, 1=1 other person, 2=2-3 diff people, 3=4/+ diff people)}
-#'     \item{\code{Q4}} {How often been to shoot gall/hse-lst 6 mos (0=Never, 1=Few times or less, 2= Few times/month, 3= Once or more/week)}
-#'     \item{\code{Q5}} {How often been to crack house-last 6 mos (0=Never, 1=Few times or less, 2=Few times/month, 3=Once or more/week)}
-#'     \item{\code{Q6}} {How often shared rinse-water-last 6 mos (0=Nevr/Not shot up, 1=Few times or less, 2=Few times/month, 3=Once or more/week)}
-#'     \item{\code{Q7}} {How often shared a cooker-last 6 mos (0=Nevr/Not shot up, 1=Few times or less, 2=Few times/month, 3=Once or more/week)}
-#'     \item{\code{Q8}} {How often shared a cotton-last 6 mos (0=Nevr/Not shot up, 1=Few times or less, 2=Few times/month, 3=Once or more/week)}
-#'     \item{\code{Q9}} {How often use syringe to div drugs-lst 6 mos (0=Nevr/Not shot up, 1=Few times or less, 2=Few times/month, 3=Once or more/week)}
+#'     \item{\code{PCP_ID}} {a numeric vector}
+#'     \item{\code{PCS}} {Standardized physical component scale-00}
+#'     \item{\code{PC_REC7}} {Primary cared received: linked & # visits (0=Not linked, 1=Linked, 1 visit, 2=Linked, 2 visits, 3=Linked, 3 visits, 4=Linked, 4 visits, 5= Linked, 5 visits, 6=Linked, 6+visits)}
+#'     \item{\code{PC_REC}} {Primary care received: Linked & #visits (0=Not linked, 1=Linked, 1 visit, 2=Linked, 2+ visits)}
+#'     \item{\code{PF}} {SF-36 physical functioning (0-100)}
+#'     \item{\code{PHSXABUS}} {Any abuse (0=No, 1=Yes)}
+#'     \item{\code{PHYABUSE}} {Physical abuse-stranger or family (0=No, 1=Yes)}
+#'     \item{\code{PHYS2}} {InDUC-2L-Physical 9Raw (w/o M48)}
+#'     \item{\code{PHYS}} {InDUC-2L-Physical-Raw}
+#'     \item{\code{POLYSUB}} {Polysubstance abuser y/n (0=No, 1=Yes)}
+#'     \item{\code{PREV_TIME}} {Previous interview time}
+#'     \item{\code{PRIMLANG}} {First language (recode) (0=English, 1=Other lang)}
+#'     \item{\code{PRIMSUB2}} {First drug of choice (no marijuana) (0=None, 1=Alcohol, 2=Cocaine, 3=Heroin, 4=Barbituates, 5=Benzos, 6=Marijuana, 7=Methadone, 8=Opiates)}
+#'     \item{\code{PRIM_SUB}} {First drug of choice (0=None, 1=Alcohol, 3=Cocaine, 3=Heroine, 4=Barbituates, 5=Benzos, 6=Marijuana, 7=Methadone, 8=Opiates)}
+#'     \item{\code{PSS_FA}} {Perceived social support-family}
+#'     \item{\code{PSS_FR}} {Perceived social support-friends}
 #'     \item{\code{Q10}} {How would you describe yourself (0=Straight, 1=Gay/bisexual)}
 #'     \item{\code{Q11}} {# men had sex w/in past 6 months (0=0 men, 1=1 man, 2=2-3 men, 3=4+ men}
 #'     \item{\code{Q12}} {# women had sex w/in past 6 months (0=0 women, 1=1woman, 2=2-3 women, 3=4+ women}
@@ -896,7 +993,17 @@ NA
 #'     \item{\code{Q17}} {How often you pay pers for sex-lst 6 mos (0=Never, 1=Few times or less, 2=Few times/month, 3=Once or more/week)}
 #'     \item{\code{Q18}} {How often use condomes during sex=lst 6 mos (0=No sex/always, 1=Most of the time, 2=Some of the time, 3=None of the time)}
 #'     \item{\code{Q19}} {Condoms are too much of a hassle to use (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
+#'     \item{\code{Q1A}} {Have you ever injected drugs (0=No, 1=Yes)}
+#'     \item{\code{Q1B}} {Have you injected drugs-lst 6 mos (0=No, 1=Yes)}
 #'     \item{\code{Q20}} {Safer sex is always your responsibility (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
+#'     \item{\code{Q2}} {Have you shared needles/works-last 6 mos (0=No/Not shot up, 3=Yes)}
+#'     \item{\code{Q3}} {# people shared needles w/past 6 mos (0=No/Not shot up, 1=1 other person, 2=2-3 diff people, 3=4/+ diff people)}
+#'     \item{\code{Q4}} {How often been to shoot gall/hse-lst 6 mos (0=Never, 1=Few times or less, 2= Few times/month, 3= Once or more/week)}
+#'     \item{\code{Q5}} {How often been to crack house-last 6 mos (0=Never, 1=Few times or less, 2=Few times/month, 3=Once or more/week)}
+#'     \item{\code{Q6}} {How often shared rinse-water-last 6 mos (0=Nevr/Not shot up, 1=Few times or less, 2=Few times/month, 3=Once or more/week)}
+#'     \item{\code{Q7}} {How often shared a cooker-last 6 mos (0=Nevr/Not shot up, 1=Few times or less, 2=Few times/month, 3=Once or more/week)}
+#'     \item{\code{Q8}} {How often shared a cotton-last 6 mos (0=Nevr/Not shot up, 1=Few times or less, 2=Few times/month, 3=Once or more/week)}
+#'     \item{\code{Q9}} {How often use syringe to div drugs-lst 6 mos (0=Nevr/Not shot up, 1=Few times or less, 2=Few times/month, 3=Once or more/week)}
 #'     \item{\code{R1A}} {I really want to hange my alcohol/drug use (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
 #'     \item{\code{R1B}} {Sometimes I wonder if I'm an alcohol/addict (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
 #'     \item{\code{R1C}} {Id I don't chng alcohol/drug probs will worsen (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
@@ -916,56 +1023,56 @@ NA
 #'     \item{\code{R1Q}} {I am an alcoholic or drug addict (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
 #'     \item{\code{R1R}} {I am working hard to change alcohol/drug use (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
 #'     \item{\code{R1S}} {Some changes-want help from going back (1=Strongly disagree, 2=Disagree, 3= Agree, 4=Strongly agree)}
+#'     \item{\code{RABSCALE}} {RAB scale sore}
+#'     \item{\code{RACE2}} {Race (recode) (1=White, 2=Minority)}
+#'     \item{\code{RACE}} {Race (recode) (1=Afr Amer/Black, 2=White, 3=Hispanic, 4=Other)}
+#'     \item{\code{RAWBP}} {Raw SF-36 pain index}
+#'     \item{\code{RAWGH}} {Raw SF-36 general health perceptions}
+#'     \item{\code{RAWMH}} {Raw SF-36 mental health index}
+#'     \item{\code{RAWPF}} {Raw SF-36 physical functioning}
+#'     \item{\code{RAWRE}} {Raw SF-36 role-emotional}
+#'     \item{\code{RAWRP}} {Raw SF-36 role-physical}
+#'     \item{\code{RAWSF}} {Raw SF-36 social functioning}
+#'     \item{\code{RAWVT}} {Raw SF-36 vitality}
+#'     \item{\code{RAW_ADS}} {ADS score}
+#'     \item{\code{RAW_AM}} {SOCRATES-Ambivalence-Raw}
+#'     \item{\code{RAW_RE}} {SOCRATES-Rocognition-Raw}
+#'     \item{\code{RAW_TS}} {SOCRATES-Taking steps-Raw}
+#'     \item{\code{RCT_LINK}} {Did subject link to primary care (RCT)--This time point (0=No, 1=Yes)}
+#'     \item{\code{REALM2}} {REALM score (dichotomous) (1=0-60, 2=61-66)}
+#'     \item{\code{REALM3}} {REALM score (categorical) (1=0-44), 2=45-60), 3=61-66)}
+#'     \item{\code{REALM}} {REALM score}
+#'     \item{\code{REG_MD}} {Did subject report having regular doctor--This time point (0=No, 1=Yes)}
+#'     \item{\code{RE}} {SF-36 role-emotional (0-100)}
+#'     \item{\code{RP}} {SF-36 role physical (0-100)}
 #'     \item{\code{S1A}} {At interview pt obviously depressed/withdrawn (0=No, 1=Yes)}
 #'     \item{\code{S1B}} {at interview pt obviously hostile (0=No, 1=Yes)}
 #'     \item{\code{S1C}} {At interview pt obviouslt anx/nervous (0=No, 1=Yes)}
 #'     \item{\code{S1D}} {Trouble w/real tst/thght dis/par at interview (0=No, 1=Yes)}
 #'     \item{\code{S1E}} {At interview pt trbl w/ compr/concen/rememb (0=No, 1=Yes)}
 #'     \item{\code{S1F}} {At interview pt had suicidal thoughts (0=No, 1=Yes)}
-#'     \item{\code{T1}} {Have used alc since leaving River St. (0=No, 1=Yes)}
+#'     \item{\code{SATREAT}} {Any BSAS substance abuse this time point (0=No, 1=Yes)}
+#'     \item{\code{SECD_SUB}} {Second drug of choice (0=None, 1=Alcohol, 3=Cocaine, 3=Heroine, 4=Barbituates, 5=Benzos, 6=Marijuana, 7=Methadone, 8=Opiates)}
+#'     \item{\code{SER_INJ}} {Recent (6m) serious injury y/n (0=No, 1=Yes)}
+#'     \item{\code{SEXABUSE}} {Sexual abuse-stranger or family (0=No, 1=Yes)}
+#'     \item{\code{SEXRISK}} {RAB-Sex risk total}
+#'     \item{\code{SF}} {SF-36 social functioning (0-100)}
+#'     \item{\code{SMOKER}} {Current smoker (every/some days) y/n (0=No, 1=Yes)}
+#'     \item{\code{SR}} {InDUC-2L-Social responsibility-Raw}
+#'     \item{\code{STD_6M}} {Had an STD past 6m y/n (0=No, 1=Yes)}
+#'     \item{\code{STD_EVER}} {Ever had an STD y/n (0=No, 1=Yes)}
+#'     \item{\code{STRABUSE}} {Stranger abuse-physical or sexual (0=No, 1=Yes)}
 #'     \item{\code{T1B}} {# days in row continued to drink}
 #'     \item{\code{T1C}} {Longest period abstain-lst 6 mos (alc)}
-#'     \item{\code{T2}} {Have used heroin since leaving River St (0=No, 1=Yes)}
+#'     \item{\code{T1}} {Have used alc since leaving River St. (0=No, 1=Yes)}
 #'     \item{\code{T2B}} {# days in row continued to use heroin}
 #'     \item{\code{T2C}} {Longest period abstain-lst 6 mos (heroin)}
-#'     \item{\code{T3}} {Have used cocaine since leaving River St (0=No, 1=Yes)}
+#'     \item{\code{T2}} {Have used heroin since leaving River St (0=No, 1=Yes)}
 #'     \item{\code{T3B}} {# days in row continued to use cocaine}
 #'     \item{\code{T3C}} {Lngest period abstain-lst 6 mos (cocaine)}
-#'     \item{\code{U1}} {It is important to have a regular MD (1=Strongly agree, 2=Agree, 3=Uncertain, 4=Disagree, 5=Strongly Disagree)}
-#'     \item{\code{U2A}} {I cannot pay for services (0=No, 1=Yes)}
-#'     \item{\code{U2B}} {I am not eligible for free care (0=No, 1=Yes)}
-#'     \item{\code{U2C}} {I do not know where to go (0=No, 1=Yes)}
-#'     \item{\code{U2D}} {Can't get services due to transport probs (0=No, 1=Yes)}
-#'     \item{\code{U2E}} {Office/clinic hours are inconvenient (0=No, 1=Yes)}
-#'     \item{\code{U2F}} {I do not speak/understand English well (0=No, 1=Yes)}
-#'     \item{\code{U2G}} {Afraid others discover hlth prb I have (0=No, 1=Yes)}
-#'     \item{\code{U2H}} {My substance abuse interferes (0=No, 1=Yes)}
-#'     \item{\code{U2I}} {I do not have a babysitter (0=No, 1=Yes)}
-#'     \item{\code{U2J}} {I do not want to lose my job (0=No, 1=Yes)}
-#'     \item{\code{U2K}} {My insurance does not cover services (0=No, 1=Yes)}
-#'     \item{\code{U2L}} {Medical care is not important to me (0=No, 1=Yes)}
-#'     \item{\code{U2M}} {I do not have time (0=No, 1=Yes)}
-#'     \item{\code{U2N}} {Med staff do not treat me with respect (0=No, 1=Yes)}
-#'     \item{\code{U2O}} {I do not trust my doctors or nurses (0=No, 1=Yes)}
-#'     \item{\code{U2P}} {Often been unsatisfied w/my med care (0=No, 1=Yes)}
-#'     \item{\code{U2Q}} {Other reason hard to get regular med care (0=No, 1=Yes)}
-#'     \item{\code{U2Q_T}} {a factor with many levels}
-#'     \item{\code{U2R}} {a factor with levels \code{} \code{7} \code{A} \code{B} \code{C} \code{D} \code{E} \code{F} \code{G} \code{H} \code{I} \code{J} \code{K} \code{L} \code{M} \code{N} \code{O} \code{P} \code{Q}}
-#'     \item{\code{U3A}} {Has MD evr talked to you about drug use (0=No, 1=Yes)}
-#'     \item{\code{U3B}} {Has MD evr talked to you about alc use (0=No, 1=Yes)}
-#'     \item{\code{U4}} {Is there an MD you consider your regular MD (0=No, 1=Yes)}
-#'     \item{\code{U5}} {Have you seen any MDs in last 6 mos (0=No, 1=Yes)}
-#'     \item{\code{U6A}} {Would you go to this MD if med prb not emer (0=No, 1=Yes)}
-#'     \item{\code{U6B}} {Think one of these could be your regular MD (0=No, 1=Yes)}
-#'     \item{\code{PCP_ID}} {a numeric vector}
-#'     \item{\code{U7A}} {What type of MD is your regular MD/this MD (1=OB/GYN, 2=Family medicine, 3=Pediatrician, 4=Adolescent medicine, 5=Internal medicine, 6=AIDS doctor, 7=Asthma doctor, 8=Pulmonary doctor, 9=Cardiologist, 10=Gastroen)}
-#'     \item{\code{U7A_T}} {a factor with levels \code{} \code{ARTHRITIS DOCTOR} \code{CHIROPRACTOR} \code{COCAINE STUDY} \code{DETOX DOCTOR} \code{DO} \code{EAR DOCTOR} \code{EAR SPECIALIST} \code{EAR, NOSE, & THROAT.} \code{EAR/NOSE/THROAT} \code{ENT} \code{FAMILY PHYSICIAN} \code{GENERAL MEDICINE} \code{GENERAL PRACTICE} \code{GENERAL PRACTIONER} \code{GENERAL PRACTITIONER} \code{HEAD & NECK SPECIALIST} \code{HERBAL/HOMEOPATHIC/ACUPUNCTURE} \code{ID DOCTOR} \code{MAYBE GENERAL PRACTITIONER} \code{MEDICAL STUDENT} \code{NEUROLOGIST} \code{NURSE} \code{NURSE PRACTICIONER} \code{NURSE PRACTITIONER} \code{ONCOLOGIST} \code{PRENATAL} \code{PRIMARY} \code{PRIMARY CAAE} \code{PRIMARY CARE} \code{PRIMARY CARE DOCTOR} \code{PRIMERY CARE} \code{THERAPIST} \code{UROLOGIST} \code{WOMENS CLINIC BMC}}
-#'     \item{\code{U8A}} {Only saw this person once (=Only saw once)}
-#'     \item{\code{U8B}} {Saw this person for <6 mos (1=<6 mos)}
-#'     \item{\code{U8C}} {Saw tis person for 6 mos-1year (2=Betwn 6 mos & 1 yr)}
-#'     \item{\code{U8D}} {Saw this person for 1-2 years (3=1-2 years)}
-#'     \item{\code{U8E}} {Saw this person for 3-5 years (4=3-5 years)}
-#'     \item{\code{U8F}} {Saw this person for more than 5 years (5=>5 years)}
+#'     \item{\code{T3}} {Have used cocaine since leaving River St (0=No, 1=Yes)}
+#'     \item{\code{TIME}} {Interview time point}
+#'     \item{\code{TOTALRAB}} {RAB-Total RAB sore}
 #'     \item{\code{U10A}} {# times been to regular MDs office-pst 6 mos}
 #'     \item{\code{U10B}} {# times saw regular MD in office-pst 6 mos}
 #'     \item{\code{U10C}} {# times saw oth prof in office-pst 6 mos}
@@ -981,6 +1088,7 @@ NA
 #'     \item{\code{U18A}} {Ability to reach MC office by phone (1=Very poor, 2=Poor, 3=Fair, 4=Good, 5=Very good, 6=Excellent)}
 #'     \item{\code{U18B}} {Ability to speak to MD by phone if need (1=Very poor, 2=Poor, 3=Fair, 4=Good, 5=Very good, 6=Excellent)}
 #'     \item{\code{U19}} {How often see regular MD when have regular check-up (1=Always, 2=Almost always, 3=A lot of the time, 4=Some of the time, 5=Almost never, 6=Never)}
+#'     \item{\code{U1}} {It is important to have a regular MD (1=Strongly agree, 2=Agree, 3=Uncertain, 4=Disagree, 5=Strongly Disagree)}
 #'     \item{\code{U20}} {When sick + go to MD how often see regular MD (1=Always, 2=Almost always, 3=A lot of the time, 4=Some of the time, 5=Almost never, 6=Never)}
 #'     \item{\code{U21A}} {How thorough MD exam to check hlth prb (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
 #'     \item{\code{U21B}} {How often question if MD diagnosis right (1=Always, 2=Almost always, 3=A lot of the time, 4=Some of the time, 5=Almost never, 6=Never)}
@@ -1025,13 +1133,32 @@ NA
 #'     \item{\code{U29B}} {MD knowldg of your respons-home/work/sch (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}"						
 #'     \item{\code{U29C}} {MD knowldg of what worries you most-hlth (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}"						
 #'     \item{\code{U29D}} {MDs knowledge of you as a person (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}"						
+#'     \item{\code{U2A}} {I cannot pay for services (0=No, 1=Yes)}
+#'     \item{\code{U2B}} {I am not eligible for free care (0=No, 1=Yes)}
+#'     \item{\code{U2C}} {I do not know where to go (0=No, 1=Yes)}
+#'     \item{\code{U2D}} {Can't get services due to transport probs (0=No, 1=Yes)}
+#'     \item{\code{U2E}} {Office/clinic hours are inconvenient (0=No, 1=Yes)}
+#'     \item{\code{U2F}} {I do not speak/understand English well (0=No, 1=Yes)}
+#'     \item{\code{U2G}} {Afraid others discover hlth prb I have (0=No, 1=Yes)}
+#'     \item{\code{U2H}} {My substance abuse interferes (0=No, 1=Yes)}
+#'     \item{\code{U2I}} {I do not have a babysitter (0=No, 1=Yes)}
+#'     \item{\code{U2J}} {I do not want to lose my job (0=No, 1=Yes)}
+#'     \item{\code{U2K}} {My insurance does not cover services (0=No, 1=Yes)}
+#'     \item{\code{U2L}} {Medical care is not important to me (0=No, 1=Yes)}
+#'     \item{\code{U2M}} {I do not have time (0=No, 1=Yes)}
+#'     \item{\code{U2N}} {Med staff do not treat me with respect (0=No, 1=Yes)}
+#'     \item{\code{U2O}} {I do not trust my doctors or nurses (0=No, 1=Yes)}
+#'     \item{\code{U2P}} {Often been unsatisfied w/my med care (0=No, 1=Yes)}
+#'     \item{\code{U2Q_T}} {a factor with many levels}
+#'     \item{\code{U2Q}} {Other reason hard to get regular med care (0=No, 1=Yes)}
+#'     \item{\code{U2R}} {a factor with levels \code{} \code{7} \code{A} \code{B} \code{C} \code{D} \code{E} \code{F} \code{G} \code{H} \code{I} \code{J} \code{K} \code{L} \code{M} \code{N} \code{O} \code{P} \code{Q}}
 #'     \item{\code{U30}} {MD would know what want done if unconsc (1=Strongly agree, 2=Agree, 3=Not sure, 4= Disagree, 5=Strongly disagree)}"						
 #'     \item{\code{U31}} {Oth MDs/RNs who play roel in your care (0=No, 1=Yes)}"						*
 #'     \item{\code{U32A}} {Their knowledge of you as a person (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
 #'     \item{\code{U32B}} {The quality of care they provide (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
 #'     \item{\code{U32C}} {Coordination betw them and your regular MD (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
-#'     \item{\code{U32D}} {Their expl of your hlth prbs/trtmts need (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
 #'     \item{\code{U32D_T}} {N/A, only my regular MD does this}
+#'     \item{\code{U32D}} {Their expl of your hlth prbs/trtmts need (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
 #'     \item{\code{U33}} {Amt regular MD knows about care from others (1=Knows everything, 2=Knows almost everything, 3=Knows some things, 4=Knows very little, 5=Knows nothing)}
 #'     \item{\code{U34}} {Has MD ever recommended you see MD sepcialist (0=No, 1=Yes)}
 #'     \item{\code{U35A}} {How helpful MD in deciding on specialist (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
@@ -1044,153 +1171,26 @@ NA
 #'     \item{\code{U37}} {When sick+call how long take to see you (1=Same day, 2=Next day, 3=In 2-3 days, 4=In 4-5 days, 5=in >5 days)}
 #'     \item{\code{U38}} {How mant minutes late appt usually begin (1=None, 2=<5 minutes, 3=6-10 minutes, 4=11-20 minutes, 5=21-30 minutes, 6=31-45 minutes, 7=>45 minutes)}
 #'     \item{\code{U39}} {How satisfied are you w/your regular MD (1=Completely satisfied, 2=Very satisfied, 3=Somewhat satisfied, 4=Neither, 5=Somewhat dissatisfied, 6=Very dissatisfied, 7=Completely dissatisfied)}
+#'     \item{\code{U3A}} {Has MD evr talked to you about drug use (0=No, 1=Yes)}
+#'     \item{\code{U3B}} {Has MD evr talked to you about alc use (0=No, 1=Yes)}
+#'     \item{\code{U4}} {Is there an MD you consider your regular MD (0=No, 1=Yes)}
+#'     \item{\code{U5}} {Have you seen any MDs in last 6 mos (0=No, 1=Yes)}
+#'     \item{\code{U6A}} {Would you go to this MD if med prb not emer (0=No, 1=Yes)}
+#'     \item{\code{U6B}} {Think one of these could be your regular MD (0=No, 1=Yes)}
+#'     \item{\code{U7A_T}} {a factor with levels \code{} \code{ARTHRITIS DOCTOR} \code{CHIROPRACTOR} \code{COCAINE STUDY} \code{DETOX DOCTOR} \code{DO} \code{EAR DOCTOR} \code{EAR SPECIALIST} \code{EAR, NOSE, & THROAT.} \code{EAR/NOSE/THROAT} \code{ENT} \code{FAMILY PHYSICIAN} \code{GENERAL MEDICINE} \code{GENERAL PRACTICE} \code{GENERAL PRACTIONER} \code{GENERAL PRACTITIONER} \code{HEAD & NECK SPECIALIST} \code{HERBAL/HOMEOPATHIC/ACUPUNCTURE} \code{ID DOCTOR} \code{MAYBE GENERAL PRACTITIONER} \code{MEDICAL STUDENT} \code{NEUROLOGIST} \code{NURSE} \code{NURSE PRACTICIONER} \code{NURSE PRACTITIONER} \code{ONCOLOGIST} \code{PRENATAL} \code{PRIMARY} \code{PRIMARY CAAE} \code{PRIMARY CARE} \code{PRIMARY CARE DOCTOR} \code{PRIMERY CARE} \code{THERAPIST} \code{UROLOGIST} \code{WOMENS CLINIC BMC}}
+#'     \item{\code{U7A}} {What type of MD is your regular MD/this MD (1=OB/GYN, 2=Family medicine, 3=Pediatrician, 4=Adolescent medicine, 5=Internal medicine, 6=AIDS doctor, 7=Asthma doctor, 8=Pulmonary doctor, 9=Cardiologist, 10=Gastroen)}
+#'     \item{\code{U8A}} {Only saw this person once (=Only saw once)}
+#'     \item{\code{U8B}} {Saw this person for <6 mos (1=<6 mos)}
+#'     \item{\code{U8C}} {Saw tis person for 6 mos-1year (2=Betwn 6 mos & 1 yr)}
+#'     \item{\code{U8D}} {Saw this person for 1-2 years (3=1-2 years)}
+#'     \item{\code{U8E}} {Saw this person for 3-5 years (4=3-5 years)}
+#'     \item{\code{U8F}} {Saw this person for more than 5 years (5=>5 years)}
+#'     \item{\code{UNEMPLOY}} {Usually unemployed last 6m (0=No, 1=Yes)}
 #'     \item{\code{V1}} {Evr needed to drink much more to get effect (0=No, 1=Yes)}
 #'     \item{\code{V2}} {Evr find alc had < effect than once did (0=No, 1=Yes)}
+#'     \item{\code{VT}} {SF-36 vitality 0-100)}
 #'     \item{\code{Z1}} {Breath Alcohol Concentration:1st test}
 #'     \item{\code{Z2}} {Breath Alcohol Concentration:2nd test}
-#'     \item{\code{AGE}} {Age in years}
-#'     \item{\code{REALM}} {REALM score}
-#'     \item{\code{E16A_RT}} {Barrier to regular MD: red tape (0=No, 1=Yes)}
-#'     \item{\code{E16A_IB}} {Barrier to regular MD: internal barriers (0=No, 1=Yes)}
-#'     \item{\code{E16A_TM}} {Barrier to regular MD: time restrictions (0=No, 1=Yes)}
-#'     \item{\code{E16A_DD}} {Barrier to regular MD: dislike docs/system (0=No, 1=Yes)}
-#'     \item{\code{GROUP}} {Randomization Group (0=Control, 1=Clinic)}
-#'     \item{\code{MMSEC}} {MMSEC}
-#'     \item{\code{PRIM_SUB}} {First drug of choice (0=None, 1=Alcohol, 3=Cocaine, 3=Heroine, 4=Barbituates, 5=Benzos, 6=Marijuana, 7=Methadone, 8=Opiates)}
-#'     \item{\code{SECD_SUB}} {Second drug of choice (0=None, 1=Alcohol, 3=Cocaine, 3=Heroine, 4=Barbituates, 5=Benzos, 6=Marijuana, 7=Methadone, 8=Opiates)}
-#'     \item{\code{ALCOHOL}} {1st/2nd drug of coice=Alcohol (0=No, 1=Yes)}
-#'     \item{\code{COC_HER}} {1st/2nd drug of choice=cocaine or heroine (0=No, 1=Yes)}
-#'     \item{\code{REALM2}} {REALM score (dichotomous) (1=0-60, 2=61-66)}
-#'     \item{\code{REALM3}} {REALM score (categorical) (1=0-44), 2=45-60), 3=61-66)}
-#'     \item{\code{RACE}} {Race (recode) (1=Afr Amer/Black, 2=White, 3=Hispanic, 4=Other)}
-#'     \item{\code{RACE2}} {Race (recode) (1=White, 2=Minority)}
-#'     \item{\code{BIRTHPLC}} {Where born (recode) (0=USA, 1=Foreign)}
-#'     \item{\code{PRIMLANG}} {First language (recode) (0=English, 1=Other lang)}
-#'     \item{\code{MD_LANG}} {Lang prefer to speak to MD (recode) (0=English, 1=Other lang)}
-#'     \item{\code{HS_GRAD}} {High school graduate (0=No, 1=Yes)}
-#'     \item{\code{MAR_STAT}} {Marital status (recode) (0=Married, 1=Not married)}
-#'     \item{\code{A12B_REC}} {Hollingshead category (recode) (0=Cat 1,2,3, 1=Cat 4,5,6, 2=Cat 7,8,9)}
-#'     \item{\code{UNEMPLOY}} {Usually unemployed last 6m (0=No, 1=Yes)}
-#'     \item{\code{ALONE6M}} {Usually lived alone past 6m y/n (0=No, 1=Yes)}
-#'     \item{\code{HOMELESS}} {Homeless-shelter/street past 6 m (0=No, 1=Yes)}
-#'     \item{\code{JAIL_MOS}} {Total months in jail past 5 years }
-#'     \item{\code{JAIL_5YR}} {Any jail time past 5 years y/n (0=No, 1=Yes)}
-#'     \item{\code{GOV_SUPP}} {Received governemtn support past 6 m (0=No, 1=Yes)}
-#'     \item{\code{A18_REC1}} {Most money made in 1 yr (recode)  (0=$19,000 or less, 1=$20,000-$49,000, 2=$50,000 or more)}
-#'     \item{\code{A18_REC2}} {Most money made-continuous recode}
-#'     \item{\code{STD_EVER}} {Ever had an STD y/n (0=No, 1=Yes)}
-#'     \item{\code{STD_6M}} {Had an STD past 6m y/n (0=No, 1=Yes)}
-#'     \item{\code{CHR_SUM}} {Sum chronic medican conds/HIV ever}
-#'     \item{\code{CHR_EVER}} {Chronic medical conds/HIV-ever y/n (0=No, 1=Yes)}
-#'     \item{\code{EPI_SUM}} {Sum episodic (C2A-C2O, C2R-C2U, STD)-6m}
-#'     \item{\code{EPI_6M}} {Episodic (C2A-C2O,C2R-C2U, STD)-6m y/n (0=No, 1=Yes)}
-#'     \item{\code{EPI_6M2B}} {Episodic(C2A-C2O)-6m y/n (0=No, 1=Yes)}
-#'     \item{\code{SER_INJ}} {Recent (6m) serious injury y/n (0=No, 1=Yes)}
-#'     \item{\code{D3_REC}} {Any medical problems past 30d y/n (0=No, 1=Yes)}
-#'     \item{\code{D4_REC}} {Bothered by medical problems y/n (0=No, 1=Yes)}
-#'     \item{\code{D5_REC}} {Medical trtmt is important y/n (0=No, 1=Yes)}
-#'     \item{\code{ANY_INS}} {Did you have health insurance past 6 m (0=No, 1=Yes)}
-#'     \item{\code{FRML_SAT}} {Formal substance abuse treatment y/n (0=No, 1=Yes)}
-#'     \item{\code{E10B1_R}} {Mental health treatment past 6m y/n (0=No, 1=Yes)}
-#'     \item{\code{E10B2_R}} {Med clinic/private MD past 6m y/n (0=No, 1=Yes)}
-#'     \item{\code{ALT_TRT}} {Alternative tratments y/n (0=No, 1=Yes)}
-#'     \item{\code{ANY_UTIL}} {Amy recent health utilization (0=No, 1=Yes)}
-#'     \item{\code{NUM_BARR}} {# of perceived barriers to linkage}
-#'     \item{\code{G1B_REC}} {Suicidal thoughs past 30 days y/n (0=No, 1=Yes)}
-#'     \item{\code{G1D_REC}} {Prescribed psych meds past 30 daus y/n (0=No, 1=Yes)}
-#'     \item{\code{PRIMSUB2}} {First drug of choice (no marijuana) (0=None, 1=Alcohol, 2=Cocaine, 3=Heroin, 4=Barbituates, 5=Benzos, 6=Marijuana, 7=Methadone, 8=Opiates)}
-#'     \item{\code{ALCQ_30}} {Total number drinks past 30 days}
-#'     \item{\code{H2_PRB}} {Problem sub: alc to intox (0=No, 1=Yes)}
-#'     \item{\code{H3_PRB}} {Problem sub: heroin (0=No, 1=Yes)}
-#'     \item{\code{H4_PRB}} {Problem sub: methadone (0=No, 1=Yes)}
-#'     \item{\code{H5_PRB}} {Problem sub: oth opiates/analg (0=No, 1=Yes)}
-#'     \item{\code{H6_PRB}} {Problem sub: barbituates (0=No, 1=Yes)}
-#'     \item{\code{H7_PRB}} {Problem sub: sedat/hyp/tranq (0=No, 1=Yes)}
-#'     \item{\code{H8_PRB}} {Problem sub: cocaine (0=No, 1=Yes)}
-#'     \item{\code{H9_PRB}} {Problem sub: amphetamines (0=No, 1=Yes)}
-#'     \item{\code{H10_PRB}} {Problem sub: marijuana, cannabis (0=No, 1=Yes)}
-#'     \item{\code{H11_PRB}} {Problem sub: hallucinogens (0=No, 1=Yes)}
-#'     \item{\code{H12_PRB}} {Problem sub: inhalants (0=No, 1=Yes)}
-#'     \item{\code{POLYSUB}} {Polysubstance abuser y/n (0=No, 1=Yes)}
-#'     \item{\code{SMOKER}} {Current smoker (every/some days) y/n (0=No, 1=Yes)}
-#'     \item{\code{O1B_REC}} {Family/friends heavy drinkers y/n (0=No, 1=Yes)}
-#'     \item{\code{O1C_REC}} {Family/friends use drugs y/n (0=No, 1=Yes)}
-#'     \item{\code{O1D_REC}} {Family/fiends support abst. y/n (0=No, 1=Yes)}
-#'     \item{\code{O2_REC}} {Live-in partner drinks/drugs y/n (0=No, 1=Yes)}
-#'     \item{\code{PHYABUSE}} {Physical abuse-stranger or family (0=No, 1=Yes)}
-#'     \item{\code{SEXABUSE}} {Sexual abuse-stranger or family (0=No, 1=Yes)}
-#'     \item{\code{PHSXABUS}} {Any abuse (0=No, 1=Yes)}
-#'     \item{\code{ABUSE2}} {Type of abuse (0=No abuse, 1=Physical only, 2=Sexual only, 3=Physical and sexual)}
-#'     \item{\code{ABUSE3}} {Type of abuse (0=No abuse, 1=Physical only, 2=Sexual +/- physical (0=No, 1=Yes)}
-#'     \item{\code{CURPHYAB}} {Current abuse-physical (0=No, 1=Yes)}
-#'     \item{\code{CURSEXAB}} {Current abuse-sexual (0=No, 1=Yes)}
-#'     \item{\code{CURPHYSEXAB}} {Curent abuse-physical or sexual (0=No abuse, 1=Physical only, 2=Sexual +/- physical)}
-#'     \item{\code{FAMABUSE}} {Family abuse-physical or sexual (0=No, 1=Yes)}
-#'     \item{\code{STRABUSE}} {Stranger abuse-physical or sexual (0=No, 1=Yes)}
-#'     \item{\code{ABUSE}} {Abuse-physical or sexual (0=No abuse, 1= Family abuse, 2= Stranger only abuse)}
-#'     \item{\code{RAWPF}} {Raw SF-36 physical functioning}
-#'     \item{\code{PF}} {SF-36 physical functioning (0-100)}
-#'     \item{\code{RAWRP}} {Raw SF-36 role-physical}
-#'     \item{\code{RP}} {SF-36 role physical (0-100)}
-#'     \item{\code{RAWBP}} {Raw SF-36 pain index}
-#'     \item{\code{BP}} {SF-36 pain index (0-100)}
-#'     \item{\code{RAWGH}} {Raw SF-36 general health perceptions}
-#'     \item{\code{GH}} {SF-36 general health perceptions (0-100)}
-#'     \item{\code{RAWVT}} {Raw SF-36 vitality}
-#'     \item{\code{VT}} {SF-36 vitality 0-100)}
-#'     \item{\code{RAWSF}} {Raw SF-36 social functioning}
-#'     \item{\code{SF}} {SF-36 social functioning (0-100)}
-#'     \item{\code{RAWRE}} {Raw SF-36 role-emotional}
-#'     \item{\code{RE}} {SF-36 role-emotional (0-100)}
-#'     \item{\code{RAWMH}} {Raw SF-36 mental health index}
-#'     \item{\code{MH}} {SF-36 mental health index (0-100)}
-#'     \item{\code{HT}} {Raw SF-36 health transition item}
-#'     \item{\code{PCS}} {Standardized physical component scale-00}
-#'     \item{\code{MCS}} {Standardized mental component scale-00}
-#'     \item{\code{CES_D}} {CES-D score, measure of depressive symptoms, high scores are worse}
-#'     \item{\code{CESD_CUT}} {CES-D score > 21 y/n (0=No, 1=Yes)}
-#'     \item{\code{C_MS}} {ASI-Composite medical status}
-#'     \item{\code{C_AU}} {ASI-Composite score for alcohol use}
-#'     \item{\code{C_DU}} {ASI-Composite score for drug use}
-#'     \item{\code{CUAD_C}} {CUAD-Cocaine}
-#'     \item{\code{CUAD_H}} {CUAD-Heroin}
-#'     \item{\code{RAW_RE}} {SOCRATES-Rocognition-Raw}
-#'     \item{\code{DEC_RE}} {SOCRATES-Recognition-Decile}
-#'     \item{\code{RAW_AM}} {SOCRATES-Ambivalence-Raw}
-#'     \item{\code{DEC_AM}} {SOCRATES-Ambivalence-Decile}
-#'     \item{\code{RAW_TS}} {SOCRATES-Taking steps-Raw}
-#'     \item{\code{DEC_TS}} {SOCRATES-Taking steps-Decile}
-#'     \item{\code{RAW_ADS}} {ADS score}
-#'     \item{\code{PHYS}} {InDUC-2L-Physical-Raw}
-#'     \item{\code{PHYS2}} {InDUC-2L-Physical 9Raw (w/o M48)}
-#'     \item{\code{INTER}} {InDUC-2L-Interpersonal-Raw}
-#'     \item{\code{INTRA}} {InDUC-2L-Intrapersonal-Raw}
-#'     \item{\code{IMPUL}} {InDUL-2L-Impulse control-Raw}
-#'     \item{\code{IMPUL2}} {InDUC-2L-Impulse control-Raw (w/0 M23)}
-#'     \item{\code{SR}} {InDUC-2L-Social responsibility-Raw}
-#'     \item{\code{CNTRL}} {InDUC-2L-Control score}
-#'     \item{\code{INDTOT}} {InDUC-2LTotal drlnC sore-Raw}
-#'     \item{\code{INDTOT2}} {InDUC-2L-Total drlnC-Raw- w/o M23 and M48}
-#'     \item{\code{PSS_FR}} {Perceived social support-friends}
-#'     \item{\code{PSS_FA}} {Perceived social support-family}
-#'     \item{\code{DRUGRISK}} {RAB-Drug risk total}
-#'     \item{\code{SEXRISK}} {RAB-Sex risk total}
-#'     \item{\code{TOTALRAB}} {RAB-Total RAB sore}
-#'     \item{\code{RABSCALE}} {RAB scale sore}
-#'     \item{\code{CHR_6M}} {Chronic medical conds/HIV-past 6m y/n (0=No, 1=Yes)}
-#'     \item{\code{RCT_LINK}} {Did subject link to primary care (RCT)--This time point (0=No, 1=Yes)}
-#'     \item{\code{REG_MD}} {Did subject report having regular doctor--This time point (0=No, 1=Yes)}
-#'     \item{\code{ANY_VIS}} {# visits to regular doctor's office--This time point}
-#'     \item{\code{ANY_VIS_CUMUL}} {Cumulative # visits to regular doctor's office}
-#'     \item{\code{PC_REC}} {Primary care received: Linked & #visits (0=Not linked, 1=Linked, 1 visit, 2=Linked, 2+ visits)}
-#'     \item{\code{PC_REC7}} {Primary cared received: linked & # visits (0=Not linked, 1=Linked, 1 visit, 2=Linked, 2 visits, 3=Linked, 3 visits, 4=Linked, 4 visits, 5= Linked, 5 visits, 6=Linked, 6+visits)}
-#'     \item{\code{SATREAT}} {Any BSAS substance abuse this time point (0=No, 1=Yes)}
-#'     \item{\code{DRINKSTATUS}} {Drank alcohol since leaving detox-6m}
-#'     \item{\code{DAYSDRINK}} {Time (days) from baseline to first drink since leaving detox-6m}
-#'     \item{\code{ANYSUBSTATUS}} {Used alcohol, heroin, or cocaine since leaving detox-6m}
-#'     \item{\code{DAYSANYSUB}} {time (days) from baseline to first alcohol, heroin, or cocaine since leaving detox-6m}
-#'     \item{\code{LINKSTATUS}} {Linked to primary care within 12 months (by administrative record)}
-#'     \item{\code{DAYSLINK}} {Time (days) to linkage to primary care within 12 months (by administrative record)}
 #'   }
 #' 
 #' @details 
