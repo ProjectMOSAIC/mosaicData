@@ -335,7 +335,6 @@ NA
 #'     \item{\code{outcome}} {1 = live birth that survived at least 28 days}
 #'     \item{\code{date}} {birth date where 1096=January 1, 1961}
 #'     \item{\code{gestation}} {length of gestation (in days)}
-#'     \item{\code{sex}} {infant's sex (1=male, 2=female)}
 #'     \item{\code{wt}} {birth weight (in ounces)}
 #'     \item{\code{parity}} {total number of previous pregnancies (including fetal deaths
 #' and still births)}
@@ -368,13 +367,13 @@ NA
 #'   }
 #' 
 #' @details 
-#' The data were presented by Nolan and Speed to address the question of whether there is a link between maternal smoking and the baby's health.
+#' The data were presented by Nolan and Speed to address the question of whether there is a link between maternal smoking and the baby's health for male births.
 #' 
 #' @source 
 #' The book by Nolan and Speed
 #' describes the data in more detail 
 #' and provides an Internet site for accessing them: 
-#' \url{http://www.stat.berkeley.edu/users/statlabs/}
+#' \url{http://www.stat.berkeley.edu/users/statlabs}
 #' 
 #' 
 #' @references 
