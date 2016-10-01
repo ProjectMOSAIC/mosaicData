@@ -126,6 +126,34 @@ NA
 
 NA 
 
+#' US Births in 2015
+#'
+#' A day by day record of the number of births in the United States in 2015.
+#' 
+#' @docType data
+#' @name Births2015
+#' @usage data(Births2015)
+#' @format 
+#'   A data frame with 365 observations on the following variables.
+#'   \itemize{
+#'     \item{\code{date}} {date in 2015}
+#'     \item{\code{births}} {number of US births}
+#'     \item{\code{dayofyear}} {sequential number of days from 1 to 365}
+#'     \item{\code{wday}} {day of week as an ordered factor}
+#'   }
+#' @seealso \code{\link{Births78}}, \code{\link{Births}}
+#' @source United States Centers for Disease Control (based on 2015 US Natality data).
+#' 
+#' 
+#' @examples
+#' data(Births2015)
+#' if (require(lattice)) {
+#'   xyplot(births ~ date, Births2015)
+#'   xyplot(births ~ date, Births2015, groups = wday)
+#' }
+
+NA 
+
 #' Standard Deck of Cards
 #' 
 #' A character vector with two or three character representations of 

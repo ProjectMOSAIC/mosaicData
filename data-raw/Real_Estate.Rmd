@@ -1,0 +1,326 @@
+---
+title: "How much is a Fireplace Worth?"
+author: "Dick De Veaux"
+date: "Oct. 7, 2015"
+output: word_document
+---
+
+##Zillow
+
+```{r include=FALSE}
+library(ggplot2)
+library(mosaic)
+```
+
+The website Zillow estimates the home prices for over 100,000,000 homes around the United States. (Well, actually they call them Zestimates.) In their own words,"We use proprietary automated valuation models that apply advanced algorithms to analyze our data to identify relationships within a specific geographic area, between this home-related data and actual sales prices. Home characteristics, such as square footage, location or the number of bathrooms, are given different weights according to their influence on home sale prices in each specific geography over a specific period of time, resulting in a set of valuation rules, or models that are applied to generate each home's Zestimate. Specifically, some of the data we use in this algorithm include:
+
+Physical attributes: Location, lot size, square footage, number of bedrooms and bathrooms and many other details.
+
+Tax assessments: Property tax information, actual property taxes paid, exceptions to tax assessments and other information provided in the tax assessors' records.
+
+Prior and current transactions: Actual sale prices over time of the home itself and comparable recent sales of nearby homes
+
+Currently, we have data on 110 million homes and Zestimates and Rent Zestimates on approximately 100 million U.S. homes. (Source: Zillow Internal, March 2013)
+"
+-----------
+
+##This Study
+
+
+Everyone's heard the real estate adage that the three most important things in real estate are: location, location and location. And notice that it's first on Zillow's list of variables. We're not going to try to compete with Zillow here. Instead, we'll make things simpler by keeping the location restricted to Saratoga County, New York. We'll explore some data on home prices to see if we can come up with our own model. In particular, we'll study how much more a house can fetch if it has a fireplace in it.  We'll use the prices of 1000 homes collected from public records about 8 years ago in Saratoga County, New York by a student studying at Williams College.
+
+Some of our goals for this study include building and reinforcing skills for
+
+
+    * Examining the Distribution of a Variable
+
+    * Comparing two groups via boxplots and summary statistics
+
+    * Summarizing the relationship between variables using linear regression
+    
+          + We first use simple regression 
+          + Then we add an indicator variable (dummy variable) to adjust the intercept for two groups
+          + Finally we introduce an interaction term to adjust the slopes for the two groups. 
+  
+    * The result is a multiple regression model using interaction terms to create a more complex and realistic model
+
+-----------------
+
+##Exploration
+
+We start by exploring all the variables. Of course, we first need to bring in the data. We import the data from a webset using the simple command 
+read.delim("http://sites.williams.edu/rdeveaux/files/2014/09/Saratoga.txt").
+
+We can then look at a summary -- and we notice that some of the categorical variables (*Fuel Type*, *Waterfront* etc) are treated as numerical.
+
+```{r}
+real=read.delim("http://sites.williams.edu/rdeveaux/files/2014/09/Saratoga.txt")  # read in data from the web 
+options(width=100)
+summary(real)
+```
+
+So we need to do some data processing -- telling the software that the numbers indicating *Fuel Type (2-4)*, *Heat Type (2-4)*, *Waterfront (0 or 1)* etc. are categorical.  In **R**, categorical variables are called **factors**. We can also give the categories labels inside the factor() function.By consulting with the Director of Data Processing of Saratoga County, I was able to assign the actual definitions of the numeric codes to the various levels.
+
+I also created some new variables based on the original variables. The original variable *Fireplaces* is the actual number of fireplace in the house. I've created two variables from it: *Fireplace* is a $0/1$ or Yes/No variable indicating presence of a fireplace and the new coding for *Fireplaces* uses just three levels: "None","1" and "2 or more". Similarly, *Beds* is an ordered categorical variable created from *Bedrooms*. 
+
+
+```{r}
+real$Fuel.Type=factor(real$Fuel.Type,labels=c("Gas","Electric","Oil")) # Turn numbers into categories
+real$Sewer.Type=factor(real$Sewer.Type,labels=c("None","Private","Public"))
+real$Heat.Type=factor(real$Heat.Type,labels=c("Hot Air","Hot Water","Electric"))
+real$Waterfront=factor(real$Waterfront,labels=c("No","Yes"))
+real$Central.Air=factor(real$Central.Air,labels=c("No","Yes"))
+real$New.Construct=factor(real$New.Construct,labels=c("No","Yes"))
+real$Fireplace=factor(real$Fireplaces==0,labels=c("No","Yes"))
+real$Fireplaces=factor(real$Fireplaces)
+real$Fireplace=factor(real$Fireplaces==0,labels=c("Yes","No"))
+levels(real$Fireplaces)=c("None","1","2 or more","2 or more","2 or more")
+real$Beds=as.factor(real$Bedrooms)
+levels(real$Beds)=c("2 or fewer","2 or fewer","3","4 or more","4 or more","4 or more","4 or more") 
+```
+
+Running the summary again, we see that it looks much better:
+
+
+```{r}
+summary(real)
+```
+
+-----------
+
+##Getting Started
+
+A summary provides a good way to see how the variables are treated (as quantitative or categorical) and whether they are indundated with missing values. However, don't spend too much time examining variables this way -- graphical displays, such as histograms and bar charts are a much better way to go. 
+
+Our response variable -- the variable we're trying to predict -- is house price. Here's a histogram. 
+
+```{r}
+options(scipen=1000)
+with(real,hist(Price,col="light blue",nclass=30,main="",xlab="Price ($)"))
+```
+
+
+From the summary we saw that the median house price is $189,000 the mean is $211,967, and the max is $775,000. Now we see that the prices are skewed to the right with relatively few houses priced above $400K. That skewness explains why the mean is higher than the median. The few houses priced between $400K and $800K have pulled it away from the typical price. 
+
+
+---------------
+
+##House Size
+
+Clearly, the size of the house is an important factor when considering the price. Here's a histogram of the sizes (in square feet). How would you describe the distribution of house sizes?
+
+```{r fig.width=6, fig.height=3.75, fig.cap="Histogram of Living Area"}
+with(real,hist(Living.Area,col="light blue",nclass=30,main="",xlab="Living Area (sq.ft)"))
+```
+
+----------
+
+##Fireplaces
+
+Are houses with fireplaces generally more expensive than houses without? Let's try a simple comparison of the prices for the two groups -- those without and those with fireplaces. A boxplot is a great way to display the differences:
+
+
+```{r fig.width=3, fig.height=4}
+with(real,boxplot(Price~Fireplace,col=c("light pink","blue")))
+```
+
+```{r}
+mean(Price~Fireplace,data=real)
+```
+
+
+
+```{r}
+compareMean(Price~Fireplace,data=real)
+```
+
+The houses with fireplaces are more expensive. In fact, they are \$65,261 more expensive, on average.
+
+So, is a fireplace *worth* about \$65,000 ? If you're thinking of selling a house that doesn't have a fireplace should you invest \$50,000 to put one in?
+
+-----------------
+
+##What about other Variables?
+
+ Unless we have data from a designed experiment it is impossible to conclude that a change in one variable is the cause for the changes in another. Looking at differences in  averages between groups is one of the most common ways to be led to make such false conclusions. While we can never assign cause, we can do *better* by adjusting for other variables that we know also contribute to the changes. This is the basic idea behind epidemiological, or case/control studies.
+ 
+For the real estate date, we know that larger houses are genearlly more expensive. Let's examine the relationship between *Price* and *Living Area* with a scatterplot:
+
+```{r fig.width=8, fig.height=6.1}
+with(real,plot(Price~Living.Area,pch=20,col="#0000FF",xlab="Living Area",ylab="Price"))
+options(scipen=1, digits=2)
+mod0=lm(Price~Living.Area,data=real)
+mod0
+abline(mod0)
+```
+
+
+If we model the relationship between *Price* on *Living Area* with a linear regression, the model shows a slope of 113.10 which means that each additional square foot is associated with a *Price* increase of about \$113.10:
+
+```{r}
+
+```
+
+Are the houses with fireplaces evenly distributed in this scatter plot? Let's color the ones with fireplaces red:
+
+
+```{r fig.width=8, fig.height=6.1}
+colors=rep("pink",length(real$Fireplace))
+colors[real$Fireplace=="No"]="#0000FF"
+colors[real$Fireplace=="Yes"]="#FF0000"
+with(real,plot(Price~Living.Area,pch=20,col=colors,xlab="Living Area",ylab="Price"))
+abline(mod0)
+```
+
+Aha. So the price goes up with *Living Area* and the houses with fireplaces tend to be bigger. 
+
+Maybe that's some (or most) of the increase in *Price* that we're seeing.
+
+Let's fit a model that adds a term for *Fireplace* to the simple regression:
+
+$$ y_i = \beta_0 + \beta_1 x_{1i} + \epsilon_i$$
+
+(Here $x_1$ is *Living Area*)
+
+The easiest approach might be to split the data into two groups and fit a linear regression to each, but using indicator variables has some important advantages. An indicator variable is simply a two-valued variable that labels houses with fireplaces with a $1$ and those without with a $0$. Let's call it $x_2$. So:
+
+$$x_{2i} = \begin{cases} 1 &\mbox{if house i has a Fireplace} \\ 
+0 & \mbox{if not}\end{cases}$$
+
+So now the model looks like this: 
+
+
+$$y_i = \beta_0 + \beta_1 x_{1i} + \beta_2 x_{2i} + \epsilon_i$$
+
+Or, after we fit it:
+
+$$\hat{y}_i = b_0 + b_1 x_{1i} + b_2 x_{2i}$$
+
+In fact, we actually have two models:
+
+$$y_i = \begin{cases} ~\beta_0 + ~~~~~~~~~~~ \beta_1 x_{1i}  + \epsilon_i  &\mbox{if no Fireplace}\\ (\beta_0 + \beta_2) + \beta_1 x_{1i}  + \epsilon_i & \mbox{if house i does have a Fireplace} \end{cases}$$
+
+Or in other words:
+$$
+\widehat{Price} = b_0 + b_1 Living Area + b_2 (Fireplace == "Yes")
+$$
+
+which, for houses without fireplaces is the same as the original model (since the variable *Fireplace == "Yes"* has value 0):
+$$
+\widehat{Price} = b_0 + b_1 Living Area 
+$$
+
+
+For houses with fireplaces there's a "different" model:
+
+$$
+\widehat{Price} = (b_0 + b_2) + b_1 Living Area
+$$
+
+Because the slope on *Living Area* is the same, we have two parallel lines. The coefficient $b_2$ isn't a "slope" at all, but the adjustment to the intercept for the houses with fireplaces.  It's the constant difference between the two parallel lines, each with slope $b_1$.
+
+--------------------------
+
+```{r}
+mod1=lm(Price~Living.Area+(Fireplace=="Yes"),data=real)
+options(scipen=1,digits=2)
+mod1
+```
+
+```{r fig.width=8, fig.height=6.1}
+colors=rep("pink",length(real$Fireplace))
+colors[real$Fireplace=="No"]="#0000FF"
+colors[real$Fireplace=="Yes"]="#FF0000"
+with(real,plot(Price~Living.Area,pch=20,col=colors,xlab="Living Area",ylab="Price"))
+abline(mod1,col="blue")
+abline(c(19167+5567,111),col="red")
+```
+
+So, it seems that a fireplace might adds about \$5567, on average to the *Price*, not \$65,000 if we adjust for the size of the house. We can see this as the difference between the two slopes, one for houses with fireplaces, and one for those without.
+
+-------------
+
+##Do we need the intercept adjustor? 
+
+We can test to see if we need $\beta_2$ just like any coefficient by looking at 
+
+$$t_{n-2} = \frac{b_2-0}{se(b_2)}$$
+
+just as we did for the slope and intecept in simple regression.
+
+```{r}
+summary(mod1)
+```
+
+Actually, it appears that perhaps we didn't need it at all (with a P-value of 0.13) -- but wait.
+
+------------------
+
+##Are the slopes the same?
+
+Of course, in this model we've assumed that the difference in price between houses with and without fireplaces is constant, no matter what their size. Let's let this assumption go by adding an *interaction* term  and adding it to the model.  We do that by *multiplying* the indicator variable by the quantitative term:
+
+
+$$
+\widehat{Price} = b_0 + b_1~ Living Area + b_2 (Fireplace == "Yes") + b_3~ Living_Area *(Fireplace=="Yes")
+$$
+
+Again, for the houses without fireplaces, both the $x_2$ and $x_3$ terms will be zero, so, for them, we'll still have:
+$$
+\widehat{Price} = b_0 + b_1 Living Area 
+$$
+
+But for houses with fireplaces *Fireplace =="Yes"* is $1$, and so:
+$$
+\widehat{Price} = (b_0 + b_2) + (b_1 + b_3) ~ Living Area 
+$$
+
+The term $b_2$ acts (as before) as an intercept adjuster for houses with fireplaces, and the new (interaction) term  $b_3$ acts as a slope adjuster:
+
+```{r}
+mod2=lm(Price~Living.Area+Fireplace+Living.Area*Fireplace,data=real)
+options(scipen=1,digits=2)
+summary(mod2)
+```
+
+
+All the terms are significant with very small P-values, so it seems that this added complexity is justifed by the data. 
+
+This is an important lesson. It's often true that a more complex model will reveal insights and patterns that a simpler model fails to show. By adding a term allowing the slopes to vary we see what happened to the constrained model. 
+
+What does this model look like?
+
+```{r fig.width=8, fig.height=6.1}
+colors=rep("pink",length(real$Fireplace))
+colors[real$Fireplace=="No"]="#0000FF"
+colors[real$Fireplace=="Yes"]="#FF0000"
+with(real,plot(Price~Living.Area,pch=20,col=colors,xlab="Living Area",ylab="Price"))
+coefs=coefficients(mod2)
+abline(c(coefs[1],coefs[2]),col="red")
+abline(c(coefs[1]+coefs[3],coefs[2]+coefs[4]),col="blue")
+```
+
+So, how much is a fireplace *worth*? Well, we still can't assign causality, but it certainly seems that the answer is at least "it depends". Fireplaces are associated with generally higher prices for large houses, and the bigger the house, the more a fireplace seems to increase the price, but for smaller houses it seems that the prices are about the same with fireplaces and without. (The lines actually appear to cross, but it would be unwise to infer that, in fact, a fireplace in a small house is associated with a decrease in price. It's probably not a statistically signficant difference.)
+
+(After thought -- if we have a categorical variable with more than two levels we can extend this, but in a non-obvious way. For example if we have three fuel types (Gas, Oil and Electric), we could create two indicators $x_2$ and $x_3$ to separate the houses with Oil from those with Gas and another to separate those with Electric from Gas. As with the no fireplace houses, one level (here we've chosen Gas) becomes the "default, and all other category levels are compared to it. If that's undesirable there are even other coding schemes that can make all levels compare to the mean, but that's a story for another day.)
+
+---------------
+
+##What have we Learned?
+
+We've seen that basing our analysis on simple models and simple averages can lead to incorrect conclusions.
+
+Even though complex models can never prove causality, they can offer explanations that are more plausible that relying on looking at one variable at a time.
+
+We've built the model through a series of steps:
+
+
+    * Examining the Distribution of a Variable
+
+    * Comparing two groups via boxplots and summary statistics
+
+    * Summarizing the relationship between variables using a multiple linear regression
+
+    * Using indicator variables to adjust models 
+  
+    * Using interaction terms (multiplying an indicator variable by a quantitative variable) to create a more complex and realistic model
