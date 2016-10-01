@@ -25,6 +25,8 @@
 #' The number of births in \code{\link{Births78}} is slightly lower than the number
 #' of births in this data set for the year 1978.  See the examples.
 #' 
+#' @seealso \code{\link{Births2015}}, \code{\link{Births}}.
+#' 
 #' @examples
 #' data(Births)
 #' if(require(ggplot2)) {

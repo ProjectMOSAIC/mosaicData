@@ -24,4 +24,7 @@ if (require(lattice)) {
   xyplot(births ~ date, Births78, groups = wday)
 }
 }
+\seealso{
+\code{\link{Births2015}}, \code{\link{Births}}
+}
 

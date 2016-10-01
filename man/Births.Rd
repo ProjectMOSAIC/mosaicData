@@ -49,4 +49,7 @@ if(require(ggplot2)) {
 }
 
 }
+\seealso{
+\code{\link{Births2015}}, \code{\link{Births}}.
+}
 

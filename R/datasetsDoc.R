@@ -116,6 +116,8 @@ NA
 #'     \item{\code{dayofyear}} {sequential number of days from 1 to 365}
 #'     \item{\code{wday}} {day of week as an ordered factor}
 #'   }
+#'   
+#' @seealso \code{\link{Births2015}}, \code{\link{Births}}
 #' 
 #' @examples
 #' data(Births78)
@@ -150,6 +152,14 @@ NA
 #' if (require(lattice)) {
 #'   xyplot(births ~ date, Births2015)
 #'   xyplot(births ~ date, Births2015, groups = wday)
+#' }
+#' if (require(dplyr)) {
+#'   Births78 %>% 
+#'     group_by(wday) %>% summarise(births = sum(births)) 
+#'     %>% ungroup() %>% mutate(frac = births / sum(births))
+#'   Births2015 %>% 
+#'     group_by(wday) %>% summarise(births = sum(births)) %>% 
+#'     ungroup() %>% mutate(frac = births / sum(births))
 #' }
 
 NA 

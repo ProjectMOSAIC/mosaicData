@@ -26,6 +26,14 @@ if (require(lattice)) {
   xyplot(births ~ date, Births2015)
   xyplot(births ~ date, Births2015, groups = wday)
 }
+if (require(dplyr)) {
+  Births78 \%>\% 
+    group_by(wday) \%>\% summarise(births = sum(births)) 
+    \%>\% ungroup() \%>\% mutate(frac = births / sum(births))
+  Births2015 \%>\% 
+    group_by(wday) \%>\% summarise(births = sum(births)) \%>\% 
+    ungroup() \%>\% mutate(frac = births / sum(births))
+}
 }
 \seealso{
 \code{\link{Births78}}, \code{\link{Births}}
