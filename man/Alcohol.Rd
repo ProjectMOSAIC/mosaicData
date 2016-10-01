@@ -8,10 +8,11 @@
   \itemize{
     \item{\code{country}} {country name}
     \item{\code{year}} {year}
-    \item{\code{alcohol}} {per capita alcohol consumption}
+    \item{\code{alcohol}} {estimated per capita alcohol consumption for adults (15+)
+    in litres pure alcohol}
   }}
 \source{
-Gapminder (http://www.gapminder.org/)
+Gapminder (\url{http://www.gapminder.org/data/})
 }
 \usage{
 data(Alcohol)
@@ -25,8 +26,5 @@ countries for which there are data in other years.
 data(Alcohol)
 # There are only a few observations in years other than 2005 and 2008
 subset(Alcohol, ! year \%in\% c(2005,2008))
-}
-\references{
-http://www.fvgreenway.org/pdfs/Northampton-Bikepath-Volume-Counts%20_05_LTA.pdf
 }
 
