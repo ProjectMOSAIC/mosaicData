@@ -28,8 +28,8 @@ if (require(lattice)) {
 }
 if (require(dplyr)) {
   Births78 \%>\% 
-    group_by(wday) \%>\% summarise(births = sum(births)) 
-    \%>\% ungroup() \%>\% mutate(frac = births / sum(births))
+    group_by(wday) \%>\% summarise(births = sum(births)) \%>\% 
+    ungroup() \%>\% mutate(frac = births / sum(births))
   Births2015 \%>\% 
     group_by(wday) \%>\% summarise(births = sum(births)) \%>\% 
     ungroup() \%>\% mutate(frac = births / sum(births))

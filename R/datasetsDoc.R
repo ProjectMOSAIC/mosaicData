@@ -54,14 +54,13 @@ NA
 #'   \itemize{
 #'     \item{\code{country}} {country name}
 #'     \item{\code{year}} {year}
-#'     \item{\code{alcohol}} {per capita alcohol consumption}
+#'     \item{\code{alcohol}} {estimated per capita alcohol consumption for adults (15+)
+#'     in litres pure alcohol}
 #'   }
 #'
 #' @source
-#' Gapminder (http://www.gapminder.org/)
+#' Gapminder (\url{http://www.gapminder.org/data/})
 #'
-#' @references
-#' http://www.fvgreenway.org/pdfs/Northampton-Bikepath-Volume-Counts%20_05_LTA.pdf
 #'
 #' @examples
 #' data(Alcohol)
@@ -155,8 +154,8 @@ NA
 #' }
 #' if (require(dplyr)) {
 #'   Births78 %>% 
-#'     group_by(wday) %>% summarise(births = sum(births)) 
-#'     %>% ungroup() %>% mutate(frac = births / sum(births))
+#'     group_by(wday) %>% summarise(births = sum(births)) %>% 
+#'     ungroup() %>% mutate(frac = births / sum(births))
 #'   Births2015 %>% 
 #'     group_by(wday) %>% summarise(births = sum(births)) %>% 
 #'     ungroup() %>% mutate(frac = births / sum(births))
