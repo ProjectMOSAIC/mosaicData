@@ -143,7 +143,9 @@ NA
 #'     \item{\code{wday}} {day of week as an ordered factor}
 #'   }
 #' @seealso \code{\link{Births78}}, \code{\link{Births}}
-#' @source United States Centers for Disease Control (based on 2015 US Natality data).
+#' @source Obtained from the
+#' United States Centers for Disease Control (based on 2015 US Natality data)
+#' with assistance from Brady Hamilton.
 #' 
 #' 
 #' @examples
