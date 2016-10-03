@@ -12,9 +12,9 @@
     \item{\code{wday}} {day of week as an ordered factor}
   }}
 \source{
-Obtained from the
-United States Centers for Disease Control (based on 2015 US Natality data)
-with assistance from Brady Hamilton.
+Obtained from the National Center for Health Statistics,  
+National Vital Statistics System,  
+Natality, 2015 data.
 }
 \usage{
 data(Births2015)
