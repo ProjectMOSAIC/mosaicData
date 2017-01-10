@@ -15,7 +15,7 @@ data(Countries)
 }
 \description{
 A data frame containing country names as used by GapMinder and the \code{maps}
-package to facilitate converstion between the two.
+package to facilitate conversation between the two.
 }
 \details{
 The "countries" in the \code{maps} data include several other geographic regions (bodies

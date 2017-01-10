@@ -25,7 +25,7 @@ as nearly as can be managed the only heat exchange is between the hot and cold w
 \examples{
 # We can test for heat exchange with the environment by check to see if the 
 # heat gained by the cold water matches the heat lost by the hot water.
-C_p <- 4.182 / 60  # / 60 because measureing m in L/min
+C_p <- 4.182 / 60  # / 60 because measuring m in L/min
 HeatX2 <- transform(HeatX, 
                 Q.cold = m.cold * C_p * (T.cold.out - T.cold.in),
                 Q.hot= m.hot * C_p * (T.hot.out- T.hot.in)
