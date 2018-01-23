@@ -23,6 +23,10 @@
 past 30 days (measured at baseline)}
     \item{\code{i2}} {maximum number of drinks (standard units) consumed per day, in the 
 past 30 days (measured at baseline)}
+    \item{\code{avg_drinks}} {average number of drinks (standard units) consumed per day, in the 
+past 30 days (measured at baseline). Same as `i1`.}
+    \item{\code{max_drinks}} {maximum number of drinks (standard units) consumed per day, in the 
+past 30 days (measured at baseline).  Same as `i2`.}
     \item{\code{id}} {subject identifier}
     \item{\code{indtot}} {Inventory of Drug Use Consequences (InDUC) total score (measured at baseline)}
     \item{\code{linkstatus}} {post-detox linkage to primary care (0 = no, 1 = yes)}
@@ -83,4 +87,3 @@ a multi-disciplinary health intervention in a detoxification unit.
 \code{\link{HELPrct}} , and \code{\link{HELPfull}}.
 }
 \keyword{datasets}
-

@@ -840,4 +840,3 @@ a multi-disciplinary health intervention in a detoxification unit.
 \code{\link{HELPrct}}, and \code{\link{HELPmiss}}.
 }
 \keyword{datasets}
-

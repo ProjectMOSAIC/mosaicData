@@ -94,4 +94,3 @@ a multi-disciplinary health intervention in a detoxification unit.
 \code{\link{HELPmiss}}, and \code{\link{HELPfull}}.
 }
 \keyword{datasets}
-
