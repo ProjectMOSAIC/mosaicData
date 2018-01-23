@@ -42,4 +42,3 @@ data(Marriage)
 
 }
 \keyword{datasets}
-

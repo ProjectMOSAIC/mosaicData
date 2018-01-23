@@ -46,4 +46,3 @@ data(CPS85)
 \references{
 Berndt, ER. \emph{The Practice of Econometrics} 1991. Addison-Wesley.
 }
-

@@ -39,4 +39,3 @@ of Simpson's paradox". (1996)
 \emph{American Statistician}, 50(4):340-341.
 }
 \keyword{datasets}
-

@@ -41,4 +41,3 @@ data(Galton)
 \emph{The American Statistician}, 58(3):237-243.
 }
 \keyword{datasets}
-

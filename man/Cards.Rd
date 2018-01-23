@@ -24,4 +24,3 @@ if (require(mosaic)) {
 
 }
 \keyword{datasets}
-

@@ -68,4 +68,3 @@ D Nolan and T Speed. \emph{Stat Labs: Mathematical
 Statistics Through Applications} (2000), Springer-Verlag.
 }
 \keyword{datasets}
-

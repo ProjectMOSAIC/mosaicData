@@ -35,4 +35,3 @@ data(SaratogaHouses)
 \description{
 Data on houses in Saratoga County, New York, USA in 2006
 }
-

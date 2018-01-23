@@ -32,4 +32,3 @@ subset(Countries, is.na(gapminder))    # Things from maps with no GapMinder equi
 subset(Countries, is.na(maps))         # Things from GapMinder with no maps equivalent
 }
 \keyword{datasets}
-

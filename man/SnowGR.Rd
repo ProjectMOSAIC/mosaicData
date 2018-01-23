@@ -47,4 +47,3 @@ if (require(reshape2)) {
 
 }
 \keyword{datasets}
-

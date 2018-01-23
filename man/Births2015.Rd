@@ -40,4 +40,3 @@ if (require(dplyr)) {
 \seealso{
 \code{\link{Births78}}, \code{\link{Births}}
 }
-

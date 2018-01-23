@@ -40,4 +40,3 @@ if (require(lattice)) {
 \code{\link{Utilities2}}.
 }
 \keyword{datasets}
-

@@ -27,4 +27,3 @@ if (require(lattice)) {
 \seealso{
 \code{\link{Births2015}}, \code{\link{Births}}
 }
-

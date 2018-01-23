@@ -38,4 +38,3 @@ Mary C. Meyer (2006) ``Wider Shoes for Wider Feet?''
 \url{www.amstat.org/publications/jse/v14n1/datasets.meyer.html}
 }
 \keyword{datasets}
-

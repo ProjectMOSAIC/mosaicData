@@ -41,4 +41,3 @@ Deborah Lynn Guber, "Getting what you pay for: the debate over equity in
 public school expenditures" (1999), \emph{Journal of Statistics Education} 7(2).
 }
 \keyword{datasets}
-

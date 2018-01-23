@@ -50,4 +50,3 @@ str(Riders)
 Nicholas J. Horton and Ella Hartenian (Journal of Statistics Education, 2015), 
 http://www.amstat.org/publications/jse/v23n2/horton.pdf
 }
-

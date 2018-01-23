@@ -31,4 +31,3 @@ if (require(lattice)) {
     }
   }
 }
-

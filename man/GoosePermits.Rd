@@ -37,4 +37,3 @@ if (require(mosaic)) {
 }
 
 }
-

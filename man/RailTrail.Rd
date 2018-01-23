@@ -42,4 +42,3 @@ data(RailTrail)
 \references{
 http://www.fvgreenway.org/pdfs/Northampton-Bikepath-Volume-Counts%20_05_LTA.pdf
 }
-
