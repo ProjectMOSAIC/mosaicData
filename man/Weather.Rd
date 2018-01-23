@@ -15,7 +15,7 @@
   \item{high_dewpt, avg_dewpt, low_dewpt}{High, average, and low dew point for the day in degrees F.}
   \item{high_humidity, avg_humidity, low_humidity}{High, average, and low relative humidity.}
   \item{high_hg, avg_hg, low_hg}{High, average, and low sea level pressure in inches of mercury.}
-  \item{high_vis, avg_vis, low_viw}{High, average, and low visability for the day in miles.}
+  \item{high_vis, avg_vis, low_vis}{High, average, and low visability for the day in miles.}
   \item{high_wind, avg_wind, low_wind}{High, average, and low wind speed for the day in mph.}
   \item{precip}{Precipitation for the day -- a character vale; `T` means "trace amount".}
   \item{events}{Character string naming weather events on the day (Rain, Fog, Snow, etc.)}
