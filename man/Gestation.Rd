@@ -26,7 +26,7 @@ and still births)}
     \item{\code{wt.1}} {mother's prepregnancy weight (in pounds)}
     \item{\code{drace}} {father's race (a factor with levels equivalent to mother's race)}
     \item{\code{dage}} {father's age (in years)}
-    \item{\code{ded}} {father'ed education (same coding as mother's education)}
+    \item{\code{ded}} {father's education (same coding as mother's education)}
     \item{\code{dht}} {father's height in inches to the last completed inch}
     \item{\code{dwt}} {father's weight (in pounds)}
     \item{\code{marital}} {marital status: 1=married, 2=legally separated, 3=divorced,
@@ -36,10 +36,10 @@ and still births)}
     \item{\code{smoke}} {does mother smoke? 0=never, 1=smokes now, 
     2=until current pregnancy, 3=once did, not now}
     \item{\code{time}} {time since quitting smoking: 0=never smoked, 1=still smokes,
-    2=during current preg, 3=within 1 yr, 4=1 to 2 years ago,
-    5= 2 to 3 yr ago, 6= 3 to 4 yrs ago, 7=5 to 9yrs ago, 
-    8=10+yrs ago, 9=quit and don't know}
-    \item{\code{number}} {number of cigs smoked per day for past and current smokers  0=never, 1=1-4, 2=5-9, 3=10-14, 4=15-19, 5=20-29, 6=30-39, 7=40-60, 8=60+, 9=smoke but don't know}
+    2=during current preg, 3=within 1 year, 4=1 to 2 years ago,
+    5= 2 to 3 years ago, 6= 3 to 4 years ago, 7=5 to 9 years ago, 
+    8=10+ years ago, 9=quit and don't know}
+    \item{\code{number}} {number of cigarettes smoked per day for past and current smokers  0=never, 1=1-4, 2=5-9, 3=10-14, 4=15-19, 5=20-29, 6=30-39, 7=40-60, 8=60+, 9=smoke but don't know}
   }}
 \source{
 The book by Nolan and Speed

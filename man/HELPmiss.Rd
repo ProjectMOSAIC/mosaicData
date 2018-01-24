@@ -40,9 +40,6 @@ past 30 days (measured at baseline).  Same as `i2`.}
     \item{\code{substance}} {primary substance of abuse: \code{alcohol} \code{cocaine} \code{heroin}}
     \item{\code{treat}} {randomized to HELP clinic: \code{no} \code{yes}}
   }}
-\source{
-\url{http://www.math.smith.edu/help}
-}
 \usage{
 data(HELPmiss)
 }

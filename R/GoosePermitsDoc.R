@@ -17,7 +17,9 @@
 #' "Measuring values of extramarket goods: are indirect measures biased?". 
 #' Amer. J. Agr. Econ. 61, 1979. Available at 
 #' \url{http://www1.udel.edu/johnmack/frec343/bishop_and_heberlein.pdf}.
-#' See also \url{http://www.math.umt.edu/patterson/ProfileLikelihoodCI.pdf}.
+#' 
+### This link seems to have broken: 
+### See also \url{http://www.math.umt.edu/patterson/ProfileLikelihoodCI.pdf}.
 #' 
 #' @examples
 #' data(GoosePermits)
