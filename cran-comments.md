@@ -1,8 +1,9 @@
 ## Test environments
+
  * local
-   * R version 3.3.0 Patched (2016-06-02 r70706)
-   * Platform: x86_64-apple-darwin13.4.0 (64-bit)
-   * Running under: OS X 10.11.5 (El Capitan)
+    * R version 3.4.2 (2017-09-28)
+    * Platform: x86_64-apple-darwin15.6.0 (64-bit)
+    * Running under: macOS High Sierra 10.13.1
    
  * win-builder via devtools
 
@@ -15,12 +16,11 @@ R CMD check succeeded
 
 ## Downstream dependencies
 
-The only reported issue from revdep_check() was with the mosaic package, but that will go away with the version submitted to CRAN earlier today.
+The only change (other than updating some documentation) is the addition of a new data set.  This should not affect downstream dependencies.
+
 
 ## Note
 
-Modified DESCRIPTION file to remove reference to mosaic-web.org from title and add
-http:// in description.
+This is a first step toward submitting an updated version of ggformula.  The new data set will replace one from weatherData, which has been removed from CRAN.
 
-Put title into title case -- would have been nice to catch that at the same time
-as the other issue, but oh well.
+
