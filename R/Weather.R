@@ -1,7 +1,7 @@
 
 #' Weather
 #' 
-#' Weather in several cities
+#' 2016-17 weather in several cities
 #' 
 #' @docType data
 #' @name Weather
@@ -27,7 +27,7 @@
 #' @examples
 #' if (require(dplyr)) {
 #'   Weather %>%
-#'     group_by(city) %>%
+#'     group_by(city, year) %>%
 #'     summarise(
 #'       min_temp = min(low_temp),
 #'       max_temp = max(high_temp)

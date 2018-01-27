@@ -27,12 +27,12 @@ These data were downloaded from WeatherUnderground in January 2018.
 data(Weather)
 }
 \description{
-Weather in several cities
+2016-17 weather in several cities
 }
 \examples{
 if (require(dplyr)) {
   Weather \%>\%
-    group_by(city) \%>\%
+    group_by(city, year) \%>\%
     summarise(
       min_temp = min(low_temp),
       max_temp = max(high_temp)
