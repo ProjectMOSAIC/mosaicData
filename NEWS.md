@@ -1,5 +1,11 @@
 # mosaicData package NEWS
 
+## version 0.16
+
+ * added new data set, Weather, containing daily weather for five 
+   cities in 2016 and 2017
+ * minor updates to documentation
+   
 ## version 0.15
 
  * added Births2015 data set
