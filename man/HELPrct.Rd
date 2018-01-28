@@ -36,6 +36,9 @@ past 30 days (measured at baseline)}
     \item{\code{substance}} {primary substance of abuse: \code{alcohol} \code{cocaine} \code{heroin}}
     \item{\code{treat}} {randomized to HELP clinic: \code{no} \code{yes}}
   }}
+\source{
+\url{https://nhorton.people.amherst.edu/help/}
+}
 \usage{
 data(HELPrct)
 }

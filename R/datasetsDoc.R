@@ -1251,8 +1251,8 @@ NA
 #' This dataset is a superset of the HELPmiss and HELPrct datasets which include
 #' far fewer variables.
 #' 
-# #' @source 
-# #' \url{http://www.math.smith.edu/help}
+#' @source 
+#' \url{https://nhorton.people.amherst.edu/help/}
 #' 
 #' @references 
 #' Samet JH, Larson MJ, Horton NJ, Doyle K, Winter M, and Saitz R.  Linking alcohol and
@@ -1340,8 +1340,8 @@ NA
 #' a subset of the HELPfull data which includes 5 timepoints and many
 #' additional variables.
 #' 
-# #' @source 
-# #' \url{http://www.math.smith.edu/help}
+#' @source 
+#' \url{https://nhorton.people.amherst.edu/help/}
 #' 
 #' @references 
 #' Samet JH, Larson MJ, Horton NJ, Doyle K, Winter M, and Saitz R.  Linking alcohol and 
@@ -1437,8 +1437,8 @@ NA
 #' also a subset of the \code{\link{HELPfull}}  data which includes 5 timepoints and 
 #' many additional variables.
 #' 
-# #' @source 
-# #' \url{http://www.math.smith.edu/help}
+#' @source 
+#' \url{https://nhorton.people.amherst.edu/help/}
 #' 
 #' @references 
 #' Samet JH, Larson MJ, Horton NJ, Doyle K, Winter M, and Saitz R.  Linking alcohol and 
