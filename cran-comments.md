@@ -1,9 +1,9 @@
 ## Test environments
 
  * local
-    * R version 3.4.3 (2017-11-30)
+    * R version 3.5.0 (2018-04-23)
     * Platform: x86_64-apple-darwin15.6.0 (64-bit)
-    * Running under: macOS High Sierra 10.13.1
+    * Running under: macOS High Sierra 10.13.5
    
  * win-builder via devtools
 
@@ -16,13 +16,13 @@ R CMD check succeeded
 
 ## Downstream dependencies
 
-The only change (other than updating some documentation) is the addition of a new data set.  This should not affect downstream dependencies.
+Main downstream dependencies are also maintained by me and are being updated in
+advance of the ggplot2 release that is forthcoming.  The only potential breaking
+change is the renaming of a variable in one of the data sets.
 
+Homer White, the only other author of a reverse dependency, has been notified about the
+upates to this package.
 
-## Note
-
-This is a first step toward submitting an updated version of ggformula.
-The new data set will replace one from weatherData, which has been
-removed from CRAN.
+Other packages in the mosaic suite will be coming over the next 48 hours.
 
 
