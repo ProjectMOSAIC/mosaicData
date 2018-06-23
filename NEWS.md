@@ -1,5 +1,9 @@
 # mosaicData package NEWS
 
+## version 0.17
+
+ * reformated the various births data sets so that they all match.
+
 ## version 0.16
 
  * added new data set, Weather, containing daily weather for five 
