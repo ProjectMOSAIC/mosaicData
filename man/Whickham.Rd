@@ -5,11 +5,11 @@
 \alias{Whickham}
 \title{Data from the Whickham survey}
 \format{A data frame with 1314 observations on women for the following  variables.
-  \itemize{
-    \item{\code{outcome}} {survival status after 20 years: a factor with levels \code{Alive} \code{Dead}}
-    \item{\code{smoker}} {smoking status at baseline: a factor with levels \code{No} \code{Yes}}
-    \item{\code{age}} {age (in years) at the time of the first survey}
-  }}
+\itemize{
+\item{\code{outcome}} {survival status after 20 years: a factor with levels \code{Alive} \code{Dead}}
+\item{\code{smoker}} {smoking status at baseline: a factor with levels \code{No} \code{Yes}}
+\item{\code{age}} {age (in years) at the time of the first survey}
+}}
 \usage{
 data(Whickham)
 }
@@ -25,7 +25,7 @@ survey was conducted twenty years later.
 This dataset contains a
 subset of the survey sample: women who were classified as current
 smokers or as never having smoked.
-The data were 
+The data were
 synthesized from the summary description tables given
 in the Appleton et al al paper.
 }

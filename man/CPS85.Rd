@@ -5,21 +5,21 @@
 \alias{CPS85}
 \title{Data from the 1985 Current Population Survey (CPS85)}
 \format{A data frame with 534 observations on the following variables.
-  \itemize{
-    \item{\code{wage}} {wage (US dollars per hour)}
-    \item{\code{educ}} {number of years of education}
-    \item{\code{race}} {a factor with levels \code{NW} (nonwhite) or \code{W} (white)}
-    \item{\code{sex}} {a factor with levels \code{F} \code{M}}
-    \item{\code{hispanic}} {a factor with levels \code{Hisp} \code{NH}}
-    \item{\code{south}} {a factor with levels \code{NS} \code{S}}
-    \item{\code{married}} {a factor with levels \code{Married} \code{Single}}
-    \item{\code{exper}} {number of years of work experience (inferred from \code{age} and
+\itemize{
+\item{\code{wage}} {wage (US dollars per hour)}
+\item{\code{educ}} {number of years of education}
+\item{\code{race}} {a factor with levels \code{NW} (nonwhite) or \code{W} (white)}
+\item{\code{sex}} {a factor with levels \code{F} \code{M}}
+\item{\code{hispanic}} {a factor with levels \code{Hisp} \code{NH}}
+\item{\code{south}} {a factor with levels \code{NS} \code{S}}
+\item{\code{married}} {a factor with levels \code{Married} \code{Single}}
+\item{\code{exper}} {number of years of work experience (inferred from \code{age} and
 \code{educ})}
-    \item{\code{union}} {a factor with levels \code{Not} \code{Union}}
-    \item{\code{age}} {age in years}
-    \item{\code{sector}} {a factor with levels \code{clerical} \code{const}
-\code{manag} \code{manuf} \code{other} \code{prof} \code{sales} \code{service}} 
-  }}
+\item{\code{union}} {a factor with levels \code{Not} \code{Union}}
+\item{\code{age}} {age in years}
+\item{\code{sector}} {a factor with levels \code{clerical} \code{const}
+\code{manag} \code{manuf} \code{other} \code{prof} \code{sales} \code{service}}
+}}
 \source{
 Data are from \url{http://lib.stat.cmu.edu/DASL}.
 }

@@ -5,16 +5,16 @@
 \alias{KidsFeet}
 \title{Foot measurements in children}
 \format{A data frame with 39 observations on the following variables.
-  \itemize{
-    \item{\code{name}} {a factor with levels corresponding to the name of each child}
-    \item{\code{birthmonth}} {the month of birth}
-    \item{\code{birthyear}} {the year of birth}
-    \item{\code{length}} {length of longer foot (in cm)}
-    \item{\code{width}} {width of longer foot (in cm)}
-    \item{\code{sex}} {a factor with levels \code{B} \code{G}}
-    \item{\code{biggerfoot}} {a factor with levels \code{L} \code{R}}
-    \item{\code{domhand}} {a factor with levels \code{L} \code{R}}
-  }}
+\itemize{
+\item{\code{name}} {a factor with levels corresponding to the name of each child}
+\item{\code{birthmonth}} {the month of birth}
+\item{\code{birthyear}} {the year of birth}
+\item{\code{length}} {length of longer foot (in cm)}
+\item{\code{width}} {width of longer foot (in cm)}
+\item{\code{sex}} {a factor with levels \code{B} \code{G}}
+\item{\code{biggerfoot}} {a factor with levels \code{L} \code{R}}
+\item{\code{domhand}} {a factor with levels \code{L} \code{R}}
+}}
 \usage{
 data(KidsFeet)
 }

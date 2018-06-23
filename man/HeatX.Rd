@@ -5,15 +5,15 @@
 \alias{HeatX}
 \title{Data from a heat exchanger laboratory}
 \format{A data frame with 6 observations on the following variables.
-  \itemize{
-    \item{\code{trial}} {trial number}
-    \item{\code{T.cold.in}} {temperature (C) of the cold water as it enters the apparatus}
-    \item{\code{T.cold.out}} {temperature (C) of the cold water as it leaves the apparatus}
-    \item{\code{m.cold}} {flow rate (L/min) of the cold water}
-    \item{\code{T.hot.in}} {temperature (C) of the hot water as it enters the apparatus}
-    \item{\code{T.hot.out}} {temperature (C) of the hot water as it leaves the apparatus}
-    \item{\code{m.hot}} {flow rate (L/min) of the hot water}
-  }}
+\itemize{
+\item{\code{trial}} {trial number}
+\item{\code{T.cold.in}} {temperature (C) of the cold water as it enters the apparatus}
+\item{\code{T.cold.out}} {temperature (C) of the cold water as it leaves the apparatus}
+\item{\code{m.cold}} {flow rate (L/min) of the cold water}
+\item{\code{T.hot.in}} {temperature (C) of the hot water as it enters the apparatus}
+\item{\code{T.hot.out}} {temperature (C) of the hot water as it leaves the apparatus}
+\item{\code{m.hot}} {flow rate (L/min) of the hot water}
+}}
 \usage{
 data(HeatX)
 }
@@ -31,8 +31,12 @@ HeatX2 <- transform(HeatX,
                 Q.hot= m.hot * C_p * (T.hot.out- T.hot.in)
 )
 HeatX2 <- transform(HeatX2, Q.env = Q.cold + Q.hot)
+if (require(ggformula)) {
+  gf_jitter( "" ~ Q.env, data = HeatX2, alpha = 0.6, size = 4, 
+    width = 0, height = 0.1, seed = 123) \%>\%
+  gf_labs(y = "")
+}
 if (require(mosaic)) {
-  stripplot( ~ Q.env, data=HeatX2, alpha=.6, cex=2, jitter.data=TRUE, factor=4)
   t.test( ~Q.env, data = HeatX2 )
 }
 }

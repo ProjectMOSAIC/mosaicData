@@ -26,10 +26,10 @@
 #' 
 #' goose.model <- 
 #'   glm( cbind(keep, sell) ~ log(bid), data = GoosePermits, family = binomial())
-#' if (require(mosaic)) {
-#'   f <- makeFun(goose.model)
-#'   xyplot( (keep/(keep+sell)) ~ bid, data = GoosePermits, ylim = c(0,1.05))
-#'   plotFun( f(b) ~ b, add = TRUE) 
+#' if (require(ggformula)) {
+#'   y.hat <- makeFun(goose.model)
+#'   gf_point( (keep/(keep+sell)) ~ bid, data = GoosePermits, ylim = c(0,1.05)) %>%
+#'   gf_fun(y.hat(b) ~ b, add = TRUE, color = "red", alpha = 0.5) 
 #' }
 #' 
 NA

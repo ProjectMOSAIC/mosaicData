@@ -24,9 +24,9 @@
 \item{\code{centralAir}}{ whether the house has central air}
 }}
 \source{
-Data collected by Candice Corvetti and used in the "Stat 101" case study 
-"How much is a Fireplace Worth".  
-See also 
+Data collected by Candice Corvetti and used in the "Stat 101" case study
+"How much is a Fireplace Worth".
+See also
 \url{http://www.saratogacountyny.gov/departments/real-property-tax-service-agency/}.
 }
 \usage{

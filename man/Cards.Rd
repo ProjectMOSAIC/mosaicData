@@ -9,7 +9,7 @@
 Cards
 }
 \description{
-A character vector with two or three character representations of 
+A character vector with two or three character representations of
 each card in a standard 52-card deck.
 }
 \details{

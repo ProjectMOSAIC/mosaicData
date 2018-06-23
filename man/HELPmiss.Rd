@@ -4,42 +4,42 @@
 \name{HELPmiss}
 \alias{HELPmiss}
 \title{Health Evaluation and Linkage to Primary Care}
-\format{Data frame with 470 observations on the following variables.  
-  
-  \itemize{
-    \item{\code{age}} {subject age at baseline (in years)}
-    \item{\code{anysub}} {use of any substance post-detox: a factor with levels \code{no} \code{yes}} 
-    \item{\code{cesd}} {Center for Epidemiologic Studies Depression measure of depressive symptoms at baseline (higher scores indicate more symptoms)}
-    \item{\code{d1}} {lifetime number of hospitalizations for medical problems (measured at baseline)}
-    \item{\code{daysanysub}} {time (in days) to first use of any substance post-detox}
-    \item{\code{dayslink}} {time (in days) to linkage to primary care}
-    \item{\code{drugrisk}} {Risk Assessment Battery drug risk scale at baseline}
-    \item{\code{e2b}} {number of times in past 6 months entered a detox program (measured at baseline)}
-    \item{\code{female}} {0 for male, 1 for female} 
-    \item{\code{sex}} {a factor with levels \code{male} \code{female}} 
-    \item{\code{g1b}} {experienced serious thoughts of suicide in last 30 days (measured at baseline): a factor with levels \code{no} \code{yes}}
-    \item{\code{homeless}} {housing status: a factor with levels \code{housed} \code{homeless}}
-    \item{\code{i1}} {average number of drinks (standard units) consumed per day, in the 
+\format{Data frame with 470 observations on the following variables.
+
+\itemize{
+\item{\code{age}} {subject age at baseline (in years)}
+\item{\code{anysub}} {use of any substance post-detox: a factor with levels \code{no} \code{yes}}
+\item{\code{cesd}} {Center for Epidemiologic Studies Depression measure of depressive symptoms at baseline (higher scores indicate more symptoms)}
+\item{\code{d1}} {lifetime number of hospitalizations for medical problems (measured at baseline)}
+\item{\code{daysanysub}} {time (in days) to first use of any substance post-detox}
+\item{\code{dayslink}} {time (in days) to linkage to primary care}
+\item{\code{drugrisk}} {Risk Assessment Battery drug risk scale at baseline}
+\item{\code{e2b}} {number of times in past 6 months entered a detox program (measured at baseline)}
+\item{\code{female}} {0 for male, 1 for female}
+\item{\code{sex}} {a factor with levels \code{male} \code{female}}
+\item{\code{g1b}} {experienced serious thoughts of suicide in last 30 days (measured at baseline): a factor with levels \code{no} \code{yes}}
+\item{\code{homeless}} {housing status: a factor with levels \code{housed} \code{homeless}}
+\item{\code{i1}} {average number of drinks (standard units) consumed per day, in the
 past 30 days (measured at baseline)}
-    \item{\code{i2}} {maximum number of drinks (standard units) consumed per day, in the 
+\item{\code{i2}} {maximum number of drinks (standard units) consumed per day, in the
 past 30 days (measured at baseline)}
-    \item{\code{avg_drinks}} {average number of drinks (standard units) consumed per day, in the 
-past 30 days (measured at baseline). Same as `i1`.}
-    \item{\code{max_drinks}} {maximum number of drinks (standard units) consumed per day, in the 
-past 30 days (measured at baseline).  Same as `i2`.}
-    \item{\code{id}} {subject identifier}
-    \item{\code{indtot}} {Inventory of Drug Use Consequences (InDUC) total score (measured at baseline)}
-    \item{\code{linkstatus}} {post-detox linkage to primary care (0 = no, 1 = yes)}
-    \item{\code{link}} {post-detox linkage to primary care: \code{no} \code{yes}} 
-    \item{\code{mcs}} {SF-36 Mental Component Score (measured at baseline, higher scores are better)}
-    \item{\code{pcs}} {SF-36 Physical Component Score (measured at baseline, higher scores are better)}
-    \item{\code{pss_fr}} {perceived social support by friends (measured at baseline)}
-    \item{\code{racegrp}} {race/ethnicity: levels \code{black} \code{hispanic} \code{other} \code{white}}
-    \item{\code{satreat}} {any BSAS substance abuse treatment at baseline: \code{no} \code{yes}}
-    \item{\code{sexrisk}} {Risk Assessment Battery sex risk score (measured at baseline)}
-    \item{\code{substance}} {primary substance of abuse: \code{alcohol} \code{cocaine} \code{heroin}}
-    \item{\code{treat}} {randomized to HELP clinic: \code{no} \code{yes}}
-  }}
+\item{\code{avg_drinks}} {average number of drinks (standard units) consumed per day, in the
+past 30 days (measured at baseline). Same as \code{i1}.}
+\item{\code{max_drinks}} {maximum number of drinks (standard units) consumed per day, in the
+past 30 days (measured at baseline).  Same as \code{i2}.}
+\item{\code{id}} {subject identifier}
+\item{\code{indtot}} {Inventory of Drug Use Consequences (InDUC) total score (measured at baseline)}
+\item{\code{linkstatus}} {post-detox linkage to primary care (0 = no, 1 = yes)}
+\item{\code{link}} {post-detox linkage to primary care: \code{no} \code{yes}}
+\item{\code{mcs}} {SF-36 Mental Component Score (measured at baseline, higher scores are better)}
+\item{\code{pcs}} {SF-36 Physical Component Score (measured at baseline, higher scores are better)}
+\item{\code{pss_fr}} {perceived social support by friends (measured at baseline)}
+\item{\code{racegrp}} {race/ethnicity: levels \code{black} \code{hispanic} \code{other} \code{white}}
+\item{\code{satreat}} {any BSAS substance abuse treatment at baseline: \code{no} \code{yes}}
+\item{\code{sexrisk}} {Risk Assessment Battery sex risk score (measured at baseline)}
+\item{\code{substance}} {primary substance of abuse: \code{alcohol} \code{cocaine} \code{heroin}}
+\item{\code{treat}} {randomized to HELP clinic: \code{no} \code{yes}}
+}}
 \source{
 \url{https://nhorton.people.amherst.edu/help/}
 }
@@ -67,7 +67,7 @@ years.  A variety of continuous, count, discrete, and survival time
 predictors and outcomes were collected at each of these five
 occasions.
 
-This dataset is a superset of the HELPrct data with 17 subjects with 
+This dataset is a superset of the HELPrct data with 17 subjects with
 partially observed data on some of the baseline variables.  This is
 a subset of the HELPfull data which includes 5 timepoints and many
 additional variables.
@@ -77,10 +77,10 @@ data(HELPmiss)
 
 }
 \references{
-Samet JH, Larson MJ, Horton NJ, Doyle K, Winter M, and Saitz R.  Linking alcohol and 
-drug-dependent adults to primary medical care: 
-A randomized controlled trial of 
-a multi-disciplinary health intervention in a detoxification unit.  
+Samet JH, Larson MJ, Horton NJ, Doyle K, Winter M, and Saitz R.  Linking alcohol and
+drug-dependent adults to primary medical care:
+A randomized controlled trial of
+a multi-disciplinary health intervention in a detoxification unit.
 \emph{Addiction}, 2003; 98(4):509-516.
 }
 \seealso{

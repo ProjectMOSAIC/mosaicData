@@ -69,102 +69,7 @@ NA
 #' subset(Alcohol, ! year %in% c(2005,2008))
 
 NA
-#' US Births in 1969 - 1988
-#'
-#' A day by day record of the number of births in each US State.
-#' 
-#' @docType data
-#' @name Birthdays
-#' @usage data(Birthdays)
-#' @format 
-#'   A data frame with 374221 observations on the following variables.
-#'   \itemize{
-#'     \item{\code{state}} {state where child was born}
-#'     \item{\code{year}} {year (1969-1988)}
-#'     \item{\code{month}} {month (1-12)}
-#'     \item{\code{day}} {day of month}
-#'     \item{\code{date}} {date as a date object}
-#'     \item{\code{births}} {number of births}
-#'   }
-#' 
-#' @examples
-#' data(Birthdays)
-#' if (require(lattice)) {
-#'   xyplot(births ~ date, Birthdays, subset=state=="CA")
-#'   xyplot(births ~ date, Birthdays, subset=state=="CA", 
-#'     groups=wday, type='l')
-#'   if (require(mosaic)) {
-#'     xyplot(births ~ date, type='l',
-#'       data = Birthdays %>% group_by(date) %>% summarise(births=sum(births)))
-#'     }
-#'   }
 
-NA 
-
-#' US Births in 1978
-#'
-#' A day by day record of the number of births in the United States in 1978.
-#' 
-#' @docType data
-#' @name Births78
-#' @usage data(Births78)
-#' @format 
-#'   A data frame with 365 observations on the following variables.
-#'   \itemize{
-#'     \item{\code{date}} {date in 1978}
-#'     \item{\code{births}} {number of US births}
-#'     \item{\code{dayofyear}} {sequential number of days from 1 to 365}
-#'     \item{\code{wday}} {day of week as an ordered factor}
-#'   }
-#'   
-#' @seealso \code{\link{Births2015}}, \code{\link{Births}}
-#' 
-#' @examples
-#' data(Births78)
-#' if (require(lattice)) {
-#'   xyplot(births ~ date, Births78)
-#'   xyplot(births ~ date, Births78, groups = wday)
-#' }
-
-NA 
-
-#' US Births in 2015
-#'
-#' A day by day record of the number of births in the United States in 2015.
-#' 
-#' @docType data
-#' @name Births2015
-#' @usage data(Births2015)
-#' @format 
-#'   A data frame with 365 observations on the following variables.
-#'   \itemize{
-#'     \item{\code{date}} {date in 2015}
-#'     \item{\code{births}} {number of US births}
-#'     \item{\code{dayofyear}} {sequential number of days from 1 to 365}
-#'     \item{\code{wday}} {day of week as an ordered factor}
-#'   }
-#' @seealso \code{\link{Births78}}, \code{\link{Births}}
-#' @source 
-#' Obtained from the National Center for Health Statistics,  
-#' National Vital Statistics System,  
-#' Natality, 2015 data.
-#' 
-#' @examples
-#' data(Births2015)
-#' if (require(lattice)) {
-#'   xyplot(births ~ date, Births2015)
-#'   xyplot(births ~ date, Births2015, groups = wday)
-#' }
-#' if (require(dplyr)) {
-#'   Births78 %>% 
-#'     group_by(wday) %>% summarise(births = sum(births)) %>% 
-#'     ungroup() %>% mutate(frac = births / sum(births))
-#'   Births2015 %>% 
-#'     group_by(wday) %>% summarise(births = sum(births)) %>% 
-#'     ungroup() %>% mutate(frac = births / sum(births))
-#' }
-
-NA 
 
 #' Standard Deck of Cards
 #' 
@@ -349,8 +254,12 @@ NA
 #'                 Q.hot= m.hot * C_p * (T.hot.out- T.hot.in)
 #')
 #' HeatX2 <- transform(HeatX2, Q.env = Q.cold + Q.hot)
+#' if (require(ggformula)) {
+#'   gf_jitter( "" ~ Q.env, data = HeatX2, alpha = 0.6, size = 4, 
+#'     width = 0, height = 0.1, seed = 123) %>%
+#'   gf_labs(y = "")
+#' }
 #' if (require(mosaic)) {
-#'   stripplot( ~ Q.env, data=HeatX2, alpha=.6, cex=2, jitter.data=TRUE, factor=4)
 #'   t.test( ~Q.env, data = HeatX2 )
 #' }
 
@@ -1607,10 +1516,11 @@ NA
 #' 
 #' @examples 
 #' data(SAT)
-#' if (require(lattice)) {
-#'   xyplot(sat ~ expend, SAT)
-#'   xyplot(sat ~ expend, SAT, 
-#' 	   panel=function(x,y){grid.text(abbreviate(SAT$state, 3), x, y, default.units='native')})
+#' if (require(ggformula)) {
+#'   gf_point(sat ~ expend, data = SAT, color = "blue", alpha = 0.5) %>%
+#'     gf_lm()
+#'   gf_text(sat ~ expend, data = SAT, label = ~ abbreviate(SAT$state, 3),
+#'     inherit = FALSE)
 #' } 
 #' @keywords datasets
 
@@ -1642,9 +1552,10 @@ NA
 #' 
 #' @examples 
 #' data(TenMileRace)
-#' if (require(lattice)) {
-#'   xyplot(net ~ age, data=TenMileRace, groups=sex)
-#'   lm(net ~ age + sex, data=TenMileRace)
+#' if (require(ggformula)) {
+#'   gf_point(net ~ age | sex, data = TenMileRace, color = ~sex, alpha = 0.1) %>%
+#'   gf_density2d(color = "gray40")
+#'   lm(net ~ age + sex, data = TenMileRace)
 #' }
 #' 
 #' @keywords datasets
@@ -1681,8 +1592,8 @@ NA
 #' 
 #' @examples 
 #' data(Utilities)
-#' if (require(lattice)) {
-#'   xyplot(gasbill ~ temp, Utilities)
+#' if (require(ggformula)) {
+#'   gf_point(gasbill ~ temp, data = Utilities)
 #' }
 #' 
 #' @seealso \code{\link{Utilities2}}.
@@ -1713,13 +1624,15 @@ NA
 #'     \item{\code{gasbill}} {gas bill (in dollars)}
 #'     \item{\code{elecbill}} {electric bill (in dollars)}
 #'     \item{\code{notes}} {notes about the billing period}
-#'     \item{\code{ccfpday}} {average gas usage per day [\code{Utilities2} only]}
-#'     \item{\code{kwhpday}} {average electric usage per day [\code{Utilities2} only]}
-#'     \item{\code{gasbillpday}} {gas bill divided by billing days [\code{Utilities2} only]}
-#'     \item{\code{elecbillpday}} {electric bill divided by billing days a numeric vector [\code{Utilities2} only]}
-#'     \item{\code{totalbillpday}} {total bill divided by billing days a numeric vector [\code{Utilities2} only]}
-#'     \item{\code{therms}} {\code{thermsPerDay * billingDays} [\code{Utilities2} only]}
-#'     \item{\code{monthsSinceY2K}} {months since 2000 [\code{Utilities2} only]}
+#'     \item{\code{ccfpday}} {average gas usage per day (\code{Utilities2} only)}
+#'     \item{\code{kwhpday}} {average electric usage per day (\code{Utilities2} only)}
+#'     \item{\code{gasbillpday}} {gas bill divided by billing days (\code{Utilities2} only)}
+#'     \item{\code{elecbillpday}} {electric bill divided by billing days a numeric vector 
+#'         (\code{Utilities2} only)}
+#'     \item{\code{totalbillpday}} {total bill divided by billing days a 
+#'         numeric vector (\code{Utilities2} only)}
+#'     \item{\code{therms}} {\code{thermsPerDay * billingDays} (\code{Utilities2} only)}
+#'     \item{\code{monthsSinceY2K}} {months since 2000 (\code{Utilities2} only)}
 #'   }
 #' 
 #' @source 
@@ -1727,8 +1640,8 @@ NA
 #' 
 #' @examples 
 #' data(Utilities2)
-#' if (require(lattice)) {
-#'   xyplot(gasbillpday ~ temp, Utilities2)
+#' if (require(ggformula)) {
+#'   gf_point(gasbillpday ~ temp, data = Utilities2)
 #' }
 #' 
 #' @seealso \code{\link{Utilities}}.
@@ -1810,14 +1723,16 @@ NA
 #' @examples 
 #' data(SnowGR)
 #' if (require(mosaic)) {
-#'   favstats(SnowGR$Total)
-#'   histogram(~Total, data=SnowGR)
-#'   xyplot(Total ~ SeasonStart, SnowGR, type=c('p','smooth'))
+#'   df_stats(~ Total, data = SnowGR)
+#'   gf_histogram( ~ Total, data = SnowGR)
+#'   gf_point(Total ~ SeasonStart, data = SnowGR) %>%
+#'     gf_smooth()
 #' }
-#' if (require(reshape2)) {
-#'   Snow2 <- melt(SnowGR, id=1:2)
-#'   names(Snow2)[3:4] <- c('Time','Snow')
-#'   bwplot(Snow ~ Time, Snow2)
+#' if (require(tidyr)) {
+#'   Snow2 <- 
+#'     SnowGR %>%
+#'     gather("Time", "Snowfall", Jul:Total) 
+#'   gf_boxplot(Snowfall ~ Time, data = Snow2)
 #' }
 #' 
 #' @keywords datasets
@@ -1841,8 +1756,8 @@ NA
 #' 
 #' @examples 
 #' data(SwimRecords)
-#' if (require(lattice)) {
-#'   xyplot(time~year, data=SwimRecords, groups=sex)
+#' if (require(ggformula)) {
+#'   gf_point(time ~ year, data = SwimRecords, color = ~ sex) 
 #' }
 #' 
 #' @keywords datasets
@@ -1872,8 +1787,8 @@ NA
 #' the water with a few seconds of the pour.
 #' @examples 
 #' data(CoolingWater)
-#' if (require(lattice)) {
-#'   xyplot(temp~time, data=CoolingWater)
+#' if (require(ggformula)) {
+#'   gf_point(temp ~ time, data = CoolingWater, alpha = 0.5)
 #' }
 #' 
 #' @keywords datasets

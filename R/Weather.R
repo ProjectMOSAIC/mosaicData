@@ -34,4 +34,11 @@
 #'       )
 #' }
 #' 
+#' if (require(ggformula)) {
+#'   Weather %>%
+#'     gf_linerange(low_temp + high_temp ~ date | city ~ ., 
+#'     color = ~ (high_temp + low_temp) / 2 ) %>%
+#'     gf_refine(scale_color_gradientn(colors = rev(rainbow(5))))
+#' }
+#' 
 "Weather"
