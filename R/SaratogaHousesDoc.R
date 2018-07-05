@@ -7,8 +7,8 @@
 #' @usage data(SaratogaHouses)
 #' @format  A data frame with 1728 observations on the following 16 variables.
 #' \itemize{
-#' \item{\code{price}}{ price (1000s of US dollars)}
-#' \item{\code{lotSize}}{ size of lot (square feet)}
+#' \item{\code{price}}{ price (US dollars)}
+#' \item{\code{lotSize}}{ size of lot (acres)}
 #' \item{\code{age}}{ age of house (years)}
 #' \item{\code{landValue}}{ value of land (1000s of US dollars)}
 #' \item{\code{livingArea}}{ living are (square feet)}
