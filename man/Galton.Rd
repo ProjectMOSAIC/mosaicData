@@ -29,7 +29,7 @@ the heights of adult children and their parents.
 \details{
 Entries were deleted for
 those children whose heights were not recorded numerically by Galton,
-who sometimes used entries such as \code{tall'',}short'', \code{idiotic'',}deformed'' and so on.
+who sometimes used entries such as \code{tall'', }short'', \code{idiotic'', }deformed'' and so on.
 }
 \examples{
 data(Galton)

@@ -13,6 +13,8 @@ Weather <-
     date  = lubridate::make_date(year = year, month = month, day = day)
     ) %>%
   select(
-    city, date, year, month, day, matches("*"))
+    city, date, year, month, day, matches("*")) %>%
+  ungroup()
 
+usethis::use_data(Weather, overwrite = TRUE)
 

@@ -1,0 +1,47 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# mosaicData
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+mosaicData provides a number of data sets associated with Proejct MOSAiC.
+
+## Installation
+
+You can install the released version of mosaicData from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("mosaicData")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("ProjectMOSAIC/mosaicData")
+```
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(mosaicData)
+suppressPackageStartupMessages(library(ggformula))
+head(Weather)
+gf_linerange(high_temp + low_temp ~ date | city ~ ., color = ~avg_temp, data = Weather) %>%
+  gf_refine(scale_color_viridis_c(option = "D", end = 0.95, begin = 0.1))
+```
+
