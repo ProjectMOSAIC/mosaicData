@@ -4,7 +4,8 @@
 \name{Riders}
 \alias{Riders}
 \title{Volume of Users of a Massachusetts Rail Trail}
-\format{A data frame with 90 observations on the following 12 variables.
+\format{
+A data frame with 90 observations on the following 12 variables.
 \describe{
 \item{\code{date}}{date of data collection (POSIXct)}
 \item{\code{day}}{a factor with levels \code{Monday}, \code{Tuesday}, \code{Wednesday},
@@ -20,10 +21,11 @@
 \item{\code{weekday}}{type of day: a factor with levels \code{N} (weekend or holiday)
 \code{Y} (non-holiday weekday)}
 \item{\code{wday}}{shorter name for \code{weekday}}
-}}
+}
+}
 \source{
 Pioneer Valley Planning Commission,
-http://www.fvgreenway.org/pdfs/Northampton-Bikepath-Volume-Counts%20_05_LTA.pdf
+http://www.fvgreenway.org/pdfs/Northampton-Bikepath-Volume-Counts\%20_05_LTA.pdf
 }
 \usage{
 data(Riders)

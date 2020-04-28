@@ -4,7 +4,8 @@
 \name{Gestation}
 \alias{Gestation}
 \title{Data from the Child Health and Development Studies}
-\format{A data frame with 1236 observations on the following variables.
+\format{
+A data frame with 1236 observations on the following variables.
 \itemize{
 \item{\code{id}} {identification number}
 \item{\code{plurality}} {5 = single fetus}
@@ -40,7 +41,8 @@ and still births)}
 5= 2 to 3 years ago, 6= 3 to 4 years ago, 7=5 to 9 years ago,
 8=10+ years ago, 9=quit and don't know}
 \item{\code{number}} {number of cigarettes smoked per day for past and current smokers  0=never, 1=1-4, 2=5-9, 3=10-14, 4=15-19, 5=20-29, 6=30-39, 7=40-60, 8=60+, 9=smoke but don't know}
-}}
+}
+}
 \source{
 The book by Nolan and Speed
 describes the data in more detail

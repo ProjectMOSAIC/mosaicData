@@ -4,7 +4,8 @@
 \name{HELPrct}
 \alias{HELPrct}
 \title{Health Evaluation and Linkage to Primary Care}
-\format{Data frame with 453 observations on the following variables.
+\format{
+Data frame with 453 observations on the following variables.
 
 \itemize{
 \item{\code{age}} {subject age at baseline (in years)}
@@ -35,7 +36,8 @@ past 30 days (measured at baseline)}
 \item{\code{sexrisk}} {Risk Assessment Battery sex risk score (measured at baseline)}
 \item{\code{substance}} {primary substance of abuse: \code{alcohol} \code{cocaine} \code{heroin}}
 \item{\code{treat}} {randomized to HELP clinic: \code{no} \code{yes}}
-}}
+}
+}
 \source{
 \url{https://nhorton.people.amherst.edu/help/}
 }

@@ -4,7 +4,8 @@
 \name{HELPfull}
 \alias{HELPfull}
 \title{Health Evaluation and Linkage to Primary Care}
-\format{A data frame with 1472 observations on the following variables.
+\format{
+A data frame with 1472 observations on the following variables.
 \itemize{
 \item{\code{ID}} {Subject ID}
 \item{\code{A10}} {Marital Status (1=Married, 2=Remarried, 3=Widowed, 4= Separated, 5=Divorced, 6=Never Married}
@@ -82,7 +83,7 @@
 \item{\code{B5A}} {Cut wrk/act time due to emot prbs-last 4 weeks (0=No, 1=Yes)}
 \item{\code{B5B}} {Accomplish ess due to emot probs-last 4 weeks (0=No, 1=Yes)}
 \item{\code{B5C}} {<carefl w/wrk/act due to em prb-last 4 weeks (0=No, 1=Yes)}
-\item{\code{B6}} {Ext phys/em intf w/norm soc act-last 4 weeks (1-Not al all, 2=Slightly, 3=Moderately, 4=Quite a bit, 5=Extremely)}
+\item{\code{B6}} {Ext phys/em intf w/norm soc act-last 4 weeks (1=Not al all, 2=Slightly, 3=Moderately, 4=Quite a bit, 5=Extremely)}
 \item{\code{B7}} {Amount of bodily pain -- past 4 weeks (1=None, 2=Very mild, 3= Mild, 4=Moderate, 5= Severe, 6= Very severe)}
 \item{\code{B8}} {Amount of pain interfering with normal work-last 4 weeks (1=Not at all, 2=A little bit, 3=Moderately, 4=Quite a bit, 5=Extremely}
 \item{\code{B9A}} {Did you feel full of pep -- past 4 weeks (1=All of the time, 2=Most of the time, 3 = Good bit of the time, 4=Some of the time, 5=A little of time, 6=None of the time)}
@@ -350,7 +351,7 @@
 \item{\code{H13_30}} {# days used >1 sub/day-last 30 bef detox}
 \item{\code{H13_LT}} {# years regularly used >1 subst/day}
 \item{\code{H13_RT}} {Route of admin of >1 subst/day (0=N/A. 1=Oral, 2=Nasal, 3=Smoking, 4=Non-IV injection, 5=IV)}
-\item{\code{H14}} {Accord to interview w/c subst is main prob (0=No problem, 1=Alcohol, 2=Alcohol to intox, 3=Heroin 4=Methadone, 5=Other opiate/analg, 6=Barbituates, 7=Sed/hyp/tranq, 8=Cocaine, 9=Amphetamines, 10=Marij/cannabis}
+\item{\code{H14}} {According to interviewer, which substance is main problem (0=No problem, 1=Alcohol, 2=Alcohol to intox, 3=Heroin 4=Methadone, 5=Other opiate/analg, 6=Barbituates, 7=Sed/hyp/tranq, 8=Cocaine, 9=Amphetamines, 10=Marij/cannabis, 15=Alcohol and one or more drug, 16=More than one drug}
 \item{\code{H15A}} {# times had alcohol DTs}
 \item{\code{H15B}} {# times overdosed on drugs}
 \item{\code{H16A}} {$ spent on alcohol-last 30 days bef detox}
@@ -409,8 +410,8 @@
 \item{\code{I7A}} {Mst bgs cocaine use any 1 day-30 bef det}
 \item{\code{I7B}} {Mst rcks cocaine use any 1 day-30 bef det}
 \item{\code{I8}} {Avg $ amt of cocaine used per day}
-\item{\code{IMPUL2}} {InDUC-2L-Impulse control-Raw (w/0 M23)}
-\item{\code{IMPUL}} {InDUL-2L-Impulse control-Raw}
+\item{\code{IMPUL2}} {Inventory of Drug Use Consequences InDUC-2L-Impulse control-Raw (w/0 M23)}
+\item{\code{IMPUL}} {Inventory of Drug Use Consequences InDUL-2L-Impulse control-Raw}
 \item{\code{INDTOT2}} {InDUC-2L-Total drlnC-Raw- w/o M23 and M48}
 \item{\code{INDTOT}} {InDUC-2LTotal drlnC sore-Raw}
 \item{\code{INTER}} {InDUC-2L-Interpersonal-Raw}
@@ -794,7 +795,8 @@
 \item{\code{VT}} {SF-36 vitality 0-100)}
 \item{\code{Z1}} {Breath Alcohol Concentration:1st test}
 \item{\code{Z2}} {Breath Alcohol Concentration:2nd test}
-}}
+}
+}
 \source{
 \url{https://nhorton.people.amherst.edu/help/}
 }
@@ -823,7 +825,8 @@ predictors and outcomes were collected at each of these five
 occasions.
 
 This dataset is a superset of the HELPmiss and HELPrct datasets which include
-far fewer variables.
+far fewer variables.  Full details of the survey instruments are available at the
+following link.
 }
 \examples{
 data(HELPfull)

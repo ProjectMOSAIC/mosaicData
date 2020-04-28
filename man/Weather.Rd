@@ -4,7 +4,8 @@
 \name{Weather}
 \alias{Weather}
 \title{Weather}
-\format{A data frame with weather-related variables for several world cities.
+\format{
+A data frame with weather-related variables for several world cities.
 \describe{
 \item{city}{City name.}
 \item{date}{Date.}
@@ -19,7 +20,8 @@
 \item{high_wind, avg_wind, low_wind}{High, average, and low wind speed for the day in mph.}
 \item{precip}{Precipitation for the day -- a character vale; \code{T} means "trace amount".}
 \item{events}{Character string naming weather events on the day (Rain, Fog, Snow, etc.)}
-}}
+}
+}
 \source{
 These data were downloaded from WeatherUnderground in January 2018.
 }

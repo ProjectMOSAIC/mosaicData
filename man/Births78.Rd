@@ -4,7 +4,8 @@
 \name{Births78}
 \alias{Births78}
 \title{US Births in 1978}
-\format{A data.frame with 365 observations on the following 8 variables.
+\format{
+A data.frame with 365 observations on the following 8 variables.
 \itemize{
 \item \code{date}   Date
 \item \code{births} Number of births on \code{date} (integer)
@@ -14,7 +15,8 @@
 \item \code{day_of_year}  Day of year (integer)
 \item \code{day_of_month} Day of month (integer)
 \item \code{day_of_week}  Day of week (integer)
-}}
+}
+}
 \usage{
 data(Births78)
 }

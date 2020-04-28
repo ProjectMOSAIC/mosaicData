@@ -4,7 +4,8 @@
 \name{Utilities}
 \alias{Utilities}
 \title{Utility bills}
-\format{A data frame containing 117 observations for the following variables.
+\format{
+A data frame containing 117 observations for the following variables.
 \itemize{
 \item{\code{month}} {month (coded as a number)}
 \item{\code{day}} {day of month on which bill was calculated}
@@ -18,7 +19,8 @@
 \item{\code{gasbill}} {gas bill (in dollars)}
 \item{\code{elecbill}} {electric bill (in dollars)}
 \item{\code{notes}} {notes about the billing period}
-}}
+}
+}
 \source{
 Daniel T. Kaplan, \emph{Statistical modeling: A fresh approach}, 2009.
 }

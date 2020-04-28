@@ -4,7 +4,8 @@
 \name{Marriage}
 \alias{Marriage}
 \title{Marriage records}
-\format{A data frame with 98 observations on the following variables.
+\format{
+A data frame with 98 observations on the following variables.
 \itemize{
 \item{\code{bookpageID}} {a factor with levels for each book and page (unique identifier)}
 \item{\code{appdate}} {a factor with levels corresponding to each of the dates on which the
@@ -23,7 +24,8 @@ application}
 \item{\code{college}} {the number of years College education, as listed on the application.  Where no number was listed, this field was left blank, unless less than 12 years High School was reported, in which case it was entered as 0.}
 \item{\code{dayOfBirth}} {the day of birth, as a number from 1 to 365 counting from January 1}
 \item{\code{sign}} {the astrological sign, with levels \code{Aquarius} \code{Aries} \code{Cancer} \code{Capricorn} \code{Gemini} \code{Leo} \code{Libra} \code{Pisces} \code{Sagittarius} \code{Scorpio} \code{Taurus} \code{Virgo}}
-}}
+}
+}
 \source{
 The records were collected through
 http://www.mobilecounty.org/probatecourt/recordssearch.htm

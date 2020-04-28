@@ -4,7 +4,8 @@
 \name{SAT}
 \alias{SAT}
 \title{State by State SAT data}
-\format{A data frame with 50 observations on the following variables.
+\format{
+A data frame with 50 observations on the following variables.
 \itemize{
 \item{\code{state}} {a factor with names of each state}
 \item{\code{expend}} {expenditure per pupil in average daily attendance in
@@ -17,7 +18,8 @@ and secondary schools, 1994-95 (in thousands of US dollars)}
 \item{\code{verbal}} {average verbal SAT score, 1994-95}
 \item{\code{math}} {average math SAT score, 1994-95}
 \item{\code{sat}} {average total SAT score, 1994-95}
-}}
+}
+}
 \source{
 http://www.amstat.org/publications/jse/secure/v7n2/datasets.guber.cfm
 }
