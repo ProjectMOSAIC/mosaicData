@@ -27,3 +27,5 @@ LazyLoad: yes
 LazyData: yes
 RoxygenNote: 7.1.0
 Roxygen: list(markdown = TRUE)
+URL: https://github.com/ProjectMOSAIC/mosaicData
+BugReports: https://github.com/ProjectMOSAIC/mosaicData/issues
