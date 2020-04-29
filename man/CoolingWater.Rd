@@ -4,11 +4,13 @@
 \name{CoolingWater}
 \alias{CoolingWater}
 \title{CoolingWater}
-\format{A data frame with 222 observations of the following variables.
+\format{
+A data frame with 222 observations of the following variables.
 \itemize{
 \item \code{time} time in minutes
 \item \code{temp} temperature in Celsius
-}}
+}
+}
 \source{
 These data were collected Stan Wagon to help his
 mathematical modeling students explore Newton's

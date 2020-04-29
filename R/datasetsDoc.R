@@ -205,8 +205,8 @@ NA
 #' @details 
 #' Entries were deleted for
 #' those children whose heights were not recorded numerically by Galton,
-#' who sometimes used entries such as ``tall'', ``short'', ``idiotic'',
-#' ``deformed'' and so on.
+#' who sometimes used entries such as "tall", "short", "idiotic",
+#' "deformed" and so on.
 #' 
 #' @source 
 #' The data were transcribed by J.A. Hanley who has published them at
@@ -1390,12 +1390,12 @@ NA
 #'   }
 #' 
 #' @details 
-#' Quoted from the source: ``From a very young age, shoes for boys tend to be wider than shoes for girls.  Is this because boys have wider feet, or because it is assumed that
+#' Quoted from the source: "From a very young age, shoes for boys tend to be wider than shoes for girls.  Is this because boys have wider feet, or because it is assumed that
 #' girls, even in elementary school, are willing to sacrifice comfort for fashion?
-#' To assess the former, a statistician measures kids' feet.''
+#' To assess the former, a statistician measures kids' feet."
 #' 
 #' @references 
-#' Mary C. Meyer (2006) ``Wider Shoes for Wider Feet?''
+#' Mary C. Meyer (2006) "Wider Shoes for Wider Feet?"
 #' \emph{Journal of Statistics Education} 14(1),
 #' \url{www.amstat.org/publications/jse/v14n1/datasets.meyer.html}
 #' 

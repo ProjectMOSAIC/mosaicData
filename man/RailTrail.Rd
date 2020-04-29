@@ -4,7 +4,8 @@
 \name{RailTrail}
 \alias{RailTrail}
 \title{Volume of Users of a Rail Trail}
-\format{A data frame with 90 observations on the following variables.
+\format{
+A data frame with 90 observations on the following variables.
 \itemize{
 \item{\code{hightemp}} {daily high temperature (in degrees Fahrenheit)}
 \item{\code{lowtemp}} {daily low temperature (in degrees Fahrenheit)}
@@ -17,7 +18,8 @@
 \item{\code{volume}} {estimated number of trail users that day (number of breaks recorded)}
 \item{\code{weekday}} {logical indicator of whether the day was a non-holiday weekday}
 \item{\code{dayType}} {one of "weekday" or "weekend"}
-}}
+}
+}
 \source{
 Pioneer Valley Planning Commission
 }
@@ -40,5 +42,5 @@ data(RailTrail)
 
 }
 \references{
-http://www.fvgreenway.org/pdfs/Northampton-Bikepath-Volume-Counts%20_05_LTA.pdf
+http://www.fvgreenway.org/pdfs/Northampton-Bikepath-Volume-Counts\%20_05_LTA.pdf
 }

@@ -4,13 +4,15 @@
 \name{Alcohol}
 \alias{Alcohol}
 \title{Alcohol Consumption per Capita}
-\format{A data frame with 411 observations on the following variables.
+\format{
+A data frame with 411 observations on the following variables.
 \itemize{
 \item{\code{country}} {country name}
 \item{\code{year}} {year}
 \item{\code{alcohol}} {estimated per capita alcohol consumption for adults (15+)
 in litres pure alcohol}
-}}
+}
+}
 \source{
 Gapminder (\url{http://www.gapminder.org/data/})
 }

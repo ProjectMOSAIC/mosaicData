@@ -4,7 +4,8 @@
 \name{Utilities2}
 \alias{Utilities2}
 \title{Utility bills}
-\format{A data frame containing 117 observations for the following variables.
+\format{
+A data frame containing 117 observations for the following variables.
 \itemize{
 \item{\code{month}} {month (coded as a number)}
 \item{\code{day}} {day of month on which bill was calculated}
@@ -27,7 +28,8 @@
 numeric vector (\code{Utilities2} only)}
 \item{\code{therms}} {\code{thermsPerDay * billingDays} (\code{Utilities2} only)}
 \item{\code{monthsSinceY2K}} {months since 2000 (\code{Utilities2} only)}
-}}
+}
+}
 \source{
 Daniel T. Kaplan, \emph{Statistical modeling: A fresh approach}, 2009.
 }

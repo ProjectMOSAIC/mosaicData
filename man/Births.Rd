@@ -4,7 +4,8 @@
 \name{Births}
 \alias{Births}
 \title{US Births}
-\format{A data.frame with 7305 observations on the following 8 variables.
+\format{
+A data.frame with 7305 observations on the following 8 variables.
 \itemize{
 \item \code{date}   Date
 \item \code{births} Number of births on \code{date} (integer)
@@ -14,7 +15,8 @@
 \item \code{day_of_year}  Day of year (integer)
 \item \code{day_of_month} Day of month (integer)
 \item \code{day_of_week}  Day of week (integer)
-}}
+}
+}
 \source{
 Data source: National Vital Statistics System natality data, as provided by
 Google BigQuery and exported to csv

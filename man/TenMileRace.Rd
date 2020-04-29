@@ -4,7 +4,8 @@
 \name{TenMileRace}
 \alias{TenMileRace}
 \title{Cherry Blossom Race}
-\format{A data frame with 8636 observations on the following variables.
+\format{
+A data frame with 8636 observations on the following variables.
 \itemize{
 \item{\code{state}} {State of residence of runner.}
 \item{\code{time}} {Official time from starting gun to finish line.}
@@ -15,7 +16,8 @@ the race: it takes time to reach the starting line after the gun has
 gone off.}
 \item{\code{age}} {Age of runner in years.}
 \item{\code{sex}} {A factor with levels \code{F} \code{M}.}
-}}
+}
+}
 \usage{
 data(TenMileRace)
 }

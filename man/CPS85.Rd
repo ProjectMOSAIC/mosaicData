@@ -4,7 +4,8 @@
 \name{CPS85}
 \alias{CPS85}
 \title{Data from the 1985 Current Population Survey (CPS85)}
-\format{A data frame with 534 observations on the following variables.
+\format{
+A data frame with 534 observations on the following variables.
 \itemize{
 \item{\code{wage}} {wage (US dollars per hour)}
 \item{\code{educ}} {number of years of education}
@@ -19,7 +20,8 @@
 \item{\code{age}} {age in years}
 \item{\code{sector}} {a factor with levels \code{clerical} \code{const}
 \code{manag} \code{manuf} \code{other} \code{prof} \code{sales} \code{service}}
-}}
+}
+}
 \source{
 Data are from \url{http://lib.stat.cmu.edu/DASL}.
 }

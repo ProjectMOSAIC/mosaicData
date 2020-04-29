@@ -4,7 +4,8 @@
 \name{Galton}
 \alias{Galton}
 \title{Galton's dataset of parent and child heights}
-\format{A data frame with 898 observations on the following variables.
+\format{
+A data frame with 898 observations on the following variables.
 \itemize{
 \item{\code{family}} {a factor with levels for each family}
 \item{\code{father}} {the father's height (in inches)}
@@ -13,7 +14,8 @@
 \item{\code{height}} {the child's height as an adult (in inches)}
 \item{\code{nkids}} {the number of adult children in the family, or, at least,
 the number whose heights Galton recorded.}
-}}
+}
+}
 \source{
 The data were transcribed by J.A. Hanley who has published them at
 \url{http://www.medicine.mcgill.ca/epidemiology/hanley/galton/}
@@ -29,7 +31,8 @@ the heights of adult children and their parents.
 \details{
 Entries were deleted for
 those children whose heights were not recorded numerically by Galton,
-who sometimes used entries such as \code{tall'', }short'', \code{idiotic'', }deformed'' and so on.
+who sometimes used entries such as "tall", "short", "idiotic",
+"deformed" and so on.
 }
 \examples{
 data(Galton)

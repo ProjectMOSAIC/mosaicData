@@ -4,12 +4,14 @@
 \name{GoosePermits}
 \alias{GoosePermits}
 \title{Goose Permit Study}
-\format{A data.frame with 11 observations on the following 3 variables.
+\format{
+A data.frame with 11 observations on the following 3 variables.
 \itemize{
 item{code{bid }}{amount offered for permit (US $) (numeric)}
 item{code{keep }}{number of hunters who kept the permit and returned the cash (numeric)}
 item{code{sell }}{number of hunters who kept the cash and returned the permit (numeric)}
-}}
+}
+}
 \source{
 Bishop and Heberlein.
 "Measuring values of extramarket goods: are indirect measures biased?".

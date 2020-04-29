@@ -4,7 +4,8 @@
 \name{KidsFeet}
 \alias{KidsFeet}
 \title{Foot measurements in children}
-\format{A data frame with 39 observations on the following variables.
+\format{
+A data frame with 39 observations on the following variables.
 \itemize{
 \item{\code{name}} {a factor with levels corresponding to the name of each child}
 \item{\code{birthmonth}} {the month of birth}
@@ -14,7 +15,8 @@
 \item{\code{sex}} {a factor with levels \code{B} \code{G}}
 \item{\code{biggerfoot}} {a factor with levels \code{L} \code{R}}
 \item{\code{domhand}} {a factor with levels \code{L} \code{R}}
-}}
+}
+}
 \usage{
 data(KidsFeet)
 }
@@ -24,16 +26,16 @@ fourth grade classroom in Ann Arbor, MI, in October 1997.  They are a
 convenience sample --- the kids who were in the fourth grade.
 }
 \details{
-Quoted from the source: ``From a very young age, shoes for boys tend to be wider than shoes for girls.  Is this because boys have wider feet, or because it is assumed that
+Quoted from the source: "From a very young age, shoes for boys tend to be wider than shoes for girls.  Is this because boys have wider feet, or because it is assumed that
 girls, even in elementary school, are willing to sacrifice comfort for fashion?
-To assess the former, a statistician measures kids' feet.''
+To assess the former, a statistician measures kids' feet."
 }
 \examples{
 data(KidsFeet)
 
 }
 \references{
-Mary C. Meyer (2006) ``Wider Shoes for Wider Feet?''
+Mary C. Meyer (2006) "Wider Shoes for Wider Feet?"
 \emph{Journal of Statistics Education} 14(1),
 \url{www.amstat.org/publications/jse/v14n1/datasets.meyer.html}
 }

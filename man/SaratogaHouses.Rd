@@ -4,10 +4,11 @@
 \name{SaratogaHouses}
 \alias{SaratogaHouses}
 \title{Houses in Saratoga County (2006)}
-\format{A data frame with 1728 observations on the following 16 variables.
+\format{
+A data frame with 1728 observations on the following 16 variables.
 \itemize{
-\item{\code{price}}{ price (1000s of US dollars)}
-\item{\code{lotSize}}{ size of lot (square feet)}
+\item{\code{price}}{ price (US dollars)}
+\item{\code{lotSize}}{ size of lot (acres)}
 \item{\code{age}}{ age of house (years)}
 \item{\code{landValue}}{ value of land (1000s of US dollars)}
 \item{\code{livingArea}}{ living are (square feet)}
@@ -22,7 +23,8 @@
 \item{\code{waterfront}}{ whether property includes waterfront}
 \item{\code{newConstruction}}{ whether the property is a new construction}
 \item{\code{centralAir}}{ whether the house has central air}
-}}
+}
+}
 \source{
 Data collected by Candice Corvetti and used in the "Stat 101" case study
 "How much is a Fireplace Worth".
