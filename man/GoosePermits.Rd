@@ -16,7 +16,7 @@ item{code{sell }}{number of hunters who kept the cash and returned the permit (n
 Bishop and Heberlein.
 "Measuring values of extramarket goods: are indirect measures biased?".
 Amer. J. Agr. Econ. 61, 1979. Available at
-\url{http://www1.udel.edu/johnmack/frec343/bishop_and_heberlein.pdf}.
+\url{https://onlinelibrary.wiley.com/doi/abs/10.2307/3180348}
 }
 \usage{
 data(GoosePermits)

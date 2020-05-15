@@ -25,8 +25,10 @@ A data frame with 119 observations of the following variables.
 }
 }
 \source{
-These data were compiled by Laura Kapitula from data available at
-\url{http://www.crh.noaa.gov/grr/climate/data/grr/snowfall/}.
+These data were compiled by Laura Kapitula from data available
+from NOAA. The original URL used
+(http://www.crh.noaa.gov/grr/climate/data/grr/snowfall/)
+is no longer in service.
 }
 \usage{
 data(SnowGR)
