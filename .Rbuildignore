@@ -9,3 +9,4 @@
 ^revdep$
 ^README\.Rmd$
 ^mosaicData\.Rproj$
+^CRAN-RELEASE$
