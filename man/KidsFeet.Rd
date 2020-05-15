@@ -37,6 +37,6 @@ data(KidsFeet)
 \references{
 Mary C. Meyer (2006) "Wider Shoes for Wider Feet?"
 \emph{Journal of Statistics Education} 14(1),
-\url{www.amstat.org/publications/jse/v14n1/datasets.meyer.html}
+\url{http://jse.amstat.org/v14n1/datasets.meyer.html}.
 }
 \keyword{datasets}

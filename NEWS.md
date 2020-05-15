@@ -1,5 +1,11 @@
 # mosaicData package NEWS
 
+## version 0.18
+
+ * removed groups from data sets to avoid dplyr version change issues
+ * updated documentation error for SaratogaHouses (#26)
+ * updated or removed broken URLs
+ 
 ## version 0.17
 
  * reformated the various births data sets so that they all match.
