@@ -154,20 +154,20 @@
       <span class='kw'>min_temp</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span>(<span class='no'>low_temp</span>),
       <span class='kw'>max_temp</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span>(<span class='no'>high_temp</span>)
       )
-}</div><div class='output co'>#&gt; <span class='message'>`summarise()` regrouping by 'city' (override with `.groups` argument)</span></div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 10 x 4</span><span>
-#&gt; </span><span style='color: #555555;'># Groups:   city [5]</span><span>
+}</div><div class='output co'>#&gt; <span class='message'>`summarise()` regrouping output by 'city' (override with `.groups` argument)</span></div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 10 x 4</span><span>
+#&gt; </span><span style='color: #949494;'># Groups:   city [5]</span><span>
 #&gt;    city       year min_temp max_temp
-#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span> Auckland   </span><span style='text-decoration: underline;'>2</span><span>016       35       82
-#&gt; </span><span style='color: #555555;'> 2</span><span> Auckland   </span><span style='text-decoration: underline;'>2</span><span>017       35       80
-#&gt; </span><span style='color: #555555;'> 3</span><span> Beijing    </span><span style='text-decoration: underline;'>2</span><span>016        1       98
-#&gt; </span><span style='color: #555555;'> 4</span><span> Beijing    </span><span style='text-decoration: underline;'>2</span><span>017        5      102
-#&gt; </span><span style='color: #555555;'> 5</span><span> Chicago    </span><span style='text-decoration: underline;'>2</span><span>016      -</span><span style='color: #BB0000;'>13</span><span>       93
-#&gt; </span><span style='color: #555555;'> 6</span><span> Chicago    </span><span style='text-decoration: underline;'>2</span><span>017       -</span><span style='color: #BB0000;'>4</span><span>       95
-#&gt; </span><span style='color: #555555;'> 7</span><span> Mumbai     </span><span style='text-decoration: underline;'>2</span><span>016       54      100
-#&gt; </span><span style='color: #555555;'> 8</span><span> Mumbai     </span><span style='text-decoration: underline;'>2</span><span>017       53      101
-#&gt; </span><span style='color: #555555;'> 9</span><span> San Diego  </span><span style='text-decoration: underline;'>2</span><span>016       41      101
-#&gt; </span><span style='color: #555555;'>10</span><span> San Diego  </span><span style='text-decoration: underline;'>2</span><span>017       41       98</div><div class='input'>
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> Auckland   </span><span style='text-decoration: underline;'>2</span><span>016       35       82
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> Auckland   </span><span style='text-decoration: underline;'>2</span><span>017       35       80
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> Beijing    </span><span style='text-decoration: underline;'>2</span><span>016        1       98
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> Beijing    </span><span style='text-decoration: underline;'>2</span><span>017        5      102
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> Chicago    </span><span style='text-decoration: underline;'>2</span><span>016      -</span><span style='color: #BB0000;'>13</span><span>       93
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> Chicago    </span><span style='text-decoration: underline;'>2</span><span>017       -</span><span style='color: #BB0000;'>4</span><span>       95
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> Mumbai     </span><span style='text-decoration: underline;'>2</span><span>016       54      100
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> Mumbai     </span><span style='text-decoration: underline;'>2</span><span>017       53      101
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> San Diego  </span><span style='text-decoration: underline;'>2</span><span>016       41      101
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> San Diego  </span><span style='text-decoration: underline;'>2</span><span>017       41       98</div><div class='input'>
 <span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/library.html'>require</a></span>(<span class='no'>ggformula</span>)) {
   <span class='no'>Weather</span> <span class='kw'>%&gt;%</span>
     <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_linerange.html'>gf_linerange</a></span>(<span class='no'>low_temp</span> + <span class='no'>high_temp</span> ~ <span class='no'>date</span> <span class='kw'>|</span> <span class='no'>city</span> ~ <span class='no'>.</span>,

@@ -25,7 +25,7 @@ Description: Data sets from Project MOSAIC (<http://mosaic-web.org>) used
 License: GPL (>=2)
 LazyLoad: yes
 LazyData: yes
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Roxygen: list(markdown = TRUE)
 URL: https://github.com/ProjectMOSAIC/mosaicData
 BugReports: https://github.com/ProjectMOSAIC/mosaicData/issues
