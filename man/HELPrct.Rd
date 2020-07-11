@@ -12,6 +12,7 @@ Data frame with 453 observations on the following variables.
 \item{\code{anysub}} {use of any substance post-detox: a factor with levels \code{no} \code{yes}}
 \item{\code{cesd}} {Center for Epidemiologic Studies Depression measure at baseline (high scores indicate more depressive symptoms)}
 \item{\code{d1}} {lifetime number of hospitalizations for medical problems (measured at baseline)}
+\item{\code{hospitalizations}} {lifetime number of hospitalizations for medical problems (measured at baseline)}
 \item{\code{daysanysub}} {time (in days) to first use of any substance post-detox}
 \item{\code{dayslink}} {time (in days) to linkage to primary care}
 \item{\code{drugrisk}} {Risk Assessment Battery drug risk scale at baseline}
