@@ -1,7 +1,7 @@
 Package: mosaicData
 Type: Package
 Title: Project MOSAIC Data Sets
-Version: 0.18.0
+Version: 0.18.9000
 Date: 2020-05-14
 Depends:
     R (>= 3.0.0)
