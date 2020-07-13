@@ -1418,9 +1418,8 @@ NA
 #'   A data frame with 98 observations on the following variables.
 #'   \itemize{
 #'     \item{\code{bookpageID}} {a factor with levels for each book and page (unique identifier)}
-#'     \item{\code{appdate}} {a factor with levels corresponding to each of the dates on which the
-#' application was filed (in the form MO/DY/YY, e.g. 1/22/99 represents January 22, 1999)}
-#'     \item{\code{ceremonydate}} {a factor with levels corresponding to the date of the ceremony}
+#'     \item{\code{appdate}} {date on which the application was filed}
+#'     \item{\code{ceremonydate}} {date of the ceremony}
 #'     \item{\code{delay}} {number of days between the application and the ceremony}
 #'     \item{\code{officialTitle}} {a factor with levels \code{BISHOP} \code{CATHOLIC PRIEST} \code{CHIEF CLERK} \code{CIRCUIT JUDGE } \code{ELDER} \code{MARRIAGE OFFICIAL} \code{MINISTER} \code{PASTOR} \code{REVEREND}}
 #'     \item{\code{person}} {a factor with levels \code{Bride} \code{Groom}}
