@@ -38,7 +38,7 @@ Official snowfall data by month and season for Grand Rapids, MI, going back to 1
 }
 \examples{
 data(SnowGR)
-if (require(mosaic)) {
+if (require(ggformula)) {
   df_stats(~ Total, data = SnowGR)
   gf_histogram( ~ Total, data = SnowGR)
   gf_point(Total ~ SeasonStart, data = SnowGR) \%>\%
