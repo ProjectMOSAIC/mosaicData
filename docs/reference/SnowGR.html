@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mosaicData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.18.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.18.9000</span>
       </span>
     </div>
 
@@ -152,17 +152,22 @@ is no longer in service.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>SnowGR</span>)
-<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/library.html'>require</a></span>(<span class='no'>mosaic</span>)) {
-  <span class='fu'>df_stats</span>(~ <span class='no'>Total</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>SnowGR</span>)
-  <span class='fu'>gf_histogram</span>( ~ <span class='no'>Total</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>SnowGR</span>)
-  <span class='fu'>gf_point</span>(<span class='no'>Total</span> ~ <span class='no'>SeasonStart</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>SnowGR</span>) <span class='kw'>%&gt;%</span>
-    <span class='fu'>gf_smooth</span>()
-}</div><div class='output co'>#&gt; <span class='message'>Loading required package: mosaic</span></div><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/library.html'>require</a></span>(<span class='no'>tidyr</span>)) {
+<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/library.html'>require</a></span>(<span class='no'>ggformula</span>)) {
+  <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/reexports.html'>df_stats</a></span>(~ <span class='no'>Total</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>SnowGR</span>)
+  <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_histogram.html'>gf_histogram</a></span>( ~ <span class='no'>Total</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>SnowGR</span>)
+  <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_point.html'>gf_point</a></span>(<span class='no'>Total</span> ~ <span class='no'>SeasonStart</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>SnowGR</span>) <span class='kw'>%&gt;%</span>
+    <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_smooth.html'>gf_smooth</a></span>()
+}</div><div class='output co'>#&gt; <span class='message'>`geom_smooth()` using method = 'loess'</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Removed 1 rows containing non-finite values (stat_smooth).</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Removed 1 rows containing missing values (geom_point).</span></div><div class='img'><img src='SnowGR-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/library.html'>require</a></span>(<span class='no'>tidyr</span>) <span class='kw'>&amp;&amp;</span> <span class='fu'><a href='https://rdrr.io/r/base/library.html'>require</a></span>(<span class='no'>dplyr</span>)) {
   <span class='no'>Snow2</span> <span class='kw'>&lt;-</span>
     <span class='no'>SnowGR</span> <span class='kw'>%&gt;%</span>
-    <span class='fu'><a href='https://tidyr.tidyverse.org/reference/gather.html'>gather</a></span>(<span class='st'>"Time"</span>, <span class='st'>"Snowfall"</span>, <span class='no'>Jul</span>:<span class='no'>Total</span>)
-  <span class='fu'>gf_boxplot</span>(<span class='no'>Snowfall</span> ~ <span class='no'>Time</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Snow2</span>)
-}</div><div class='output co'>#&gt; <span class='message'>Loading required package: tidyr</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Removed 8 rows containing non-finite values (stat_boxplot).</span></div><div class='img'><img src='SnowGR-1.png' alt='' width='700' height='433' /></div><div class='input'>
+    <span class='fu'><a href='https://tidyr.tidyverse.org/reference/pivot_longer.html'>pivot_longer</a></span>(<span class='no'>Jul</span>:<span class='no'>Total</span>, <span class='kw'>names_to</span> <span class='kw'>=</span> <span class='st'>"month"</span>, <span class='kw'>values_to</span> <span class='kw'>=</span> <span class='st'>"snowfall"</span>) <span class='kw'>%&gt;%</span>
+    <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span>(<span class='no'>month</span> <span class='kw'>!=</span> <span class='st'>"Total"</span>) <span class='kw'>%&gt;%</span>
+    <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span>(<span class='kw'>month</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>month</span>, <span class='kw'>levels</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span>(<span class='no'>month</span>)))
+  <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_violin.html'>gf_violin</a></span>(<span class='no'>snowfall</span> ~ <span class='no'>month</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Snow2</span>, <span class='kw'>scale</span> <span class='kw'>=</span> <span class='st'>"width"</span>)
+}</div><div class='output co'>#&gt; <span class='message'>Loading required package: tidyr</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: ‘tidyr’</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from ‘package:Matrix’:</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    expand, pack, unpack</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Removed 7 rows containing non-finite values (stat_ydensity).</span></div><div class='img'><img src='SnowGR-2.png' alt='' width='700' height='433' /></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

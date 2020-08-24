@@ -73,7 +73,7 @@ cotton plants." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mosaicData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.18.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.18.9000</span>
       </span>
     </div>
 
@@ -144,7 +144,10 @@ cotton plants.</p>
 <span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/library.html'>require</a></span>(<span class='no'>mosaic</span>)) {
   <span class='fu'><a href='https://rdrr.io/pkg/mosaic/man/reexports.html'>tally</a></span>(~ <span class='no'>treatment</span> + <span class='no'>outcome</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>Mites</span>)
   <span class='fu'><a href='https://rdrr.io/pkg/mosaic/man/reexports.html'>tally</a></span>(~ <span class='no'>outcome</span> <span class='kw'>|</span> <span class='no'>treatment</span>, <span class='kw'>format</span><span class='kw'>=</span><span class='st'>"percent"</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>Mites</span>)
-}</div><div class='output co'>#&gt; <span class='message'>Loading required package: mosaic</span></div><div class='input'>
+}</div><div class='output co'>#&gt;          treatment
+#&gt; outcome      mites no mites
+#&gt;   no wilt 57.69231 19.04762
+#&gt;   wilt    42.30769 80.95238</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

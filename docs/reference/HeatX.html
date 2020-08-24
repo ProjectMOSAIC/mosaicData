@@ -74,7 +74,7 @@ as nearly as can be managed the only heat exchange is between the hot and cold w
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mosaicData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.18.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.18.9000</span>
       </span>
     </div>
 
@@ -141,21 +141,33 @@ as nearly as can be managed the only heat exchange is between the hot and cold w
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># We can test for heat exchange with the environment by check to see if the </span>
+    <pre class="examples"><div class='input'><span class='co'># We can test for heat exchange with the environment by checking to see if the </span>
 <span class='co'># heat gained by the cold water matches the heat lost by the hot water.</span>
 <span class='no'>C_p</span> <span class='kw'>&lt;-</span> <span class='fl'>4.182</span> / <span class='fl'>60</span>  <span class='co'># / 60 because measuring m in L/min</span>
-<span class='no'>HeatX2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>HeatX</span>,
-                <span class='kw'>Q.cold</span> <span class='kw'>=</span> <span class='no'>m.cold</span> * <span class='no'>C_p</span> * (<span class='no'>T.cold.out</span> - <span class='no'>T.cold.in</span>),
-                <span class='kw'>Q.hot</span><span class='kw'>=</span> <span class='no'>m.hot</span> * <span class='no'>C_p</span> * (<span class='no'>T.hot.out</span>- <span class='no'>T.hot.in</span>)
-)
-<span class='no'>HeatX2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>HeatX2</span>, <span class='kw'>Q.env</span> <span class='kw'>=</span> <span class='no'>Q.cold</span> + <span class='no'>Q.hot</span>)
+<span class='no'>HeatX2</span> <span class='kw'>&lt;-</span>
+  <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span>(<span class='no'>HeatX</span>,
+    <span class='kw'>Q.cold</span> <span class='kw'>=</span> <span class='no'>m.cold</span> * <span class='no'>C_p</span> * (<span class='no'>T.cold.out</span> - <span class='no'>T.cold.in</span>),
+    <span class='kw'>Q.hot</span>  <span class='kw'>=</span> <span class='no'>m.hot</span> * <span class='no'>C_p</span> * (<span class='no'>T.hot.out</span>- <span class='no'>T.hot.in</span>),
+    <span class='kw'>Q.env</span>  <span class='kw'>=</span> <span class='no'>Q.cold</span> + <span class='no'>Q.hot</span>
+  )
 <span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/library.html'>require</a></span>(<span class='no'>ggformula</span>)) {
   <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_jitter.html'>gf_jitter</a></span>( <span class='st'>""</span> ~ <span class='no'>Q.env</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>HeatX2</span>, <span class='kw'>alpha</span> <span class='kw'>=</span> <span class='fl'>0.6</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>4</span>,
     <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>height</span> <span class='kw'>=</span> <span class='fl'>0.1</span>, <span class='kw'>seed</span> <span class='kw'>=</span> <span class='fl'>123</span>) <span class='kw'>%&gt;%</span>
   <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_aux.html'>gf_labs</a></span>(<span class='kw'>y</span> <span class='kw'>=</span> <span class='st'>""</span>)
 }</div><div class='img'><img src='HeatX-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/library.html'>require</a></span>(<span class='no'>mosaic</span>)) {
   <span class='fu'><a href='https://rdrr.io/pkg/mosaic/man/ttest.html'>t.test</a></span>( ~<span class='no'>Q.env</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>HeatX2</span> )
-}</div><div class='output co'>#&gt; <span class='message'>Loading required package: mosaic</span></div></pre>
+}</div><div class='output co'>#&gt; 
+#&gt; 	One Sample t-test
+#&gt; 
+#&gt; data:  Q.env
+#&gt; t = 2.6641, df = 5, p-value = 0.04466
+#&gt; alternative hypothesis: true mean is not equal to 0
+#&gt; 95 percent confidence interval:
+#&gt;  0.003160671 0.176897663
+#&gt; sample estimates:
+#&gt;  mean of x 
+#&gt; 0.09002917 
+#&gt; </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

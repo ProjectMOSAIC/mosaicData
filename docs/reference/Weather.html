@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mosaicData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.18.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.18.9000</span>
       </span>
     </div>
 
@@ -171,7 +171,7 @@
 <span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/library.html'>require</a></span>(<span class='no'>ggformula</span>)) {
   <span class='no'>Weather</span> <span class='kw'>%&gt;%</span>
     <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_linerange.html'>gf_linerange</a></span>(<span class='no'>low_temp</span> + <span class='no'>high_temp</span> ~ <span class='no'>date</span> <span class='kw'>|</span> <span class='no'>city</span> ~ <span class='no'>.</span>,
-    <span class='kw'>color</span> <span class='kw'>=</span> ~ (<span class='no'>high_temp</span> + <span class='no'>low_temp</span>) / <span class='fl'>2</span> ) <span class='kw'>%&gt;%</span>
+    <span class='kw'>color</span> <span class='kw'>=</span> ~ (<span class='no'>high_temp</span> + <span class='no'>low_temp</span>) / <span class='fl'>2</span>, <span class='kw'>show.legend</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>) <span class='kw'>%&gt;%</span>
     <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_aux.html'>gf_refine</a></span>(<span class='fu'>scale_color_gradientn</span>(<span class='kw'>colors</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/rev.html'>rev</a></span>(<span class='fu'><a href='https://rdrr.io/r/grDevices/palettes.html'>rainbow</a></span>(<span class='fl'>5</span>))))
 }</div><div class='img'><img src='Weather-1.png' alt='' width='700' height='433' /></div><div class='input'>
 </div></span></pre>
