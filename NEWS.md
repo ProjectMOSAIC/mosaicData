@@ -1,5 +1,10 @@
 # mosaicData package NEWS
 
+## version 0.19
+
+ * added labels to Weather and HELP data sets
+ * modified some of the examples
+
 ## version 0.18
 
  * removed groups from data sets to avoid dplyr version change issues

@@ -40,10 +40,10 @@ SaratogaHouses <-
             
   
  
-tally(heating ~ Heat.Type, data=SaratogaHouses)
-tally(fuel ~ Fuel.Type, data=SaratogaHouses)
-tally(sewer ~ Sewer.Type, data=SaratogaHouses)
-tally(centralAir ~ Central.Air, data=SaratogaHouses)
+tally(heating ~ Heat.Type, data = SaratogaHouses)
+tally(fuel ~ Fuel.Type, data = SaratogaHouses)
+tally(sewer ~ Sewer.Type, data = SaratogaHouses)
+tally(centralAir ~ Central.Air, data = SaratogaHouses)
 SaratogaHouses <- 
   SaratogaHouses %>% 
   select(-Heat.Type, -Fuel.Type, -Sewer.Type, -Waterfront) %>%
