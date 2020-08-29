@@ -1,7 +1,7 @@
 ## Test environments
 
  * local
-   * R version 4.0.0 (2020-04-24)
+   * R Under development (unstable) (2020-08-28 r79089)
    * Platform: x86_64-apple-darwin17.0 (64-bit)
    * Running under: macOS Catalina 10.15.4
    
@@ -16,8 +16,4 @@ R CMD check succeeded
 
 ## Notes on this release
 
-This is a minor update that
-  * fixes one error in documentation 
-  * deals with two URLs that no longer work, and 
-  * remove groups from a data set to avoid error message when new version of dplyr gets o CRAN.
 
