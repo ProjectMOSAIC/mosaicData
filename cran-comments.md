@@ -16,4 +16,10 @@ R CMD check succeeded
 
 ## Notes on this release
 
+There is one error at 
 
+   https://www.r-project.org/nosvn/R.check/r-release-macos-x86_64/mosaicData-00check.html
+   
+   message: there is no package called ‘stringi’
+   
+   Only occurs for this one platform.
