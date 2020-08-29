@@ -2,6 +2,7 @@
 
 ## version 0.19
 
+ * recoded several variables in the Gestation data set
  * added labels to Weather and HELP data sets
  * modified some of the examples
 
