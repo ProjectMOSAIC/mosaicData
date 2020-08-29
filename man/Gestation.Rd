@@ -8,46 +8,41 @@
 A data frame with 1236 observations on the following variables.
 \itemize{
 \item{\code{id}} {identification number}
-\item{\code{plurality}} {5 = single fetus}
-\item{\code{outcome}} {1 = live birth that survived at least 28 days}
+\item{\code{plurality}} {all "single fetus" in this data set}
+\item{\code{outcome}} {all "live birth" (survived at least 28 days) in this data set}
 \item{\code{date}} {birth date where 1096=January 1, 1961}
 \item{\code{gestation}} {length of gestation (in days)}
 \item{\code{wt}} {birth weight (in ounces)}
 \item{\code{parity}} {total number of previous pregnancies (including fetal deaths
 and still births)}
-\item{\code{race}} {mother's race: 0-5=white 6=mex 7=black 8=asian 9=mixed}
+\item{\code{race}} {mother's race: "asian", "black", "mex",  "mixed", or "white"}
 \item{\code{age}} {mother's age in years at termination of pregnancy}
-\item{\code{ed}} {mother's education:  0= less than 8th grade,
-1 = 8th -12th grade - did not graduate,
-2= HS graduate--no other schooling, 3= HS+trade,
-4=HS+some college,
-5=College graduate,
-6=Trade school, 7=HS unclear}
+\item{\code{ed}} {mother's education}
 \item{\code{ht}} {mother's height in inches to the last completed inch}
 \item{\code{wt.1}} {mother's prepregnancy weight (in pounds)}
-\item{\code{drace}} {father's race (a factor with levels equivalent to mother's race)}
+\item{\code{drace}} {father's race}
 \item{\code{dage}} {father's age (in years)}
-\item{\code{ded}} {father's education (same coding as mother's education)}
+\item{\code{ded}} {father's education}
 \item{\code{dht}} {father's height in inches to the last completed inch}
 \item{\code{dwt}} {father's weight (in pounds)}
-\item{\code{marital}} {marital status: 1=married, 2=legally separated, 3=divorced,
-4=widowed, 5=never married}
-\item{\code{inc}} {family yearly income in $2500 increments: 0=under 2500,
-1=2500-4999, ..., 8=12,500-14,999, 9=15000+}
-\item{\code{smoke}} {does mother smoke? 0=never, 1=smokes now,
-2=until current pregnancy, 3=once did, not now}
-\item{\code{time}} {time since quitting smoking: 0=never smoked, 1=still smokes,
-2=during current preg, 3=within 1 year, 4=1 to 2 years ago,
-5= 2 to 3 years ago, 6= 3 to 4 years ago, 7=5 to 9 years ago,
-8=10+ years ago, 9=quit and don't know}
-\item{\code{number}} {number of cigarettes smoked per day for past and current smokers  0=never, 1=1-4, 2=5-9, 3=10-14, 4=15-19, 5=20-29, 6=30-39, 7=40-60, 8=60+, 9=smoke but don't know}
+\item{\code{marital}} {marital status},
+\item{\code{inc}} {family yearly income in $2500 increments}
+\item{\code{smoke}} {does mother smoke? (never, smokes now,
+until current pregnancy, once did, not now)}
+\item{\code{time}} {time since quitting smoking
+(never smoked, still smokes, during current preg, within 1 year,
+1 to 2 years ago, 2 to 3 years ago, 3 to 4 years ago,
+5 to 9 years ago, 10+ years ago, quit and don't know}
+\item{\code{number}} {number of cigarettes smoked per day for past and
+current smokers  (never, 1-4, 5-9, 10-14, 15-19, 20-29, 30-39, 40-60, 60+,
+smoke but don't know)}
 }
 }
 \source{
 The book by Nolan and Speed
 describes the data in more detail
 and provides an Internet site for accessing them:
-\url{http://www.stat.berkeley.edu/users/statlabs}
+\url{https://www.stat.berkeley.edu/users/statlabs/}
 }
 \usage{
 data(Gestation)
