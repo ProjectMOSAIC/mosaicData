@@ -14,7 +14,7 @@ in litres pure alcohol}
 }
 }
 \source{
-Gapminder (\url{http://www.gapminder.org/data/})
+Gapminder (\url{https://www.gapminder.org/data/})
 }
 \usage{
 data(Alcohol)
