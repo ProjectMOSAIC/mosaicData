@@ -1,6 +1,6 @@
 # mosaicData package NEWS
 
-## version 0.19
+## version 0.20
 
  * recoded several variables in the Gestation data set
  * added labels to Weather and HELP data sets

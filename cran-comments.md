@@ -1,25 +1,15 @@
 ## Test environments
 
- * local
-   * R Under development (unstable) (2020-08-28 r79089)
-   * Platform: x86_64-apple-darwin17.0 (64-bit)
-   * Running under: macOS Catalina 10.15.4
-   
- * win-builder via devtools
+* local
 
-## R CMD check results
+  * R (4.0.2 and 4.1 (unstable))
+  * Platform: x86_64-apple-darwin17.0 (64-bit)
+  * Running under: macOS Catalina 10.15.4
 
-R CMD check results
-0 errors | 0 warnings | 0 notes
+* win-builder
 
-R CMD check succeeded
+## Mosaic suite udpates
 
-## Notes on this release
+This is submission is part of parallel submissions of mosaicCore, mosaicData, mosaic, and ggformula.
+All of which are currently checking clean locally and with check_win_devel()
 
-There is one error at 
-
-   https://www.r-project.org/nosvn/R.check/r-release-macos-x86_64/mosaicData-00check.html
-   
-   message: there is no package called ‘stringi’
-   
-   Only occurs for this one platform.
