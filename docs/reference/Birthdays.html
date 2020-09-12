@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mosaicData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.19</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.20.0</span>
       </span>
     </div>
 
@@ -143,18 +143,23 @@
   <span class='fu'>gf_line</span>(<span class='no'>births</span> ~ <span class='no'>date</span>, <span class='no'>Birthdays</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>MI</span>, <span class='kw'>color</span> <span class='kw'>=</span> ~ <span class='no'>wday</span>)
   <span class='fu'>gf_line</span>(<span class='no'>births</span> ~ <span class='no'>date</span>,
     <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Birthdays</span> <span class='kw'>%&gt;%</span> <span class='fu'>group_by</span>(<span class='no'>date</span>) <span class='kw'>%&gt;%</span> <span class='fu'>summarise</span>(<span class='kw'>births</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/mosaic/man/aggregating.html'>sum</a></span>(<span class='no'>births</span>)))
-  }</div><div class='output co'>#&gt; <span class='message'>Loading required package: mosaic</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: dplyr</span></div><div class='output co'>#&gt; <span class='message'></span>
-#&gt; <span class='message'>Attaching package: ‘dplyr’</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from ‘package:stats’:</span>
+  }</div><div class='output co'>#&gt; <span class='message'>Loading required package: mosaic</span></div><div class='output co'>#&gt; <span class='message'>Registered S3 method overwritten by 'mosaic':</span>
+#&gt; <span class='message'>  method                           from   </span>
+#&gt; <span class='message'>  fortify.SpatialPolygonsDataFrame ggplot2</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>The 'mosaic' package masks several functions from core packages in order to add </span>
+#&gt; <span class='message'>additional features.  The original behavior of these functions should not be affected by this.</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: ‘mosaic’</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from ‘package:dplyr’:</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    filter, lag</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from ‘package:base’:</span>
+#&gt; <span class='message'>    count, do, tally</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from ‘package:Matrix’:</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    intersect, setdiff, setequal, union</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: lattice</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: ggformula</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: ggplot2</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: ggstance</span></div><div class='output co'>#&gt; <span class='message'></span>
-#&gt; <span class='message'>Attaching package: ‘ggstance’</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from ‘package:ggplot2’:</span>
+#&gt; <span class='message'>    mean</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from ‘package:ggplot2’:</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    geom_errorbarh, GeomErrorbarh</span></div><div class='output co'>#&gt; <span class='message'></span>
-#&gt; <span class='message'>New to ggformula?  Try the tutorials: </span>
-#&gt; <span class='message'>	learnr::run_tutorial("introduction", package = "ggformula")</span>
-#&gt; <span class='message'>	learnr::run_tutorial("refining", package = "ggformula")</span></div></pre>
+#&gt; <span class='message'>    stat</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from ‘package:stats’:</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    binom.test, cor, cor.test, cov, fivenum, IQR, median, prop.test,</span>
+#&gt; <span class='message'>    quantile, sd, t.test, var</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from ‘package:base’:</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    max, mean, min, prod, range, sample, sum</span></div><div class='output co'>#&gt; <span class='message'>`summarise()` ungrouping output (override with `.groups` argument)</span></div><div class='img'><img src='Birthdays-1.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
