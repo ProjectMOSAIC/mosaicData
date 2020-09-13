@@ -169,7 +169,7 @@ NA
 #' entirely numerical codes.  
 #' 
 #' @source
-#' Data are from \url{http://lib.stat.cmu.edu/DASL}.
+#' Data are from <https://dasl.datadescription.com/>
 #' 
 #' @references
 #' Berndt, ER. \emph{The Practice of Econometrics} 1991. Addison-Wesley. 
@@ -1461,7 +1461,13 @@ NA
 #'     }
 #'     
 #' @details
-#' Researchers suspected that attack of a plant by one organism induced resistance to subsequent attack by a different organism.  Individually potted cotton plants were randomly allocated to two groups: infestation by spider mites or no infestation.  After two weeks the mites were dutifully removed by a conscientious research assistant, and both groups were inoculated with Verticillium, a fungus that causes Wilt disease.  More information can be found at \url{https://www.causeweb.org/webinar/activity/2010-01/}.
+#' Researchers suspected that attack of a plant by one organism induced
+#' resistance to subsequent attack by a different organism.  Individually potted
+#' cotton plants were randomly allocated to two groups: infestation by spider
+#' mites or no infestation.  After two weeks the mites were dutifully removed by
+#' a conscientious research assistant, and both groups were inoculated with
+#' Verticillium, a fungus that causes Wilt disease.  More information can be
+#' found at <https://www.causeweb.org/cause/webinar/activity/2010-01/>.
 #'
 #' @source
 #' Statistics for the Life Sciences, Third Edition; Myra Samuels & Jeffrey Witmer (2003), page 409.

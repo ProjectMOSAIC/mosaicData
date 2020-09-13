@@ -1,5 +1,5 @@
 require(mosaic)
-SaratogaHouses <- read.table("http://sites.williams.edu/rdeveaux/files/2014/09/Saratoga.txt", 
+SaratogaHouses <- read.table("https://sites.williams.edu/rdeveaux/files/2014/09/Saratoga.txt", 
   header=TRUE, stringsAsFactors=FALSE)
 inspect(SaratogaHouses)
 str(SaratogaHouses)

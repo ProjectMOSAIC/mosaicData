@@ -49,12 +49,12 @@ Some of our goals for this study include building and reinforcing skills for
 ##Exploration
 
 We start by exploring all the variables. Of course, we first need to bring in the data. We import the data from a webset using the simple command 
-read.delim("http://sites.williams.edu/rdeveaux/files/2014/09/Saratoga.txt").
+read.delim("https://sites.williams.edu/rdeveaux/files/2014/09/Saratoga.txt").
 
 We can then look at a summary -- and we notice that some of the categorical variables (*Fuel Type*, *Waterfront* etc) are treated as numerical.
 
 ```{r}
-real=read.delim("http://sites.williams.edu/rdeveaux/files/2014/09/Saratoga.txt")  # read in data from the web 
+real=read.delim("https://sites.williams.edu/rdeveaux/files/2014/09/Saratoga.txt")  # read in data from the web 
 options(width=100)
 summary(real)
 ```
