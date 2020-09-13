@@ -23,7 +23,7 @@ A data frame with 534 observations on the following variables.
 }
 }
 \source{
-Data are from \url{http://lib.stat.cmu.edu/DASL}.
+Data are from \url{https://dasl.datadescription.com}
 }
 \usage{
 data(CPS85)

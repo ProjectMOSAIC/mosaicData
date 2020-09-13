@@ -29,7 +29,7 @@ A data frame with 1728 observations on the following 16 variables.
 Data collected by Candice Corvetti and used in the "Stat 101" case study
 "How much is a Fireplace Worth".
 See also
-\url{http://www.saratogacountyny.gov/departments/real-property-tax-service-agency/}.
+\url{https://www.saratogacountyny.gov/departments/real-property-tax-service-agency/}
 }
 \usage{
 data(SaratogaHouses)

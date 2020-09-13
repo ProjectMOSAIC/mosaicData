@@ -169,7 +169,7 @@ NA
 #' entirely numerical codes.  
 #' 
 #' @source
-#' Data are from <https://dasl.datadescription.com/>
+#' Data are from <https://dasl.datadescription.com>
 #' 
 #' @references
 #' Berndt, ER. \emph{The Practice of Econometrics} 1991. Addison-Wesley. 

@@ -22,7 +22,13 @@ Data from an experiment to test whether exposure to mites protects against Wilt 
 cotton plants.
 }
 \details{
-Researchers suspected that attack of a plant by one organism induced resistance to subsequent attack by a different organism.  Individually potted cotton plants were randomly allocated to two groups: infestation by spider mites or no infestation.  After two weeks the mites were dutifully removed by a conscientious research assistant, and both groups were inoculated with Verticillium, a fungus that causes Wilt disease.  More information can be found at \url{https://www.causeweb.org/webinar/activity/2010-01/}.
+Researchers suspected that attack of a plant by one organism induced
+resistance to subsequent attack by a different organism.  Individually potted
+cotton plants were randomly allocated to two groups: infestation by spider
+mites or no infestation.  After two weeks the mites were dutifully removed by
+a conscientious research assistant, and both groups were inoculated with
+Verticillium, a fungus that causes Wilt disease.  More information can be
+found at \url{https://www.causeweb.org/cause/webinar/activity/2010-01/}.
 }
 \examples{
 data(Mites)
