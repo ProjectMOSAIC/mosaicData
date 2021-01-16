@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mosaicData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.20.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.20.2</span>
       </span>
     </div>
 
@@ -80,7 +80,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -94,7 +94,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/ProjectMOSAIC/mosaicData/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -120,7 +120,7 @@
     <p>A day by day record of the number of births in the United States in 1978.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>Births78</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>Births78</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
@@ -141,11 +141,12 @@
     <div class='dont-index'><p><code><a href='Births2015.html'>Births2015</a></code>, <code><a href='Births.html'>Births</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>Births78</span>)
-<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/library.html'>require</a></span>(<span class='no'>ggformula</span>)) {
-  <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_point.html'>gf_point</a></span>(<span class='no'>births</span> ~ <span class='no'>date</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Births78</span>)
-  <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_point.html'>gf_point</a></span>(<span class='no'>births</span> ~ <span class='no'>date</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Births78</span>, <span class='kw'>color</span> <span class='kw'>=</span> ~ <span class='no'>wday</span>)
-}</div><div class='img'><img src='Births78-1.png' alt='' width='700' height='433' /></div></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>Births78</span><span class='op'>)</span>
+<span class='kw'>if</span> <span class='op'>(</span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>require</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/ProjectMOSAIC/ggformula'>ggformula</a></span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_point.html'>gf_point</a></span><span class='op'>(</span><span class='va'>births</span> <span class='op'>~</span> <span class='va'>date</span>, data <span class='op'>=</span> <span class='va'>Births78</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_point.html'>gf_point</a></span><span class='op'>(</span><span class='va'>births</span> <span class='op'>~</span> <span class='va'>date</span>, data <span class='op'>=</span> <span class='va'>Births78</span>, color <span class='op'>=</span> <span class='op'>~</span> <span class='va'>wday</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div><div class='img'><img src='Births78-1.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -161,7 +162,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

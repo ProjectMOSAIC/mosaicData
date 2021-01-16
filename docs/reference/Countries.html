@@ -73,7 +73,7 @@ package to facilitate conversation between the two." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mosaicData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.20.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.20.2</span>
       </span>
     </div>
 
@@ -81,7 +81,7 @@ package to facilitate conversation between the two." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -95,7 +95,7 @@ package to facilitate conversation between the two." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/ProjectMOSAIC/mosaicData/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -122,7 +122,7 @@ package to facilitate conversation between the two." />
 package to facilitate conversation between the two.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>Countries</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>Countries</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
@@ -143,12 +143,14 @@ includes some NAs when there is no appropriate mapping.  Bodies of water in the
 <code>maps</code> data, for example, are not assigned a country in the Gapminder.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>Countries</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>Countries</span>, <span class='no'>maps</span><span class='kw'>==</span><span class='st'>"Yugoslavia"</span>)  <span class='co'># Where has Yugoslavia gone?</span></div><div class='output co'>#&gt;                   maptools       maps              gapminder
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>Countries</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>Countries</span>, <span class='va'>maps</span><span class='op'>==</span><span class='st'>"Yugoslavia"</span><span class='op'>)</span>  <span class='co'># Where has Yugoslavia gone?</span>
+</div><div class='output co'>#&gt;                   maptools       maps              gapminder
 #&gt; 33  Bosnia and Herzegovina Yugoslavia Bosnia and Herzegovina
 #&gt; 64                 Croatia Yugoslavia                Croatia
 #&gt; 227                 Serbia Yugoslavia                 Serbia
-#&gt; 234               Slovenia Yugoslavia               Slovenia</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>Countries</span>, <span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span>(<span class='no'>gapminder</span>))    <span class='co'># Things from maps with no Gapminder equivalent</span></div><div class='output co'>#&gt;                                 maptools                     maps gapminder
+#&gt; 234               Slovenia Yugoslavia               Slovenia</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>Countries</span>, <span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>gapminder</span><span class='op'>)</span><span class='op'>)</span>    <span class='co'># Things from maps with no Gapminder equivalent</span>
+</div><div class='output co'>#&gt;                                 maptools                     maps gapminder
 #&gt; 2                          Åland Islands                     &lt;NA&gt;      &lt;NA&gt;
 #&gt; 6                                   &lt;NA&gt;          Andaman Islands      &lt;NA&gt;
 #&gt; 9                               Anguilla                 Anguilla      &lt;NA&gt;
@@ -237,7 +239,8 @@ includes some NAs when there is no appropriate mapping.  Bodies of water in the
 #&gt; 280         United States Virgin Islands           Virgin Islands      &lt;NA&gt;
 #&gt; 281                                 &lt;NA&gt;         Vislinskiy Zaliv      &lt;NA&gt;
 #&gt; 283            Wallis and Futuna Islands                     &lt;NA&gt;      &lt;NA&gt;
-#&gt; 285                       Western Sahara           Western Sahara      &lt;NA&gt;</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>Countries</span>, <span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span>(<span class='no'>maps</span>))         <span class='co'># Things from Gapminder with no maps equivalent</span></div><div class='output co'>#&gt;                                 maptools maps    gapminder
+#&gt; 285                       Western Sahara           Western Sahara      &lt;NA&gt;</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>Countries</span>, <span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>maps</span><span class='op'>)</span><span class='op'>)</span>         <span class='co'># Things from Gapminder with no maps equivalent</span>
+</div><div class='output co'>#&gt;                                 maptools maps    gapminder
 #&gt; 2                          Åland Islands &lt;NA&gt;         &lt;NA&gt;
 #&gt; 14                               Armenia &lt;NA&gt;      Armenia
 #&gt; 18                            Azerbaijan &lt;NA&gt;   Azerbaijan
@@ -298,7 +301,7 @@ includes some NAs when there is no appropriate mapping.  Bodies of water in the
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

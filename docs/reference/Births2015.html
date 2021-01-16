@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mosaicData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.20.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.20.2</span>
       </span>
     </div>
 
@@ -80,7 +80,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -94,7 +94,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/ProjectMOSAIC/mosaicData/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -120,7 +120,7 @@
     <p>A day by day record of the number of births in the United States in 2015.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>Births2015</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>Births2015</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
@@ -146,20 +146,22 @@ Natality, 2015 data.</p>
     <div class='dont-index'><p><code><a href='Births78.html'>Births78</a></code>, <code><a href='Births.html'>Births</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>Births2015</span>)
-<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/library.html'>require</a></span>(<span class='no'>ggformula</span>)) {
-  <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_point.html'>gf_point</a></span>(<span class='no'>births</span> ~ <span class='no'>date</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Births2015</span>)
-  <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_point.html'>gf_point</a></span>(<span class='no'>births</span> ~ <span class='no'>date</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Births2015</span>, <span class='kw'>color</span> <span class='kw'>=</span> ~ <span class='no'>wday</span>)
-}</div><div class='img'><img src='Births2015-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/library.html'>require</a></span>(<span class='no'>dplyr</span>)) {
-  <span class='no'>Births78</span> <span class='kw'>%&gt;%</span>
-    <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span>(<span class='no'>wday</span>) <span class='kw'>%&gt;%</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarise</a></span>(<span class='kw'>births</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>births</span>)) <span class='kw'>%&gt;%</span>
-    <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>ungroup</a></span>() <span class='kw'>%&gt;%</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span>(<span class='kw'>frac</span> <span class='kw'>=</span> <span class='no'>births</span> / <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>births</span>))
-  <span class='no'>Births2015</span> <span class='kw'>%&gt;%</span>
-    <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span>(<span class='no'>wday</span>) <span class='kw'>%&gt;%</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarise</a></span>(<span class='kw'>births</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>births</span>)) <span class='kw'>%&gt;%</span>
-    <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>ungroup</a></span>() <span class='kw'>%&gt;%</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span>(<span class='kw'>frac</span> <span class='kw'>=</span> <span class='no'>births</span> / <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>births</span>))
-}</div><div class='output co'>#&gt; <span class='message'>`summarise()` ungrouping output (override with `.groups` argument)</span></div><div class='output co'>#&gt; <span class='message'>`summarise()` ungrouping output (override with `.groups` argument)</span></div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 7 x 3</span><span>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>Births2015</span><span class='op'>)</span>
+<span class='kw'>if</span> <span class='op'>(</span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>require</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/ProjectMOSAIC/ggformula'>ggformula</a></span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_point.html'>gf_point</a></span><span class='op'>(</span><span class='va'>births</span> <span class='op'>~</span> <span class='va'>date</span>, data <span class='op'>=</span> <span class='va'>Births2015</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_point.html'>gf_point</a></span><span class='op'>(</span><span class='va'>births</span> <span class='op'>~</span> <span class='va'>date</span>, data <span class='op'>=</span> <span class='va'>Births2015</span>, color <span class='op'>=</span> <span class='op'>~</span> <span class='va'>wday</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div><div class='img'><img src='Births2015-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>require</a></span><span class='op'>(</span><span class='va'><a href='https://dplyr.tidyverse.org'>dplyr</a></span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='va'>Births78</span> <span class='op'>%&gt;%</span> 
+    <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>wday</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarise</a></span><span class='op'>(</span>births <span class='op'>=</span> <span class='fu'><a href='https://projectmosaic.github.io/mosaic/reference/aggregating.html'>sum</a></span><span class='op'>(</span><span class='va'>births</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+    <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>ungroup</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>frac <span class='op'>=</span> <span class='va'>births</span> <span class='op'>/</span> <span class='fu'><a href='https://projectmosaic.github.io/mosaic/reference/aggregating.html'>sum</a></span><span class='op'>(</span><span class='va'>births</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>Births2015</span> <span class='op'>%&gt;%</span> 
+    <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>wday</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarise</a></span><span class='op'>(</span>births <span class='op'>=</span> <span class='fu'><a href='https://projectmosaic.github.io/mosaic/reference/aggregating.html'>sum</a></span><span class='op'>(</span><span class='va'>births</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+    <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>ungroup</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>frac <span class='op'>=</span> <span class='va'>births</span> <span class='op'>/</span> <span class='fu'><a href='https://projectmosaic.github.io/mosaic/reference/aggregating.html'>sum</a></span><span class='op'>(</span><span class='va'>births</span><span class='op'>)</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 7 x 3</span><span>
 #&gt;   wday  births   frac
-#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;ord&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>*</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;ord&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
 #&gt; </span><span style='color: #BCBCBC;'>1</span><span> Sun   </span><span style='text-decoration: underline;'>384</span><span>686 0.096</span><span style='text-decoration: underline;'>7</span><span>
 #&gt; </span><span style='color: #BCBCBC;'>2</span><span> Mon   </span><span style='text-decoration: underline;'>610</span><span>448 0.153 
 #&gt; </span><span style='color: #BCBCBC;'>3</span><span> Tue   </span><span style='text-decoration: underline;'>654</span><span>462 0.164 
@@ -182,7 +184,7 @@ Natality, 2015 data.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
