@@ -1,5 +1,9 @@
 # mosaicData package NEWS
 
+## version 0.20.2
+
+ * minor revision: update URL, add missing require() in one example
+ 
 ## version 0.20
 
  * recoded several variables in the Gestation data set
