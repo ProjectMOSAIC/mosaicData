@@ -14,7 +14,7 @@ A data frame with 1728 observations on the following 16 variables.
 \item{\code{livingArea}}{ living are (square feet)}
 \item{\code{pctCollege}}{ percent of neighborhood that graduated college}
 \item{\code{bedrooms}}{ number of bedrooms}
-\item{\code{firplaces}}{ number of fireplaces}
+\item{\code{fireplaces}}{ number of fireplaces}
 \item{\code{bathrooms}}{ number of bathrooms (half bathrooms have no shower or tub)}
 \item{\code{rooms}}{ number of rooms}
 \item{\code{heating}}{ type of heating system}
