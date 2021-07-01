@@ -31,3 +31,7 @@ if (require(mosaic)) {
     data = Birthdays \%>\% group_by(date) \%>\% summarise(births = sum(births)))
   }
 }
+\seealso{
+\code{Births}, \code{Births78}, \code{Births2015}, \code{BirthsSSA}, \code{BirthsCDC} for data sets that are
+aggregated at the level of the entire country.
+}

@@ -5,7 +5,7 @@
 \alias{Births}
 \title{US Births}
 \format{
-A data.frame with 7305 observations on the following 8 variables.
+A data.frame with the following 8 variables.
 \itemize{
 \item \code{date}   Date
 \item \code{births} Number of births on \code{date} (integer)
@@ -18,22 +18,55 @@ A data.frame with 7305 observations on the following 8 variables.
 }
 }
 \source{
-Data source: National Vital Statistics System natality data, as provided by
-Google BigQuery and exported to csv
-Robert Kern (\url{http://www.mechanicalkern.com/static/birthdates-1968-1988.csv})
+\itemize{
+\item Data source for \code{Births}: National Vital Statistics System natality data, as provided by
+Google BigQuery and exported to csv by
+Robert Kern \url{http://www.mechanicalkern.com/static/birthdates-1968-1988.csv}.
+\item Data source for \code{BirthsSSA}  US Social Security Administration, as curated at \url{https://github.com/fivethirtyeight/data/tree/master/births}
+\item Data source for \code{BirthsCDC}  US Centers for Disease Control, as curated at \url{https://github.com/fivethirtyeight/data/tree/master/births}
+\item Data source for \code{Births2015}: Obtained from the National Center for Health Statistics,
+National Vital Statistics System,  Natality, 2015 data.
+}
 }
 \usage{
 data(Births)
+
+data(Births78)
+
+data(Births2015)
+
+data(BirthsSSA)
+
+data(BirthsCDC)
 }
 \description{
-Number of births each day from 1968 to 1988
+Number of births in the United States.
+There are several data sets covering different date ranges and obtaining data from different sources.
 }
 \details{
-The number of births in \code{\link{Births78}} is slightly lower than the number
-of births in this data set for the year 1978.  See the examples.
+There are some overlapping dates in the various data sets, but the number of births does \strong{not} always agree
+due to the different sources of the data.
+See the examples.
 }
 \examples{
+data(Births78)
+data(Births2015)
 data(Births)
+data(BirthsSSA)
+data(BirthsCDC)
+# date ranges for the different data sets
+lapply(
+  list(Births = Births, Births78 = Births78, Biths2015 = Births2015, BirthsSSA = BirthsSSA, 
+       BirthsCDC = BirthsCDC), 
+       function(x) range(x$date))
+range(Births78$date)
+range(Births2015$date)
+range(Births$date)
+range(BirthsSSA$date)
+range(BirthsCDC$date)
+
+# Births and Births78 have slightly different numbers of births
+
 if(require(ggplot2)) {
   ggplot(data = Births, aes(x = date, y = births, colour = ~ wday)) +
     stat_smooth(se = FALSE, alpha = 0.8, geom = "line")
@@ -50,7 +83,33 @@ if(require(ggplot2)) {
   }
 }
 
+if(require(ggplot2)) {
+  ggplot(data = Births, aes(x = date, y = births, colour = ~ wday)) +
+    stat_smooth(se = FALSE, alpha = 0.8, geom = "line")
+  ggplot(data = Births, aes(x = day_of_year, y = births, colour = ~ wday)) +
+    geom_point(size = 0.4, alpha = 0.5) +
+    stat_smooth(se = FALSE, geom = "line", alpha = 0.6, size = 1.5)
+  if (require(dplyr)) {
+    ggplot(
+     data =  bind_cols(Births \%>\% filter(year == 1978), 
+                       Births78 \%>\% rename(births78 = births)),
+     aes(x = births - births78)
+     ) +
+     geom_histogram(binwidth = 1)
+
+    # SSA records more births than CDC
+    ggplot(
+     data =  bind_cols(BirthsSSA \%>\% filter(year <= 2003) \%>\% rename(SSA = births), 
+                       BirthsCDC \%>\% filter(year >= 2000) \%>\% rename(CDC = births)),
+     aes(x = SSA - CDC)
+     ) +
+     geom_histogram(binwidth = 10)
+  }
+}
+
+
+
 }
 \seealso{
-\code{\link{Births2015}}, \code{\link{Births}}.
+\code{Birthdays} for a data set aggregated at the state level.
 }
