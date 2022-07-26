@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-mosaicData provides a number of data sets associated with Project MOSAiC.
+mosaicData provides a number of data sets associated with Project MOSAIC.
 
 ## Installation
 
