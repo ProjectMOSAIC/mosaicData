@@ -32,5 +32,9 @@ Marriage <- Marriage |>
 use_data(Marriage, overwrite = TRUE)
 
 library(mosaicData)
+range(Marriage$appdate)
 range(Marriage$ceremonydate)
 range(Marriage$dob)
+
+Marriage |>
+  ggformula::gf_point( ceremonydate ~ (dob + lubridate::days(round(age * 365.25))))
