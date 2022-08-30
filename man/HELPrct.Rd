@@ -79,9 +79,9 @@ also a subset of the \code{\link{HELPfull}}  data which includes 5 timepoints an
 many additional variables.
 }
 \note{
-\preformatted{The \code{HELPrct} data set was originally named \code{HELP} but has 
+\if{html}{\out{<div class="sourceCode">}}\preformatted{The \code{HELPrct} data set was originally named \code{HELP} but has 
 been renamed to avoid confusion with the \code{help} function.
-}
+}\if{html}{\out{</div>}}
 }
 \examples{
 data(HELPrct)

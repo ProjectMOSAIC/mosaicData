@@ -3,6 +3,10 @@
 \docType{data}
 \name{Births}
 \alias{Births}
+\alias{Births78}
+\alias{Births2015}
+\alias{BirthsSSA}
+\alias{BirthsCDC}
 \title{US Births}
 \format{
 A data.frame with the following 8 variables.
@@ -56,8 +60,8 @@ data(BirthsSSA)
 data(BirthsCDC)
 # date ranges for the different data sets
 lapply(
-  list(Births = Births, Births78 = Births78, Biths2015 = Births2015, BirthsSSA = BirthsSSA, 
-       BirthsCDC = BirthsCDC), 
+  list(Births = Births, Births78 = Births78, Biths2015 = Births2015, BirthsSSA = BirthsSSA,
+       BirthsCDC = BirthsCDC),
        function(x) range(x$date))
 range(Births78$date)
 range(Births2015$date)
@@ -75,7 +79,7 @@ if(require(ggplot2)) {
     stat_smooth(se = FALSE, geom = "line", alpha = 0.6, size = 1.5)
   if (require(dplyr)) {
     ggplot(
-     data =  bind_cols(Births \%>\% filter(year == 1978), 
+     data =  bind_cols(Births \%>\% filter(year == 1978),
                        Births78 \%>\% rename(births78 = births)),
      aes(x = births - births78)
      ) +
@@ -91,7 +95,7 @@ if(require(ggplot2)) {
     stat_smooth(se = FALSE, geom = "line", alpha = 0.6, size = 1.5)
   if (require(dplyr)) {
     ggplot(
-     data =  bind_cols(Births \%>\% filter(year == 1978), 
+     data =  bind_cols(Births \%>\% filter(year == 1978),
                        Births78 \%>\% rename(births78 = births)),
      aes(x = births - births78)
      ) +
@@ -99,7 +103,7 @@ if(require(ggplot2)) {
 
     # SSA records more births than CDC
     ggplot(
-     data =  bind_cols(BirthsSSA \%>\% filter(year <= 2003) \%>\% rename(SSA = births), 
+     data =  bind_cols(BirthsSSA \%>\% filter(year <= 2003) \%>\% rename(SSA = births),
                        BirthsCDC \%>\% filter(year >= 2000) \%>\% rename(CDC = births)),
      aes(x = SSA - CDC)
      ) +
