@@ -24,6 +24,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -36,18 +38,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">mosaicData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.20.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.20.3</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
@@ -57,7 +53,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/ProjectMOSAIC/mosaicData/">
+  <a href="https://github.com/ProjectMOSAIC/mosaicData/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -74,47 +70,47 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="mosaicdata" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#mosaicdata" class="anchor"></a>mosaicData</h1></div>
+<div class="section level1">
+<div class="page-header"><h1 id="mosaicdata">mosaicData<a class="anchor" aria-label="anchor" href="#mosaicdata"></a>
+</h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
 <p>mosaicData provides a number of data sets associated with Proejct MOSAiC.</p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install the released version of mosaicData from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
+<p>You can install the released version of mosaicData from <a href="https://CRAN.R-project.org" class="external-link">CRAN</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"mosaicData"</span><span class="op">)</span></code></pre></div>
-<p>And the development version from <a href="https://github.com/">GitHub</a> with:</p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"mosaicData"</span><span class="op">)</span></span></code></pre></div>
+<p>And the development version from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"ProjectMOSAIC/mosaicData"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"ProjectMOSAIC/mosaicData"</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="example" class="section level2">
-<h2 class="hasAnchor">
-<a href="#example" class="anchor"></a>Example</h2>
+<div class="section level2">
+<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+</h2>
 <p>This is a basic example which shows you how to solve a common problem:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ProjectMOSAIC/mosaicData">mosaicData</a></span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/message.html">suppressPackageStartupMessages</a></span><span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ProjectMOSAIC/ggformula">ggformula</a></span><span class="op">)</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">Weather</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 6 x 25</span>
-<span class="co">#&gt;   city  date        year month   day high_temp avg_temp low_temp high_dewpt</span>
-<span class="co">#&gt;   &lt;chr&gt; &lt;date&gt;     &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt;</span>
-<span class="co">#&gt; 1 Auck… 2016-01-01  2016     1     1        68       65       62         64</span>
-<span class="co">#&gt; 2 Auck… 2016-01-02  2016     1     2        68       66       64         64</span>
-<span class="co">#&gt; 3 Auck… 2016-01-03  2016     1     3        77       72       66         70</span>
-<span class="co">#&gt; 4 Auck… 2016-01-04  2016     1     4        73       66       60         66</span>
-<span class="co">#&gt; 5 Auck… 2016-01-05  2016     1     5        69       62       55         55</span>
-<span class="co">#&gt; 6 Auck… 2016-01-06  2016     1     6        69       63       57         54</span>
-<span class="co">#&gt; # … with 16 more variables: avg_dewpt &lt;dbl&gt;, low_dewpt &lt;dbl&gt;,</span>
-<span class="co">#&gt; #   high_humidity &lt;dbl&gt;, avg_humidity &lt;dbl&gt;, low_humidity &lt;dbl&gt;,</span>
-<span class="co">#&gt; #   high_hg &lt;dbl&gt;, avg_hg &lt;dbl&gt;, low_hg &lt;dbl&gt;, high_vis &lt;dbl&gt;,</span>
-<span class="co">#&gt; #   avg_vis &lt;dbl&gt;, low_vis &lt;dbl&gt;, high_wind &lt;dbl&gt;, avg_wind &lt;dbl&gt;,</span>
-<span class="co">#&gt; #   low_wind &lt;dbl&gt;, precip &lt;chr&gt;, events &lt;chr&gt;</span>
-<span class="fu"><a href="https://rdrr.io/pkg/ggformula/man/gf_linerange.html">gf_linerange</a></span><span class="op">(</span><span class="va">high_temp</span> <span class="op">+</span> <span class="va">low_temp</span> <span class="op">~</span> <span class="va">date</span> <span class="op">|</span> <span class="va">city</span> <span class="op">~</span> <span class="va">.</span>, color <span class="op">=</span> <span class="op">~</span><span class="va">avg_temp</span>, data <span class="op">=</span> <span class="va">Weather</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/ggformula/man/gf_aux.html">gf_refine</a></span><span class="op">(</span><span class="fu">scale_color_viridis_c</span><span class="op">(</span>option <span class="op">=</span> <span class="st">"D"</span>, end <span class="op">=</span> <span class="fl">0.95</span>, begin <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ProjectMOSAIC/mosaicData" class="external-link">mosaicData</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/message.html" class="external-link">suppressPackageStartupMessages</a></span><span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ProjectMOSAIC/ggformula" class="external-link">ggformula</a></span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">Weather</span><span class="op">)</span></span>
+<span><span class="co">#&gt; # A tibble: 6 x 25</span></span>
+<span><span class="co">#&gt;   city  date        year month   day high_temp avg_temp low_temp high_dewpt</span></span>
+<span><span class="co">#&gt;   &lt;chr&gt; &lt;date&gt;     &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt; 1 Auck… 2016-01-01  2016     1     1        68       65       62         64</span></span>
+<span><span class="co">#&gt; 2 Auck… 2016-01-02  2016     1     2        68       66       64         64</span></span>
+<span><span class="co">#&gt; 3 Auck… 2016-01-03  2016     1     3        77       72       66         70</span></span>
+<span><span class="co">#&gt; 4 Auck… 2016-01-04  2016     1     4        73       66       60         66</span></span>
+<span><span class="co">#&gt; 5 Auck… 2016-01-05  2016     1     5        69       62       55         55</span></span>
+<span><span class="co">#&gt; 6 Auck… 2016-01-06  2016     1     6        69       63       57         54</span></span>
+<span><span class="co">#&gt; # … with 16 more variables: avg_dewpt &lt;dbl&gt;, low_dewpt &lt;dbl&gt;,</span></span>
+<span><span class="co">#&gt; #   high_humidity &lt;dbl&gt;, avg_humidity &lt;dbl&gt;, low_humidity &lt;dbl&gt;,</span></span>
+<span><span class="co">#&gt; #   high_hg &lt;dbl&gt;, avg_hg &lt;dbl&gt;, low_hg &lt;dbl&gt;, high_vis &lt;dbl&gt;,</span></span>
+<span><span class="co">#&gt; #   avg_vis &lt;dbl&gt;, low_vis &lt;dbl&gt;, high_wind &lt;dbl&gt;, avg_wind &lt;dbl&gt;,</span></span>
+<span><span class="co">#&gt; #   low_wind &lt;dbl&gt;, precip &lt;chr&gt;, events &lt;chr&gt;</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/ggformula/man/gf_linerange.html" class="external-link">gf_linerange</a></span><span class="op">(</span><span class="va">high_temp</span> <span class="op">+</span> <span class="va">low_temp</span> <span class="op">~</span> <span class="va">date</span> <span class="op">|</span> <span class="va">city</span> <span class="op">~</span> <span class="va">.</span>, color <span class="op">=</span> <span class="op">~</span><span class="va">avg_temp</span>, data <span class="op">=</span> <span class="va">Weather</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/ggformula/man/gf_aux.html" class="external-link">gf_refine</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_viridis.html" class="external-link">scale_color_viridis_c</a></span><span class="op">(</span>option <span class="op">=</span> <span class="st">"D"</span>, end <span class="op">=</span> <span class="fl">0.95</span>, begin <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-example-1.png" width="100%"></p>
 </div>
 </div>
@@ -122,39 +118,50 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=mosaicData">https://​cloud.r-project.org/​package=mosaicData</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/ProjectMOSAIC/mosaicData/">https://​github.com/​ProjectMOSAIC/​mosaicData/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/ProjectMOSAIC/mosaicData/issues">https://​github.com/​ProjectMOSAIC/​mosaicData/​issues</a>
-</li>
+<li><a href="https://cloud.r-project.org/package=mosaicData" class="external-link">View on CRAN</a></li>
+<li><a href="https://github.com/ProjectMOSAIC/mosaicData/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/ProjectMOSAIC/mosaicData/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li>GPL (&gt;=2)</li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing mosaicData</a></li>
+</ul>
+</div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>Randall Pruim <br><small class="roles"> Maintainer </small>  </li>
 </ul>
 </div>
+
+
 
   </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Randall Pruim.</p>
+  <p></p>
+<p>Developed by Randall Pruim.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer>
@@ -162,6 +169,8 @@
 
   
 
+
+  
 
   </body>
 </html>
