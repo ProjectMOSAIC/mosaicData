@@ -7,7 +7,7 @@
 \format{
 Data frame with 453 observations on the following variables.
 
-\itemize{
+\describe{
 \item{\code{age}} {subject age at baseline (in years)}
 \item{\code{anysub}} {use of any substance post-detox: a factor with levels \code{no} \code{yes}}
 \item{\code{cesd}} {Center for Epidemiologic Studies Depression measure at baseline (high scores indicate more depressive symptoms)}
@@ -79,7 +79,7 @@ also a subset of the \code{\link{HELPfull}}  data which includes 5 timepoints an
 many additional variables.
 }
 \note{
-\if{html}{\out{<div class="sourceCode">}}\preformatted{The \code{HELPrct} data set was originally named \code{HELP} but has 
+\if{html}{\out{<div class="sourceCode">}}\preformatted{The \code{HELPrct} data set was originally named \code{HELP} but has
 been renamed to avoid confusion with the \code{help} function.
 }\if{html}{\out{</div>}}
 }

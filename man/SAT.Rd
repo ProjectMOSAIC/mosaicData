@@ -6,7 +6,7 @@
 \title{State by State SAT data}
 \format{
 A data frame with 50 observations on the following variables.
-\itemize{
+\describe{
 \item{\code{state}} {a factor with names of each state}
 \item{\code{expend}} {expenditure per pupil in average daily attendance in
 public elementary and secondary schools, 1994-95 (in thousands of US dollars)}
@@ -37,7 +37,7 @@ if (require(ggformula)) {
     gf_lm()
   gf_text(sat ~ expend, data = SAT, label = ~ abbreviate(SAT$state, 3),
     inherit = FALSE)
-} 
+}
 }
 \references{
 Deborah Lynn Guber, "Getting what you pay for: the debate over equity in

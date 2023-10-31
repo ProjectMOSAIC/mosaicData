@@ -25,7 +25,7 @@
 #' @source
 #' * Data source for `Births`: National Vital Statistics System natality data, as provided by
 #'   Google BigQuery and exported to csv by
-#'   Robert Kern <http://www.mechanicalkern.com/static/birthdates-1968-1988.csv>.
+#'   Robert Kern <https://www.mechanicalkern.com:443/static/birthdates-1968-1988.csv>.
 #' * Data source for `BirthsSSA`  US Social Security Administration, as curated at <https://github.com/fivethirtyeight/data/tree/master/births>
 #' * Data source for `BirthsCDC`  US Centers for Disease Control, as curated at <https://github.com/fivethirtyeight/data/tree/master/births>
 #' * Data source for `Births2015`: Obtained from the National Center for Health Statistics,

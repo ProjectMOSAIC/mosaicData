@@ -6,7 +6,7 @@
 \title{Utility bills}
 \format{
 A data frame containing 117 observations for the following variables.
-\itemize{
+\describe{
 \item{\code{month}} {month (coded as a number)}
 \item{\code{day}} {day of month on which bill was calculated}
 \item{\code{year}} {year of bill}

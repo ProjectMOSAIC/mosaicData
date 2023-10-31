@@ -7,7 +7,7 @@
 \format{
 Data frame with 470 observations on the following variables.
 
-\itemize{
+\describe{
 \item{\code{age}} {subject age at baseline (in years)}
 \item{\code{anysub}} {use of any substance post-detox: a factor with levels \code{no} \code{yes}}
 \item{\code{cesd}} {Center for Epidemiologic Studies Depression measure of depressive symptoms at baseline (higher scores indicate more symptoms)}

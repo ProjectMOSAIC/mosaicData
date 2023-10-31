@@ -6,7 +6,7 @@
 \title{Data from the 1985 Current Population Survey (CPS85)}
 \format{
 A data frame with 534 observations on the following variables.
-\itemize{
+\describe{
 \item{\code{wage}} {wage (US dollars per hour)}
 \item{\code{educ}} {number of years of education}
 \item{\code{race}} {a factor with levels \code{NW} (nonwhite) or \code{W} (white)}

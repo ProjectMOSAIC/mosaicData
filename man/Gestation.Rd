@@ -6,7 +6,7 @@
 \title{Data from the Child Health and Development Studies}
 \format{
 A data frame with 1236 observations on the following variables.
-\itemize{
+\describe{
 \item{\code{id}} {identification number}
 \item{\code{plurality}} {all "single fetus" in this data set}
 \item{\code{outcome}} {all "live birth" (survived at least 28 days) in this data set}

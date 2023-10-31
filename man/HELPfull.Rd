@@ -6,7 +6,7 @@
 \title{Health Evaluation and Linkage to Primary Care}
 \format{
 A data frame with 1472 observations on the following variables.
-\itemize{
+\describe{
 \item{\code{ID}} {Subject ID}
 \item{\code{A10}} {Marital Status (1=Married, 2=Remarried, 3=Widowed, 4= Separated, 5=Divorced, 6=Never Married}
 \item{\code{A11A}} {Do you currently have a living mother? (0=No, 1= Yes}

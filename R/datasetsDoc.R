@@ -1,16 +1,16 @@
 #' Volume of Users of a Rail Trail
 #'
-#' The Pioneer Valley Planning Commission (PVPC) collected data north of Chestnut Street in 
-#' Florence, MA for ninety days from April 5, 2005 to November 15, 2005. Data collectors set up a 
-#' laser sensor, with breaks in the laser beam recording when a rail-trail user passed the 
-#' data collection station.  
+#' The Pioneer Valley Planning Commission (PVPC) collected data north of Chestnut Street in
+#' Florence, MA for ninety days from April 5, 2005 to November 15, 2005. Data collectors set up a
+#' laser sensor, with breaks in the laser beam recording when a rail-trail user passed the
+#' data collection station.
 #'
 #' @docType data
 #' @name RailTrail
 #' @usage data(RailTrail)
 #' @format
 #'   A data frame with 90 observations on the following variables.
-#'   \itemize{
+#'   \describe{
 #'     \item{\code{hightemp}} {daily high temperature (in degrees Fahrenheit)}
 #'     \item{\code{lowtemp}} {daily low temperature (in degrees Fahrenheit)}
 #'     \item{\code{avgtemp}} {average of daily low and daily high temperature (in degrees Fahrenheit)}
@@ -25,9 +25,9 @@
 #'   }
 #'
 #' @details
-#' There is a potential for error when two users trigger the infrared beam at exactly the same time since the counter 
-#' would only logs one of the crossings.  The collectors left the motion detector out during the winter, but because the 
-#' counter drops data when the temperature falls below 14 degrees Fahrenheit, there is no data for the cold winter months. 
+#' There is a potential for error when two users trigger the infrared beam at exactly the same time since the counter
+#' would only logs one of the crossings.  The collectors left the motion detector out during the winter, but because the
+#' counter drops data when the temperature falls below 14 degrees Fahrenheit, there is no data for the cold winter months.
 #'
 #' @source
 #' Pioneer Valley Planning Commission
@@ -52,7 +52,7 @@ NA
 #' @usage data(Alcohol)
 #' @format
 #'   A data frame with 411 observations on the following variables.
-#'   \itemize{
+#'   \describe{
 #'     \item{\code{country}} {country name}
 #'     \item{\code{year}} {year}
 #'     \item{\code{alcohol}} {estimated per capita alcohol consumption for adults (15+)
@@ -72,48 +72,48 @@ NA
 
 
 #' Standard Deck of Cards
-#' 
-#' A character vector with two or three character representations of 
+#'
+#' A character vector with two or three character representations of
 #' each card in a standard 52-card deck.
-#' 
+#'
 #' @name Cards
 #' @aliases card
 #' @docType data
-#' 
+#'
 #' @usage Cards
-#' 
+#'
 #' @details
 #' The 2 of clubs is represented as "2C", while the 10 of diamonds is "10D".
-#' 
+#'
 #' @examples
 #' if (require(mosaic)) {
 #'   deal(Cards, 13)        # bridge hand
 #'   deal(Cards, 5)         # poker hand
 #'   shuffle(Cards)         # shuffled deck
 #' }
-#' 
+#'
 #' @keywords datasets
 
-NA 
+NA
 
 #' Countries
-#' 
+#'
 #' A data frame containing country names as used by Gapminder and the \code{maps}
 #' package to facilitate conversation between the two.
-#' 
+#'
 #' @name Countries
 #' @aliases Countries
 #' @docType data
-#' 
+#'
 #' @usage data(Countries)
-#' @format 
+#' @format
 #'   A data frame with 258 observations on the following variables.
-#'   \itemize{
+#'   \describe{
 #'     \item{\code{worldmap}} {region name http://mappinghacks.com/ data sets}
 #'     \item{\code{gapminder}} {country name in Gapminder data sets}
 #'     \item{\code{maps}} {region name in \code{maps} data sets}
 #'   }
-#' 
+#'
 #' @details
 #' The "countries" in the \code{maps} data include several other geographic regions (bodies
 #' of water, islands belonging to other countries, Hawaii, etc.) that are not countries.
@@ -121,7 +121,7 @@ NA
 #' have been created since ca. 2000.  The mapping is therefore many-to-many, and also
 #' includes some NAs when there is no appropriate mapping.  Bodies of water in the
 #' \code{maps} data, for example, are not assigned a country in the Gapminder.
-#' 
+#'
 #' @examples
 #' data(Countries)
 #' subset(Countries, maps=="Yugoslavia")  # Where has Yugoslavia gone?
@@ -130,24 +130,24 @@ NA
 
 #' @keywords datasets
 
-NA 
+NA
 
 
 #' Data from the 1985 Current Population Survey (CPS85)
-#' 
+#'
 #' The Current Population Survey (CPS) is used to supplement census
 #' information between census years. These data consist of a random
 #' sample of persons from the CPS85, with information on wages and
 #' other characteristics of the workers, including sex, number of years
 #' of education, years of work experience, occupational status, region of
-#' residence and union membership.  
-#' 
+#' residence and union membership.
+#'
 #' @docType data
 #' @name CPS85
 #' @usage data(CPS85)
-#' @format 
+#' @format
 #'   A data frame with 534 observations on the following variables.
-#'   \itemize{
+#'   \describe{
 #'     \item{\code{wage}} {wage (US dollars per hour)}
 #'     \item{\code{educ}} {number of years of education}
 #'     \item{\code{race}} {a factor with levels \code{NW} (nonwhite) or \code{W} (white)}
@@ -160,39 +160,39 @@ NA
 #'     \item{\code{union}} {a factor with levels \code{Not} \code{Union}}
 #'     \item{\code{age}} {age in years}
 #'     \item{\code{sector}} {a factor with levels \code{clerical} \code{const}
-#' \code{manag} \code{manuf} \code{other} \code{prof} \code{sales} \code{service}} 
+#' \code{manag} \code{manuf} \code{other} \code{prof} \code{sales} \code{service}}
 #'   }
-#' 
+#'
 #' @details
 #' Data are from 1985.
 #' The data file is recoded from the original, which had
-#' entirely numerical codes.  
-#' 
+#' entirely numerical codes.
+#'
 #' @source
 #' Data are from <https://dasl.datadescription.com>
-#' 
+#'
 #' @references
-#' Berndt, ER. \emph{The Practice of Econometrics} 1991. Addison-Wesley. 
-#' 
+#' Berndt, ER. \emph{The Practice of Econometrics} 1991. Addison-Wesley.
+#'
 #' @examples
 #' data(CPS85)
-#' 
+#'
 
 NA
 
 #' Galton's dataset of parent and child heights
-#' 
+#'
 #' In the 1880's, Francis Galton was developing ways to quantify the
 #' heritability of traits.  As part of this work, he collected data on
-#' the heights of adult children and their parents.  
-#' 
+#' the heights of adult children and their parents.
+#'
 #' @docType data
 #' @keywords datasets
 #' @name Galton
 #' @usage data(Galton)
-#' @format 
+#' @format
 #'   A data frame with 898 observations on the following variables.
-#'   \itemize{
+#'   \describe{
 #'     \item{\code{family}} {a factor with levels for each family}
 #'     \item{\code{father}} {the father's height (in inches)}
 #'     \item{\code{mother}} {the mother's height (in inches)}
@@ -201,27 +201,27 @@ NA
 #'     \item{\code{nkids}} {the number of adult children in the family, or, at least,
 #' the number whose heights Galton recorded.}
 #'   }
-#' 
-#' @details 
+#'
+#' @details
 #' Entries were deleted for
 #' those children whose heights were not recorded numerically by Galton,
 #' who sometimes used entries such as "tall", "short", "idiotic",
 #' "deformed" and so on.
-#' 
-#' @source 
+#'
+#' @source
 #' The data were transcribed by J.A. Hanley who has published them at
 #' \url{http://www.medicine.mcgill.ca/epidemiology/hanley/galton/}
-#' 
-#' @references 
+#'
+#' @references
 #' "Transmuting" women into men: Galton's family data on human stature. (2004)
 #' \emph{The American Statistician}, 58(3):237-243.
-#' 
-#' @examples 
+#'
+#' @examples
 #' data(Galton)
-#' 
+#'
 #' @keywords datasets
-#' 
-#' 
+#'
+#'
 
 NA
 #' Data from a heat exchanger laboratory
@@ -234,9 +234,9 @@ NA
 #' @keywords datasets
 #' @name HeatX
 #' @usage data(HeatX)
-#' @format 
+#' @format
 #'   A data frame with 6 observations on the following variables.
-#'   \itemize{
+#'   \describe{
 #'     \item{\code{trial}} {trial number}
 #'     \item{\code{T.cold.in}} {temperature (C) of the cold water as it enters the apparatus}
 #'     \item{\code{T.cold.out}} {temperature (C) of the cold water as it leaves the apparatus}
@@ -246,17 +246,17 @@ NA
 #'     \item{\code{m.hot}} {flow rate (L/min) of the hot water}
 #'   }
 #' @examples
-#' # We can test for heat exchange with the environment by checking to see if the 
+#' # We can test for heat exchange with the environment by checking to see if the
 #' # heat gained by the cold water matches the heat lost by the hot water.
 #' C_p <- 4.182 / 60  # / 60 because measuring m in L/min
-#' HeatX2 <- 
+#' HeatX2 <-
 #'   dplyr::mutate(HeatX,
 #'     Q.cold = m.cold * C_p * (T.cold.out - T.cold.in),
 #'     Q.hot  = m.hot * C_p * (T.hot.out- T.hot.in),
 #'     Q.env  = Q.cold + Q.hot
 #'   )
 #' if (require(ggformula)) {
-#'   gf_jitter( "" ~ Q.env, data = HeatX2, alpha = 0.6, size = 4, 
+#'   gf_jitter( "" ~ Q.env, data = HeatX2, alpha = 0.6, size = 4,
 #'     width = 0, height = 0.1, seed = 123) |>
 #'   gf_labs(y = "")
 #' }
@@ -267,19 +267,19 @@ NA
 NA
 
 #' Data from the Child Health and Development Studies
-#' 
+#'
 #' Birth weight, date, and gestational period collected as part of the Child
 #' Health and Development Studies in 1961 and 1962.  Information about the baby's
 #' parents --- age, education, height, weight, and whether the mother smoked is
-#' also recorded.  
-#' 
+#' also recorded.
+#'
 #' @name Gestation
 #' @usage data(Gestation)
 #' @docType data
-#' 
-#' @format 
+#'
+#' @format
 #'   A data frame with 1236 observations on the following variables.
-#'   \itemize{
+#'   \describe{
 #'     \item{\code{id}} {identification number}
 #'     \item{\code{plurality}} {all "single fetus" in this data set}
 #'     \item{\code{outcome}} {all "live birth" (survived at least 28 days) in this data set}
@@ -300,34 +300,34 @@ NA
 #'     \item{\code{dwt}} {father's weight (in pounds)}
 #'     \item{\code{marital}} {marital status},
 #'     \item{\code{inc}} {family yearly income in $2500 increments}
-#'     \item{\code{smoke}} {does mother smoke? (never, smokes now, 
+#'     \item{\code{smoke}} {does mother smoke? (never, smokes now,
 #'       until current pregnancy, once did, not now)}
-#'     \item{\code{time}} {time since quitting smoking 
-#'       (never smoked, still smokes, during current preg, within 1 year, 
-#'       1 to 2 years ago, 2 to 3 years ago, 3 to 4 years ago, 
+#'     \item{\code{time}} {time since quitting smoking
+#'       (never smoked, still smokes, during current preg, within 1 year,
+#'       1 to 2 years ago, 2 to 3 years ago, 3 to 4 years ago,
 #'       5 to 9 years ago, 10+ years ago, quit and don't know}
-#'     \item{\code{number}} {number of cigarettes smoked per day for past and 
-#'       current smokers  (never, 1-4, 5-9, 10-14, 15-19, 20-29, 30-39, 40-60, 60+, 
+#'     \item{\code{number}} {number of cigarettes smoked per day for past and
+#'       current smokers  (never, 1-4, 5-9, 10-14, 15-19, 20-29, 30-39, 40-60, 60+,
 #'         smoke but don't know)}
 #'   }
-#' 
-#' @details 
+#'
+#' @details
 #' The data were presented by Nolan and Speed to address the question of whether there is a link between maternal smoking and the baby's health for male births.
-#' 
-#' @source 
+#'
+#' @source
 #' The book by Nolan and Speed
-#' describes the data in more detail 
-#' and provides an Internet site for accessing them: 
+#' describes the data in more detail
+#' and provides an Internet site for accessing them:
 #' \url{https://www.stat.berkeley.edu/users/statlabs/}
-#' 
-#' 
-#' @references 
-#' D Nolan and T Speed. \emph{Stat Labs: Mathematical 
+#'
+#'
+#' @references
+#' D Nolan and T Speed. \emph{Stat Labs: Mathematical
 #' Statistics Through Applications} (2000), Springer-Verlag.
-#' 
-#' @examples 
+#'
+#' @examples
 #' data(Gestation)
-#' 
+#'
 #' @keywords datasets
 
 NA
@@ -335,19 +335,19 @@ NA
 
 
 #' Health Evaluation and Linkage to Primary Care
-#' 
+#'
 #' The HELP study was a clinical trial for adult inpatients recruited from a
 #' detoxification unit.  Patients with no primary care physician were randomized
 #' to receive a multidisciplinary assessment and a brief motivational intervention
 #' or usual care, with the goal of linking them to primary medical care.
-#' 
+#'
 #' @keywords datasets
 #' @name HELPfull
 #' @usage data(HELPfull)
 #' @docType data
-#' @format 
+#' @format
 #'   A data frame with 1472 observations on the following variables.
-#'   \itemize{
+#'   \describe{
 #'     \item{\code{ID}} {Subject ID}
 #'     \item{\code{A10}} {Marital Status (1=Married, 2=Remarried, 3=Widowed, 4= Separated, 5=Divorced, 6=Never Married}
 #'     \item{\code{A11A}} {Do you currently have a living mother? (0=No, 1= Yes}
@@ -1064,20 +1064,20 @@ NA
 #'     \item{\code{U26E}} {Done more exercise because MDs advice (0=No, 1=Yes)}
 #'     \item{\code{U26F}} {Relax/reduce stress because of MDs advice (0=No, 1=Yes)}
 #'     \item{\code{U26G}} {Practiced safer sex because of MDs advice (0=No, 1=Yes)}
-#'     \item{\code{U26H}} {Tried to cut down/quit drugs because MD advice (0=No, 1=Yes)}"						
-#'     \item{\code{U26I}} {Got HIV tested because of MDs advice (0=No, 1=Yes)}"						
-#'     \item{\code{U27A}} {I can tell my MD anything (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"						
-#'     \item{\code{U27B}} {My MD pretends to know thngs if not sure (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"						
-#'     \item{\code{U27C}} {I trust my MDs judgment re my med care (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"						
-#'     \item{\code{U27D}} {My MD cares > about < costs than my health (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"						
-#'     \item{\code{U27E}} {My MD always tell truth about my health (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"						
-#'     \item{\code{U27F}} {My MD cares as much as I about my health (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"						
-#'     \item{\code{U27G}} {My MD would try to hide a mistake in trtmt (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"						
-#'     \item{\code{U28}} {How much to you trust this MD (0=Not at all, 1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=Completely)}"						
-#'     \item{\code{U29A}} {MDs knowledge of your entire med history (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}"						
-#'     \item{\code{U29B}} {MD knowledge of your response-home/work/sch (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}"						
-#'     \item{\code{U29C}} {MD knowledge of what worries you most-health (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}"						
-#'     \item{\code{U29D}} {MDs knowledge of you as a person (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}"						
+#'     \item{\code{U26H}} {Tried to cut down/quit drugs because MD advice (0=No, 1=Yes)}"
+#'     \item{\code{U26I}} {Got HIV tested because of MDs advice (0=No, 1=Yes)}"
+#'     \item{\code{U27A}} {I can tell my MD anything (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"
+#'     \item{\code{U27B}} {My MD pretends to know thngs if not sure (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"
+#'     \item{\code{U27C}} {I trust my MDs judgment re my med care (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"
+#'     \item{\code{U27D}} {My MD cares > about < costs than my health (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"
+#'     \item{\code{U27E}} {My MD always tell truth about my health (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"
+#'     \item{\code{U27F}} {My MD cares as much as I about my health (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"
+#'     \item{\code{U27G}} {My MD would try to hide a mistake in trtmt (1=Strongly agree, 2= Agree, 3= Not sure, 4=Disagree, 5=Strongly disagree)}"
+#'     \item{\code{U28}} {How much to you trust this MD (0=Not at all, 1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=Completely)}"
+#'     \item{\code{U29A}} {MDs knowledge of your entire med history (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}"
+#'     \item{\code{U29B}} {MD knowledge of your response-home/work/sch (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}"
+#'     \item{\code{U29C}} {MD knowledge of what worries you most-health (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}"
+#'     \item{\code{U29D}} {MDs knowledge of you as a person (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}"
 #'     \item{\code{U2A}} {I cannot pay for services (0=No, 1=Yes)}
 #'     \item{\code{U2B}} {I am not eligible for free care (0=No, 1=Yes)}
 #'     \item{\code{U2C}} {I do not know where to go (0=No, 1=Yes)}
@@ -1097,7 +1097,7 @@ NA
 #'     \item{\code{U2Q_T}} {a factor with many levels}
 #'     \item{\code{U2Q}} {Other reason hard to get regular med care (0=No, 1=Yes)}
 #'     \item{\code{U2R}} {a factor with levels \code{} \code{7} \code{A} \code{B} \code{C} \code{D} \code{E} \code{F} \code{G} \code{H} \code{I} \code{J} \code{K} \code{L} \code{M} \code{N} \code{O} \code{P} \code{Q}}
-#'     \item{\code{U30}} {MD would know what want done if unconscious (1=Strongly agree, 2=Agree, 3=Not sure, 4= Disagree, 5=Strongly disagree)}"						
+#'     \item{\code{U30}} {MD would know what want done if unconscious (1=Strongly agree, 2=Agree, 3=Not sure, 4= Disagree, 5=Strongly disagree)}"
 #'     \item{\code{U31}} {Oth MDs/RNs who play role in your care (0=No, 1=Yes)}"						*
 #'     \item{\code{U32A}} {Their knowledge of you as a person (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
 #'     \item{\code{U32B}} {The quality of care they provide (1=Very poor, 2= Poor, 3=Fair, 4=Good, 5= Very good, 6= Excellent)}
@@ -1137,8 +1137,8 @@ NA
 #'     \item{\code{Z1}} {Breath Alcohol Concentration:1st test}
 #'     \item{\code{Z2}} {Breath Alcohol Concentration:2nd test}
 #'   }
-#' 
-#' @details 
+#'
+#' @details
 #' Eligible subjects were adults, who spoke Spanish or English, reported alcohol,
 #' heroin or cocaine as their first or second drug of choice, resided in proximity
 #' to the primary care clinic to which they would be referred or were homeless.
@@ -1146,75 +1146,75 @@ NA
 #' significant dementia, specific plans to leave the Boston area that would
 #' prevent research participation, failure to provide contact information for
 #' tracking purposes, or pregnancy were excluded.
-#' 
+#'
 #' Subjects were interviewed at baseline during their detoxification
 #' stay and follow-up interviews were undertaken every 6 months for 2
 #' years.  A variety of continuous, count, discrete, and survival time
 #' predictors and outcomes were collected at each of these five
 #' occasions.
-#' 
+#'
 #' This dataset is a superset of the HELPmiss and HELPrct datasets which include
 #' far fewer variables.  Full details of the survey instruments are available at the
 #' following link.
-#' 
-#' @source 
+#'
+#' @source
 #' \url{https://nhorton.people.amherst.edu/help/}
-#' 
-#' @references 
+#'
+#' @references
 #' Samet JH, Larson MJ, Horton NJ, Doyle K, Winter M, and Saitz R.  Linking alcohol and
 #' drug-dependent adults to primary medical care:
 #' A randomized controlled trial of
 #' a multi-disciplinary health intervention in a detoxification unit.
 #' \emph{Addiction}, 2003; 98(4):509-516.
-#' 
-#' 
-#' @examples 
+#'
+#'
+#' @examples
 #' data(HELPfull)
-#' 
-#' @seealso \code{\link{HELPrct}}, and \code{\link{HELPmiss}}. 
-#' 
+#'
+#' @seealso \code{\link{HELPrct}}, and \code{\link{HELPmiss}}.
+#'
 #' @keywords datasets
 
 NA
 
 #' Health Evaluation and Linkage to Primary Care
-#' 
+#'
 #' The HELP study was a clinical trial for adult inpatients recruited from a
 #' detoxification unit.  Patients with no primary care physician were randomized
 #' to receive a multidisciplinary assessment and a brief motivational intervention
 #' or usual care, with the goal of linking them to primary medical care.
-#' 
+#'
 #' @name HELPmiss
 #' @usage data(HELPmiss)
 #' @docType data
-#' @format 
-#'   Data frame with 470 observations on the following variables.  
-#'   
-#'   \itemize{
+#' @format
+#'   Data frame with 470 observations on the following variables.
+#'
+#'   \describe{
 #'     \item{\code{age}} {subject age at baseline (in years)}
-#'     \item{\code{anysub}} {use of any substance post-detox: a factor with levels \code{no} \code{yes}} 
+#'     \item{\code{anysub}} {use of any substance post-detox: a factor with levels \code{no} \code{yes}}
 #'     \item{\code{cesd}} {Center for Epidemiologic Studies Depression measure of depressive symptoms at baseline (higher scores indicate more symptoms)}
 #'     \item{\code{d1}} {lifetime number of hospitalizations for medical problems (measured at baseline)}
 #'     \item{\code{daysanysub}} {time (in days) to first use of any substance post-detox}
 #'     \item{\code{dayslink}} {time (in days) to linkage to primary care}
 #'     \item{\code{drugrisk}} {Risk Assessment Battery drug risk scale at baseline}
 #'     \item{\code{e2b}} {number of times in past 6 months entered a detox program (measured at baseline)}
-#'     \item{\code{female}} {0 for male, 1 for female} 
-#'     \item{\code{sex}} {a factor with levels \code{male} \code{female}} 
+#'     \item{\code{female}} {0 for male, 1 for female}
+#'     \item{\code{sex}} {a factor with levels \code{male} \code{female}}
 #'     \item{\code{g1b}} {experienced serious thoughts of suicide in last 30 days (measured at baseline): a factor with levels \code{no} \code{yes}}
 #'     \item{\code{homeless}} {housing status: a factor with levels \code{housed} \code{homeless}}
-#'     \item{\code{i1}} {average number of drinks (standard units) consumed per day, in the 
+#'     \item{\code{i1}} {average number of drinks (standard units) consumed per day, in the
 #' past 30 days (measured at baseline)}
-#'     \item{\code{i2}} {maximum number of drinks (standard units) consumed per day, in the 
+#'     \item{\code{i2}} {maximum number of drinks (standard units) consumed per day, in the
 #' past 30 days (measured at baseline)}
-#'     \item{\code{avg_drinks}} {average number of drinks (standard units) consumed per day, in the 
+#'     \item{\code{avg_drinks}} {average number of drinks (standard units) consumed per day, in the
 #' past 30 days (measured at baseline). Same as `i1`.}
-#'     \item{\code{max_drinks}} {maximum number of drinks (standard units) consumed per day, in the 
+#'     \item{\code{max_drinks}} {maximum number of drinks (standard units) consumed per day, in the
 #' past 30 days (measured at baseline).  Same as `i2`.}
 #'     \item{\code{id}} {subject identifier}
 #'     \item{\code{indtot}} {Inventory of Drug Use Consequences (InDUC) total score (measured at baseline)}
 #'     \item{\code{linkstatus}} {post-detox linkage to primary care (0 = no, 1 = yes)}
-#'     \item{\code{link}} {post-detox linkage to primary care: \code{no} \code{yes}} 
+#'     \item{\code{link}} {post-detox linkage to primary care: \code{no} \code{yes}}
 #'     \item{\code{mcs}} {SF-36 Mental Component Score (measured at baseline, higher scores are better)}
 #'     \item{\code{pcs}} {SF-36 Physical Component Score (measured at baseline, higher scores are better)}
 #'     \item{\code{pss_fr}} {perceived social support by friends (measured at baseline)}
@@ -1224,9 +1224,9 @@ NA
 #'     \item{\code{substance}} {primary substance of abuse: \code{alcohol} \code{cocaine} \code{heroin}}
 #'     \item{\code{treat}} {randomized to HELP clinic: \code{no} \code{yes}}
 #'   }
-#' 
-#' 
-#' @details 
+#'
+#'
+#' @details
 #' Eligible subjects were adults, who spoke Spanish or English, reported alcohol,
 #' heroin or cocaine as their first or second drug of choice, resided in proximity
 #' to the primary care clinic to which they would be referred or were homeless.
@@ -1234,54 +1234,54 @@ NA
 #' significant dementia, specific plans to leave the Boston area that would
 #' prevent research participation, failure to provide contact information for
 #' tracking purposes, or pregnancy were excluded.
-#' 
+#'
 #' Subjects were interviewed at baseline during their detoxification
 #' stay and follow-up interviews were undertaken every 6 months for 2
 #' years.  A variety of continuous, count, discrete, and survival time
 #' predictors and outcomes were collected at each of these five
 #' occasions.
-#' 
-#' This dataset is a superset of the HELPrct data with 17 subjects with 
+#'
+#' This dataset is a superset of the HELPrct data with 17 subjects with
 #' partially observed data on some of the baseline variables.  This is
 #' a subset of the HELPfull data which includes 5 timepoints and many
 #' additional variables.
-#' 
-#' @source 
+#'
+#' @source
 #' \url{https://nhorton.people.amherst.edu/help/}
-#' 
-#' @references 
-#' Samet JH, Larson MJ, Horton NJ, Doyle K, Winter M, and Saitz R.  Linking alcohol and 
-#' drug-dependent adults to primary medical care: 
-#' A randomized controlled trial of 
-#' a multi-disciplinary health intervention in a detoxification unit.  
+#'
+#' @references
+#' Samet JH, Larson MJ, Horton NJ, Doyle K, Winter M, and Saitz R.  Linking alcohol and
+#' drug-dependent adults to primary medical care:
+#' A randomized controlled trial of
+#' a multi-disciplinary health intervention in a detoxification unit.
 #' \emph{Addiction}, 2003; 98(4):509-516.
-#' 
+#'
 #' @seealso \code{\link{HELPrct}} , and \code{\link{HELPfull}}.
-#' 
-#' 
-#' @examples 
+#'
+#'
+#' @examples
 #' data(HELPmiss)
-#' 
+#'
 #' @keywords datasets
 
 NA
 
 #' Health Evaluation and Linkage to Primary Care
-#' 
+#'
 #' The HELP study was a clinical trial for adult inpatients recruited from a
 #' detoxification unit.  Patients with no primary care physician were randomized
 #' to receive a multidisciplinary assessment and a brief motivational intervention
 #' or usual care, with the goal of linking them to primary medical care.
-#' 
+#'
 #' @name HELPrct
 #' @usage data(HELPrct)
 #' @docType data
-#' @format 
-#'   Data frame with 453 observations on the following variables.  
-#'   
-#'   \itemize{
+#' @format
+#'   Data frame with 453 observations on the following variables.
+#'
+#'   \describe{
 #'     \item{\code{age}} {subject age at baseline (in years)}
-#'     \item{\code{anysub}} {use of any substance post-detox: a factor with levels \code{no} \code{yes}} 
+#'     \item{\code{anysub}} {use of any substance post-detox: a factor with levels \code{no} \code{yes}}
 #'     \item{\code{cesd}} {Center for Epidemiologic Studies Depression measure at baseline (high scores indicate more depressive symptoms)}
 #'     \item{\code{d1}} {lifetime number of hospitalizations for medical problems (measured at baseline)}
 #'     \item{\code{hospitalizations}} {lifetime number of hospitalizations for medical problems (measured at baseline)}
@@ -1289,18 +1289,18 @@ NA
 #'     \item{\code{dayslink}} {time (in days) to linkage to primary care}
 #'     \item{\code{drugrisk}} {Risk Assessment Battery drug risk scale at baseline}
 #'     \item{\code{e2b}} {number of times in past 6 months entered a detox program (measured at baseline)}
-#'     \item{\code{female}} {0 for male, 1 for female} 
-#'     \item{\code{sex}} {a factor with levels \code{male} \code{female}} 
+#'     \item{\code{female}} {0 for male, 1 for female}
+#'     \item{\code{sex}} {a factor with levels \code{male} \code{female}}
 #'     \item{\code{g1b}} {experienced serious thoughts of suicide in last 30 days (measured at baseline): a factor with levels \code{no} \code{yes}}
 #'     \item{\code{homeless}} {housing status: a factor with levels \code{housed} \code{homeless}}
-#'     \item{\code{i1}} {average number of drinks (standard units) consumed per day, in the 
+#'     \item{\code{i1}} {average number of drinks (standard units) consumed per day, in the
 #' past 30 days (measured at baseline)}
-#'     \item{\code{i2}} {maximum number of drinks (standard units) consumed per day, in the 
+#'     \item{\code{i2}} {maximum number of drinks (standard units) consumed per day, in the
 #' past 30 days (measured at baseline)}
 #'     \item{\code{id}} {subject identifier}
 #'     \item{\code{indtot}} {Inventory of Drug Use Consequences (InDUC) total score (measured at baseline)}
 #'     \item{\code{linkstatus}} {post-detox linkage to primary care (0 = no, 1 = yes)}
-#'     \item{\code{link}} {post-detox linkage to primary care: \code{no} \code{yes}} 
+#'     \item{\code{link}} {post-detox linkage to primary care: \code{no} \code{yes}}
 #'     \item{\code{mcs}} {SF-36 Mental Component Score (measured at baseline, lower scores indicate worse status)}
 #'     \item{\code{pcs}} {SF-36 Physical Component Score (measured at baseline, lower scores indicate worse status)}
 #'     \item{\code{pss_fr}} {perceived social support by friends (measured at baseline, higher scores indicate more support)}
@@ -1310,14 +1310,14 @@ NA
 #'     \item{\code{substance}} {primary substance of abuse: \code{alcohol} \code{cocaine} \code{heroin}}
 #'     \item{\code{treat}} {randomized to HELP clinic: \code{no} \code{yes}}
 #'   }
-#' 
-#' 
+#'
+#'
 #' @note
-#' 	The \code{HELPrct} data set was originally named \code{HELP} but has 
+#' 	The \code{HELPrct} data set was originally named \code{HELP} but has
 #' 	been renamed to avoid confusion with the \code{help} function.
-#' 
-#' 
-#' @details 
+#'
+#'
+#' @details
 #' Eligible subjects were adults, who spoke Spanish or English, reported alcohol,
 #' heroin or cocaine as their first or second drug of choice, resided in proximity
 #' to the primary care clinic to which they would be referred or were homeless.
@@ -1325,57 +1325,57 @@ NA
 #' significant dementia, specific plans to leave the Boston area that would
 #' prevent research participation, failure to provide contact information for
 #' tracking purposes, or pregnancy were excluded.
-#' 
+#'
 #' Subjects were interviewed at baseline during their detoxification
 #' stay and follow-up interviews were undertaken every 6 months for 2
 #' years.  A variety of continuous, count, discrete, and survival time
 #' predictors and outcomes were collected at each of these five
 #' occasions.
-#' 
+#'
 #' This data set is a subset of the \code{\link{HELPmiss}} data set restricted to
-#' the 453 subjects who were fully observed on the 
-#' \code{age}, \code{cesd}, \code{d1}, 
-#' \code{female}, \code{sex}, \code{g1b}, \code{homeless}, 
+#' the 453 subjects who were fully observed on the
+#' \code{age}, \code{cesd}, \code{d1},
+#' \code{female}, \code{sex}, \code{g1b}, \code{homeless},
 #' \code{i1}, \code{i2}, \code{indtot}, \code{mcs}, \code{pcs}, \code{pss_fr},
-#' \code{racegrp}, \code{satreat}, \code{substance}, \code{treat}, 
+#' \code{racegrp}, \code{satreat}, \code{substance}, \code{treat},
 #' and \code{sexrisk} variables.  (There is some missingness in the other variables.)
-#' \code{\link{HELPmiss}} contains 17 additional subjects with 
+#' \code{\link{HELPmiss}} contains 17 additional subjects with
 #' partially observed data on some of these baseline variables.  This is
-#' also a subset of the \code{\link{HELPfull}}  data which includes 5 timepoints and 
+#' also a subset of the \code{\link{HELPfull}}  data which includes 5 timepoints and
 #' many additional variables.
-#' 
-#' @source 
+#'
+#' @source
 #' \url{https://nhorton.people.amherst.edu/help/}
-#' 
-#' @references 
-#' Samet JH, Larson MJ, Horton NJ, Doyle K, Winter M, and Saitz R.  Linking alcohol and 
-#' drug-dependent adults to primary medical care: 
-#' A randomized controlled trial of 
-#' a multi-disciplinary health intervention in a detoxification unit.  
+#'
+#' @references
+#' Samet JH, Larson MJ, Horton NJ, Doyle K, Winter M, and Saitz R.  Linking alcohol and
+#' drug-dependent adults to primary medical care:
+#' A randomized controlled trial of
+#' a multi-disciplinary health intervention in a detoxification unit.
 #' \emph{Addiction}, 2003; 98(4):509-516.
-#' 
+#'
 #' @seealso \code{\link{HELPmiss}}, and \code{\link{HELPfull}}.
-#' 
-#' 
-#' @examples 
+#'
+#'
+#' @examples
 #' data(HELPrct)
-#' 
+#'
 #' @keywords datasets
 
 NA
 
 #' Foot measurements in children
-#' 
+#'
 #' These data were collected by a statistician, Mary C. Meyer, in a
 #' fourth grade classroom in Ann Arbor, MI, in October 1997.  They are a
 #' convenience sample --- the kids who were in the fourth grade.
-#' 
+#'
 #' @name KidsFeet
 #' @usage data(KidsFeet)
 #' @docType data
-#' @format 
+#' @format
 #'   A data frame with 39 observations on the following variables.
-#'   \itemize{
+#'   \describe{
 #'     \item{\code{name}} {a factor with levels corresponding to the name of each child}
 #'     \item{\code{birthmonth}} {the month of birth}
 #'     \item{\code{birthyear}} {the year of birth}
@@ -1385,34 +1385,34 @@ NA
 #'     \item{\code{biggerfoot}} {a factor with levels \code{L} \code{R}}
 #'     \item{\code{domhand}} {a factor with levels \code{L} \code{R}}
 #'   }
-#' 
-#' @details 
+#'
+#' @details
 #' Quoted from the source: "From a very young age, shoes for boys tend to be wider than shoes for girls.  Is this because boys have wider feet, or because it is assumed that
 #' girls, even in elementary school, are willing to sacrifice comfort for fashion?
 #' To assess the former, a statistician measures kids' feet."
-#' 
-#' @references 
+#'
+#' @references
 #' Mary C. Meyer (2006) "Wider Shoes for Wider Feet?"
 #' \emph{Journal of Statistics Education} 14(1),
 #' <http://jse.amstat.org/v14n1/datasets.meyer.html>.
-#' 
-#' @examples 
+#'
+#' @examples
 #' data(KidsFeet)
-#' 
+#'
 #' @keywords datasets
 
 NA
 
 #' Marriage records
-#' 
-#' Marriage records from the Mobile County, Alabama, probate court.  
-#' 
+#'
+#' Marriage records from the Mobile County, Alabama, probate court.
+#'
 #' @name Marriage
 #' @usage data(Marriage)
 #' @docType data
-#' @format 
+#' @format
 #'   A data frame with 98 observations on the following variables.
-#'   \itemize{
+#'   \describe{
 #'     \item{\code{bookpageID}} {a factor with levels for each book and page (unique identifier)}
 #'     \item{\code{appdate}} {date on which the application was filed}
 #'     \item{\code{ceremonydate}} {date of the ceremony}
@@ -1430,36 +1430,36 @@ NA
 #'     \item{\code{dayOfBirth}} {the day of birth, as a number from 1 to 365 counting from January 1}
 #'     \item{\code{sign}} {the astrological sign, with levels \code{Aquarius} \code{Aries} \code{Cancer} \code{Capricorn} \code{Gemini} \code{Leo} \code{Libra} \code{Pisces} \code{Sagittarius} \code{Scorpio} \code{Taurus} \code{Virgo}}
 #'   }
-#' 
-#' @details 
+#'
+#' @details
 #' The calculation of the astrological sign may not correctly sort people directly on the borders between signs.  This variable is not part of the original record.
-#' 
-#' @source 
-#' The records were collected through 
+#'
+#' @source
+#' The records were collected through
 #' http://www.mobilecounty.org/probatecourt/recordssearch.htm
-#' 
-#' @examples 
+#'
+#' @examples
 #' data(Marriage)
-#' 
+#'
 #' @keywords datasets
 
 NA
 
-#' Mites and Wilt Disease 
+#' Mites and Wilt Disease
 #'
 #' Data from an experiment to test whether exposure to mites protects against Wilt Disease in
 #' cotton plants.
-#' 
+#'
 #' @name Mites
 #' @usage data(Mites)
 #' @docType data
-#' @format 
+#' @format
 #'   A data frame with 47 observations on the following variables.
-#'   \itemize{
+#'   \describe{
 #'     \item{\code{treatment}} {a factor with levels \code{mites} and \code{no mites}}
 #'     \item{\code{outcome}} {a factor with levels \code{wilt} and \code{no wilt}}
 #'     }
-#'     
+#'
 #' @details
 #' Researchers suspected that attack of a plant by one organism induced
 #' resistance to subsequent attack by a different organism.  Individually potted
@@ -1471,32 +1471,32 @@ NA
 #'
 #' @source
 #' Statistics for the Life Sciences, Third Edition; Myra Samuels & Jeffrey Witmer (2003), page 409.
-#' 
-#' @examples 
+#'
+#' @examples
 #' data(Mites)
 #' if (require(mosaic)) {
 #'   tally(~ treatment + outcome, data=Mites)
 #'   tally(~ outcome | treatment, format="percent", data=Mites)
 #' }
-#' 
+#'
 #' @keywords datasets
 
 NA
 
 
-#' State by State SAT data 
-#' 
-#' 
-#' SAT data assembled for a statistics education journal article on the 
+#' State by State SAT data
+#'
+#'
+#' SAT data assembled for a statistics education journal article on the
 #' link between SAT scores and measures of educational expenditures
-#' 
-#' 
+#'
+#'
 #' @name SAT
 #' @usage data(SAT)
 #' @docType data
-#' @format 
+#' @format
 #'   A data frame with 50 observations on the following variables.
-#'   \itemize{
+#'   \describe{
 #'     \item{\code{state}} {a factor with names of each state}
 #'     \item{\code{expend}} {expenditure per pupil in average daily attendance in
 #'  public elementary and secondary schools, 1994-95 (in thousands of US dollars)}
@@ -1509,39 +1509,39 @@ NA
 #'     \item{\code{math}} {average math SAT score, 1994-95}
 #'     \item{\code{sat}} {average total SAT score, 1994-95}
 #'   }
-#' 
-#' @source 
+#'
+#' @source
 #' http://www.amstat.org/publications/jse/secure/v7n2/datasets.guber.cfm
-#' 
-#' @references 
+#'
+#' @references
 #' Deborah Lynn Guber, "Getting what you pay for: the debate over equity in
 #' public school expenditures" (1999), \emph{Journal of Statistics Education} 7(2).
-#' 
-#' @examples 
+#'
+#' @examples
 #' data(SAT)
 #' if (require(ggformula)) {
 #'   gf_point(sat ~ expend, data = SAT, color = "blue", alpha = 0.5) |>
 #'     gf_lm()
 #'   gf_text(sat ~ expend, data = SAT, label = ~ abbreviate(SAT$state, 3),
 #'     inherit = FALSE)
-#' } 
+#' }
 #' @keywords datasets
 
 NA
 
 #' Cherry Blossom Race
-#' 
+#'
 #' The Cherry Blossom 10 Mile Run is a road race held in Washington,
 #' D.C. in April each year.  (The name comes from the famous cherry trees
 #' that are in bloom in April in Washington.)  The results of this race
-#' are published.  This data frame  contains the results from the 2005 race. 
-#' 
+#' are published.  This data frame  contains the results from the 2005 race.
+#'
 #' @name TenMileRace
 #' @usage data(TenMileRace)
 #' @docType data
-#' @format 
+#' @format
 #'   A data frame with 8636 observations on the following variables.
-#'   \itemize{
+#'   \describe{
 #'     \item{\code{state}} {State of residence of runner.}
 #'     \item{\code{time}} {Official time from starting gun to finish line.}
 #'     \item{\code{net}} {The recorded time (in seconds) from when the runner crossed the starting
@@ -1552,30 +1552,30 @@ NA
 #'     \item{\code{age}} {Age of runner in years.}
 #'     \item{\code{sex}} {A factor with levels \code{F} \code{M}.}
 #'   }
-#' 
-#' @examples 
+#'
+#' @examples
 #' data(TenMileRace)
 #' if (require(ggformula)) {
 #'   gf_point(net ~ age | sex, data = TenMileRace, color = ~sex, alpha = 0.1) |>
 #'   gf_density2d(color = "gray40")
 #'   lm(net ~ age + sex, data = TenMileRace)
 #' }
-#' 
+#'
 #' @keywords datasets
 
 NA
 
-#' Utility bills 
-#' 
+#' Utility bills
+#'
 #' Data from utility bills at a residence.
 #' \code{\link{Utilities2}}  is a similar data set with some additional variables.
-#' 
+#'
 #' @name Utilities
 #' @usage data(Utilities)
 #' @docType data
-#' @format 
+#' @format
 #'   A data frame containing 117 observations for the following variables.
-#'   \itemize{
+#'   \describe{
 #'     \item{\code{month}} {month (coded as a number)}
 #'     \item{\code{day}} {day of month on which bill was calculated}
 #'     \item{\code{year}} {year of bill}
@@ -1589,32 +1589,32 @@ NA
 #'     \item{\code{elecbill}} {electric bill (in dollars)}
 #'     \item{\code{notes}} {notes about the billing period}
 #'   }
-#' 
-#' @source 
-#' Daniel T. Kaplan, \emph{Statistical modeling: A fresh approach}, 2009. 
-#' 
-#' @examples 
+#'
+#' @source
+#' Daniel T. Kaplan, \emph{Statistical modeling: A fresh approach}, 2009.
+#'
+#' @examples
 #' data(Utilities)
 #' if (require(ggformula)) {
 #'   gf_point(gasbill ~ temp, data = Utilities)
 #' }
-#' 
+#'
 #' @seealso \code{\link{Utilities2}}.
 #' @keywords datasets
 
 NA
 
-#' Utility bills 
-#' 
-#' Data from utility bills at a private residence.  This is an augmented version 
+#' Utility bills
+#'
+#' Data from utility bills at a private residence.  This is an augmented version
 #' of \code{\link{Utilities}}.
-#' 
+#'
 #' @name Utilities2
 #' @usage data(Utilities2)
 #' @docType data
-#' @format 
+#' @format
 #'   A data frame containing 117 observations for the following variables.
-#'   \itemize{
+#'   \describe{
 #'     \item{\code{month}} {month (coded as a number)}
 #'     \item{\code{day}} {day of month on which bill was calculated}
 #'     \item{\code{year}} {year of bill}
@@ -1630,78 +1630,78 @@ NA
 #'     \item{\code{ccfpday}} {average gas usage per day (\code{Utilities2} only)}
 #'     \item{\code{kwhpday}} {average electric usage per day (\code{Utilities2} only)}
 #'     \item{\code{gasbillpday}} {gas bill divided by billing days (\code{Utilities2} only)}
-#'     \item{\code{elecbillpday}} {electric bill divided by billing days a numeric vector 
+#'     \item{\code{elecbillpday}} {electric bill divided by billing days a numeric vector
 #'         (\code{Utilities2} only)}
-#'     \item{\code{totalbillpday}} {total bill divided by billing days a 
+#'     \item{\code{totalbillpday}} {total bill divided by billing days a
 #'         numeric vector (\code{Utilities2} only)}
 #'     \item{\code{therms}} {\code{thermsPerDay * billingDays} (\code{Utilities2} only)}
 #'     \item{\code{monthsSinceY2K}} {months since 2000 (\code{Utilities2} only)}
 #'   }
-#' 
-#' @source 
-#' Daniel T. Kaplan, \emph{Statistical modeling: A fresh approach}, 2009. 
-#' 
-#' @examples 
+#'
+#' @source
+#' Daniel T. Kaplan, \emph{Statistical modeling: A fresh approach}, 2009.
+#'
+#' @examples
 #' data(Utilities2)
 #' if (require(ggformula)) {
 #'   gf_point(gasbillpday ~ temp, data = Utilities2)
 #' }
-#' 
+#'
 #' @seealso \code{\link{Utilities}}.
 #' @keywords datasets
 
 NA
 
 #' Data from the Whickham survey
-#' 
+#'
 #' Data on age, smoking, and mortality
 #' from a one-in-six survey of the electoral roll
 #' in Whickham, a mixed urban and rural district near Newcastle upon
 #' Tyne, in the UK. The survey was conducted in 1972-1974 to study
 #' heart disease and thyroid disease.  A follow-up on those in the
 #' survey was conducted twenty years later.
-#' 
+#'
 #' @name Whickham
 #' @usage data(Whickham)
 #' @docType data
-#' @format 
+#' @format
 #'   A data frame with 1314 observations on women for the following  variables.
-#'   \itemize{
+#'   \describe{
 #'     \item{\code{outcome}} {survival status after 20 years: a factor with levels \code{Alive} \code{Dead}}
 #'     \item{\code{smoker}} {smoking status at baseline: a factor with levels \code{No} \code{Yes}}
 #'     \item{\code{age}} {age (in years) at the time of the first survey}
 #'   }
-#' 
-#' @details 
+#'
+#' @details
 #' This dataset contains a
 #' subset of the survey sample: women who were classified as current
 #' smokers or as never having smoked.
-#' The data were 
+#' The data were
 #' synthesized from the summary description tables given
 #' in the Appleton et al al paper.
-#' 
-#' @references 
+#'
+#' @references
 #' DR Appleton, JM French, MPJ Vanderpump.  "Ignoring a covariate: an example
 #' of Simpson's paradox". (1996)
-#' \emph{American Statistician}, 50(4):340-341. 
-#' 
-#' @examples 
+#' \emph{American Statistician}, 50(4):340-341.
+#'
+#' @examples
 #' data(Whickham)
-#' 
+#'
 #' @keywords datasets
 
 NA
 
 #' Snowfall data for Grand Rapids, MI
-#' 
+#'
 #' Official snowfall data by month and season for Grand Rapids, MI, going back to 1893.
-#' 
+#'
 #' @name SnowGR
 #' @usage data(SnowGR)
 #' @docType data
-#' @format 
+#' @format
 #'   A data frame with 119 observations of the following variables.
-#'   \itemize{
+#'   \describe{
 #'       \item \code{SeasonStart} Year in which season started (July is start of season)
 #'       \item \code{SeasonEnd} Year in which season ended (June is end of season)
 #'       \item \code{Jul} Inches of snow in July
@@ -1718,23 +1718,23 @@ NA
 #'       \item \code{Jun} Inches of snow in June
 #'       \item \code{Total} Inches of snow for entire season (July-June)
 #'   }
-#' 
+#'
 #' @source
-#'    These data were compiled by Laura Kapitula from data available 
+#'    These data were compiled by Laura Kapitula from data available
 #'    from NOAA. The original URL used
 #'    (http://www.crh.noaa.gov/grr/climate/data/grr/snowfall/)
 #'    is no longer in service.
-#' 
-#' @examples 
+#'
+#' @examples
 #' data(SnowGR)
 #' if (require(ggformula)) {
 #'   df_stats(~ Total, data = SnowGR)
 #'   gf_histogram( ~ Total, data = SnowGR)
 #'   gf_point(Total ~ SeasonStart, data = SnowGR) |>
 #'     gf_smooth()
-#'     
+#'
 #'   if (require(tidyr) && require(dplyr)) {
-#'     Snow2 <- 
+#'     Snow2 <-
 #'       SnowGR |>
 #'       pivot_longer(Jul:Total, names_to = "month", values_to = "snowfall") |>
 #'       filter(month != "Total") |>
@@ -1742,63 +1742,63 @@ NA
 #'     gf_violin(snowfall ~ month, data = Snow2, scale = "width")
 #'   }
 #' }
-#' 
+#'
 #' @keywords datasets
 
 NA
 
 #' 100 m Swimming World Records
-#' 
+#'
 #' World records for men and women over time from 1905 through 2004.
-#' 
+#'
 #' @name SwimRecords
 #' @usage data(SwimRecords)
 #' @docType data
-#' @format 
+#' @format
 #'   A data frame with 62 observations of the following variables.
-#'   \itemize{
+#'   \describe{
 #'       \item \code{time} time (in seconds) of the world record
 #'       \item \code{year} Year in which the record was set
 #'       \item \code{sex} a factor with levels \code{M} and \code{F}
 #'   }
-#' 
-#' @examples 
+#'
+#' @examples
 #' data(SwimRecords)
 #' if (require(ggformula)) {
-#'   gf_point(time ~ year, data = SwimRecords, color = ~ sex) 
+#'   gf_point(time ~ year, data = SwimRecords, color = ~ sex)
 #' }
-#' 
+#'
 #' @keywords datasets
 
 NA
 
 #' CoolingWater
-#' 
+#'
 #' Temperature of a mug of water as it cools
-#'  
+#'
 #' @name CoolingWater
 #' @usage data(CoolingWater)
 #' @docType data
-#' @format 
+#' @format
 #'   A data frame with 222 observations of the following variables.
-#'   \itemize{
+#'   \describe{
 #'       \item \code{time} time in minutes
 #'       \item \code{temp} temperature in Celsius
 #'   }
 #' @source
 #' These data were collected Stan Wagon to help his
-#' mathematical modeling students explore Newton's 
-#' Law of Cooling and the ways that the law is really 
+#' mathematical modeling students explore Newton's
+#' Law of Cooling and the ways that the law is really
 #' only an approximation. More about Stan: \url{http://stanwagon.com}.
 #' @details
 #' The water was poured into a mug and a temperature probe inserted into
 #' the water with a few seconds of the pour.
-#' @examples 
+#' @examples
 #' data(CoolingWater)
 #' if (require(ggformula)) {
 #'   gf_point(temp ~ time, data = CoolingWater, alpha = 0.5)
 #' }
-#' 
+#'
 #' @keywords datasets
 NA
 
@@ -1806,17 +1806,17 @@ NA
 #' Volume of Users of a Massachusetts Rail Trail
 #'
 #'The Pioneer Valley Planning Commission (PVPC) collected data north of
-#' Chestnut Street in Florence, MA for ninety days from April 5, 2005 to 
+#' Chestnut Street in Florence, MA for ninety days from April 5, 2005 to
 #' November 15, 2005. Data collectors set up a laser sensor, with breaks in the laser beam
 #' recording when a rail-trail user passed the data collection station.
 #' @docType data
 #' @name Riders
 #' @usage data(Riders)
-#' @format 
+#' @format
 #'   A data frame with 90 observations on the following 12 variables.
 #'   \describe{
 #'     \item{\code{date}}{date of data collection (POSIXct)}
-#'     \item{\code{day}}{a factor with levels \code{Monday}, \code{Tuesday}, \code{Wednesday}, 
+#'     \item{\code{day}}{a factor with levels \code{Monday}, \code{Tuesday}, \code{Wednesday},
 #'     \code{Thursday}, \code{Friday}, \code{Saturday}, and \code{Sunday}.}
 #'     \item{\code{highT}}{high temperature for the day (in degrees Fahrenheit)}
 #'     \item{\code{lowT}}{low temperature for the day (in degrees Fahrenheit)}
@@ -1826,27 +1826,27 @@ NA
 #'     \item{\code{clouds}}{measure of cloud cover (in oktas)}
 #'     \item{\code{riders}}{estimated number of trail crossings that day (number of breaks recorded)}
 #'     \item{\code{ct}}{shorter name for \code{riders}}
-#'     \item{\code{weekday}}{type of day: a factor with levels \code{N} (weekend or holiday) 
+#'     \item{\code{weekday}}{type of day: a factor with levels \code{N} (weekend or holiday)
 #'     \code{Y} (non-holiday weekday)}
 #'     \item{\code{wday}}{shorter name for \code{weekday}}
 #'   }
 #' @details
-#' There is a potential for error when two users trigger the infrared beam at exactly the same time 
-#' since the counter would only logs one of the crossings.  The collectors left the motion detector 
-#' out during the winter, but because the counter drops data when the temperature falls below 14 
+#' There is a potential for error when two users trigger the infrared beam at exactly the same time
+#' since the counter would only logs one of the crossings.  The collectors left the motion detector
+#' out during the winter, but because the counter drops data when the temperature falls below 14
 #' degrees Fahrenheit, there are no data for the coldest winter months.
-#' 
+#'
 #' @source
-#' Pioneer Valley Planning Commission, 
+#' Pioneer Valley Planning Commission,
 #' http://www.fvgreenway.org/pdfs/Northampton-Bikepath-Volume-Counts%20_05_LTA.pdf
 #'
 #' @references
-#' "Rail trails and property values: Is there an association?", 
-#' Nicholas J. Horton and Ella Hartenian (Journal of Statistics Education, 2015), 
+#' "Rail trails and property values: Is there an association?",
+#' Nicholas J. Horton and Ella Hartenian (Journal of Statistics Education, 2015),
 #' http://www.amstat.org/publications/jse/v23n2/horton.pdf
 #'
 #' @examples
 #' data(Riders)
 #' str(Riders)
-#' 
+#'
 NA

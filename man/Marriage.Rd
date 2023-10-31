@@ -6,7 +6,7 @@
 \title{Marriage records}
 \format{
 A data frame with 98 observations on the following variables.
-\itemize{
+\describe{
 \item{\code{bookpageID}} {a factor with levels for each book and page (unique identifier)}
 \item{\code{appdate}} {date on which the application was filed}
 \item{\code{ceremonydate}} {date of the ceremony}

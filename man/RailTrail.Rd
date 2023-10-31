@@ -6,7 +6,7 @@
 \title{Volume of Users of a Rail Trail}
 \format{
 A data frame with 90 observations on the following variables.
-\itemize{
+\describe{
 \item{\code{hightemp}} {daily high temperature (in degrees Fahrenheit)}
 \item{\code{lowtemp}} {daily low temperature (in degrees Fahrenheit)}
 \item{\code{avgtemp}} {average of daily low and daily high temperature (in degrees Fahrenheit)}

@@ -6,7 +6,7 @@
 \title{Snowfall data for Grand Rapids, MI}
 \format{
 A data frame with 119 observations of the following variables.
-\itemize{
+\describe{
 \item \code{SeasonStart} Year in which season started (July is start of season)
 \item \code{SeasonEnd} Year in which season ended (June is end of season)
 \item \code{Jul} Inches of snow in July
@@ -43,9 +43,9 @@ if (require(ggformula)) {
   gf_histogram( ~ Total, data = SnowGR)
   gf_point(Total ~ SeasonStart, data = SnowGR) |>
     gf_smooth()
-    
+
   if (require(tidyr) && require(dplyr)) {
-    Snow2 <- 
+    Snow2 <-
       SnowGR |>
       pivot_longer(Jul:Total, names_to = "month", values_to = "snowfall") |>
       filter(month != "Total") |>

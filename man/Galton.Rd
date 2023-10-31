@@ -6,7 +6,7 @@
 \title{Galton's dataset of parent and child heights}
 \format{
 A data frame with 898 observations on the following variables.
-\itemize{
+\describe{
 \item{\code{family}} {a factor with levels for each family}
 \item{\code{father}} {the father's height (in inches)}
 \item{\code{mother}} {the mother's height (in inches)}

@@ -6,7 +6,7 @@
 \title{Foot measurements in children}
 \format{
 A data frame with 39 observations on the following variables.
-\itemize{
+\describe{
 \item{\code{name}} {a factor with levels corresponding to the name of each child}
 \item{\code{birthmonth}} {the month of birth}
 \item{\code{birthyear}} {the year of birth}

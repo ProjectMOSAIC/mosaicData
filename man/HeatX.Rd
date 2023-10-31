@@ -6,7 +6,7 @@
 \title{Data from a heat exchanger laboratory}
 \format{
 A data frame with 6 observations on the following variables.
-\itemize{
+\describe{
 \item{\code{trial}} {trial number}
 \item{\code{T.cold.in}} {temperature (C) of the cold water as it enters the apparatus}
 \item{\code{T.cold.out}} {temperature (C) of the cold water as it leaves the apparatus}
@@ -25,17 +25,17 @@ The apparatus consists of concentric pipes insulated from the environment so tha
 as nearly as can be managed the only heat exchange is between the hot and cold water.
 }
 \examples{
-# We can test for heat exchange with the environment by checking to see if the 
+# We can test for heat exchange with the environment by checking to see if the
 # heat gained by the cold water matches the heat lost by the hot water.
 C_p <- 4.182 / 60  # / 60 because measuring m in L/min
-HeatX2 <- 
+HeatX2 <-
   dplyr::mutate(HeatX,
     Q.cold = m.cold * C_p * (T.cold.out - T.cold.in),
     Q.hot  = m.hot * C_p * (T.hot.out- T.hot.in),
     Q.env  = Q.cold + Q.hot
   )
 if (require(ggformula)) {
-  gf_jitter( "" ~ Q.env, data = HeatX2, alpha = 0.6, size = 4, 
+  gf_jitter( "" ~ Q.env, data = HeatX2, alpha = 0.6, size = 4,
     width = 0, height = 0.1, seed = 123) |>
   gf_labs(y = "")
 }

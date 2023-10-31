@@ -25,7 +25,7 @@ A data.frame with the following 8 variables.
 \itemize{
 \item Data source for \code{Births}: National Vital Statistics System natality data, as provided by
 Google BigQuery and exported to csv by
-Robert Kern \url{http://www.mechanicalkern.com/static/birthdates-1968-1988.csv}.
+Robert Kern \url{https://www.mechanicalkern.com:443/static/birthdates-1968-1988.csv}.
 \item Data source for \code{BirthsSSA}  US Social Security Administration, as curated at \url{https://github.com/fivethirtyeight/data/tree/master/births}
 \item Data source for \code{BirthsCDC}  US Centers for Disease Control, as curated at \url{https://github.com/fivethirtyeight/data/tree/master/births}
 \item Data source for \code{Births2015}: Obtained from the National Center for Health Statistics,
