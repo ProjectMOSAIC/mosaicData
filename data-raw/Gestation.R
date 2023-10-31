@@ -1,6 +1,6 @@
 library(dplyr)
 Gestation <- 
-  readr::read_csv('Gestation.csv') %>%
+  readr::read_csv('Gestation.csv') |>
   mutate(
     pluralty = case_when(pluralty == 5 ~ "single fetus"),
     outcome = case_when(outcome == 1 ~ 'live birth'),

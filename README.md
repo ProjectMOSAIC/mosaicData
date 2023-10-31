@@ -48,7 +48,7 @@ head(Weather)
 #> #   high_hg <dbl>, avg_hg <dbl>, low_hg <dbl>, high_vis <dbl>,
 #> #   avg_vis <dbl>, low_vis <dbl>, high_wind <dbl>, avg_wind <dbl>,
 #> #   low_wind <dbl>, precip <chr>, events <chr>
-gf_linerange(high_temp + low_temp ~ date | city ~ ., color = ~avg_temp, data = Weather) %>%
+gf_linerange(high_temp + low_temp ~ date | city ~ ., color = ~avg_temp, data = Weather) |>
   gf_refine(scale_color_viridis_c(option = "D", end = 0.95, begin = 0.1))
 ```
 

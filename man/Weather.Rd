@@ -33,8 +33,8 @@ data(Weather)
 }
 \examples{
 if (require(dplyr)) {
-  Weather \%>\%
-    group_by(city, year) \%>\%
+  Weather |>
+    group_by(city, year) |>
     summarise(
       min_temp = min(low_temp),
       max_temp = max(high_temp)
@@ -42,9 +42,9 @@ if (require(dplyr)) {
 }
 
 if (require(ggformula)) {
-  Weather \%>\%
+  Weather |>
     gf_linerange(low_temp + high_temp ~ date | city ~ ., 
-    color = ~ (high_temp + low_temp) / 2, show.legend = FALSE) \%>\%
+    color = ~ (high_temp + low_temp) / 2, show.legend = FALSE) |>
     gf_refine(scale_color_gradientn(colors = rev(rainbow(5))))
 }
 

@@ -41,7 +41,7 @@ This is a basic example which shows you how to solve a common problem:
 library(mosaicData)
 suppressPackageStartupMessages(library(ggformula))
 head(Weather)
-gf_linerange(high_temp + low_temp ~ date | city ~ ., color = ~avg_temp, data = Weather) %>%
+gf_linerange(high_temp + low_temp ~ date | city ~ ., color = ~avg_temp, data = Weather) |>
   gf_refine(scale_color_viridis_c(option = "D", end = 0.95, begin = 0.1))
 ```
 

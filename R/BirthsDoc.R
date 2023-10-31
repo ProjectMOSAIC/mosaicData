@@ -65,8 +65,8 @@
 #'     stat_smooth(se = FALSE, geom = "line", alpha = 0.6, size = 1.5)
 #'   if (require(dplyr)) {
 #'     ggplot(
-#'      data =  bind_cols(Births %>% filter(year == 1978),
-#'                        Births78 %>% rename(births78 = births)),
+#'      data =  bind_cols(Births |> filter(year == 1978),
+#'                        Births78 |> rename(births78 = births)),
 #'      aes(x = births - births78)
 #'      ) +
 #'      geom_histogram(binwidth = 1)
@@ -81,16 +81,16 @@
 #'     stat_smooth(se = FALSE, geom = "line", alpha = 0.6, size = 1.5)
 #'   if (require(dplyr)) {
 #'     ggplot(
-#'      data =  bind_cols(Births %>% filter(year == 1978),
-#'                        Births78 %>% rename(births78 = births)),
+#'      data =  bind_cols(Births |> filter(year == 1978),
+#'                        Births78 |> rename(births78 = births)),
 #'      aes(x = births - births78)
 #'      ) +
 #'      geom_histogram(binwidth = 1)
 #'
 #'     # SSA records more births than CDC
 #'     ggplot(
-#'      data =  bind_cols(BirthsSSA %>% filter(year <= 2003) %>% rename(SSA = births),
-#'                        BirthsCDC %>% filter(year >= 2000) %>% rename(CDC = births)),
+#'      data =  bind_cols(BirthsSSA |> filter(year <= 2003) |> rename(SSA = births),
+#'                        BirthsCDC |> filter(year >= 2000) |> rename(CDC = births)),
 #'      aes(x = SSA - CDC)
 #'      ) +
 #'      geom_histogram(binwidth = 10)
@@ -125,11 +125,11 @@ NA
 #' @examples
 #' data(Birthdays)
 #' if (require(mosaic)) {
-#'   MI <- Birthdays %>% filter(state == "MI")
+#'   MI <- Birthdays |> filter(state == "MI")
 #'   gf_point(births ~ date, Birthdays, data = MI)
 #'   gf_line(births ~ date, Birthdays, data = MI, color = ~ wday)
 #'   gf_line(births ~ date,
-#'     data = Birthdays %>% group_by(date) %>% summarise(births = sum(births)))
+#'     data = Birthdays |> group_by(date) |> summarise(births = sum(births)))
 #'   }
 
 NA

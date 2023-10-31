@@ -4,18 +4,18 @@ library(ggformula)
 Weather <- 
   bind_rows(
     lapply(1:10, function(i) 
-      readxl::read_excel("Weather.xlsx", sheet = i, na = "-") %>% 
+      readxl::read_excel("Weather.xlsx", sheet = i, na = "-") |> 
         mutate(precip = as.character(precip))
     )
-  ) %>%
-  group_by(city,year) %>%
+  ) |>
+  group_by(city,year) |>
   mutate(
     month = cumsum(day == 1),
     date  = lubridate::make_date(year = year, month = month, day = day)
-  ) %>%
+  ) |>
   select(
-    city, date, year, month, day, matches("*")) %>%
-  ungroup() %>%
+    city, date, year, month, day, matches("*")) |>
+  ungroup() |>
   set_labels(
     list(
       high_temp  = "high temp (F)",

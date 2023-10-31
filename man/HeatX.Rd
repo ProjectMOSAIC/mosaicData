@@ -36,7 +36,7 @@ HeatX2 <-
   )
 if (require(ggformula)) {
   gf_jitter( "" ~ Q.env, data = HeatX2, alpha = 0.6, size = 4, 
-    width = 0, height = 0.1, seed = 123) \%>\%
+    width = 0, height = 0.1, seed = 123) |>
   gf_labs(y = "")
 }
 if (require(mosaic)) {

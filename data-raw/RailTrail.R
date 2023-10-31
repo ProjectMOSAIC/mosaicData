@@ -1,8 +1,8 @@
 require(mosaic)
 RailTrail <- readRDS("RailTrail_orig.rds")
 RailTrail <- 
-  RailTrail %>% 
-  mutate(weekday = weekday == "1") %>%
+  RailTrail |> 
+  mutate(weekday = weekday == "1") |>
   mutate(dayType = ifelse(weekday, "weekday", "weekend")) 
 
 RailTrail2 <-
@@ -85,8 +85,8 @@ RailTrail2 <-
         367L, 348L, 181L)
   )
 
-RailTrail %>% 
+RailTrail |> 
   inner_join(RailTrail2)
 
-RailTrail %>% 
+RailTrail |> 
   anti_join(RailTrail2)

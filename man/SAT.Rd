@@ -33,7 +33,7 @@ link between SAT scores and measures of educational expenditures
 \examples{
 data(SAT)
 if (require(ggformula)) {
-  gf_point(sat ~ expend, data = SAT, color = "blue", alpha = 0.5) \%>\%
+  gf_point(sat ~ expend, data = SAT, color = "blue", alpha = 0.5) |>
     gf_lm()
   gf_text(sat ~ expend, data = SAT, label = ~ abbreviate(SAT$state, 3),
     inherit = FALSE)

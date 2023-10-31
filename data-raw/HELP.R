@@ -2,9 +2,9 @@ library(dplyr)
 library(ggformula)
 load('HELPrct.rda')
 HELPrct <- 
-  HELPrct %>%
-  mutate(avg_drinks = i1, max_drinks = i2) %>%
-  mutate(hospitalizations = d1) %>%
+  HELPrct |>
+  mutate(avg_drinks = i1, max_drinks = i2) |>
+  mutate(hospitalizations = d1) |>
   set_labels(
     list(
       age = "age (years)",
@@ -40,9 +40,9 @@ HELPrct <-
 
 load('HELPmiss.rda')
 HELPmiss <- 
-  HELPmiss %>% mutate(avg_drinks = i1, max_drinks = i2) %>%
-  mutate(avg_drinks = i1, max_drinks = i2) %>%
-  mutate(hospitalizations = d1) %>%
+  HELPmiss |> mutate(avg_drinks = i1, max_drinks = i2) |>
+  mutate(avg_drinks = i1, max_drinks = i2) |>
+  mutate(hospitalizations = d1) |>
   set_labels(
     list(
       age = "age (years)",

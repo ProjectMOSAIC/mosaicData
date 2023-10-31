@@ -3,7 +3,7 @@
 
 # data(Marriage)  # from previous version of package
 # Marriage <-
-#   Marriage %>%
+#   Marriage |>
 #   mutate(
 #     appdate = lubridate::mdy(appdate),
 #     ceremonydate = lubridate::mdy(ceremonydate),

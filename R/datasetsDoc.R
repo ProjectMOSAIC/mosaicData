@@ -257,7 +257,7 @@ NA
 #'   )
 #' if (require(ggformula)) {
 #'   gf_jitter( "" ~ Q.env, data = HeatX2, alpha = 0.6, size = 4, 
-#'     width = 0, height = 0.1, seed = 123) %>%
+#'     width = 0, height = 0.1, seed = 123) |>
 #'   gf_labs(y = "")
 #' }
 #' if (require(mosaic)) {
@@ -1520,7 +1520,7 @@ NA
 #' @examples 
 #' data(SAT)
 #' if (require(ggformula)) {
-#'   gf_point(sat ~ expend, data = SAT, color = "blue", alpha = 0.5) %>%
+#'   gf_point(sat ~ expend, data = SAT, color = "blue", alpha = 0.5) |>
 #'     gf_lm()
 #'   gf_text(sat ~ expend, data = SAT, label = ~ abbreviate(SAT$state, 3),
 #'     inherit = FALSE)
@@ -1556,7 +1556,7 @@ NA
 #' @examples 
 #' data(TenMileRace)
 #' if (require(ggformula)) {
-#'   gf_point(net ~ age | sex, data = TenMileRace, color = ~sex, alpha = 0.1) %>%
+#'   gf_point(net ~ age | sex, data = TenMileRace, color = ~sex, alpha = 0.1) |>
 #'   gf_density2d(color = "gray40")
 #'   lm(net ~ age + sex, data = TenMileRace)
 #' }
@@ -1730,14 +1730,14 @@ NA
 #' if (require(ggformula)) {
 #'   df_stats(~ Total, data = SnowGR)
 #'   gf_histogram( ~ Total, data = SnowGR)
-#'   gf_point(Total ~ SeasonStart, data = SnowGR) %>%
+#'   gf_point(Total ~ SeasonStart, data = SnowGR) |>
 #'     gf_smooth()
 #'     
 #'   if (require(tidyr) && require(dplyr)) {
 #'     Snow2 <- 
-#'       SnowGR %>%
-#'       pivot_longer(Jul:Total, names_to = "month", values_to = "snowfall") %>%
-#'       filter(month != "Total") %>%
+#'       SnowGR |>
+#'       pivot_longer(Jul:Total, names_to = "month", values_to = "snowfall") |>
+#'       filter(month != "Total") |>
 #'       mutate(month = factor(month, levels = unique(month)))
 #'     gf_violin(snowfall ~ month, data = Snow2, scale = "width")
 #'   }
