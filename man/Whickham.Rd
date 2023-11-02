@@ -7,9 +7,9 @@
 \format{
 A data frame with 1314 observations on women for the following  variables.
 \describe{
-\item{\code{outcome}} {survival status after 20 years: a factor with levels \code{Alive} \code{Dead}}
-\item{\code{smoker}} {smoking status at baseline: a factor with levels \code{No} \code{Yes}}
-\item{\code{age}} {age (in years) at the time of the first survey}
+\item{\code{outcome}}{survival status after 20 years: a factor with levels \code{Alive} \code{Dead}}
+\item{\code{smoker}}{smoking status at baseline: a factor with levels \code{No} \code{Yes}}
+\item{\code{age}}{age (in years) at the time of the first survey}
 }
 }
 \usage{

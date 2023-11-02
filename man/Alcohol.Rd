@@ -7,9 +7,9 @@
 \format{
 A data frame with 411 observations on the following variables.
 \describe{
-\item{\code{country}} {country name}
-\item{\code{year}} {year}
-\item{\code{alcohol}} {estimated per capita alcohol consumption for adults (15+)
+\item{\code{country}}{country name}
+\item{\code{year}}{year}
+\item{\code{alcohol}}{estimated per capita alcohol consumption for adults (15+)
 in litres pure alcohol}
 }
 }

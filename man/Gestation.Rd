@@ -7,33 +7,34 @@
 \format{
 A data frame with 1236 observations on the following variables.
 \describe{
-\item{\code{id}} {identification number}
-\item{\code{plurality}} {all "single fetus" in this data set}
-\item{\code{outcome}} {all "live birth" (survived at least 28 days) in this data set}
-\item{\code{date}} {birth date where 1096=January 1, 1961}
-\item{\code{gestation}} {length of gestation (in days)}
-\item{\code{wt}} {birth weight (in ounces)}
-\item{\code{parity}} {total number of previous pregnancies (including fetal deaths
+\item{\code{id}}{identification number}
+\item{\code{plurality}}{all "single fetus" in this data set}
+\item{\code{outcome}}{all "live birth" (survived at least 28 days) in this data set}
+\item{\code{date}}{birth date where 1096=January 1, 1961}
+\item{\code{gestation}}{length of gestation (in days)}
+\item{\code{wt}}{birth weight (in ounces)}
+\item{\code{parity}}{total number of previous pregnancies (including fetal deaths
 and still births)}
-\item{\code{race}} {mother's race: "asian", "black", "mex",  "mixed", or "white"}
-\item{\code{age}} {mother's age in years at termination of pregnancy}
-\item{\code{ed}} {mother's education}
-\item{\code{ht}} {mother's height in inches to the last completed inch}
-\item{\code{wt.1}} {mother's prepregnancy weight (in pounds)}
-\item{\code{drace}} {father's race}
-\item{\code{dage}} {father's age (in years)}
-\item{\code{ded}} {father's education}
-\item{\code{dht}} {father's height in inches to the last completed inch}
-\item{\code{dwt}} {father's weight (in pounds)}
-\item{\code{marital}} {marital status},
-\item{\code{inc}} {family yearly income in $2500 increments}
-\item{\code{smoke}} {does mother smoke? (never, smokes now,
+\item{\code{sex}}{"male"}
+\item{\code{race}}{mother's race: "asian", "black", "mex",  "mixed", or "white"}
+\item{\code{age}}{mother's age in years at termination of pregnancy}
+\item{\code{ed}}{mother's education}
+\item{\code{ht}}{mother's height in inches to the last completed inch}
+\item{\code{wt.1}}{mother's prepregnancy weight (in pounds)}
+\item{\code{drace}}{father's race}
+\item{\code{dage}}{father's age (in years)}
+\item{\code{ded}}{father's education}
+\item{\code{dht}}{father's height in inches to the last completed inch}
+\item{\code{dwt}}{father's weight (in pounds)}
+\item{\code{marital}}{marital status},
+\item{\code{inc}}{family yearly income in $2500 increments}
+\item{\code{smoke}}{does mother smoke? (never, smokes now,
 until current pregnancy, once did, not now)}
-\item{\code{time}} {time since quitting smoking
+\item{\code{time}}{time since quitting smoking
 (never smoked, still smokes, during current preg, within 1 year,
 1 to 2 years ago, 2 to 3 years ago, 3 to 4 years ago,
 5 to 9 years ago, 10+ years ago, quit and don't know}
-\item{\code{number}} {number of cigarettes smoked per day for past and
+\item{\code{number}}{number of cigarettes smoked per day for past and
 current smokers  (never, 1-4, 5-9, 10-14, 15-19, 20-29, 30-39, 40-60, 60+,
 smoke but don't know)}
 }

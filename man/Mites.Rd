@@ -7,8 +7,8 @@
 \format{
 A data frame with 47 observations on the following variables.
 \describe{
-\item{\code{treatment}} {a factor with levels \code{mites} and \code{no mites}}
-\item{\code{outcome}} {a factor with levels \code{wilt} and \code{no wilt}}
+\item{\code{treatment}}{a factor with levels \code{mites} and \code{no mites}}
+\item{\code{outcome}}{a factor with levels \code{wilt} and \code{no wilt}}
 }
 }
 \source{

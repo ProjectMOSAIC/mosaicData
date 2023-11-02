@@ -7,12 +7,12 @@
 \format{
 A data frame with 898 observations on the following variables.
 \describe{
-\item{\code{family}} {a factor with levels for each family}
-\item{\code{father}} {the father's height (in inches)}
-\item{\code{mother}} {the mother's height (in inches)}
-\item{\code{sex}} {the child's sex: \code{F} or \code{M}}
-\item{\code{height}} {the child's height as an adult (in inches)}
-\item{\code{nkids}} {the number of adult children in the family, or, at least,
+\item{\code{family}}{a factor with levels for each family}
+\item{\code{father}}{the father's height (in inches)}
+\item{\code{mother}}{the mother's height (in inches)}
+\item{\code{sex}}{the child's sex: \code{F} or \code{M}}
+\item{\code{height}}{the child's height as an adult (in inches)}
+\item{\code{nkids}}{the number of adult children in the family, or, at least,
 the number whose heights Galton recorded.}
 }
 }

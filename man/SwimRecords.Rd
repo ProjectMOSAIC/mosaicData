@@ -7,9 +7,9 @@
 \format{
 A data frame with 62 observations of the following variables.
 \describe{
-\item \code{time} time (in seconds) of the world record
-\item \code{year} Year in which the record was set
-\item \code{sex} a factor with levels \code{M} and \code{F}
+\item{\code{time}}{time (in seconds) of the world record}
+\item{\code{year}}{Year in which the record was set}
+\item{\code{sex}}{a factor with levels \code{M} and \code{F}}
 }
 }
 \usage{

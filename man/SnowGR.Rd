@@ -7,21 +7,21 @@
 \format{
 A data frame with 119 observations of the following variables.
 \describe{
-\item \code{SeasonStart} Year in which season started (July is start of season)
-\item \code{SeasonEnd} Year in which season ended (June is end of season)
-\item \code{Jul} Inches of snow in July
-\item \code{Aug} Inches of snow in August
-\item \code{Sep} Inches of snow in September
-\item \code{Oct} Inches of snow in October
-\item \code{Nov} Inches of snow in November
-\item \code{Dec} Inches of snow in December
-\item \code{Jan} Inches of snow in January
-\item \code{Feb} Inches of snow in February
-\item \code{Mar} Inches of snow in March
-\item \code{Apr} Inches of snow in April
-\item \code{May} Inches of snow in May
-\item \code{Jun} Inches of snow in June
-\item \code{Total} Inches of snow for entire season (July-June)
+\item{\code{SeasonStart}}{Year in which season started (July is start of season)}
+\item{\code{SeasonEnd}}{Year in which season ended (June is end of season)}
+\item{\code{Jul}}{Inches of snow in July}
+\item{\code{Aug}}{Inches of snow in August}
+\item{\code{Sep}}{Inches of snow in September}
+\item{\code{Oct}}{Inches of snow in October}
+\item{\code{Nov}}{Inches of snow in November}
+\item{\code{Dec}}{Inches of snow in December}
+\item{\code{Jan}}{Inches of snow in January}
+\item{\code{Feb}}{Inches of snow in February}
+\item{\code{Mar}}{Inches of snow in March}
+\item{\code{Apr}}{Inches of snow in April}
+\item{\code{May}}{Inches of snow in May}
+\item{\code{Jun}}{Inches of snow in June}
+\item{\code{Total}}{Inches of snow for entire season (July-June)}
 }
 }
 \source{

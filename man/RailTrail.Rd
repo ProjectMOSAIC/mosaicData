@@ -7,17 +7,17 @@
 \format{
 A data frame with 90 observations on the following variables.
 \describe{
-\item{\code{hightemp}} {daily high temperature (in degrees Fahrenheit)}
-\item{\code{lowtemp}} {daily low temperature (in degrees Fahrenheit)}
-\item{\code{avgtemp}} {average of daily low and daily high temperature (in degrees Fahrenheit)}
-\item{\code{spring}} {indicator of whether the season was Spring}
-\item{\code{summer}} {indicator of whether the season was Summer}
-\item{\code{fall}} {indicator of whether the season was Fall}
-\item{\code{cloudcover}} {measure of cloud cover (in oktas)}
-\item{\code{precip}} {measure of precipitation (in inches)}
-\item{\code{volume}} {estimated number of trail users that day (number of breaks recorded)}
-\item{\code{weekday}} {logical indicator of whether the day was a non-holiday weekday}
-\item{\code{dayType}} {one of "weekday" or "weekend"}
+\item{\code{hightemp}}{daily high temperature (in degrees Fahrenheit)}
+\item{\code{lowtemp}}{daily low temperature (in degrees Fahrenheit)}
+\item{\code{avgtemp}}{average of daily low and daily high temperature (in degrees Fahrenheit)}
+\item{\code{spring}}{indicator of whether the season was Spring}
+\item{\code{summer}}{indicator of whether the season was Summer}
+\item{\code{fall}}{indicator of whether the season was Fall}
+\item{\code{cloudcover}}{measure of cloud cover (in oktas)}
+\item{\code{precip}}{measure of precipitation (in inches)}
+\item{\code{volume}}{estimated number of trail users that day (number of breaks recorded)}
+\item{\code{weekday}}{logical indicator of whether the day was a non-holiday weekday}
+\item{\code{dayType}}{one of "weekday" or "weekend"}
 }
 }
 \source{

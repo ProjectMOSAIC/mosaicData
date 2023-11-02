@@ -7,13 +7,13 @@
 \format{
 A data frame with 6 observations on the following variables.
 \describe{
-\item{\code{trial}} {trial number}
-\item{\code{T.cold.in}} {temperature (C) of the cold water as it enters the apparatus}
-\item{\code{T.cold.out}} {temperature (C) of the cold water as it leaves the apparatus}
-\item{\code{m.cold}} {flow rate (L/min) of the cold water}
-\item{\code{T.hot.in}} {temperature (C) of the hot water as it enters the apparatus}
-\item{\code{T.hot.out}} {temperature (C) of the hot water as it leaves the apparatus}
-\item{\code{m.hot}} {flow rate (L/min) of the hot water}
+\item{\code{trial}}{trial number}
+\item{\code{T.cold.in}}{temperature (C) of the cold water as it enters the apparatus}
+\item{\code{T.cold.out}}{temperature (C) of the cold water as it leaves the apparatus}
+\item{\code{m.cold}}{flow rate (L/min) of the cold water}
+\item{\code{T.hot.in}}{temperature (C) of the hot water as it enters the apparatus}
+\item{\code{T.hot.out}}{temperature (C) of the hot water as it leaves the apparatus}
+\item{\code{m.hot}}{flow rate (L/min) of the hot water}
 }
 }
 \usage{

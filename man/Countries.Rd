@@ -7,9 +7,9 @@
 \format{
 A data frame with 258 observations on the following variables.
 \describe{
-\item{\code{worldmap}} {region name http://mappinghacks.com/ data sets}
-\item{\code{gapminder}} {country name in Gapminder data sets}
-\item{\code{maps}} {region name in \code{maps} data sets}
+\item{\code{maptools}}{region name http://mappinghacks.com/ data sets}
+\item{\code{gapminder}}{country name in Gapminder data sets}
+\item{\code{maps}}{region name in \code{maps} data sets}
 }
 }
 \usage{

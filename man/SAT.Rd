@@ -7,17 +7,17 @@
 \format{
 A data frame with 50 observations on the following variables.
 \describe{
-\item{\code{state}} {a factor with names of each state}
-\item{\code{expend}} {expenditure per pupil in average daily attendance in
+\item{\code{state}}{a factor with names of each state}
+\item{\code{expend}}{expenditure per pupil in average daily attendance in
 public elementary and secondary schools, 1994-95 (in thousands of US dollars)}
-\item{\code{ratio}} {average pupil/teacher ratio in public elementary and secondary
+\item{\code{ratio}}{average pupil/teacher ratio in public elementary and secondary
 schools, Fall 1994}
-\item{\code{salary}} {estimated average annual salary of teachers in public elementary
+\item{\code{salary}}{estimated average annual salary of teachers in public elementary
 and secondary schools, 1994-95 (in thousands of US dollars)}
-\item{\code{frac}} {percentage of all eligible students taking the SAT, 1994-95}
-\item{\code{verbal}} {average verbal SAT score, 1994-95}
-\item{\code{math}} {average math SAT score, 1994-95}
-\item{\code{sat}} {average total SAT score, 1994-95}
+\item{\code{frac}}{percentage of all eligible students taking the SAT, 1994-95}
+\item{\code{verbal}}{average verbal SAT score, 1994-95}
+\item{\code{math}}{average math SAT score, 1994-95}
+\item{\code{sat}}{average total SAT score, 1994-95}
 }
 }
 \source{
