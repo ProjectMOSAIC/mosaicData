@@ -1,3 +1,17 @@
+
+## Submission notes
+
+We are submitting four packages in parallel:
+
+* mosaicCore
+* mosaicData
+* mosaic
+* ggformula
+
+The changes to mosacData are mainly in documentation formatting errors now flagged 
+by CRAN checks.
+
+
 ## Test environments
 
 * local
