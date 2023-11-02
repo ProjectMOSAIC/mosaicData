@@ -1,12 +1,12 @@
 #' Houses in Saratoga County (2006)
-#' 
+#'
 #' Data on houses in Saratoga County, New York, USA in 2006
-#' 
+#'
 #' @docType data
 #' @name SaratogaHouses
 #' @usage data(SaratogaHouses)
 #' @format  A data frame with 1728 observations on the following 16 variables.
-#' \itemize{
+#' \describe{
 #' \item{\code{price}}{ price (US dollars)}
 #' \item{\code{lotSize}}{ size of lot (acres)}
 #' \item{\code{age}}{ age of house (years)}
@@ -24,11 +24,11 @@
 #' \item{\code{newConstruction}}{ whether the property is a new construction}
 #' \item{\code{centralAir}}{ whether the house has central air}
 #' }
-#' @source 
-#' Data collected by Candice Corvetti and used in the "Stat 101" case study 
-#' "How much is a Fireplace Worth".  
-#' See also 
+#' @source
+#' Data collected by Candice Corvetti and used in the "Stat 101" case study
+#' "How much is a Fireplace Worth".
+#' See also
 #' <https://www.saratogacountyny.gov/departments/real-property-tax-service-agency/>
 NA
 
-  
+

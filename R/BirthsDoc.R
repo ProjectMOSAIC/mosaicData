@@ -13,14 +13,16 @@
 #' @usage data(BirthsCDC)
 #' @format  A data.frame with the following 8 variables.
 #'
-#'  * `date`   Date
-#'  * `births` Number of births on `date` (integer)
-#'  * `wday`   Day of week (ordered factor)
-#'  * `year`   Year (integer)
-#'  * `month`  Month (integer)
-#'  * `day_of_year`  Day of year (integer)
-#'  * `day_of_month` Day of month (integer)
-#'  * `day_of_week`  Day of week (integer)
+#' \describe{
+#'  \item{\code{date}}{Date}
+#'  \item{\code{births}{Number of births on `date` (integer)}
+#'  \item{\code{wday}{Day of week (ordered factor)}
+#'  \item{\code{year}{Year (integer)}
+#'  \item{\code{month}{Month (integer)}
+#'  \item{\code{day_of_year}{Day of year (integer)}
+#'  \item{\code{day_of_month}{Day of month (integer)}
+#'  \item{\code{day_of_week}{Day of week (integer)}
+#'  }
 #'
 #' @source
 #' * Data source for `Births`: National Vital Statistics System natality data, as provided by
@@ -110,7 +112,7 @@ NA
 #' @usage data(Birthdays)
 #' @format
 #'   A data frame with 374221 observations on the following variables.
-#'   \itemize{
+#'   \describe{
 #'     \item{\code{state}}{state where child was born}
 #'     \item{\code{year}}{year (1969-1988)}
 #'     \item{\code{month}}{month (1-12)}

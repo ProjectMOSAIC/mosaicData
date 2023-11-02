@@ -6,7 +6,7 @@
 \title{Weight of dimes}
 \format{
 A data frame with 30 observations on the following 2 variables.
-\itemize{
+\describe{
 \item{\code{mass}}{ mass of dime in grams}
 \item{\code{year}}{ year the dime was minted}
 }

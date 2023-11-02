@@ -1,36 +1,36 @@
 #' Goose Permit Study
-#' 
-#' 237 hunters were each offered one of 11 cash amounts (bids) ranging from 
-#' $1 to $200 in return for their goose permits.  Hunters returned either their 
+#'
+#' 237 hunters were each offered one of 11 cash amounts (bids) ranging from
+#' $1 to $200 in return for their goose permits.  Hunters returned either their
 #' permit or the cash.
-#' 
+#'
 #' @docType data
 #' @name GoosePermits
 #' @usage data(GoosePermits)
 #' @format  A data.frame with 11 observations on the following 3 variables.
-#' \itemize{
+#' \describe{
 #'    item{code{bid }}{amount offered for permit (US $) (numeric)}
 #'    item{code{keep }}{number of hunters who kept the permit and returned the cash (numeric)}
 #'    item{code{sell }}{number of hunters who kept the cash and returned the permit (numeric)}
 #' }
-#' @source  Bishop and Heberlein. 
-#' "Measuring values of extramarket goods: are indirect measures biased?". 
-#' Amer. J. Agr. Econ. 61, 1979. Available at 
+#' @source  Bishop and Heberlein.
+#' "Measuring values of extramarket goods: are indirect measures biased?".
+#' Amer. J. Agr. Econ. 61, 1979. Available at
 #' <https://onlinelibrary.wiley.com/doi/abs/10.2307/3180348>
 ### broken URL:  \url{http://www1.udel.edu/johnmack/frec343/bishop_and_heberlein.pdf}.
-#' 
-### This link seems to have broken: 
+#'
+### This link seems to have broken:
 ### See also \url{http://www.math.umt.edu/patterson/ProfileLikelihoodCI.pdf}.
-#' 
+#'
 #' @examples
 #' data(GoosePermits)
-#' 
-#' goose.model <- 
+#'
+#' goose.model <-
 #'   glm( cbind(keep, sell) ~ log(bid), data = GoosePermits, family = binomial())
 #' if (require(ggformula)) {
 #'   y.hat <- makeFun(goose.model)
 #'   gf_point( (keep/(keep+sell)) ~ bid, data = GoosePermits, ylim = c(0,1.05)) |>
-#'   gf_fun(y.hat(b) ~ b, add = TRUE, color = "red", alpha = 0.5) 
+#'   gf_fun(y.hat(b) ~ b, add = TRUE, color = "red", alpha = 0.5)
 #' }
-#' 
+#'
 NA

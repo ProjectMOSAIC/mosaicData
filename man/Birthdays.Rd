@@ -6,7 +6,7 @@
 \title{US Births in 1969 - 1988}
 \format{
 A data frame with 374221 observations on the following variables.
-\itemize{
+\describe{
 \item{\code{state}}{state where child was born}
 \item{\code{year}}{year (1969-1988)}
 \item{\code{month}}{month (1-12)}

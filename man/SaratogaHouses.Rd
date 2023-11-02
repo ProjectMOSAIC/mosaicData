@@ -6,7 +6,7 @@
 \title{Houses in Saratoga County (2006)}
 \format{
 A data frame with 1728 observations on the following 16 variables.
-\itemize{
+\describe{
 \item{\code{price}}{ price (US dollars)}
 \item{\code{lotSize}}{ size of lot (acres)}
 \item{\code{age}}{ age of house (years)}
