@@ -1,22 +1,22 @@
 library(dplyr)
-Gestation <- 
+Gestation <-
   readr::read_csv('Gestation.csv') |>
   mutate(
-    pluralty = case_when(pluralty == 5 ~ "single fetus"),
+    plurality = case_when(plurality == 5 ~ "single fetus"),
     outcome = case_when(outcome == 1 ~ 'live birth'),
     date = lubridate::ymd('1960-12-31') + lubridate::days(date),
     sex = case_when(sex == 1 ~ "male", sex == 2 ~ "female"),
     parity = ifelse(parity == 99, NA,  parity),
     race = case_when(
-      race <= 5 ~ 'white', 
-      race == 6 ~ 'mex', 
-      race == 7 ~ 'black', 
-      race == 8 ~ 'asian', 
-      race == 9 ~ 'mixed'), 
+      race <= 5 ~ 'white',
+      race == 6 ~ 'mex',
+      race == 7 ~ 'black',
+      race == 8 ~ 'asian',
+      race == 9 ~ 'mixed'),
     ed = case_when(
-      ed == 0 ~ 'less than 8th grade', 
-      ed == 1 ~ '8th -12th grade - did not graduate', 
-      ed == 2 ~ 'HS graduate--no other schooling', 
+      ed == 0 ~ 'less than 8th grade',
+      ed == 1 ~ '8th -12th grade - did not graduate',
+      ed == 2 ~ 'HS graduate--no other schooling',
       ed == 3 ~ 'HS+trade',
       ed == 4 ~ 'HS+some college',
       ed == 5 ~ 'College graduate',
@@ -24,20 +24,20 @@ Gestation <-
       ed == 7 ~ 'Trade school HS unclear'
     ),
     drace = case_when(
-      drace == "0" ~ 'white', 
-      drace == "1" ~ 'white', 
-      drace == "2" ~ 'white', 
-      drace == "3" ~ 'white', 
-      drace == "4" ~ 'white', 
-      drace == "5" ~ 'white', 
-      drace == "6" ~ 'mex', 
-      drace == "7" ~ 'black', 
-      drace == "8" ~ 'asian', 
-      drace == "9" ~ 'mixed'), 
+      drace == "0" ~ 'white',
+      drace == "1" ~ 'white',
+      drace == "2" ~ 'white',
+      drace == "3" ~ 'white',
+      drace == "4" ~ 'white',
+      drace == "5" ~ 'white',
+      drace == "6" ~ 'mex',
+      drace == "7" ~ 'black',
+      drace == "8" ~ 'asian',
+      drace == "9" ~ 'mixed'),
     ded = case_when(
-      ded == 0 ~ 'less than 8th grade', 
-      ded == 1 ~ '8th -12th grade - did not graduate', 
-      ded == 2 ~ 'HS graduate--no other schooling', 
+      ded == 0 ~ 'less than 8th grade',
+      ded == 1 ~ '8th -12th grade - did not graduate',
+      ded == 2 ~ 'HS graduate--no other schooling',
       ded == 3 ~ 'HS+trade',
       ded == 4 ~ 'HS+some college',
       ded == 5 ~ 'College graduate',
@@ -45,10 +45,10 @@ Gestation <-
       ded == 7 ~ 'Trade school HS unclear'
     ),
     marital = case_when(
-      marital == 1 ~ 'married', 
-      marital == 2 ~ 'legally separated', 
+      marital == 1 ~ 'married',
+      marital == 2 ~ 'legally separated',
       marital == 3 ~ 'divorced',
-      marital == 4 ~ 'widowed', 
+      marital == 4 ~ 'widowed',
       marital == 5 ~ 'never married'),
     inc = case_when(
       inc < 9 ~ paste0(inc * 2500, '-', (inc + 1) * 2500),
@@ -75,7 +75,7 @@ Gestation <-
       time == 98 ~ "unknown",
       time == 99 ~ "not asked"),
     number = case_when(
-      number == 0 ~ 'never', 
+      number == 0 ~ 'never',
       number == 1 ~ '1-4 per day',
       number == 2 ~ '5-9 per day',
       number == 3 ~ '10-14 per day',
@@ -91,4 +91,4 @@ Gestation <-
   )
 
 usethis::use_data(Gestation, overwrite = TRUE)
-    
+

@@ -1,4 +1,4 @@
-id,pluralty,outcome,date,gestation,sex,wt,parity,race,age,ed,ht,wt.1,drace,dage,ded,dht,dwt,marital,inc,smoke,time,number
+id,plurality,outcome,date,gestation,sex,wt,parity,race,age,ed,ht,wt.1,drace,dage,ded,dht,dwt,marital,inc,smoke,time,number
 15,5,1,1411,284,1,120,1,8,27,5,62,100,8,31,5,65,110,1,1,0,0,0
 20,5,1,1499,282,1,113,2,0,33,5,64,135,0,38,5,70,148,1,4,0,0,0
 58,5,1,1576,279,1,128,1,0,28,2,64,115,5,32,1,NA,NA,1,2,1,1,1
