@@ -111,12 +111,12 @@ NA
 #' @format
 #'   A data frame with 374221 observations on the following variables.
 #'   \itemize{
-#'     \item{\code{state}} {state where child was born}
-#'     \item{\code{year}} {year (1969-1988)}
-#'     \item{\code{month}} {month (1-12)}
-#'     \item{\code{day}} {day of month}
-#'     \item{\code{date}} {date as a date object}
-#'     \item{\code{births}} {number of births}
+#'     \item{\code{state}}{state where child was born}
+#'     \item{\code{year}}{year (1969-1988)}
+#'     \item{\code{month}}{month (1-12)}
+#'     \item{\code{day}}{day of month}
+#'     \item{\code{date}}{date as a date object}
+#'     \item{\code{births}}{number of births}
 #'   }
 #'
 #' @seealso `Births`, `Births78`, `Births2015`, `BirthsSSA`, `BirthsCDC` for data sets that are

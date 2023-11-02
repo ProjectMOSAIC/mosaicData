@@ -12,18 +12,18 @@
 #' @format 
 #'   A data frame with 100 observations on the following variables.
 #'   \itemize{
-#'     \item{\code{state}} {a factor with names of each state}
-#'     \item{\code{expend}} {expenditure per pupil in average daily attendance in
+#'     \item{\code{state}}{a factor with names of each state}
+#'     \item{\code{expend}}{expenditure per pupil in average daily attendance in
 #'  public elementary and secondary schools, 1994-95 (in thousands of US dollars)}
-#'     \item{\code{ratio}} {average pupil/teacher ratio in public elementary and secondary
+#'     \item{\code{ratio}}{average pupil/teacher ratio in public elementary and secondary
 #' schools}
-#'     \item{\code{salary}} {estimated average annual salary of teachers in public elementary
+#'     \item{\code{salary}}{estimated average annual salary of teachers in public elementary
 #' and secondary schools, unadjusted for inflation (in US dollars)}
-#'     \item{\code{frac}} {percentage of all eligible students taking the SAT}
-#'     \item{\code{verbal}} {average verbal SAT score}
-#'     \item{\code{math}} {average math SAT score}
-#'     \item{\code{sat}} {average total SAT score}
-#'     \item{\code{year}} {1994 or 2010 (as a character string)}
+#'     \item{\code{frac}}{percentage of all eligible students taking the SAT}
+#'     \item{\code{verbal}}{average verbal SAT score}
+#'     \item{\code{math}}{average math SAT score}
+#'     \item{\code{sat}}{average total SAT score}
+#'     \item{\code{year}}{1994 or 2010 (as a character string)}
 #'   }
 #' 
 #' @source 
