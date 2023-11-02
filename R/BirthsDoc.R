@@ -15,13 +15,13 @@
 #'
 #' \describe{
 #'  \item{\code{date}}{Date}
-#'  \item{\code{births}{Number of births on `date` (integer)}
-#'  \item{\code{wday}{Day of week (ordered factor)}
-#'  \item{\code{year}{Year (integer)}
-#'  \item{\code{month}{Month (integer)}
-#'  \item{\code{day_of_year}{Day of year (integer)}
-#'  \item{\code{day_of_month}{Day of month (integer)}
-#'  \item{\code{day_of_week}{Day of week (integer)}
+#'  \item{\code{births}}{Number of births on `date` (integer)}
+#'  \item{\code{wday}}{Day of week (ordered factor)}
+#'  \item{\code{year}}{Year (integer)}
+#'  \item{\code{month}}{Month (integer)}
+#'  \item{\code{day_of_year}}{Day of year (integer)}
+#'  \item{\code{day_of_month}}{Day of month (integer)}
+#'  \item{\code{day_of_week}}{Day of week (integer)}
 #'  }
 #'
 #' @source
@@ -118,6 +118,7 @@ NA
 #'     \item{\code{month}}{month (1-12)}
 #'     \item{\code{day}}{day of month}
 #'     \item{\code{date}}{date as a date object}
+#'     \item{\code{wday}}{Day of week (ordered factor)}
 #'     \item{\code{births}}{number of births}
 #'   }
 #'

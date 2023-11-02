@@ -12,6 +12,7 @@ A data frame with 374221 observations on the following variables.
 \item{\code{month}}{month (1-12)}
 \item{\code{day}}{day of month}
 \item{\code{date}}{date as a date object}
+\item{\code{wday}}{Day of week (ordered factor)}
 \item{\code{births}}{number of births}
 }
 }
