@@ -18,7 +18,7 @@ There are several data sets covering different date ranges and obtaining data fr
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mosaicData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.20.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.20.4</span>
       </span>
     </div>
 
@@ -68,21 +68,39 @@ There are several data sets covering different date ranges and obtaining data fr
 
     <div id="format">
     <h2>Format</h2>
-    <p>A data.frame with the following 8 variables.</p><ul><li><p><code>date</code>   Date</p></li>
-<li><p><code>births</code> Number of births on <code>date</code> (integer)</p></li>
-<li><p><code>wday</code>   Day of week (ordered factor)</p></li>
-<li><p><code>year</code>   Year (integer)</p></li>
-<li><p><code>month</code>  Month (integer)</p></li>
-<li><p><code>day_of_year</code>  Day of year (integer)</p></li>
-<li><p><code>day_of_month</code> Day of month (integer)</p></li>
-<li><p><code>day_of_week</code>  Day of week (integer)</p></li>
-</ul></div>
+    <p>A data.frame with the following 8 variables.</p>
+<dl><dt><code>date</code></dt>
+<dd><p>Date</p></dd>
+
+<dt><code>births</code></dt>
+<dd><p>Number of births on <code>date</code> (integer)</p></dd>
+
+<dt><code>wday</code></dt>
+<dd><p>Day of week (ordered factor)</p></dd>
+
+<dt><code>year</code></dt>
+<dd><p>Year (integer)</p></dd>
+
+<dt><code>month</code></dt>
+<dd><p>Month (integer)</p></dd>
+
+<dt><code>day_of_year</code></dt>
+<dd><p>Day of year (integer)</p></dd>
+
+<dt><code>day_of_month</code></dt>
+<dd><p>Day of month (integer)</p></dd>
+
+<dt><code>day_of_week</code></dt>
+<dd><p>Day of week (integer)</p></dd>
+
+
+</dl></div>
     <div id="source">
     <h2>Source</h2>
     
 <ul><li><p>Data source for <code>Births</code>: National Vital Statistics System natality data, as provided by
 Google BigQuery and exported to csv by
-Robert Kern <a href="http://www.mechanicalkern.com/static/birthdates-1968-1988.csv" class="external-link">http://www.mechanicalkern.com/static/birthdates-1968-1988.csv</a>.</p></li>
+Robert Kern <a href="https://www.mechanicalkern.com:443/static/birthdates-1968-1988.csv" class="external-link">https://www.mechanicalkern.com:443/static/birthdates-1968-1988.csv</a>.</p></li>
 <li><p>Data source for <code>BirthsSSA</code>  US Social Security Administration, as curated at <a href="https://github.com/fivethirtyeight/data/tree/master/births" class="external-link">https://github.com/fivethirtyeight/data/tree/master/births</a></p></li>
 <li><p>Data source for <code>BirthsCDC</code>  US Centers for Disease Control, as curated at <a href="https://github.com/fivethirtyeight/data/tree/master/births" class="external-link">https://github.com/fivethirtyeight/data/tree/master/births</a></p></li>
 <li><p>Data source for <code>Births2015</code>: Obtained from the National Center for Health Statistics,
@@ -147,13 +165,15 @@ See the examples.</p>
 <span class="r-in"><span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html" class="external-link">stat_smooth</a></span><span class="op">(</span>se <span class="op">=</span> <span class="cn">FALSE</span>, geom <span class="op">=</span> <span class="st">"line"</span>, alpha <span class="op">=</span> <span class="fl">0.6</span>, size <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="kw">if</span> <span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>     data <span class="op">=</span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind.html" class="external-link">bind_cols</a></span><span class="op">(</span><span class="va">Births</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fl">1978</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                       <span class="va">Births78</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html" class="external-link">rename</a></span><span class="op">(</span>births78 <span class="op">=</span> <span class="va">births</span><span class="op">)</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>     data <span class="op">=</span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_cols.html" class="external-link">bind_cols</a></span><span class="op">(</span><span class="va">Births</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fl">1978</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                       <span class="va">Births78</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html" class="external-link">rename</a></span><span class="op">(</span>births78 <span class="op">=</span> <span class="va">births</span><span class="op">)</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">births</span> <span class="op">-</span> <span class="va">births78</span><span class="op">)</span></span></span>
 <span class="r-in"><span>     <span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html" class="external-link">geom_histogram</a></span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="op">}</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.</span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Please use `linewidth` instead.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> New names:</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">•</span> `date` -&gt; `date...1`</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">•</span> `wday` -&gt; `wday...3`</span>
@@ -179,16 +199,16 @@ See the examples.</p>
 <span class="r-in"><span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html" class="external-link">stat_smooth</a></span><span class="op">(</span>se <span class="op">=</span> <span class="cn">FALSE</span>, geom <span class="op">=</span> <span class="st">"line"</span>, alpha <span class="op">=</span> <span class="fl">0.6</span>, size <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="kw">if</span> <span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>     data <span class="op">=</span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind.html" class="external-link">bind_cols</a></span><span class="op">(</span><span class="va">Births</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fl">1978</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                       <span class="va">Births78</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html" class="external-link">rename</a></span><span class="op">(</span>births78 <span class="op">=</span> <span class="va">births</span><span class="op">)</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>     data <span class="op">=</span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_cols.html" class="external-link">bind_cols</a></span><span class="op">(</span><span class="va">Births</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fl">1978</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                       <span class="va">Births78</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html" class="external-link">rename</a></span><span class="op">(</span>births78 <span class="op">=</span> <span class="va">births</span><span class="op">)</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">births</span> <span class="op">-</span> <span class="va">births78</span><span class="op">)</span></span></span>
 <span class="r-in"><span>     <span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html" class="external-link">geom_histogram</a></span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span>    <span class="co"># SSA records more births than CDC</span></span></span>
 <span class="r-in"><span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>     data <span class="op">=</span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind.html" class="external-link">bind_cols</a></span><span class="op">(</span><span class="va">BirthsSSA</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">&lt;=</span> <span class="fl">2003</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html" class="external-link">rename</a></span><span class="op">(</span>SSA <span class="op">=</span> <span class="va">births</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                       <span class="va">BirthsCDC</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">&gt;=</span> <span class="fl">2000</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html" class="external-link">rename</a></span><span class="op">(</span>CDC <span class="op">=</span> <span class="va">births</span><span class="op">)</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>     data <span class="op">=</span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_cols.html" class="external-link">bind_cols</a></span><span class="op">(</span><span class="va">BirthsSSA</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">&lt;=</span> <span class="fl">2003</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html" class="external-link">rename</a></span><span class="op">(</span>SSA <span class="op">=</span> <span class="va">births</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                       <span class="va">BirthsCDC</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">&gt;=</span> <span class="fl">2000</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html" class="external-link">rename</a></span><span class="op">(</span>CDC <span class="op">=</span> <span class="va">births</span><span class="op">)</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">SSA</span> <span class="op">-</span> <span class="va">CDC</span><span class="op">)</span></span></span>
 <span class="r-in"><span>     <span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html" class="external-link">geom_histogram</a></span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></span>
@@ -242,7 +262,7 @@ See the examples.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

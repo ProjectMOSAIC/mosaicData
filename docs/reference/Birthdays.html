@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mosaicData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.20.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.20.4</span>
       </span>
     </div>
 
@@ -58,13 +58,29 @@
 
     <div id="format">
     <h2>Format</h2>
-    <p>A data frame with 374221 observations on the following variables.</p><ul><li><p><code>state</code> state where child was born</p></li>
-<li><p><code>year</code> year (1969-1988)</p></li>
-<li><p><code>month</code> month (1-12)</p></li>
-<li><p><code>day</code> day of month</p></li>
-<li><p><code>date</code> date as a date object</p></li>
-<li><p><code>births</code> number of births</p></li>
-</ul></div>
+    <p>A data frame with 374221 observations on the following variables.</p><dl><dt><code>state</code></dt>
+<dd><p>state where child was born</p></dd>
+
+<dt><code>year</code></dt>
+<dd><p>year (1969-1988)</p></dd>
+
+<dt><code>month</code></dt>
+<dd><p>month (1-12)</p></dd>
+
+<dt><code>day</code></dt>
+<dd><p>day of month</p></dd>
+
+<dt><code>date</code></dt>
+<dd><p>date as a date object</p></dd>
+
+<dt><code>wday</code></dt>
+<dd><p>Day of week (ordered factor)</p></dd>
+
+<dt><code>births</code></dt>
+<dd><p>number of births</p></dd>
+
+
+</dl></div>
     <div id="see-also">
     <h2>See also</h2>
     <div class="dont-index"><p><code>Births</code>, <code>Births78</code>, <code>Births2015</code>, <code>BirthsSSA</code>, <code>BirthsCDC</code> for data sets that are
@@ -75,11 +91,11 @@ aggregated at the level of the entire country.</p></div>
     <h2>Examples</h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">Birthdays</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ProjectMOSAIC/mosaic" class="external-link">mosaic</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span>  <span class="va">MI</span> <span class="op">&lt;-</span> <span class="va">Birthdays</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">state</span> <span class="op">==</span> <span class="st">"MI"</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="va">MI</span> <span class="op">&lt;-</span> <span class="va">Birthdays</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">state</span> <span class="op">==</span> <span class="st">"MI"</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/ggformula/man/gf_point.html" class="external-link">gf_point</a></span><span class="op">(</span><span class="va">births</span> <span class="op">~</span> <span class="va">date</span>, <span class="va">Birthdays</span>, data <span class="op">=</span> <span class="va">MI</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/ggformula/man/gf_line.html" class="external-link">gf_line</a></span><span class="op">(</span><span class="va">births</span> <span class="op">~</span> <span class="va">date</span>, <span class="va">Birthdays</span>, data <span class="op">=</span> <span class="va">MI</span>, color <span class="op">=</span> <span class="op">~</span> <span class="va">wday</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/ggformula/man/gf_line.html" class="external-link">gf_line</a></span><span class="op">(</span><span class="va">births</span> <span class="op">~</span> <span class="va">date</span>,</span></span>
-<span class="r-in"><span>    data <span class="op">=</span> <span class="va">Birthdays</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu">group_by</span><span class="op">(</span><span class="va">date</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu">summarise</span><span class="op">(</span>births <span class="op">=</span> <span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">births</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>    data <span class="op">=</span> <span class="va">Birthdays</span> <span class="op">|&gt;</span> <span class="fu">group_by</span><span class="op">(</span><span class="va">date</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">summarise</span><span class="op">(</span>births <span class="op">=</span> <span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">births</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="op">}</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: mosaic</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Registered S3 method overwritten by 'mosaic':</span>
@@ -121,7 +137,7 @@ aggregated at the level of the entire country.</p></div>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

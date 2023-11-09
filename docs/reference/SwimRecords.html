@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mosaicData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.20.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.20.4</span>
       </span>
     </div>
 
@@ -58,16 +58,23 @@
 
     <div id="format">
     <h2>Format</h2>
-    <p>A data frame with 62 observations of the following variables.</p><ul><li><p><code>time</code> time (in seconds) of the world record</p></li>
-<li><p><code>year</code> Year in which the record was set</p></li>
-<li><p><code>sex</code> a factor with levels <code>M</code> and <code>F</code></p></li>
-</ul></div>
+    <p>A data frame with 62 observations of the following variables.</p><dl><dt><code>time</code></dt>
+<dd><p>time (in seconds) of the world record</p></dd>
+
+<dt><code>year</code></dt>
+<dd><p>Year in which the record was set</p></dd>
+
+<dt><code>sex</code></dt>
+<dd><p>a factor with levels <code>M</code> and <code>F</code></p></dd>
+
+
+</dl></div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">SwimRecords</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ProjectMOSAIC/ggformula" class="external-link">ggformula</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/ggformula/man/gf_point.html" class="external-link">gf_point</a></span><span class="op">(</span><span class="va">time</span> <span class="op">~</span> <span class="va">year</span>, data <span class="op">=</span> <span class="va">SwimRecords</span>, color <span class="op">=</span> <span class="op">~</span> <span class="va">sex</span><span class="op">)</span> </span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/ggformula/man/gf_point.html" class="external-link">gf_point</a></span><span class="op">(</span><span class="va">time</span> <span class="op">~</span> <span class="va">year</span>, data <span class="op">=</span> <span class="va">SwimRecords</span>, color <span class="op">=</span> <span class="op">~</span> <span class="va">sex</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-plt img"><img src="SwimRecords-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
@@ -85,7 +92,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

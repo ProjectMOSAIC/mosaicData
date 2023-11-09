@@ -20,7 +20,7 @@ also recorded."><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/l
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mosaicData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.20.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.20.4</span>
       </span>
     </div>
 
@@ -64,36 +64,84 @@ also recorded.</p>
 
     <div id="format">
     <h2>Format</h2>
-    <p>A data frame with 1236 observations on the following variables.</p><ul><li><p><code>id</code> identification number</p></li>
-<li><p><code>plurality</code> all "single fetus" in this data set</p></li>
-<li><p><code>outcome</code> all "live birth" (survived at least 28 days) in this data set</p></li>
-<li><p><code>date</code> birth date where 1096=January 1, 1961</p></li>
-<li><p><code>gestation</code> length of gestation (in days)</p></li>
-<li><p><code>wt</code> birth weight (in ounces)</p></li>
-<li><p><code>parity</code> total number of previous pregnancies (including fetal deaths
-and still births)</p></li>
-<li><p><code>race</code> mother's race: "asian", "black", "mex",  "mixed", or "white"</p></li>
-<li><p><code>age</code> mother's age in years at termination of pregnancy</p></li>
-<li><p><code>ed</code> mother's education</p></li>
-<li><p><code>ht</code> mother's height in inches to the last completed inch</p></li>
-<li><p><code>wt.1</code> mother's prepregnancy weight (in pounds)</p></li>
-<li><p><code>drace</code> father's race</p></li>
-<li><p><code>dage</code> father's age (in years)</p></li>
-<li><p><code>ded</code> father's education</p></li>
-<li><p><code>dht</code> father's height in inches to the last completed inch</p></li>
-<li><p><code>dwt</code> father's weight (in pounds)</p></li>
-<li><p><code>marital</code> marital status,</p></li>
-<li><p><code>inc</code> family yearly income in $2500 increments</p></li>
-<li><p><code>smoke</code> does mother smoke? (never, smokes now,
-until current pregnancy, once did, not now)</p></li>
-<li><p><code>time</code> time since quitting smoking
+    <p>A data frame with 1236 observations on the following variables.</p><dl><dt><code>id</code></dt>
+<dd><p>identification number</p></dd>
+
+<dt><code>plurality</code></dt>
+<dd><p>all "single fetus" in this data set</p></dd>
+
+<dt><code>outcome</code></dt>
+<dd><p>all "live birth" (survived at least 28 days) in this data set</p></dd>
+
+<dt><code>date</code></dt>
+<dd><p>birth date where 1096=January 1, 1961</p></dd>
+
+<dt><code>gestation</code></dt>
+<dd><p>length of gestation (in days)</p></dd>
+
+<dt><code>wt</code></dt>
+<dd><p>birth weight (in ounces)</p></dd>
+
+<dt><code>parity</code></dt>
+<dd><p>total number of previous pregnancies (including fetal deaths
+and still births)</p></dd>
+
+<dt><code>sex</code></dt>
+<dd><p>"male"</p></dd>
+
+<dt><code>race</code></dt>
+<dd><p>mother's race: "asian", "black", "mex",  "mixed", or "white"</p></dd>
+
+<dt><code>age</code></dt>
+<dd><p>mother's age in years at termination of pregnancy</p></dd>
+
+<dt><code>ed</code></dt>
+<dd><p>mother's education</p></dd>
+
+<dt><code>ht</code></dt>
+<dd><p>mother's height in inches to the last completed inch</p></dd>
+
+<dt><code>wt.1</code></dt>
+<dd><p>mother's prepregnancy weight (in pounds)</p></dd>
+
+<dt><code>drace</code></dt>
+<dd><p>father's race</p></dd>
+
+<dt><code>dage</code></dt>
+<dd><p>father's age (in years)</p></dd>
+
+<dt><code>ded</code></dt>
+<dd><p>father's education</p></dd>
+
+<dt><code>dht</code></dt>
+<dd><p>father's height in inches to the last completed inch</p></dd>
+
+<dt><code>dwt</code></dt>
+<dd><p>father's weight (in pounds)</p></dd>
+
+<dt><code>marital</code></dt>
+<dd><p>marital status</p></dd>
+,
+<dt><code>inc</code></dt>
+<dd><p>family yearly income in $2500 increments</p></dd>
+
+<dt><code>smoke</code></dt>
+<dd><p>does mother smoke? (never, smokes now,
+until current pregnancy, once did, not now)</p></dd>
+
+<dt><code>time</code></dt>
+<dd><p>time since quitting smoking
 (never smoked, still smokes, during current preg, within 1 year,
 1 to 2 years ago, 2 to 3 years ago, 3 to 4 years ago,
-5 to 9 years ago, 10+ years ago, quit and don't know</p></li>
-<li><p><code>number</code> number of cigarettes smoked per day for past and
+5 to 9 years ago, 10+ years ago, quit and don't know</p></dd>
+
+<dt><code>number</code></dt>
+<dd><p>number of cigarettes smoked per day for past and
 current smokers  (never, 1-4, 5-9, 10-14, 15-19, 20-29, 30-39, 40-60, 60+,
-smoke but don't know)</p></li>
-</ul></div>
+smoke but don't know)</p></dd>
+
+
+</dl></div>
     <div id="source">
     <h2>Source</h2>
     <p>The book by Nolan and Speed
@@ -129,7 +177,7 @@ Statistics Through Applications</em> (2000), Springer-Verlag.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

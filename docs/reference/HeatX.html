@@ -19,7 +19,7 @@ as nearly as can be managed the only heat exchange is between the hot and cold w
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mosaicData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.20.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.20.4</span>
       </span>
     </div>
 
@@ -62,29 +62,44 @@ as nearly as can be managed the only heat exchange is between the hot and cold w
 
     <div id="format">
     <h2>Format</h2>
-    <p>A data frame with 6 observations on the following variables.</p><ul><li><p><code>trial</code> trial number</p></li>
-<li><p><code>T.cold.in</code> temperature (C) of the cold water as it enters the apparatus</p></li>
-<li><p><code>T.cold.out</code> temperature (C) of the cold water as it leaves the apparatus</p></li>
-<li><p><code>m.cold</code> flow rate (L/min) of the cold water</p></li>
-<li><p><code>T.hot.in</code> temperature (C) of the hot water as it enters the apparatus</p></li>
-<li><p><code>T.hot.out</code> temperature (C) of the hot water as it leaves the apparatus</p></li>
-<li><p><code>m.hot</code> flow rate (L/min) of the hot water</p></li>
-</ul></div>
+    <p>A data frame with 6 observations on the following variables.</p><dl><dt><code>trial</code></dt>
+<dd><p>trial number</p></dd>
+
+<dt><code>T.cold.in</code></dt>
+<dd><p>temperature (C) of the cold water as it enters the apparatus</p></dd>
+
+<dt><code>T.cold.out</code></dt>
+<dd><p>temperature (C) of the cold water as it leaves the apparatus</p></dd>
+
+<dt><code>m.cold</code></dt>
+<dd><p>flow rate (L/min) of the cold water</p></dd>
+
+<dt><code>T.hot.in</code></dt>
+<dd><p>temperature (C) of the hot water as it enters the apparatus</p></dd>
+
+<dt><code>T.hot.out</code></dt>
+<dd><p>temperature (C) of the hot water as it leaves the apparatus</p></dd>
+
+<dt><code>m.hot</code></dt>
+<dd><p>flow rate (L/min) of the hot water</p></dd>
+
+
+</dl></div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># We can test for heat exchange with the environment by checking to see if the </span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># We can test for heat exchange with the environment by checking to see if the</span></span></span>
 <span class="r-in"><span><span class="co"># heat gained by the cold water matches the heat lost by the hot water.</span></span></span>
 <span class="r-in"><span><span class="va">C_p</span> <span class="op">&lt;-</span> <span class="fl">4.182</span> <span class="op">/</span> <span class="fl">60</span>  <span class="co"># / 60 because measuring m in L/min</span></span></span>
-<span class="r-in"><span><span class="va">HeatX2</span> <span class="op">&lt;-</span> </span></span>
+<span class="r-in"><span><span class="va">HeatX2</span> <span class="op">&lt;-</span></span></span>
 <span class="r-in"><span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span><span class="va">HeatX</span>,</span></span>
 <span class="r-in"><span>    Q.cold <span class="op">=</span> <span class="va">m.cold</span> <span class="op">*</span> <span class="va">C_p</span> <span class="op">*</span> <span class="op">(</span><span class="va">T.cold.out</span> <span class="op">-</span> <span class="va">T.cold.in</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>    Q.hot  <span class="op">=</span> <span class="va">m.hot</span> <span class="op">*</span> <span class="va">C_p</span> <span class="op">*</span> <span class="op">(</span><span class="va">T.hot.out</span><span class="op">-</span> <span class="va">T.hot.in</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>    Q.env  <span class="op">=</span> <span class="va">Q.cold</span> <span class="op">+</span> <span class="va">Q.hot</span></span></span>
 <span class="r-in"><span>  <span class="op">)</span></span></span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ProjectMOSAIC/ggformula" class="external-link">ggformula</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/ggformula/man/gf_jitter.html" class="external-link">gf_jitter</a></span><span class="op">(</span> <span class="st">""</span> <span class="op">~</span> <span class="va">Q.env</span>, data <span class="op">=</span> <span class="va">HeatX2</span>, alpha <span class="op">=</span> <span class="fl">0.6</span>, size <span class="op">=</span> <span class="fl">4</span>, </span></span>
-<span class="r-in"><span>    width <span class="op">=</span> <span class="fl">0</span>, height <span class="op">=</span> <span class="fl">0.1</span>, seed <span class="op">=</span> <span class="fl">123</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/ggformula/man/gf_jitter.html" class="external-link">gf_jitter</a></span><span class="op">(</span> <span class="st">""</span> <span class="op">~</span> <span class="va">Q.env</span>, data <span class="op">=</span> <span class="va">HeatX2</span>, alpha <span class="op">=</span> <span class="fl">0.6</span>, size <span class="op">=</span> <span class="fl">4</span>,</span></span>
+<span class="r-in"><span>    width <span class="op">=</span> <span class="fl">0</span>, height <span class="op">=</span> <span class="fl">0.1</span>, seed <span class="op">=</span> <span class="fl">123</span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/ggformula/man/gf_aux.html" class="external-link">gf_labs</a></span><span class="op">(</span>y <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-plt img"><img src="HeatX-1.png" alt="" width="700" height="433"></span>
@@ -117,7 +132,7 @@ as nearly as can be managed the only heat exchange is between the hot and cold w
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

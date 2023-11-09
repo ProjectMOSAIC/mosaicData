@@ -19,7 +19,7 @@ permit or the cash."><!-- mathjax --><script src="https://cdnjs.cloudflare.com/a
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mosaicData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.20.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.20.4</span>
       </span>
     </div>
 
@@ -62,10 +62,17 @@ permit or the cash.</p>
 
     <div id="format">
     <h2>Format</h2>
-    <p>A data.frame with 11 observations on the following 3 variables.</p><ul><li><p>itemcodebid amount offered for permit (US $) (numeric)
-itemcodekeep number of hunters who kept the permit and returned the cash (numeric)
-itemcodesell number of hunters who kept the cash and returned the permit (numeric)</p></li>
-</ul></div>
+    <p>A data.frame with 11 observations on the following 3 variables.</p><dl><dt><code>bid </code></dt>
+<dd><p>amount offered for permit (US $) (numeric)</p></dd>
+
+<dt><code>keep </code></dt>
+<dd><p>number of hunters who kept the permit and returned the cash (numeric)</p></dd>
+
+<dt><code>sell </code></dt>
+<dd><p>number of hunters who kept the cash and returned the permit (numeric)</p></dd>
+
+
+</dl></div>
     <div id="source">
     <h2>Source</h2>
     <p>Bishop and Heberlein.
@@ -78,14 +85,14 @@ Amer. J. Agr. Econ. 61, 1979. Available at
     <h2>Examples</h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">GoosePermits</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="va">goose.model</span> <span class="op">&lt;-</span> </span></span>
+<span class="r-in"><span><span class="va">goose.model</span> <span class="op">&lt;-</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/stats/glm.html" class="external-link">glm</a></span><span class="op">(</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="va">keep</span>, <span class="va">sell</span><span class="op">)</span> <span class="op">~</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="va">bid</span><span class="op">)</span>, data <span class="op">=</span> <span class="va">GoosePermits</span>, family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html" class="external-link">binomial</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ProjectMOSAIC/ggformula" class="external-link">ggformula</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span>  <span class="va">y.hat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mosaicCore/man/makeFun.html" class="external-link">makeFun</a></span><span class="op">(</span><span class="va">goose.model</span><span class="op">)</span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/ggformula/man/gf_point.html" class="external-link">gf_point</a></span><span class="op">(</span> <span class="op">(</span><span class="va">keep</span><span class="op">/</span><span class="op">(</span><span class="va">keep</span><span class="op">+</span><span class="va">sell</span><span class="op">)</span><span class="op">)</span> <span class="op">~</span> <span class="va">bid</span>, data <span class="op">=</span> <span class="va">GoosePermits</span>, ylim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1.05</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/ggformula/man/gf_function.html" class="external-link">gf_fun</a></span><span class="op">(</span><span class="fu">y.hat</span><span class="op">(</span><span class="va">b</span><span class="op">)</span> <span class="op">~</span> <span class="va">b</span>, add <span class="op">=</span> <span class="cn">TRUE</span>, color <span class="op">=</span> <span class="st">"red"</span>, alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> </span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/ggformula/man/gf_point.html" class="external-link">gf_point</a></span><span class="op">(</span> <span class="op">(</span><span class="va">keep</span><span class="op">/</span><span class="op">(</span><span class="va">keep</span><span class="op">+</span><span class="va">sell</span><span class="op">)</span><span class="op">)</span> <span class="op">~</span> <span class="va">bid</span>, data <span class="op">=</span> <span class="va">GoosePermits</span>, ylim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1.05</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/ggformula/man/gf_function.html" class="external-link">gf_fun</a></span><span class="op">(</span><span class="fu">y.hat</span><span class="op">(</span><span class="va">b</span><span class="op">)</span> <span class="op">~</span> <span class="va">b</span>, add <span class="op">=</span> <span class="cn">TRUE</span>, color <span class="op">=</span> <span class="st">"red"</span>, alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Ignoring unknown parameters: add</span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Ignoring unknown parameters: `add`</span>
 <span class="r-plt img"><img src="GoosePermits-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
@@ -102,7 +109,7 @@ Amer. J. Agr. Econ. 61, 1979. Available at
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>
