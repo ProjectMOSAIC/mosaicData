@@ -12,12 +12,17 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
+
 # mosaicData
 
 <!-- badges: start -->
 <!-- badges: end -->
 
 mosaicData provides a number of data sets associated with Project MOSAIC.
+
+## Documentation
+
+Find documenation and additional information at <http://www.mosaic-web.org/mosaicData/>.
 
 ## Installation
 
@@ -44,8 +49,4 @@ head(Weather)
 gf_linerange(high_temp + low_temp ~ date | city ~ ., color = ~avg_temp, data = Weather) |>
   gf_refine(scale_color_viridis_c(option = "D", end = 0.95, begin = 0.1))
 ```
-
-## Documentation
-
-Find documenation and additional information at <http://www.mosaic-web.org/mosaicData/>.
 

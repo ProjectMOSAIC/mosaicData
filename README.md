@@ -9,6 +9,11 @@
 mosaicData provides a number of data sets associated with Project
 MOSAIC.
 
+## Documentation
+
+Find documenation and additional information at
+<http://www.mosaic-web.org/mosaicData/>.
+
 ## Installation
 
 You can install the released version of mosaicData from
@@ -51,8 +56,3 @@ gf_linerange(high_temp + low_temp ~ date | city ~ ., color = ~avg_temp, data = W
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
-
-## Documentation
-
-Find documenation and additional information at
-<http://www.mosaic-web.org/mosaicData/>.
