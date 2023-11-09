@@ -1,5 +1,10 @@
 # mosaicData package NEWS
 
+# version 0.20.4
+
+* migrated from `%>%` to `|>`
+* fixed some documentation formatting issues
+
 # version 0.20.2
 
  * minor revision: update URL, add missing require() in one example
